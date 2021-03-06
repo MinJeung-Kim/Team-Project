@@ -1,0 +1,45 @@
+/*  COMMON  CSS */
+
+a {
+  text-decoration: none;
+  color: #111;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  background: transparent;
+}
+
+.body__container {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.section {
+  position: relative;
+}
+
+.section .inner {
+  position: relative;
+  max-width: 1808px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 38px 0 36px;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.icon {
+  padding: 0 10px;
+}
+
+.far,
+.fas {
+  font-size: 24px;
+}

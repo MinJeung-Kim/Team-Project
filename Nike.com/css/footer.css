@@ -1,0 +1,35 @@
+/*  FOOTER */
+.footer {
+  margin-top: 150px;
+  background: #111111;
+}
+
+.user-grid {
+  position: relative;
+  max-width: 880px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.footer-gnb,
+.gnb-locator {
+  padding-left: 20px;
+}
+
+.gnb-locator li,
+.footer-gnb li {
+  margin-bottom: 8px;
+}
+
+.gnb-locator a,
+.locator a {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.footer-gnb li + li > a {
+  color: #999999;
+  font-size: 11px;
+}
