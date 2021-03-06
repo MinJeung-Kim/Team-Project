@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 40px 0;
 }
 
 .footer-gnb,
@@ -32,4 +33,54 @@
 .footer-gnb li + li > a {
   color: #999999;
   font-size: 11px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  font-size: 10px;
+  padding: 15px 32px;
+}
+
+.footer-copy,
+.icon-pin,
+.icon-text,
+.footer-term a,
+.footer-info {
+  color: #fff;
+}
+
+.icon-pin .fas {
+  font-size: 15px;
+}
+
+.icon-text,
+.footer-term li {
+  padding: 0 10px 0 5px;
+}
+
+.footer-term {
+  display: flex;
+}
+
+.footer-info {
+  width: 880px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 11px;
+  color: #999999;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 16px 0 25px;
+}
+
+.b-text {
+  color: #ffffff;
+}
+.b-text a {
+  color: #ffffff;
+  text-decoration: underline;
 }
