@@ -181,6 +181,10 @@
 }
 label {
     font-size: 14px;
+    cursor: pointer;
+}
+.inputCh {
+    cursor: pointer;
 }
 .pinfo-txt {
     width: 100%;
@@ -259,6 +263,10 @@ button {
     color: white;
     font-weight: 700;
     cursor: pointer;
+    border: 1px solid black;
+}
+button:hover {
+    background-color: rgb(63, 60, 60);
 }
 .Inlabel {
     font-size: 12px;
