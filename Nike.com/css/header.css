@@ -37,3 +37,55 @@
 .user-menu a:hover {
   color: #767575;
 }
+
+/*  SECTION__HEADER */
+.gnv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.gnv__img {
+  width: 70px;
+  height: 28px;
+}
+
+.gnv__nav {
+  display: flex;
+}
+
+.gnv__nav li {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.gnv__nav li::after {
+  content: '';
+  position: absolute;
+  z-index: 9999;
+  bottom: 0;
+  border-bottom: 3px solid #111;
+}
+
+.gnv-search {
+  display: flex;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 40px;
+  border-radius: 100px;
+  background: #f5f5f5;
+}
+
+.gnv-icons {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}

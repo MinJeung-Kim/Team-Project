@@ -35,6 +35,11 @@
   font-size: 11px;
 }
 
+.sns {
+  font-size: 25px;
+  padding: 3px;
+}
+
 .footer-menu {
   display: flex;
   justify-content: space-between;
