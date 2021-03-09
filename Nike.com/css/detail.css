@@ -1,39 +1,38 @@
-/*전체 */
-.detail-contents { 
-  width: 1263px;
-  font-family : "Noto Sans KR", "Malgun Gothic", 
-  "MalgunGothic", Dotum, Helvetica, Arial, sans-serif;
-  color:black;
-  margin-top: 100px;
+.details-main {
+  display: flex;
 }
 
-/*왼쪽 이미지 부분*/
-.left {
-  display:inline-block;
-  width:1263px;
-  height:100%;
-  position:relative;
-  left:300px;
+.detail-product {
+  position: relative;
+  max-width: 991px;
+  width: calc(100% - 449px);
+  padding: 0 54px;
+  border: 3px solid tomato;
 }
 
-.detail-left {
-  height: 100%;
-  position:relative;
-  display: inline-flex;
+.detail-product-list {
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0;
-  padding:0;
 }
 
-.detail-left img {
-  width:445.5px;
-  height:445.5px;
-  margin:5px;
+.detail-product-list li {
+  width: 50%;
 }
 
-/*오른쪽 상품 info 부분*/
-.right .detail-right{
-  display:inline-block;
+.detail-product-list li img {
+  width: 100%;
+}
+
+.detail-product-info {
+  width: 449px;
+  padding: 0 54px 0 10px;
+
+  border: 3px solid yellowgreen;
+}
+
+/* DETAILS-FOOTER */
+.details-footer {
+  width: 100%;
+  box-sizing: border-box;
+  border: 3px solid violet;
 }
