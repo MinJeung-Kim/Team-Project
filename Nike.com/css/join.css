@@ -208,6 +208,9 @@ th,td {
     text-align: center;
     border-bottom: 1px solid rgb(199, 197, 197);
 }
+.b {
+    font-weight: bolder;
+}
 thead th {
     width: 76px;
     color: gray;
