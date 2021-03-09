@@ -1,0 +1,39 @@
+/*전체 */
+.detail-contents { 
+  width: 1263px;
+  font-family : "Noto Sans KR", "Malgun Gothic", 
+  "MalgunGothic", Dotum, Helvetica, Arial, sans-serif;
+  color:black;
+  margin-top: 100px;
+}
+
+/*왼쪽 이미지 부분*/
+.left {
+  display:inline-block;
+  width:1263px;
+  height:100%;
+  position:relative;
+  left:300px;
+}
+
+.detail-left {
+  height: 100%;
+  position:relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding:0;
+}
+
+.detail-left img {
+  width:445.5px;
+  height:445.5px;
+  margin:5px;
+}
+
+/*오른쪽 상품 info 부분*/
+.right .detail-right{
+  display:inline-block;
+}
