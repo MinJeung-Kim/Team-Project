@@ -1,0 +1,47 @@
+/* CART-MAIN */
+.cart-main {
+  margin-top: 40px;
+}
+
+.cart-title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 24px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #111111;
+}
+
+.cart-num {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.current-items {
+  max-width: 1440px;
+  min-height: 320px;
+  text-align: center;
+  margin: 30px auto 0;
+  padding-top: 80px;
+  border-top: 1px solid #dedfda;
+  border-bottom: 1px solid #dedfda;
+  box-sizing: border-box;
+}
+
+.ico-cart .fas {
+  font-size: 65px;
+}
+
+.current-status {
+  margin-bottom: 35px;
+  margin-top: 15px;
+}
+
+.cart-btn a {
+  height: 40px;
+  font-size: 14px;
+  padding: 13px 30px;
+  border-radius: 3px;
+}

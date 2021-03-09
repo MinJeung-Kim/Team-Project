@@ -7,6 +7,7 @@ a {
 }
 
 input {
+  width: 100px;
   border: none;
   background: transparent;
 }
