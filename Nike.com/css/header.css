@@ -63,12 +63,16 @@
   padding: 0 15px;
 }
 
-.gnv__nav li::after {
+/* .gnv__nav li::after {
   content: '';
   position: absolute;
   z-index: 9999;
   bottom: 0;
   border-bottom: 3px solid #111;
+} */
+
+.gnv__nav li:hover {
+  border-bottom: 4px solid #111;
 }
 
 .gnv-search {
@@ -88,4 +92,36 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
+}
+
+/*  GNV-SUB */
+.gnv-sub {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  top: 60px;
+  background: #fff;
+  padding: 20px 0 38px 0;
+}
+
+.gnv-sub-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gnv-list li {
+  padding-bottom: 10px;
+}
+
+.gnv-list a {
+  color: #767575;
+}
+
+.gnv-sub-box .locator-black {
+  padding-bottom: 25px;
+}
+
+.locator-black a {
+  color: #111;
 }
