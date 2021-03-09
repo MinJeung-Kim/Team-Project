@@ -48,6 +48,7 @@
 }
 .navi_inner,.navi_inner2{
     width: 210px;
+    /* cursor: pointer; */
 }
 .navi_inner2 {
     overflow: hidden;
@@ -64,18 +65,19 @@
     width: 90%;
 }
 .toparrow {
+    /* cursor: pointer; */
     width: 18px;
     display: inline;
     height: 18px;
     margin: 26px 0 0 -15px;
 }
-.navi_inner>ul>li {
+ .navi_inner>ul>li {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     padding-bottom: 17px;
     clear:both;
-    /* cursor:pointer; */
-}
+    cursor: pointer;
+} 
 .navi_inner>ul>li:last-child {
     padding: 5px 0 40px 0;
 }
@@ -88,6 +90,7 @@
     text-align: center;
     line-height: 25px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 .navi_inner2>ul>li>span {
     padding-top: 20px;
@@ -174,10 +177,13 @@
 /* 컨텐츠 영역 */
 .right-content-wrap>ul {
     margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
 }
 .right-content-wrap>ul>li {
-    float: left;
-    width: 33.3333333333%;
+    /* float: left;
+    width: 33.3333333333%; */
     margin-bottom: 120px;
     height: 300px;
 }
@@ -195,6 +201,7 @@
 .category-content-price>.category-content-info {
     float:left;
     width: 210px;
+    cursor: pointer;
 }
 .ct-content-price {
     display: inline;
