@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>나이키. Just Do It. Nike.com</title>
+
+    <!-- 작성자 -->
+    <meta name="author" content="Tem Project" />
+
+    <!-- 
+        사이트를 검색하면 사이트 밑에 사이트 설명글
+        웹표준 meta
+     -->
+    <meta
+      name="description"
+      content="나이키 정품, 신상, 베스트셀러. 공식 온라인스토어에서 다양한 제품을 만나보세요. 나이키닷컴과 함께 스포츠의 모든 순간을 함께하세요. 출시예정. THE DRAW. 서비스: 무료배송, 무료반품, 신규회원할인."
+    />
+
+    <!-- 
+        - name="viewport" : 전체화면 (=브라우저가 보여주는 크기)
+        - width=device-width : 해당 기기(device)의 가로 너비를 그대로 사용하겠다.
+        - initial-scale=1 : 다양한 기기(device)의 배율(초기 화면배율 값)을 100%부터 시작하겠다.
+            (1 => 100%, 2=> 200%....)
+        - user-scalable=no : 사용자가 화면을 손가락으로 확대,축소하는 기능을 사용하지 않겠다. (레이아웃의 문제를 막아줌)
+        - maximum-scale=1, minimum-scale=1 : 확대할 수 있는 최대값과 축소할 수 있는 최솟값 지정
+    -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"
+    />
+
+    <!-- 
+        인터넷 익스플로러 브라우저를 사용할때 렌더링하는 방식이 edge(최신)방식으로 렌더링. 
+         (IE8버전 이상에서 렌더링 가능)
+    -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 
+        - property(속성) 
+        - og => Open Graph의 약어
+            => 외부에 제공할 정보를 정의.
+        - og:type : 타입이 website사이트
+    -->
+    <!-- http://ogp.me/    => 페이스북에서 활용 -->
+    <!-- 사이트 타입 -->
+    <meta property="og:type" content="website" />
+    <!-- 사이트이름 -->
+    <meta property="og:site_name" content="나이키" />
+    <!-- 사이트 제목 -->
+    <meta property="og:title" content="나이키. Just Do It. Nike.com" />
+    <!-- 사이트 설명 -->
+    <meta
+      property="og:description"
+      content="나이키 에어 베이퍼맥스 EVO. 클래식한 에어맥스 시리즈를 리믹스하여 더욱 볼드해진 베이퍼맥스 EVO 를 나이키 멤버가 되어 가장 먼저 만나보세요. 구매하기."
+    />
+    <meta property="og:image" content="img/android-icon-36x36.png" />
+    <!-- 실제사이트 주소 -->
+    <meta property="og:url" content="https://www.nike.com/kr/ko_kr/" />
+
+    <!-- CSS 초기화(cdn) => ***초기화css를 제일 먼저 작성 
+           https://cdnjs.com/libraries/meyer-reset 
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+
+    <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- defer : html을 다 읽고 난 후 script 실행 -->
+    <!-- <script defer src="main.js"></script> -->
+  </head>
+  <body>
+    <div class="body__container">
+      <!-- ========== HEADER ========== -->
+      <header class="section header">
+        <div class="inner clearfix">
+          <div class="menu-top">
+            <img class="menu-top__img" src="img/jd_logo.png" alt="" />
+            <ul class="user-menu">
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">멤버 가입</a></li>
+              <li><a href="#">로그인</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- ========== SECTION__HEADER ========== -->
+      <div class="section section__header">
+        <div class="inner clearfix">
+          <div class="gnv">
+            <img
+              class="gnv__img"
+              src="img/nike-logo-on.png"
+              alt=""
+              class="nike-logo"
+            />
+            <ul class="gnv__nav">
+              <li><a href="#">New Releases</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kids</a></li>
+              <li><a href="#">Sale</a></li>
+            </ul>
+            <div class="gnv-search">
+              <form class="search-form">
+                <span class="icon search"><i class="fas fa-search"></i></span>
+                <input placeholder="검색" type="text" />
+              </form>
+              <div class="gnv-icons">
+                <span class="icon heart"><i class="far fa-heart"></i></span>
+                <span class="icon cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========== CONTENTS ========== -->
+      <div class="modal">
+          <div class="modal-content">
+              <a class="close-button">&times;</a>
+              <div class="title">
+                <img class="logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
+                <span class="title-text">나이키 로그인</span>
+              </div>
+              <div class="login-body">
+                <form action="#" method="POST"></form>
+                  <div class="idinput">
+                    <input type="text" name="id" placeholder="아이디" class="input">
+                  </div>
+                  <div class="psinput">
+                    <input type="password" name="password" placeholder="비밀번호" class="input">
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" name="checkbox" id="checkbox" checked>
+                    <label for="checkbox" class="log-label">로그인 유지하기</label>
+                  </div>
+                  <a class="find">아이디/비밀번호 찾기</a>
+                  <button class="log-button">로그인</button>
+                </form>
+              </div>
+              <!-- social -->
+              <div class="social">
+                <div class="Akakao">
+                  <a href="#" class="kakao">
+                    <div class="icon">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <span class="txt">
+                      카카오계정 로그인
+                    </span>
+                  </a>
+                </div>
+                <div class="Afacebook">
+                  <div class="Afacebook">
+                    <a href="#" class="facebook">
+                      <div class="icon2">
+                        <i class="fab fa-facebook-f"></i>
+                      </div>
+                      <span class="txt2">
+                        페이스북으로 로그인
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="join_line">
+                  <span class="join-txt">회원이 아니신가요?</span>
+                  <a href="#">회원가입</a>
+                </div>
+                <a href="#" class="nomem">비회원 주문 조회</a>
+              </div>
+            </div>
+          </div>
+      </div>
+         
+      <!-- ========== FOOTER ========== -->
+      <footer class="section footer">
+        <div class="user-grid">
+          <ul class="gnb-locator">
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">나이키 트레이닝 가이드</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">멤버 가입</a></li>
+          </ul>
+          <ul class="footer-gnb">
+            <li class="locator"><a href="#">고객센터</a></li>
+            <li><a href="#">080-022-0182</a></li>
+            <li><a href="#">주문/결제</a></li>
+            <li><a href="#">배송</a></li>
+            <li><a href="#">주문배송조회</a></li>
+            <li><a href="#">멤버쉽 혜택/서비스</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">1:1 채팅 문의</a></li>
+            <li><a href="#">1:1 이메일문의</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+          <ul class="footer-gnb">
+            <li class="locator"><a href="#">ABOUT NIKE</a></li>
+            <li><a href="#">나이키에 대하여</a></li>
+          </ul>
+          <ul class="footer-gnb">
+            <li class="locator"><a href="#">SOCIAL</a></li>
+            <li>
+              <a href="#"><span class="twitter"><i class="fab fa-twitter-square"></i></span></a>
+              <a href="#"><span class="facebook"><i class="fab fa-facebook-square"></i></span></a>
+              <a href="#"><span class="youtube"><i class="fab fa-youtube-square"></i></span></a>
+              <a href="#"><span class="instagram"><i class="fab fa-instagram-square"></i></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copy">
+          <a href="">
+            <span><i class="fas fa-map-marker"></i></span>
+            <span>대한민국</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

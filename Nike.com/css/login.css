@@ -1,0 +1,167 @@
+.modal {
+    position: relative;
+    top: -31.5px;
+    box-sizing: border-box;
+    width: 480px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #d3d3d3;
+    border-radius: 4px;
+}
+.modal-content {
+    height: 576.8px;
+}
+.close-button {
+    font-size: 30px;
+    position: relative;
+    left: 420px;  
+}
+.title {
+    width: 420px;
+    height: 104.8px;
+    margin: 0px 0px 40px;
+}
+.logo{
+    width: 53.5px;
+    height: 24.8px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+.title-text {
+    font-size: 24px;
+    font-weight: 550;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+.login-body{
+    width: 420px;
+    height: 138px;
+}
+.input {
+    width: 394px;
+    height: 20px;
+    font-size: 14px;
+    background: white;
+    padding: 9px 12px;
+    border: 1px solid lightgray;
+}
+.psinput,.check {
+    margin-top: 15px;
+}
+#checkbox {
+    width: 18px;
+    height: 19px;
+    margin: 0px 5px 0px 0px;
+    cursor: pointer;
+}
+.log-label {
+    font-size: 12px;
+    color: #8D8D8D;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+}
+.find {
+    font-size: 12px;
+    color: #bcbcbc;
+    position: relative;
+    left: 300px;
+    top: -23px;
+}
+.log-button {
+    width: 420px;
+    height: 40px;
+    color: white;
+    background: black;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.log-button:hover {
+    background: gray;
+}
+.social {
+    height: 100px;
+    width: 420px;
+    position: relative;
+    top: 60px;
+}
+.Akakao {
+    width: 420px;
+    height: 40px;
+    background-color: yellow;
+    margin: 0px 0px 10px;
+    border-radius: 4px;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 7px;
+    left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.txt {
+    font-size: 15px;
+    width: 418px;
+    height: 24.8px;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    display: inline-block;
+}
+.Afacebook {
+    width: 420px;
+    height: 40px;
+    position: relative;
+    background-color: #21538a;
+    border-radius: 4px;
+}
+.txt2 {
+    font-size: 15px;
+    width: 378px;
+    height: 24.8px;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+}
+.icon2 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 11px;
+    left: 23px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bottom {
+    width: 420px;
+    height: 64px;
+    position: relative;
+    top: 68px;
+}
+.join_line {
+    width: 420px;
+    height: 20px;
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+.join-txt {
+    color: #BCBCBC;
+}
+.join_line a {
+    text-decoration: underline;
+}
+.nomem {
+    font-size: 11px;
+    text-decoration: underline;
+    position: relative;
+    top: 30px;
+    left: 170px;
+}
