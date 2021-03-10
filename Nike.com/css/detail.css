@@ -126,6 +126,9 @@
   height: 48px;
   border:1px solid black;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding:5px;
   background-color:white;
   color:black;
@@ -152,10 +155,11 @@
 .order-wrap {
   margin-top:15px;
   margin-bottom: 15px;
+  align:center;
 }
 
 .buy {
-  height:80px;
+  height:40px;
   border:1px solid black;
   border-radius: 50px;
   background-color: black;
@@ -170,8 +174,10 @@
 }
 
 .shopbasket {
-  height:80px;
-  border:1px solid black;
+  display: inline-block;
+  width:160px;;
+  height:40px;
+  border:2px solid black;
   border-radius: 50px;
   background-color:white;
   padding:24px 50px;
@@ -183,6 +189,22 @@
   text-align: center;
 }
 
+.wishlist {
+  display: inline-block;
+  width:160px;
+  height:40px;
+  border:2px solid black;
+  border-radius: 50px;
+  background-color:white;
+  padding:24px 50px;
+}
+
+.wishlist a {
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  text-align: center;
+}
 /*DETAIL-DESCRIPTION*/
 .detail-description {
   margin-top:20px;
@@ -195,6 +217,11 @@
 
 .detail-bold {
   font-weight: 500;
+}
+
+/*Review*/
+.review-star {
+  display: flex;
 }
 
 /* DETAILS-FOOTER */
