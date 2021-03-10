@@ -1,0 +1,279 @@
+.join-wrap {
+    width: 420px;
+    height: 1771.2px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: "맑은 고딕";
+    margin-top: 50px;
+}
+.join-header{
+    width: 380px;
+    height: 75.8px;
+}
+.ATitle {
+    width: 380px;
+    height: 24px;
+}
+.title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.description {
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+    font-size: 14px;
+    line-height: 1.3;
+    height: 40px;
+    font-weight: 550;
+}
+.join-body {
+    width: 380px;
+    height: 1605.4;
+    position: relative;
+    margin-top: 30px;
+}
+.social {
+    width: 380px;
+    height: 100px;
+}
+.Akakao {
+    width: 387px;
+    height: 38px;
+    background-color: yellow;
+    margin: 0px 0px 10px;
+}
+.txt {
+    font-size: 15px;
+    width: 378px;
+    height: 24.8px;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    display: inline-block;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 7px;
+    left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Afacebook {
+    width: 387px;
+    height: 38px;
+    position: relative;
+    background-color: #21538a;
+}
+.txt2 {
+    font-size: 15px;
+    width: 378px;
+    height: 24.8px;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+}
+.icon2 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 11px;
+    left: 23px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.h-line {
+    width: 387px;
+    border-top:gray solid;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+.h-txt {
+    background-color: white;
+    position: relative;
+    top: -10px;
+    margin-bottom: -35px;
+    color: #606060;
+    width: 70px;
+    height: 20px;
+}
+#id {
+    border: 1px solid;
+    border-color:#cfcaca;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    font-weight: 700;
+}
+#password {
+    border: 1px solid;
+    border-color:#cfcaca;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+#repass {
+    border: 1px solid;
+    border-color:#cfcaca;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+#name {
+    border: 1px solid;
+    border-color:#cfcaca;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+#phone {
+    border: 1px solid;
+    border-color:#cfcaca;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+.agree {
+    width: 380px;
+    height: 250px;
+}
+.agree-top {
+    width: 100%;
+    height: 20px;
+}
+.agree-title {
+    width: 190px;
+    margin: 30px 0px 0px;
+    padding: 0px 0px 8px;
+    float: left;
+    font-size: 11px;
+    font-weight: 700;
+}
+.agree-allview {
+    float: left;
+    width: 190px;
+    margin: 30px 0px 0px;
+    padding: 0px 0px 8px;
+    text-align: right;
+    font-size: 11px;
+}
+.agree-scroll {
+    overflow-y: scroll;
+    height: 110px;
+    padding: 15px 8px;
+    border: 1px solid #d1d1d1;
+    font-size: 11px;
+    line-height: 1.7;
+}
+label {
+    font-size: 14px;
+    cursor: pointer;
+}
+.inputCh {
+    cursor: pointer;
+}
+.pinfo-txt {
+    width: 100%;
+    margin: 30px 0px 0px;
+    padding: 0px 0px 8px;
+    float: left;
+    font-size: 11px;
+    font-weight: 700;
+}
+#table {
+    width: 380px;
+    height: 324px;
+    width: 100%;
+    border: 1px solid rgb(199, 197, 197);
+    border-collapse: collapse;
+}
+th,td {
+    padding: 10px;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+    border-bottom: 1px solid rgb(199, 197, 197);
+}
+.b {
+    font-weight: bolder;
+}
+thead th {
+    width: 76px;
+    color: gray;
+    font-weight: 700;
+}
+.pinfo-bottom {
+    font-size: 11px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.pinfo-check {
+    margin-top: 10px;
+}
+#table2 {
+    width: 380px;
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgb(199, 197, 197);
+    border-collapse: collapse;
+    
+}
+.pinfo2 {
+    width: 100%;
+    margin-top: 30px;
+    height: 200px;
+}
+.pinfo2-txt {
+    width: 100%;
+    margin: 30px 0px 0px;
+    padding: 0px 0px 8px;
+    float: left;
+    font-size: 11px;
+    font-weight: 700;
+}
+.pinfo2-bottom {
+    margin-top: 0px;
+}
+.register-terms {
+    margin-top: 35px;
+    font-size: 11px;
+    line-height: 3;
+}
+.term3 {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    padding: 20px 0px;
+}
+button {
+    width: 380px;
+    height: 48px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid black;
+}
+button:hover {
+    background-color: rgb(63, 60, 60);
+}
+.Inlabel {
+    font-size: 12px;
+    color: rgb(199, 197, 197);
+    text-decoration: underline;
+    font-weight: 700;
+}
