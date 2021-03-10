@@ -72,61 +72,24 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/footer.css" />  
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
   </head>
   <body>
-    <div class="body__container">
-      <!-- ========== HEADER ========== -->
-      <header class="section header">
-        <div class="inner clearfix">
-          <div class="menu-top">
-            <img class="menu-top__img" src="img/jd_logo.png" alt="" />
-            <ul class="user-menu">
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">멤버 가입</a></li>
-              <li><a href="#">로그인</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <!-- ========== SECTION__HEADER ========== -->
-      <div class="section section__header">
-        <div class="inner clearfix">
-          <div class="gnv">
-            <img
-              class="gnv__img"
-              src="img/nike-logo-on.png"
-              alt=""
-              class="nike-logo"
-            />
-            <ul class="gnv__nav">
-              <li><a href="#">New Releases</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">Kids</a></li>
-              <li><a href="#">Sale</a></li>
-            </ul>
-            <div class="gnv-search">
-              <form class="search-form">
-                <span class="icon search"><i class="fas fa-search"></i></span>
-                <input placeholder="검색" type="text" />
-              </form>
-              <div class="gnv-icons">
-                <span class="icon heart"><i class="far fa-heart"></i></span>
-                <span class="icon cart">
-                  <i class="fas fa-shopping-cart"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="body__container">  
+      <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
       <section class="section contents">
         <div class="inner clearfix">
@@ -317,50 +280,9 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- ========== FOOTER ========== -->
-      <footer class="section footer">
-        <div class="user-grid">
-          <ul class="gnb-locator">
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">나이키 트레이닝 가이드</a></li>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">멤버 가입</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">고객센터</a></li>
-            <li><a href="#">080-022-0182</a></li>
-            <li><a href="#">주문/결제</a></li>
-            <li><a href="#">배송</a></li>
-            <li><a href="#">주문배송조회</a></li>
-            <li><a href="#">멤버쉽 혜택/서비스</a></li>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">1:1 채팅 문의</a></li>
-            <li><a href="#">1:1 이메일문의</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">ABOUT NIKE</a></li>
-            <li><a href="#">나이키에 대하여</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">SOCIAL</a></li>
-            <li>
-              <a href="#"><span class="twitter"><i class="fab fa-twitter-square"></i></span></a>
-              <a href="#"><span class="facebook"><i class="fab fa-facebook-square"></i></span></a>
-              <a href="#"><span class="youtube"><i class="fab fa-youtube-square"></i></span></a>
-              <a href="#"><span class="instagram"><i class="fab fa-instagram-square"></i></span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-copy">
-          <a href="">
-            <span><i class="fas fa-map-marker"></i></span>
-            <span>대한민국</span>
-          </a>
-        </div>
-      </footer>
+      </section> 
+      
+      <div id="footer"></div>
     </div>
   </body>
 </html>
