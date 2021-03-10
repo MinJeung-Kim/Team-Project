@@ -1,12 +1,16 @@
 .modal {
-    position: relative;
+    position: absolute;
     top: -31.5px;
     box-sizing: border-box;
     width: 480px;
     margin: 50px auto;
     padding: 20px;
-    background: #d3d3d3;
+    background: white;
     border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    left: 27.5%;
+    display: block;
+    z-index: 9999;
 }
 .modal-content {
     height: 576.8px;
@@ -16,18 +20,21 @@
     position: relative;
     left: 420px;  
 }
-.title {
+.close-button:hover {
+    color: gray;
+}
+.modal_title {
     width: 420px;
     height: 104.8px;
     margin: 0px 0px 40px;
 }
-.logo{
+.modal_logo{
     width: 53.5px;
     height: 24.8px;
     margin-top: 30px;
     margin-left: 200px;
 }
-.title-text {
+.modal_title_txt {
     font-size: 24px;
     font-weight: 550;
     display: block;
@@ -38,7 +45,7 @@
     width: 420px;
     height: 138px;
 }
-.input {
+.modal_input {
     width: 394px;
     height: 20px;
     font-size: 14px;
@@ -46,10 +53,10 @@
     padding: 9px 12px;
     border: 1px solid lightgray;
 }
-.psinput,.check {
+.modal_psinput,.modal_check {
     margin-top: 15px;
 }
-#checkbox {
+#modal_checkbox {
     width: 18px;
     height: 19px;
     margin: 0px 5px 0px 0px;
@@ -62,7 +69,7 @@
     top: -3px;
     cursor: pointer;
 }
-.find {
+.modal_find {
     font-size: 12px;
     color: #bcbcbc;
     position: relative;
@@ -81,20 +88,20 @@
 .log-button:hover {
     background: gray;
 }
-.social {
+.modal_social {
     height: 100px;
     width: 420px;
     position: relative;
     top: 60px;
 }
-.Akakao {
+.modal_Akakao {
     width: 420px;
     height: 40px;
     background-color: yellow;
     margin: 0px 0px 10px;
     border-radius: 4px;
 }
-.icon {
+.modal_icon {
     width: 24px;
     height: 24px;
     position: relative;
@@ -103,7 +110,7 @@
     display: inline-block;
     vertical-align: middle;
 }
-.txt {
+.modal_txt {
     font-size: 15px;
     width: 418px;
     height: 24.8px;
@@ -112,14 +119,14 @@
     text-align: center;
     display: inline-block;
 }
-.Afacebook {
+.modal_Afacebook {
     width: 420px;
     height: 40px;
     position: relative;
     background-color: #21538a;
     border-radius: 4px;
 }
-.txt2 {
+.modal_txt2 {
     font-size: 15px;
     width: 378px;
     height: 24.8px;
@@ -129,7 +136,7 @@
     display: inline-block;
     color: white;
 }
-.icon2 {
+.modal_icon2 {
     width: 24px;
     height: 24px;
     position: relative;
@@ -138,13 +145,13 @@
     display: inline-block;
     vertical-align: middle;
 }
-.bottom {
+.modal_bottom {
     width: 420px;
     height: 64px;
     position: relative;
     top: 68px;
 }
-.join_line {
+.modal_join-line {
     width: 420px;
     height: 20px;
     font-size: 11px;
@@ -152,13 +159,13 @@
     position: relative;
     top: 20px;
 }
-.join-txt {
+.modal_join-txt {
     color: #BCBCBC;
 }
-.join_line a {
+.modal_join-line a {
     text-decoration: underline;
 }
-.nomem {
+.modal_nomem {
     font-size: 11px;
     text-decoration: underline;
     position: relative;
