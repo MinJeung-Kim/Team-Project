@@ -8,7 +8,7 @@
 }
 .modal {
     position: absolute;
-    top: -31.5px;
+    top: -31.5px; 
     box-sizing: border-box;
     width: 480px;
     margin: 50px auto;
