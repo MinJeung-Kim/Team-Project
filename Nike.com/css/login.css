@@ -16,9 +16,10 @@
     background: white;
     border-radius: 4px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
-    left: 27.5%;
     display: block;
     z-index: 9999;
+    left: 50%;
+    margin-left: -240px;
 }
 .modal-content {
     height: 576.8px;
