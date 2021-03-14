@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1808px;
+    margin: 0 auto;
 }
 .section-title,.section-control {
     font-family: 'Noto Sans KR', sans-serif;
@@ -36,6 +38,8 @@
     padding: 0 30px;
     display: flex;
     justify-content: space-around;
+    max-width: 1808px;
+    margin: 0 auto;
 }
 /* 왼쪽 카테고리 네비 */
 .left_navi_emp {
