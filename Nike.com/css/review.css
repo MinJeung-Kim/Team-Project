@@ -1,0 +1,128 @@
+.review-all {
+    overflow-y: auto;
+}
+.review_product-wrap {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    padding: 18px 45px;
+    width: 100%;
+    border-bottom: 1px solid #d8d8d8;
+    -ms-overflow-style: none;
+}
+.review_product-wrap::-webkit-scrollbar{
+    display: none;
+}
+.review_close-button {
+    font-size: 33px;
+    float: right;
+    margin-right: 60px;
+    margin-top: -10px;
+}
+.review_img-div {
+    width: 60px;
+    height: 64px;
+    display: inline;
+    float: left;
+}
+.review_product-img{
+    width: 60px;
+    height: 60px;
+}
+.mini-product-info {
+    display: table-cell;
+    width: 100%;
+    margin: 0;
+    padding-left: 10px;
+    float: none;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.info_tit {
+    font-size: 13px;
+    margin: 10px 0px 0px;
+
+}
+.info_price {
+    font-size: 14px;
+    display: block;
+    margin-top: 15px;
+}
+.review_list-wrap {
+    padding-top: 100px;
+}
+.review_top {
+    text-align: center;
+    padding-top: 50px;
+}
+.star-txt {
+    font-size: 30px;
+    font-family: "Trade Gothic LT W01 Bd CnNo-20", "Apple SD Gothic Neo", "Noto Sans KR", "맑은 고딕", serif, Arial, Helvetica;
+    margin-top: 20px;
+}
+.star-review-num {
+    float: left;
+    margin-left: 200px;
+}
+.star-point {
+    float: none;
+    margin-right: 230px;
+}
+.review_gage-wrap {
+    height: 142px;
+    margin-top:60px;
+    
+}
+.grid-gage {
+    float: left;
+    width: 24%;
+    padding-left: 7px;
+    text-align: center;
+    
+}
+.gage-title {
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+}
+.value-gage {
+    border-radius: 2px;
+    border: 4px solid #E5E5E5;
+}
+.value-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 306px;
+    
+}
+.value-box {
+    display: block;
+    margin-top: 10px;
+}
+.value-txtLeft {
+    font-size: 12px;
+    float: left;
+    margin-top: 10px;
+}
+.value-txtRight {
+    font-size: 12px;
+    float: right;
+    margin-top: 10px;
+}
+.review_sort {
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+#review_filter1,#review_filter2 {
+    width: 62px;
+    height: 30px;
+    border: 2px solid #E5E5E5;
+    font-size: 13px;
+    text-align: center;
+    float: right;
+}
