@@ -1,5 +1,5 @@
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
+const ctx = document.getElementById('myChart');
+let myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['회원수', '총매출', '문의답변', '주문건수'],
