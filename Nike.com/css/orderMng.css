@@ -1,0 +1,25 @@
+.order-status {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.order-status li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid darkgrey;
+}
+
+.order-title {
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+.order-num {
+  font-size: 30px;
+  font-weight: 700;
+}
