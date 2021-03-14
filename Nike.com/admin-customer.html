@@ -72,7 +72,10 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />  
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/customer.css" />  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
@@ -90,6 +93,74 @@
   <body>
     <div class="body__container">  
       <div id="header"></div>
+       <!-- ========== CONTENTS ========== -->
+       <section class="section dashboard">
+        <div class="section-category">
+          <div class="section-title">
+            <a href="#"><span class="cstxt">고객관리<span></a>
+          </div>
+        </div>
+        <div class="dashboard-main">
+          <div class="dashboard-menu">
+            <ul class="dashboard-menu-list">
+              <li>
+                <span class="dash-icon"><i class="fas fa-chart-line"></i></span
+                ><a href="#">대시보드</a>
+              </li>
+              <li>
+                <span class="dash-icon"><i class="fas fa-dollar-sign"></i></span
+                ><a href="#">상품관리</a>
+              </li>
+              <li>
+                <span class="dash-icon"
+                  ><i class="fas fa-shopping-basket"></i></span
+                ><a href="#">주문관리</a>
+              </li>
+              <li>
+                <span class="dash-icon"><i class="fab fa-intercom"></i></span
+                ><a href="#" class="adminCustomer">고객관리</a>
+              </li>
+              <li>
+                <span class="dash-icon"><i class="fas fa-headset"></i></span
+                ><a href="#">게시판관리</a>
+              </li>
+            </ul>
+          </div>
+            <!-- ======= RIGHT CONTENT ======= -->
+            <div class="right-content-wrap">
+              <div class="customer-list">
+                  <div class="list-txt">고객 목록</div>
+                  <div class="register">등록</div>
+              </div>
+              <div class="search">
+                <select name="selectMem" class="selectMem">
+                  <option value="memberY">회원</option>
+                  <option value="memberN">비회원</option>
+                </select>
+                <input type="text" class="searchBox" name="searchBox" placeholder="이름,아이디,등급">
+                <a href="javascript:;" class="srhBtnWrap"><i class="fas fa-search searchBtn"></i></a>
+              </div>
+              <div class="memWrap">
+                <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
+                <select name="searchLimit" class="searchLimit">
+                  <option value="5">5건씩보기</option>
+                  <option value="10">10건씩보기</option> 
+                  <option value="15">15건씩보기</option> 
+                  <option value="20">20건씩보기</option>  
+                </select>
+              </div>
+              
+              <p class="gradeWrap">
+                <span class="gradeTitle">[ 등급 조건 및 혜택 ]</span><br/>
+                <span class="gradeSubTitle">FAMILY</span> 가입즉시, 1%적립, 무료배송 쿠폰1매 발행<br/>
+                <span class="gradeSubTitle">SILVER</span> 3개월 구매금액 200,000원 충족시, 2%할인<br/>
+                <span class="gradeSubTitle">GOLD</span> 3개월 구매금액 500,000원 충족시, 3%할인<br/>
+                <span class="gradeSubTitle">VIP</span> 3개월 구매금액 1,000,000원 충족시, 5%할인, 무료배송
+              </p>
+            </div>
+          </div> <!-- dashboard-main-->
+      </section>
+    </div>
 </body>
 </html>
     
