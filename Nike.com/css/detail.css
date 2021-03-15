@@ -1,12 +1,13 @@
 .details-main {
   display: flex;
+  margin-top: 35px;
 }
 
 .detail-product {
   position: relative;
   max-width: 991px;
   width: calc(100% - 449px);
-  padding: 0 54px;
+  padding: 0 44px 0 54px;
   border: 3px solid white;
 }
 
@@ -58,52 +59,65 @@
 .detail-price {
   color: #8d8d8d;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: -1px;
 }
 
 /*DETSIL-PRODUCT_INFO*/
 .detail-product-info {
   position:relative;
-  width: 600px;
-  padding: 0 30px 0 34px;
+  width: 425px;
+  padding: 0 30px 0 20px;
   border: 3px solid white;
 }
 
 .detail-info-top {
   display: block;
-  margin:30px 10px 5px 10px;
+  margin:10px 10px 5px 10px;
 }
 
 /*PRODUCT-NAME*/
 .title-wrap {
   width:55%;
   margin: 5px 10px 40px 10px;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: bold;
   line-height: 120%;
+  letter-spacing: -1px;
 }
 
 .detail-primary-text {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 650;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .detail-subtitle-text {
-  font-size: 18px;
+  font-size: 15px;
   color:rgb(80, 71, 71);
-  font-weight: 530;
+  font-weight: 550;
   letter-spacing: -1px;
   line-height: 2.0;
   margin-bottom: 30px;
 }
 
+.detail-price-text {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  line-height: 1.6;
+}
+
 .detail-subtitle-left {
   display: inline-block;
   text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .detail-subtitle-right {
@@ -115,8 +129,8 @@
 }
 
 .size-guide {
-  font-size: 17px;
-  font-weight: 650;
+  font-size: 13px;
+  font-weight: 660;
   letter-spacing: -1px;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -138,10 +152,10 @@
 
 .input-radio {
   position: relative;
-  width: calc(19% - 15px);
-  height: 48px;
+  width: calc(19.5% - 19px);
+  height: 35px;
   border:1px solid rgb(202, 194, 194);
-  border-radius: 7px;
+  border-radius:6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,22 +168,31 @@
 }
 
 .radio-text{
-  font-size: 20px;
-  font-weight: 520;
+  font-size: 15px;
+  font-weight: 525;
   letter-spacing: -1px;
   line-height: 1.6;
 }
 
 .notify-alert {
-  margin-top:20px;
-  margin-bottom: 25px;
+  margin-top:10px;
+  margin-bottom: 5px;
 }
 
 .notify-icon {
-  margin-right: 15px;
+  margin-right: 5px;
+}
+.notify-icon .fas {
+  font-size:14px;
 }
 
+
 /*QUANTITY*/
+.qty {
+  font-size:15px;
+  font-weight: 900;
+  margin:8px 0px;
+}
 .btn-qty > * {
   float:left;
 }
@@ -183,7 +206,6 @@
 }
 
 .btn-qty input {
-
   border:0;
 }
 
@@ -193,7 +215,7 @@
   padding:6px 5px;
   margin-left: 10px;
   margin-right: 8px;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
   outline: none;
   box-sizing: border-box;
@@ -208,92 +230,111 @@
   margin-right: 10px;
 }
 
+button .fas {
+  font-size: 14px;
+}
+
 /*ORDER-WRAP*/
 .order-wrap {
-  margin-top:15px;
+  margin-top:10px;
 }
 
 .buy {
-  height:40px;
+  height:55px;
   border:1px solid black;
   border-radius: 50px;
   background-color: black;
   margin-bottom: 10px;
-  padding:24px 50px;
-  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .buy a {
   color:white;
   font-weight:bold;
-  font-size:21px;
+  font-size:15px;
   text-decoration: none;
-  text-align:center;
 }
 
+.shopwish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .shopbasket {
-  display: inline-block;
-  width:160px;
-  height:40px;
-  border:2px solid black;
+  width:47%;
+  height:55px;
+  border:1px solid black;
   border-radius: 50px;
   background-color:white;
-  padding:24px 50px;
-  text-align: center;
-  margin-bottom:15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shopbasket a {
   color:black;
   font-weight:bold;
-  font-size:20px;
+  font-size:15px;
   text-decoration:none;
 }
 
 .wishlist {
-  display: inline-block;
-  width:160px;
-  height:40px;
-  border:2px solid black;
+  width:47%;
+  height:55px;
+  border:1px solid black;
   border-radius: 50px;
   background-color:white;
-  padding:24px 50px;
-  text-align: center;
+  /* padding:24px 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.wishlist button {
+.wishlist a {
   color:black;
   font-weight:bold;
-  font-size:20px;
-  outline:none;
-  border: none;
-  padding:0px;
-  background-color: white;
+  font-size:15px;
+  text-decoration:none;
+}
+.wishlist .far{
+  font-size: 14px;
+  padding:0 5px;
 }
 
 /*STORE-REVERSE-WRAP*/
 .store-reverse-wrap {
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .reservation-btn {
   width:92%;
-  height:45px;
-  border:2px solid rgb(202, 194, 194);
+  height:19px;
+  border:1px solid rgb(202, 194, 194);
   border-radius: 7px;
   text-align: center;
   vertical-align: middle;
   padding: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+.reservation-btn .fas {
+  font-size: 14px;
 }
 
 .btn-storereserve {
-  display: inline-block;
   padding-bottom:0 3px;
 }
-
-.store-reverse-info {
-  letter-spacing: -0.5px;
+.detail-pickup {
+  font-weight:bolder;
+  font-size:14px;
+  text-decoration:none;
+}
+.store-reserve-info {
+  letter-spacing: -0.1px;
+  font-size: 14px;
+  font-weight:500;
 }
 
 /*DETAIL-DESCRIPTION*/
@@ -301,6 +342,18 @@
   margin-top:20px;
   margin-bottom:20px;
   letter-spacing: -0.5px;
+  vertical-align: center;
+}
+
+.detail-desc-title {
+  font-size:14px;
+  font-weight:bolder;
+}
+
+.detail-desc-text {
+  font-size: 13px;
+  letter-spacing: -1px;
+  line-height: 1.6;
 }
 
 .detail-gray{
@@ -315,11 +368,26 @@
   text-decoration: underline;
 }
 
-.detail-right {
+.detail-plus-right {
   display: inline-block;
+  float:right;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.detail-right {
   float:right;
 }
 
-.detail-arrow {
-  margin:0px 10px;
+.detail-right .far {
+  font-size: 15px;
 }
+
+.detail-right .fas {
+  font-size:15px;
+}
+
+.detail-arrow {
+  margin:0px 15px;
+}
+
