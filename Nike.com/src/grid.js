@@ -22,7 +22,7 @@ new gridjs.Grid({
       name: '총 금액',
       data: null,
       formatter: (_, row) =>
-        `$${(row.cells[3].data + row.cells[7].data).toLocaleString()} 원`,
+        `$${(row.cells[4].data + row.cells[8].data).toLocaleString()} 원`,
     },
   ],
   pagination: {
@@ -41,7 +41,7 @@ new gridjs.Grid({
       ' ',
       '1',
       149000,
-      Array(9)
+      Array(10)
         .fill()
         .map((x) => [
           Math.round(Math.random() * 100000),
