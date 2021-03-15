@@ -193,7 +193,7 @@
     line-height: 23px;
     display: inline-block;
 }
-.to_be_released {
+.ecoFriendly {
     display: inline-block;
     width: 208px;
     color: #AA8375;
@@ -217,6 +217,7 @@
 }
 .category-content-detail {
     margin-top: 10px;
+    line-height: 20px;
 }
 .content-sort {
     width: 205px;
