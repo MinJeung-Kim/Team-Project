@@ -89,6 +89,8 @@
       $("#footer").load("footer.html"); 
     });
     </script> 
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />    
   </head>
   <body>
     <div class="body__container">  
@@ -149,7 +151,7 @@
                   <option value="20">20건씩보기</option>  
                 </select>
               </div>
-              
+              <div id="wrapper"></div>
               <p class="gradeWrap">
                 <span class="gradeTitle">[ 등급 조건 및 혜택 ]</span><br/>
                 <span class="gradeSubTitle">FAMILY</span> 가입즉시, 1%적립, 무료배송 쿠폰1매 발행<br/>
@@ -161,6 +163,19 @@
           </div> <!-- dashboard-main-->
       </section>
     </div>
+    <script>
+      const grid = new gridjs.Grid({
+      columns: ['No', '이름', '등급', '아이디', '주문번호', '성별', '유형', '관리'],
+      sort: true,
+      data: [
+        ['10', 'bom', 'VIP', 'bmbm1', '20200321-00000662', '여', '외국인', '수정   삭제'],
+        ['09', '김민정', 'GOLD', 'mj114', '20200321-00000443', '여', '개인', '수정   삭제'],
+        ['07', '통붕이', 'FAMILY', 'tb991', '', '남', '개인', '수정   삭제'],
+        ['07', '김예담', '비회원', '', '20200311-00000162', '여', '비회원', '수정   삭제'],
+        ['06', '박서윤', 'SILVER', 'sysy66', '20200221-00000612', '여', '휴면', '수정   삭제']
+      ]
+    }).render(document.getElementById("wrapper"));
+    </script>
 </body>
 </html>
     
