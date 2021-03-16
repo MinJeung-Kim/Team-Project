@@ -173,7 +173,11 @@
     width: 100%;
     height: auto;
     padding: 10px;
-
+    display: block;
+}
+.appending-img a{
+    max-width: 200px;
+    display: block;
 }
 .review-img img {
     max-width: 100%;
