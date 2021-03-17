@@ -18,13 +18,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/categorypage.css" />
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/orderMng.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <script defer src="src/dashboard.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/orderMng.css" />
+    <link rel="stylesheet" href="css/categorypage.css" />
+
+    <script defer src="src/order.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -42,11 +42,12 @@
       rel="stylesheet"
     />
 
-    <script defer src="src/grid.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
         $('#header').load('header.html');
         $('#footer').load('footer.html');
+        $('#admin-menu').load('admin-menu-common.html');
       });
     </script>
   </head>
@@ -62,33 +63,7 @@
             </div>
           </div>
           <div class="dashboard-main">
-            <div class="dashboard-menu">
-              <ul class="dashboard-menu-list">
-                <li>
-                  <span class="dash-icon"
-                    ><i class="fas fa-chart-line"></i></span
-                  ><a href="#">대시보드</a>
-                </li>
-                <li>
-                  <span class="dash-icon"
-                    ><i class="fas fa-dollar-sign"></i></span
-                  ><a href="#">상품관리</a>
-                </li>
-                <li>
-                  <span class="dash-icon"
-                    ><i class="fas fa-shopping-basket"></i></span
-                  ><a href="#">주문관리</a>
-                </li>
-                <li>
-                  <span class="dash-icon"><i class="fab fa-intercom"></i></span
-                  ><a href="#">고객관리</a>
-                </li>
-                <li>
-                  <span class="dash-icon"><i class="fas fa-headset"></i></span
-                  ><a href="#">게시판관리</a>
-                </li>
-              </ul>
-            </div>
+            <div id="admin-menu"></div>
             <div class="dashboard-main-right">
               <ul class="order-status">
                 <li>
