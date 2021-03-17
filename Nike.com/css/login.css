@@ -1,6 +1,4 @@
-.login_body {
-    position:fixed;
-}
+
 .modal_back {
     background: black;
     opacity: 0.4;
@@ -8,6 +6,7 @@
     height: 100%;
     position: absolute;
     z-index: 9998;
+    display: none;
 }
 .modal {
     position: absolute;
@@ -19,7 +18,7 @@
     background: white;
     border-radius: 4px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
-    display: block;
+    display: none;
     z-index: 9999;
     left: 50%;
     margin-left: -240px;
