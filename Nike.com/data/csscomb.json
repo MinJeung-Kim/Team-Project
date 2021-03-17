@@ -13,7 +13,7 @@
     "leading-zero": false,
     "quotes": "single",
     "remove-empty-rulesets": true,
-    "space-after-colon": "",
+    "space-after-colon": " ",
     "space-after-combinator": " ",
     "space-after-opening-brace": "\n",
     "space-after-selector-delimiter": "\n",
