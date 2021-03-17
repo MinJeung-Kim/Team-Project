@@ -64,7 +64,6 @@
     margin-top: 20px;
 }
 .review_gage-wrap {
-    position: relative;
     height: 142px;
     margin-top:80px;
     
@@ -84,10 +83,10 @@
 }
 .value-gage {
     border-radius: 2px;
-    border: 2px solid #E5E5E5;
+    border: 1px solid #E5E5E5;
     background: #e5e5e5;
     width: 100%;
-    
+    position: relative;
 }
 .value-dot {
     width: 8px;
@@ -95,6 +94,7 @@
     border-radius: 50%;
     background: black;
     position: absolute;
+    top: -3.5px;
     
 }
 .value-box {
@@ -195,8 +195,8 @@
 .customer_gage-title {
     font-size: 12px;
     font-weight: 700;
-    display: block;
-    text-align: left;
+    margin-left: 10px;
+    
 }
 .customer_value-box{
     width: 187px;
@@ -208,6 +208,7 @@
     border: 2px solid #E5E5E5;
     background: #e5e5e5;
     width: 100%;
+    position: relative;
 }
 .customer_value-dot{
     width: 8px;
@@ -215,7 +216,7 @@
     border-radius: 50%;
     background: black;
     position: absolute;
-    
+    top: -4.5px;
 }
 .customer_value-txtLeft {
     color: gray;
