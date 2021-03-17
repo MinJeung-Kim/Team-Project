@@ -3,13 +3,17 @@
   margin-top: 35px;
 }
 
-.detail-product {
+.detail-product
+{
   position: relative;
-  max-width: 991px;
+
   width: calc(100% - 449px);
+  max-width: 991px;
   padding: 0 44px 0 54px;
+
   border: 3px solid white;
 }
+
 
 .detail-product-list {
   display: flex;
@@ -21,10 +25,11 @@
 
 }
 
-.detail-product-list li img {
+.detail-product-list li img
+{
   width: 98%;
-  padding-left: 5px;;
   padding-bottom: 5px;
+  padding-left: 5px;;
 }
 
 /*  CONTENTS-GRID-DETAIL */
@@ -41,35 +46,49 @@
   text-align: left;
 }
 
-.detail-headline {
+.detail-headline
+{
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: -1px;
+
   margin-bottom: 0;
+
+  letter-spacing: -1px;
 }
 
-.detail-text {
-  color: #333;
-  font-weight: 400;
+.detail-text
+{
   font-size: 16px;
-  letter-spacing: -1px;
+  font-weight: 400;
+
   margin-bottom: 0;
+
+  letter-spacing: -1px;
+
+  color: #333;
 }
 
-.detail-price {
-  color: #8d8d8d;
-  font-weight: 400;
+.detail-price
+{
   font-size: 13px;
+  font-weight: 400;
+
   letter-spacing: -1px;
+
+  color: #8d8d8d;
 }
 
 /*DETSIL-PRODUCT_INFO*/
-.detail-product-info {
-  position:relative;
+.detail-product-info
+{
+  position: relative;
+
   width: 425px;
   padding: 0 30px 0 20px;
+
   border: 3px solid white;
 }
+
 
 .detail-info-top {
   display: block;
@@ -77,48 +96,67 @@
 }
 
 /*PRODUCT-NAME*/
-.title-wrap {
-  width:55%;
-  margin: 5px 10px 40px 10px;
+.title-wrap
+{
   font-size: 27px;
   font-weight: bold;
   line-height: 120%;
+
+  width: 55%;
+  margin: 5px 10px 40px 10px;
+
   letter-spacing: -1px;
 }
 
-.detail-primary-text {
+.detail-primary-text
+{
   font-size: 14px;
   font-weight: 650;
-  letter-spacing: -0.5px;
   line-height: 1.6;
+
   margin-bottom: 20px;
+
+  letter-spacing: -.5px;
 }
 
-.detail-subtitle-text {
+
+.detail-subtitle-text
+{
   font-size: 15px;
-  color:rgb(80, 71, 71);
   font-weight: 550;
-  letter-spacing: -1px;
   line-height: 2.0;
+
   margin-bottom: 30px;
+
+  letter-spacing: -1px;
+
+  color: rgb(80, 71, 71);
 }
 
-.detail-price-text {
+.detail-price-text
+{
   font-size: 17px;
   font-weight: 700;
-  letter-spacing: -0.1px;
   line-height: 1.6;
+
+  letter-spacing: -.1px;
 }
 
-.detail-subtitle-left {
-  display: inline-block;
-  text-align: left;
+
+.detail-subtitle-left
+{
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.5px;
   line-height: 1.6;
+
+  display: inline-block;
+
   margin-bottom: 20px;
+
+  text-align: left;
+  letter-spacing: -.5px;
 }
+
 
 .detail-subtitle-right {
   float:right;
@@ -128,51 +166,71 @@
   margin:5px 10px;
 }
 
-.size-guide {
+.size-guide
+{
   font-size: 13px;
   font-weight: 660;
-  letter-spacing: -1px;
   line-height: 1.6;
+
   margin-bottom: 30px;
-  color:gray;
+
   vertical-align: baseline;
+  letter-spacing: -1px;
+
+  color: gray;
 }
+
 
 /*OPTION LIST*/
 .detail-product-option {
   position:relative;
 }
-.opt-list {
-  width:100%;
-  display:flex;
+.opt-list
+{
+  display: flex;
   flex-wrap: wrap;
+
+  width: 100%;
   margin-bottom: 15px;
+
   vertical-align: baseline;
 }
 
-.input-radio {
+
+.input-radio
+{
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: calc(19.5% - 19px);
   height: 35px;
-  border:1px solid rgb(202, 194, 194);
-  border-radius:6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding:5px;
-  background-color:white;
-  color:black;
+  margin: 2px 3px;
+  padding: 5px;
+
   text-align: center;
   vertical-align: middle;
-  margin: 2px 3px;
+
+  color: black;
+  border: 1px solid rgb(202, 194, 194);
+  border-radius: 6px;
+  background-color: white;
 }
 
-.radio-text{
+.input-radio:hover {
+  border:1.5px solid black;
+}
+.radio-text
+{
   font-size: 15px;
   font-weight: 525;
-  letter-spacing: -1px;
   line-height: 1.6;
+
+  letter-spacing: -1px;
 }
+
 
 .notify-alert {
   margin-top:10px;
@@ -188,11 +246,14 @@
 
 
 /*QUANTITY*/
-.qty {
-  font-size:15px;
+.qty
+{
+  font-size: 15px;
   font-weight: 900;
-  margin:8px 0px;
+
+  margin: 8px 0;
 }
+
 .btn-qty > * {
   float:left;
 }
@@ -209,26 +270,34 @@
   border:0;
 }
 
-.btn-qty .label {
-  width:50px;
-  height:40px;
-  padding:6px 5px;
-  margin-left: 10px;
-  margin-right: 8px;
+.btn-qty .label
+{
   font-size: 14px;
-  text-align: center;
-  outline: none;
+
   box-sizing: border-box;
+  width: 50px;
+  height: 40px;
+  margin-right: 8px;
+  margin-left: 10px;
+  padding: 6px 5px;
+
+  text-align: center;
+
+  outline: none;
 }
 
-.btn-qty button {
-  outline:none;
-  border: none;
-  padding:0px;
-  background-color: white;
-  margin-left: 10px;
+
+.btn-qty button
+{
   margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+
+  border: none;
+  outline: none;
+  background-color: white;
 }
+
 
 button .fas {
   font-size: 14px;
@@ -239,86 +308,124 @@ button .fas {
   margin-top:10px;
 }
 
-.buy {
-  height:55px;
-  border:1px solid black;
+.buy
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 55px;
+  margin-bottom: 10px;
+
+  border: 1px solid black;
   border-radius: 50px;
   background-color: black;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.buy a {
-  color:white;
-  font-weight:bold;
-  font-size:15px;
-  text-decoration: none;
 }
 
-.shopwish {
+.buy:hover {
+  background-color: rgb(122, 116, 116);
+}
+
+.buy a
+{
+  font-size: 15px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.shopwish
+{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
   margin-bottom: 20px;
 }
-.shopbasket {
-  width:47%;
-  height:55px;
-  border:1px solid black;
-  border-radius: 50px;
-  background-color:white;
+
+.shopbasket
+{
   display: flex;
-  justify-content: center;
   align-items: center;
-}
+  justify-content: center;
 
-.shopbasket a {
-  color:black;
-  font-weight:bold;
-  font-size:15px;
-  text-decoration:none;
-}
+  width: 47%;
+  height: 55px;
 
-.wishlist {
-  width:47%;
-  height:55px;
-  border:1px solid black;
+  border: 1px solid black;
   border-radius: 50px;
-  background-color:white;
-  /* padding:24px 50px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
 }
 
-.wishlist a {
-  color:black;
-  font-weight:bold;
-  font-size:15px;
-  text-decoration:none;
+.shopbasket a
+{
+  font-size: 15px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  color: black;
 }
+
+
+.wishlist
+{
+/* padding:24px 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 47%;
+  height: 55px;
+
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.wishlist a
+{
+  font-size: 15px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  color: black;
+}
+
 .wishlist .far{
   font-size: 14px;
   padding:0 5px;
 }
 
+.shopbasket:hover{
+  border:1.5px solid  rgb(122, 116, 116);
+}
+.wishlist:hover {
+  border:1.5px solid  rgb(122, 116, 116);
+}
 /*STORE-REVERSE-WRAP*/
 .store-reverse-wrap {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.reservation-btn {
-  width:92%;
-  height:19px;
-  border:1px solid rgb(202, 194, 194);
-  border-radius: 7px;
+.reservation-btn
+{
+  width: 92%;
+  height: 19px;
+  margin-bottom: 20px;
+  padding: 15px;
+
   text-align: center;
   vertical-align: middle;
-  padding: 15px;
-  margin-bottom: 20px;
+
+  border: 1px solid rgb(202, 194, 194);
+  border-radius: 7px;
 }
+
 .reservation-btn .fas {
   font-size: 14px;
 }
@@ -338,12 +445,15 @@ button .fas {
 }
 
 /*DETAIL-DESCRIPTION*/
-.detail-description {
-  margin-top:20px;
-  margin-bottom:20px;
-  letter-spacing: -0.5px;
+.detail-description
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
   vertical-align: center;
+  letter-spacing: -.5px;
 }
+
 
 .detail-desc-title {
   font-size:14px;
@@ -368,11 +478,13 @@ button .fas {
   text-decoration: underline;
 }
 
-.detail-plus-right {
-  display: inline-block;
-  float:right;
+.detail-plus-right
+{
   font-size: 11px;
   font-weight: bold;
+
+  display: inline-block;
+  float: right;
 }
 
 .detail-right {
@@ -391,3 +503,29 @@ button .fas {
   margin:0px 15px;
 }
 
+/*SCROLL*/
+#myBtn
+{
+  font-size: 18px;
+
+  position: fixed;
+  z-index: 99;
+  right: 30px;
+  bottom: 20px;
+
+  display: none;
+
+  padding: 15px;
+
+  cursor: pointer;
+
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: red;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}

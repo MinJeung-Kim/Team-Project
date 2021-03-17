@@ -85,6 +85,7 @@
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="scroll-arrow.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
@@ -304,6 +305,11 @@
                     <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
                     <!-- 아래방향 화살표 아이콘 넣기 -->
                   </div>
+                </div>
+
+                <!-- 스크롤시 화살표  -->
+                <div>
+                  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
                 </div>
               </div>
             </div>
