@@ -1,7 +1,7 @@
 .order-status
 {
   display:flex;
-  justify-content:space-evenly;
+  justify-content:center;
 }
 
 .order-status li
