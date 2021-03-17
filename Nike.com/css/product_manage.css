@@ -31,66 +31,92 @@
     padding: 0 20px;    
 }
 .dash-icon .fas,
-.dash-icon .fab {
-    font-size: 18px;
-    padding: 5px;
+.dash-icon .fab
+{
+  font-size: 18px;
+
+  padding: 5px;
 }
+
 
 .prdList-title {
    padding-bottom: 30px;
 }
-.prd-txt {
-   font-family: 'Noto Sans KR', sans-serif;
-   font-size: 25px;
-   font-weight: 500;
-   letter-spacing: 2px;
+.prd-txt
+{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
 }
 
-.prd-search-wrap {
-  display:flex;
-  justify-content: center;
-  align-items: center;
+
+.prd-search-wrap
+{
   font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-bottom: 15px;
 }
+
 /* .prd-search{
   display: inline-block;
 } */
 .prd-search-bold {
   font-weight: bold;
 }
-.prd-count-wrap {
-  margin-bottom: 15px;
+.prd-count-wrap
+{
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
 }
-.selectPrd {
-  background-color:  rgb(93, 176, 209);
-  color: white;
+
+.selectPrd
+{
   height: 25px;
+
+  color: white;
+  background-color: rgb(93, 176, 209);
 }
-.searchBox {
+
+.searchBox
+{
   width: 150px;
-  border: 2px solid rgb(93, 176, 209);
   height: 23px;
+
+  border: 2px solid rgb(93, 176, 209);
 }
-.srhBtnWrap {
+
+.srhBtnWrap
+{
   position: relative;
-  right: 25px;
   top: 1px;
+  right: 25px;
 }
+
 .searchBtn {
   font-size: 15px;
 }
-.prdTotal {
-  padding-top: 30px;
-  color: #5C5B5B;
+.prdTotal
+{
   font-size: 14px;
+
+  padding-top: 30px;
+
+  color: #5c5b5b;
 }
-.searchLimit {
+
+.searchLimit
+{
+  height: 100%;
   margin-top: 10px;
-  height:100%;
 }
 
 .prd-listTable {
@@ -115,16 +141,19 @@ table, th, td {
 .nothing {
   padding:3px 0;
 }
-.prd-rgs-button {
-}
-.prd-register {
-  border:2px solid rgb(93, 176, 209);
-  border-radius: 50px;
-  width: 50px;
-  height: 22px;
-  line-height: 15px;
-  text-align: center;
+.prd-register
+{
   font-size: 14px;
   font-weight: bold;
+  line-height: 15px;
+
   float: right;
+
+  width: 50px;
+  height: 22px;
+
+  text-align: center;
+
+  border: 2px solid rgb(93, 176, 209);
+  border-radius: 50px;
 }

@@ -81,8 +81,19 @@
       crossorigin="anonymous"
     ></script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
-    <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+     <!-- Grid.js -->
+     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+     <script src="https://unpkg.com/gridjs-selection/dist/gridjs-selection.production.min.js"></script>
+ 
+     <link
+       href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+       rel="stylesheet"
+     />
+ 
+     <script defer src="src/grid.js"></script>
+     
     <script> 
     $(function(){
       $("#header").load("header.html"); 
