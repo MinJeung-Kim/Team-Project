@@ -74,7 +74,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/customer.css" />  
-    <link rel="stylesheet" href="css/admin-cs-detail.css" />
+    <link rel="stylesheet" href="css/customer-detail.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
     <script
@@ -98,9 +98,82 @@
     <div class="body__container">  
       <div id="header"></div>
       <div id="contents"></div>
-      <div class="cs-modal-wrap">
-        <div class="cs-modal">
+      <div class="modalWrap">
+        <div class="csModal">
+          <div class="ModalHeader">
+            <span class="csRegister">고객 등록</span>
             <a class="cs-closeBtn">&times;</a>
+          </div>
+          <form name="registerForm" id="registerForm" method="post">
+            <table class="registerTable">
+              <tr class="regRow">
+                <td>이름</td>
+                <td colspan="2"><input type="text" name="regName"></td>
+                <td>ID(이메일)</td>
+                <td colspan="2"><input type="text" name="regID" width="100px"></td>
+
+              </tr>
+              <tr class="regRow">
+                <td>비밀번호</td>
+                <td colspan="2"><input type="text" name="regPw"></td>
+                <td>전화번호</td>
+                <td colspan="4"><input type="text" name="regTel"></td>
+                <td>성별
+                  <select name="gender">
+                    <option value="man">남</option>
+                    <option value="woman">여</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td rowspan="2">주소</td>
+                <td>
+                  <input type="text" name="regPost" placeholder="우편번호">
+                  <input type="button" name="searchPost" value="우편번호 찾기"/>
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td>
+                <input type="text" name="regAddr" placeholder="상세주소">
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td>등급</td>
+                <td>
+                  <select name="grade">
+                    <option value="10">FAMILY</option>
+                    <option value="20">SILVER</option>
+                    <option value="30">GOLD</option>
+                    <option value="40">VIP</option>
+                    <option value="50">비회원</option>
+                  </select>
+                </td>
+                <td colspan="2">상태</td>
+                <td>
+                  <select name="status">
+                    <option value="10">정상</option>
+                    <option value="20">휴면</option>
+                    <option value="30">탈퇴</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td>가입날짜</td>
+                <td colspan="2"><input type="text" name="registerDate"></td>
+                <td>수정날짜</td>
+                <td colspan="2"><input type="text" name="updateDate"></td>
+              </tr>
+              <tr class="regRow">
+                <td>메모</td>
+                <td colspan="5">
+                  <textarea id="memo" name="memo" cols="40" rows="10"></textarea>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </form>
         </div>
     </div>
   </body>
