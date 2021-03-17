@@ -24,6 +24,7 @@
   min-height: 320px;
   text-align: center;
   margin: 30px auto 0;
+  margin-bottom: 100px; 
   padding-top: 80px;
   border-top: 1px solid #dedfda;
   border-bottom: 1px solid #dedfda;
@@ -44,4 +45,124 @@
   font-size: 14px;
   padding: 13px 30px;
   border-radius: 3px;
+  color: #fff;
+  background: #111;
+}
+
+
+
+/* IN CART */
+.cart-order{
+  display: flex;
+  justify-content: center; 
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+
+.order-status{ 
+  width: 60%;
+}
+
+.order-status > li{ 
+      border-top: 1px solid #dedfda;
+      padding: 20px 0;
+      margin-right: 50px;
+}
+
+.underline{
+  text-decoration: underline;
+}
+ 
+.product-list{
+  display: flex;
+  justify-content: space-between; 
+  border-bottom: 1px solid #dedfda;
+}
+
+.product-wrap{
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.product-wrap img{
+  width: 110px;
+}
+
+.product-option{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orange{
+  color: #fb5302;
+}
+
+.order-price{
+  width: 384px;
+}
+
+.order-price-title{
+  padding: 20px 10px;
+  font-weight: 700;
+  background-color: #e5e5e5;
+}
+
+.order-price-info{
+  padding: 20px 10px;
+  border: 1px solid #dedfda;
+  margin-bottom: 20px;
+}
+
+.order-price-info li{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px ;
+}
+
+.order-total-price{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.order-btn { 
+    background-color: #fb5302;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 16px 50px; 
+    border-radius: 2px;
+    margin-top: 5px; 
+    display: block;
+    text-align: center;
+}
+
+.promo-box{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px
+}
+
+.promo,
+.promo-btn{
+  border: 1px solid #e5e5e5;
+  padding: 9px 12px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+}
+
+.promo-btn{
+  background-color: transparent;
+  font-size: 15px; 
+    cursor: pointer;
+    width: 100px;
+}
+
+.promo-title{
+  padding-left: 10px;
+    font-size: 12px;
+    color: #999;
 }

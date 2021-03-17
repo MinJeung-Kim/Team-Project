@@ -10,11 +10,11 @@
     width: 380px;
     height: 75.8px;
 }
-.ATitle {
+.join_Title {
     width: 380px;
     height: 24px;
 }
-.title{
+.join_title-txt{
     text-align: center;
     font-size: 24px;
     font-weight: 500;
@@ -22,7 +22,7 @@
     margin-bottom: 15px;
     font-weight: 700;
 }
-.description {
+.join_description {
     text-align: center;
     margin-top: 20px;
     color: gray;
@@ -37,17 +37,17 @@
     position: relative;
     margin-top: 30px;
 }
-.social {
+.join_social {
     width: 380px;
     height: 100px;
 }
-.Akakao {
+.join_Akakao {
     width: 387px;
     height: 38px;
     background-color: yellow;
     margin: 0px 0px 10px;
 }
-.txt {
+.join_txt {
     font-size: 15px;
     width: 378px;
     height: 24.8px;
@@ -56,7 +56,7 @@
     text-align: center;
     display: inline-block;
 }
-.icon {
+.join_icon {
     width: 24px;
     height: 24px;
     position: relative;
@@ -65,13 +65,13 @@
     display: inline-block;
     vertical-align: middle;
 }
-.Afacebook {
+.join_Afacebook {
     width: 387px;
     height: 38px;
     position: relative;
     background-color: #21538a;
 }
-.txt2 {
+.join_txt2 {
     font-size: 15px;
     width: 378px;
     height: 24.8px;
@@ -81,23 +81,23 @@
     display: inline-block;
     color: white;
 }
-.icon2 {
+.join_icon2 {
     width: 24px;
     height: 24px;
     position: relative;
     top: 11px;
-    left: 23px;
+    left: 15px;
     display: inline-block;
     vertical-align: middle;
 }
-.h-line {
+.join_h-line {
     width: 387px;
     border-top:gray solid;
     text-align: center;
     position: relative;
     margin-top: 30px;
 }
-.h-txt {
+.join_h-txt {
     background-color: white;
     position: relative;
     top: -10px;
@@ -106,7 +106,7 @@
     width: 70px;
     height: 20px;
 }
-#id {
+#join_id {
     border: 1px solid;
     border-color:#cfcaca;
     width: 100%;
@@ -115,7 +115,7 @@
     margin-top: 35px;
     font-weight: 700;
 }
-#password {
+#join_password {
     border: 1px solid;
     border-color:#cfcaca;
     width: 100%;
@@ -123,7 +123,7 @@
     margin-bottom: 35px;
     font-weight: 700;
 }
-#repass {
+#join_repass {
     border: 1px solid;
     border-color:#cfcaca;
     width: 100%;
@@ -131,7 +131,7 @@
     margin-bottom: 35px;
     font-weight: 700;
 }
-#name {
+#join_name {
     border: 1px solid;
     border-color:#cfcaca;
     width: 100%;
@@ -139,7 +139,7 @@
     margin-bottom: 35px;
     font-weight: 700;
 }
-#phone {
+#join_phone {
     border: 1px solid;
     border-color:#cfcaca;
     width: 100%;
@@ -147,15 +147,15 @@
     margin-bottom: 35px;
     font-weight: 700;
 }
-.agree {
+.join_agree {
     width: 380px;
     height: 250px;
 }
-.agree-top {
+.join_agree-top {
     width: 100%;
     height: 20px;
 }
-.agree-title {
+.join_agree-title {
     width: 190px;
     margin: 30px 0px 0px;
     padding: 0px 0px 8px;
@@ -163,7 +163,7 @@
     font-size: 11px;
     font-weight: 700;
 }
-.agree-allview {
+.join_agree-allview {
     float: left;
     width: 190px;
     margin: 30px 0px 0px;
@@ -171,7 +171,7 @@
     text-align: right;
     font-size: 11px;
 }
-.agree-scroll {
+.join_agree-scroll {
     overflow-y: scroll;
     height: 110px;
     padding: 15px 8px;
@@ -179,14 +179,16 @@
     font-size: 11px;
     line-height: 1.7;
 }
-label {
+.join_label {
     font-size: 14px;
     cursor: pointer;
 }
-.inputCh {
+.join_inputCh {
     cursor: pointer;
+    width: 15px;
+    height: 16px;
 }
-.pinfo-txt {
+.join_pinfo-txt {
     width: 100%;
     margin: 30px 0px 0px;
     padding: 0px 0px 8px;
@@ -194,7 +196,7 @@ label {
     font-size: 11px;
     font-weight: 700;
 }
-#table {
+#join_table {
     width: 380px;
     height: 324px;
     width: 100%;
@@ -208,7 +210,7 @@ th,td {
     text-align: center;
     border-bottom: 1px solid rgb(199, 197, 197);
 }
-.b {
+.join_b {
     font-weight: bolder;
 }
 thead th {
@@ -216,15 +218,15 @@ thead th {
     color: gray;
     font-weight: 700;
 }
-.pinfo-bottom {
+.join_pinfo-bottom {
     font-size: 11px;
     margin-top: 10px;
     line-height: 1.5;
 }
-.pinfo-check {
+.join_pinfo-check {
     margin-top: 10px;
 }
-#table2 {
+#join_table2 {
     width: 380px;
     height: 100px;
     width: 100%;
@@ -232,12 +234,12 @@ thead th {
     border-collapse: collapse;
     
 }
-.pinfo2 {
+.join_pinfo2 {
     width: 100%;
     margin-top: 30px;
     height: 200px;
 }
-.pinfo2-txt {
+.join_pinfo2-txt {
     width: 100%;
     margin: 30px 0px 0px;
     padding: 0px 0px 8px;
@@ -245,21 +247,21 @@ thead th {
     font-size: 11px;
     font-weight: 700;
 }
-.pinfo2-bottom {
+.join_pinfo2-bottom {
     margin-top: 0px;
 }
-.register-terms {
+.join_register-terms {
     margin-top: 35px;
     font-size: 11px;
     line-height: 3;
 }
-.term3 {
+.join_term3 {
     font-size: 14px;
     text-align: center;
     font-weight: 500;
     padding: 20px 0px;
 }
-button {
+.join_button {
     width: 380px;
     height: 48px;
     background-color: black;
@@ -268,10 +270,10 @@ button {
     cursor: pointer;
     border: 1px solid black;
 }
-button:hover {
+.join_button:hover {
     background-color: rgb(63, 60, 60);
 }
-.Inlabel {
+#join_Inlabel,#join_Inlabel2 {
     font-size: 12px;
     color: rgb(199, 197, 197);
     text-decoration: underline;
