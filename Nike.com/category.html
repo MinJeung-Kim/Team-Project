@@ -82,6 +82,7 @@
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="src/category.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
@@ -121,7 +122,8 @@
                     <ul class="navi_inner_list">
                         <li class="ckbox_wrap">
                             <span class="input-checkbox" 
-                            onclick="location.href='category-w.html'">여성</span>
+                            onclick="menuClick()">여성</span>
+                            <!-- 여성 클릭하면 menuClick() 으로 이동 -->
                         </li>
                         <li class="ckbox_wrap"><span class="input-checkbox">남성</span></li>
                         <li class="ckbox_wrap"><span class="input-checkbox">여아</span></li>
@@ -243,355 +245,354 @@
         </div>
         <!-- right contents -->
         <div class="right-content-wrap">
-           <ul class="category-content">
+                <ul class="category-content">
+                    <li>
+                        <a href="#"><img src="img/img.category/000.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="to_be_released">출시 예정</div>
+                                <div class="category-content-info">나이키 SB 줌 나이키 블레이저 미드 엣지</div>
+                                <div class="ct-content-price">119,000원</div>
+                            </div>
+                                <div class="content-sort">성인공용 신발 액션스포츠</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
                 <li>
-                    <a href="#"><img src="img/img.category/000.jpg" class="category-content-img"></a>
+                    <a href="#"><img src="img/img.category/00.jpg" class="category-content-img"></a>
                     <figcaption class="category-content-detail">
                         <div class="category-content-price">
-                            <div class="to_be_released">출시 예정</div>
-                            <div class="category-content-info">나이키 SB 줌 나이키 블레이저 미드 엣지</div>
-                            <div class="ct-content-price">119,000원</div>
+                                <div class="category-content-info">에어 조던 35 WIP</div>
+                                <div class="ct-content-price">209,000원</div>
                         </div>
-                            <div class="content-sort">성인공용 신발 액션스포츠</div>
-                            <div class="content-color">1 컬러</div>
+                                <div class="content-sort">남성 신발 농구</div>
+                                <div class="content-color">1 컬러</div>
                     </figcaption>
-                </li>
-               <li>
-                   <a href="#"><img src="img/img.category/00.jpg" class="category-content-img"></a>
-                   <figcaption class="category-content-detail">
-                       <div class="category-content-price">
-                            <div class="category-content-info">에어 조던 35 WIP</div>
-                            <div class="ct-content-price">209,000원</div>
-                       </div>
-                            <div class="content-sort">남성 신발 농구</div>
-                            <div class="content-color">1 컬러</div>
-                   </figcaption>
-                </li>
-                <li>
-                    <a href="#"><img src="img/img.category/01.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어 포스 1 '07 스티치</div>
-                            <div class="ct-content-price">129,000원</div>
-                        </div>
-                            <div class="content-sort">남성 신발 라이프스타일</div>
-                            <div class="content-color">3 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/02rr.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어 베이퍼맥스 EVO</div>
-                            <div class="ct-content-price">249,000원</div>
-                        </div>
-                            <div class="content-sort">남성 신발 라이프스타일</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/03.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="soldout">품절</div>
-                            <div class="category-content-info">나이키 에어맥스 3</div>
-                            <div class="ct-content-price">169,000원</div>
-                            
-                        </div>
-                            <div class="content-sort">남성 신발 라이프스타일</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/05.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">에어 조던 35 PF</div>
-                            <div class="ct-content-price">229,000원</div>
-                        </div>
-                            <div class="content-sort">남성 신발 농구</div>
-                            <div class="content-color">3 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/06.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 헤리티지</div>
-                            <div class="ct-content-price">129,000원</div>
-                        </div>
-                            <div class="content-sort">남성 하프집 후드 재킷 AS</div>
-                            <div class="content-color">3 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/08.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 월드투어</div>
-                            <div class="ct-content-price">99,000원</div>
-                        </div>
-                            <div class="content-sort">남성 프렌치 테리 크루 AS</div>
-                            <div class="content-color">3 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/07.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 월드투어</div>
-                            <div class="ct-content-price">119,000원</div>
-                        </div>
-                            <div class="content-sort">남성 프렌치 테리 풀오버 AS</div>
-                            <div class="content-color">3 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/09.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어 베이퍼맥스 EVO</div>
-                            <div class="ct-content-price">249,000원</div>
-                        </div>
-                            <div class="content-sort">남성 신발 라이프스타일</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/02.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어맥스 97</div>
-                            <div class="ct-content-price">189,000원</div>
-                        </div>
-                            <div class="content-sort">주니어 신발</div>
-                            <div class="content-color">3 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/12.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어맥스 97 EOI</div>
-                            <div class="ct-content-price">199,000원</div>
-                        </div>
-                            <div class="content-sort">주니어 신발</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/13.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어맥스 97 EOI</div>
-                            <div class="ct-content-price">209,000원</div>
-                        </div>
-                            <div class="content-sort">여성 신발 라이프스타일</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/13.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어맥스 97 EOI</div>
-                            <div class="ct-content-price">209,000원</div>
-                        </div>
-                            <div class="content-sort">남성 신발 라이프스타일</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/14.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어맥스 95 EOI</div>
-                            <div class="ct-content-price">209,000원</div>
-                        </div>
-                            <div class="content-sort">남성 신발 라이프스타일</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/14.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 에어맥스 95 EOI</div>
-                            <div class="ct-content-price">209,000원</div>
-                        </div>
-                            <div class="content-sort">여성 신발 라이프스타일</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/15.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 AMD 우븐</div>
-                            <div class="ct-content-price">139,000원</div>
-                        </div>
-                            <div class="content-sort">여성 우븐 재킷 AS</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/16.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 트렌드</div>
-                            <div class="ct-content-price">79,000원</div>
-                        </div>
-                            <div class="content-sort">여성 플리스 후디 AS</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/17.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 월드 투어</div>
-                            <div class="ct-content-price">119,000원</div>
-                        </div>
-                            <div class="content-sort">남성 우븐 재킷 AS</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/18.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 스트라이프</div>
-                            <div class="ct-content-price">119,000원</div>
-                        </div>
-                            <div class="content-sort">남성 프렌치 테리 후디 긴팔 탑 AS</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/19.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 클럽</div>
-                            <div class="ct-content-price">99,000원</div>
-                        </div>
-                            <div class="content-sort">남성 프렌치 테리 후디 긴팔 탑 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/20.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="soldout">품절</div>
-                            <div class="category-content-info">나이키 스포츠웨어 클럽</div>
-                            <div class="ct-content-price">79,000원</div>
-                        </div>
-                            <div class="content-sort">남성 프렌치 테리 조거 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/21.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어</div>
-                            <div class="ct-content-price">59,000원</div>
-                        </div>
-                            <div class="content-sort">남성 롱슬리브 모크넥 티셔츠 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/22.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 맥스 90 A.I.R</div>
-                            <div class="ct-content-price">49,000원</div>
-                        </div>
-                            <div class="content-sort">남성 반팔 티셔츠 AS</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/23.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 A.I.R 모크</div>
-                            <div class="ct-content-price">55,000원</div>
-                        </div>
-                            <div class="content-sort">남성 롱슬리브 티셔츠 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/25.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 팜므</div>
-                            <div class="ct-content-price">99,000원</div>
-                        </div>
-                            <div class="content-sort">여성 프렌치 테리 가디건 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/26.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 플리스</div>
-                            <div class="ct-content-price">75,000원</div>
-                        </div>
-                            <div class="content-sort">여성 팬츠 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/27.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 팜므</div>
-                            <div class="ct-content-price">79,000원</div>
-                        </div>
-                            <div class="content-sort">여성 프렌치 테리 가디건 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/28.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 스포츠웨어 팜므</div>
-                            <div class="ct-content-price">109,000원</div>
-                        </div>
-                            <div class="content-sort">여성 우븐 재킷 AS</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/29.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">나이키 SB 줌 블레이저 미드</div>
-                            <div class="ct-content-price">109,000원</div>
-                        </div>
-                            <div class="content-sort">스케이트보드화</div>
-                            <div class="content-color">1 컬러</div>
-                    </figcaption>
-                 </li>
-                 <li>
-                    <a href="#"><img src="img/img.category/30.jpg" class="category-content-img"></a>
-                    <figcaption class="category-content-detail">
-                        <div class="category-content-price">
-                            <div class="category-content-info">For Members</div>
-                            <div class="ct-content-price">149,000원</div>
-                        </div>
-                            <div class="content-sort">여성 신발 라이프스타일</div>
-                            <div class="content-color">2 컬러</div>
-                    </figcaption>
-                 </li>
-           </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/01.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어 포스 1 '07 스티치</div>
+                                <div class="ct-content-price">129,000원</div>
+                            </div>
+                                <div class="content-sort">남성 신발 라이프스타일</div>
+                                <div class="content-color">3 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/02rr.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어 베이퍼맥스 EVO</div>
+                                <div class="ct-content-price">249,000원</div>
+                            </div>
+                                <div class="content-sort">남성 신발 라이프스타일</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/03.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="soldout">품절</div>
+                                <div class="category-content-info">나이키 에어맥스 3</div>
+                                <div class="ct-content-price">169,000원</div>
+                                
+                            </div>
+                                <div class="content-sort">남성 신발 라이프스타일</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/05.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">에어 조던 35 PF</div>
+                                <div class="ct-content-price">229,000원</div>
+                            </div>
+                                <div class="content-sort">남성 신발 농구</div>
+                                <div class="content-color">3 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/06.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 헤리티지</div>
+                                <div class="ct-content-price">129,000원</div>
+                            </div>
+                                <div class="content-sort">남성 하프집 후드 재킷 AS</div>
+                                <div class="content-color">3 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/08.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 월드투어</div>
+                                <div class="ct-content-price">99,000원</div>
+                            </div>
+                                <div class="content-sort">남성 프렌치 테리 크루 AS</div>
+                                <div class="content-color">3 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/07.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 월드투어</div>
+                                <div class="ct-content-price">119,000원</div>
+                            </div>
+                                <div class="content-sort">남성 프렌치 테리 풀오버 AS</div>
+                                <div class="content-color">3 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/09.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어 베이퍼맥스 EVO</div>
+                                <div class="ct-content-price">249,000원</div>
+                            </div>
+                                <div class="content-sort">남성 신발 라이프스타일</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/02.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어맥스 97</div>
+                                <div class="ct-content-price">189,000원</div>
+                            </div>
+                                <div class="content-sort">주니어 신발</div>
+                                <div class="content-color">3 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/12.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어맥스 97 EOI</div>
+                                <div class="ct-content-price">199,000원</div>
+                            </div>
+                                <div class="content-sort">주니어 신발</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/13.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어맥스 97 EOI</div>
+                                <div class="ct-content-price">209,000원</div>
+                            </div>
+                                <div class="content-sort">여성 신발 라이프스타일</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/13.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어맥스 97 EOI</div>
+                                <div class="ct-content-price">209,000원</div>
+                            </div>
+                                <div class="content-sort">남성 신발 라이프스타일</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/14.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어맥스 95 EOI</div>
+                                <div class="ct-content-price">209,000원</div>
+                            </div>
+                                <div class="content-sort">남성 신발 라이프스타일</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/14.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 에어맥스 95 EOI</div>
+                                <div class="ct-content-price">209,000원</div>
+                            </div>
+                                <div class="content-sort">여성 신발 라이프스타일</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/15.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 AMD 우븐</div>
+                                <div class="ct-content-price">139,000원</div>
+                            </div>
+                                <div class="content-sort">여성 우븐 재킷 AS</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/16.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 트렌드</div>
+                                <div class="ct-content-price">79,000원</div>
+                            </div>
+                                <div class="content-sort">여성 플리스 후디 AS</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/17.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 월드 투어</div>
+                                <div class="ct-content-price">119,000원</div>
+                            </div>
+                                <div class="content-sort">남성 우븐 재킷 AS</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/18.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 스트라이프</div>
+                                <div class="ct-content-price">119,000원</div>
+                            </div>
+                                <div class="content-sort">남성 프렌치 테리 후디 긴팔 탑 AS</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/19.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 클럽</div>
+                                <div class="ct-content-price">99,000원</div>
+                            </div>
+                                <div class="content-sort">남성 프렌치 테리 후디 긴팔 탑 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/20.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="soldout">품절</div>
+                                <div class="category-content-info">나이키 스포츠웨어 클럽</div>
+                                <div class="ct-content-price">79,000원</div>
+                            </div>
+                                <div class="content-sort">남성 프렌치 테리 조거 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/21.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어</div>
+                                <div class="ct-content-price">59,000원</div>
+                            </div>
+                                <div class="content-sort">남성 롱슬리브 모크넥 티셔츠 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/22.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 맥스 90 A.I.R</div>
+                                <div class="ct-content-price">49,000원</div>
+                            </div>
+                                <div class="content-sort">남성 반팔 티셔츠 AS</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/23.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 A.I.R 모크</div>
+                                <div class="ct-content-price">55,000원</div>
+                            </div>
+                                <div class="content-sort">남성 롱슬리브 티셔츠 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/25.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 팜므</div>
+                                <div class="ct-content-price">99,000원</div>
+                            </div>
+                                <div class="content-sort">여성 프렌치 테리 가디건 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/26.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 플리스</div>
+                                <div class="ct-content-price">75,000원</div>
+                            </div>
+                                <div class="content-sort">여성 팬츠 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/27.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 팜므</div>
+                                <div class="ct-content-price">79,000원</div>
+                            </div>
+                                <div class="content-sort">여성 프렌치 테리 가디건 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/28.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 스포츠웨어 팜므</div>
+                                <div class="ct-content-price">109,000원</div>
+                            </div>
+                                <div class="content-sort">여성 우븐 재킷 AS</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/29.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">나이키 SB 줌 블레이저 미드</div>
+                                <div class="ct-content-price">109,000원</div>
+                            </div>
+                                <div class="content-sort">스케이트보드화</div>
+                                <div class="content-color">1 컬러</div>
+                        </figcaption>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/img.category/30.jpg" class="category-content-img"></a>
+                        <figcaption class="category-content-detail">
+                            <div class="category-content-price">
+                                <div class="category-content-info">For Members</div>
+                                <div class="ct-content-price">149,000원</div>
+                            </div>
+                                <div class="content-sort">여성 신발 라이프스타일</div>
+                                <div class="content-color">2 컬러</div>
+                        </figcaption>
+                    </li>
+            </ul>
         </div>
     </div>
-    </body>
-
+</body>
 </html>
