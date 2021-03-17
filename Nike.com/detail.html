@@ -74,62 +74,30 @@
     <link rel="stylesheet" href="css/detail.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://kit.fontawesome.com/22d211cb30.js" 
+      crossorigin="anonymous">
+    </script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="scroll-arrow.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
   </head>
   <body>
     <div class="body__container">
-      <!-- ========== HEADER ========== -->
-      <header class="section header">
-        <div class="inner clearfix">
-          <div class="menu-top">
-            <img class="menu-top__img" src="img/jd_logo.png" alt="" />
-            <ul class="user-menu">
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">멤버 가입</a></li>
-              <li><a href="#">로그인</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <!-- ========== SECTION__HEADER ========== -->
-      <div class="section section__header">
-        <div class="inner clearfix">
-          <div class="gnv">
-            <img
-              class="gnv__img"
-              src="img/nike-logo-on.png"
-              alt=""
-              class="nike-logo"
-            />
-            <ul class="gnv__nav">
-              <li><a href="#">New Releases</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">Kids</a></li>
-              <li><a href="#">Sale</a></li>
-            </ul>
-            <div class="gnv-search">
-              <form class="search-form">
-                <span class="icon search"><i class="fas fa-search"></i></span>
-                <input placeholder="검색" type="text" />
-              </form>
-              <div class="gnv-icons">
-                <span class="icon heart"><i class="far fa-heart"></i></span>
-                <span class="icon cart">
-                  <i class="fas fa-shopping-cart"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
-      <section class="section contents body__container">
+      <section class="section contents">
         <div class="inner clearfix">
           <!-- ========== DETAILS-MAIN ========== -->
           <div class="details-main">
@@ -202,23 +170,23 @@
             </div>
             <div class="detail-product-info">
               <div class="detail-info-top">
-                <div class="detail-subtitle-left detail-primary-text">
-                  <span>성인공용 인조 잔디 축구화 </span>
-                </div>
-                <div class="detail-subtitle-right detail-primary-text">
-                  <span>119,000 원</span>
+                <div class="">
+                  <div class="detail-subtitle-left detail-subtitle-text">
+                    <span>성인공용 인조 잔디 축구화 </span>
+                  </div>
+                  <div class="detail-subtitle-right detail-price-text">
+                    <span>119,000 원</span>
+                  </div>
                 </div>
               </div>
               <h1 class="title-wrap">
                 나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF
               </h1>
               <div class="detail-size">
-                <div class="detail-subtitle-left detail-primary-text">
-                  <span>사이즈 선택</span>
-                </div>
-                <div class="detail-subtitle-right detail-primary-text">
-                  <span class="size-guide">사이즈 가이드</span>
-                </div>
+                <span class="detail-subtitle-left">사이즈 선택</span>
+                <span class="detail-subtitle-right size-guide">사이즈 가이드</span>
+              </div>
+              <div class="detail-product-option">
                 <div class="opt-list radio-text">
                   <span class="input-radio">230</span>
                   <span class="input-radio">235</span>
@@ -238,28 +206,50 @@
                   <span class="input-radio">305</span>
                   <span class="input-radio">310</span>
                 </div>
+              </div>
                 <div class="detail-subtitle-left detail-primary-text notify-alert">
-                  <span>아이콘 추가</span><span>NOTIFY ME 재입고 알림 신청</span>
+                  <span class="notify-icon"><i class="fas fa-comment-dots"></i></span>
+                  <span>NOTIFY ME 입고 알림 신청</span>
                 </div><br>
-                <div class="detail-subtitle-left detail-primary-text notify-alert">
-                  <span>수량</span>
+                <div class="btn-qty detail-primary-text notify-alert">
+                  <span class="qty">수량</span>
+                  <span>
+                    <input name="quantity" class="label" type="text" value="1">
+                    <button><i class="fas fa-minus"></i></button>
+                    <button><i class="fas fa-plus"></i></button>
+                  </span>
                 </div>
                 <hr>
                 <div class="order-wrap">
                   <div class="buy">
                     <a>바로 구매</a>
                   </div>
-                  <div class="shopbasket">
-                    <a>장바구니</a>
-                  </div>
-                  <div class="wishlist">
-                    <a>위시리스트</a>
+                  <div class="shopwish">
+                    <div class="shopbasket">
+                      <a>장바구니</a>
+                    </div>
+                    <div class="wishlist">
+                      <a>위시리스트</a>
+                      <span><i class="far fa-heart"></i></span>
+                      <!-- 클릭시 찬 하트 <i class="fas fa-heart"></i> -->
+                    </div>
                   </div>
                 </div>
                 <hr>
-                <div class="detail-description primary-text">
+                <div class="store-reverse-wrap">
+                  <div class="reservation-btn">
+                      <span><i class="fas fa-house-user"></i></span>
+                      <span class="btn-storereserve detail-pickup">배송보다 빠른, 매장픽업 서비스</span>
+                  </div>
+                  <div>
+                    <span class="store-reserve-info">지금 주문하고, 매장에서 바로 픽업하세요.</span>
+                    <a class="detail-underline detail-right">자세히 보기</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="detail-description detail-desc-text">
                   <p>
-                    <strong class="detail-bold">스피드가 느껴지는 룩. 속도감 있는 경기.</strong>
+                    <strong class="detail-desc-title">스피드가 느껴지는 룩. 속도감 있는 경기.</strong>
                   </p>
                   <br>
                   <p>
@@ -268,168 +258,66 @@
                     독특한 디자인에 최적의 터치와 접지력에 필요한 필수 요소를 결합했습니다.<br><br>
                   </p>
                   <span class="style-color">
-                    현재 컬러 : 화이트/화이트/브라이트 망고<br>
+                    º  현재 컬러 : 화이트/화이트/브라이트 망고<br>
                   </span>
                   <span class="style-code">
-                    스타일 : CV0952-118<br>
+                    º  스타일 : CV0952-118<br>
                   </span>
-                  <a href="#">더보기</a>
+                  <a href="#" class="detail-underline">더보기</a>
                 </div>
                 <hr>
                 <div class="detail-description detail-primary-text">
                   <span>리뷰</span>
-                  <!-- 별 아이콘 넣기 -->
-                  <span class="review-star">
-                    <img src="img/details/icon-star.jpg">
-                    <img src="img/details/icon-star.jpg">
-                    <img src="img/details/icon-star.jpg">
-                    <img src="img/details/icon-star.jpg">
-                    <img src="img/details/icon-star.jpg">
-                  </span>
+                  <!-- 별 이미지 대신 아이콘 넣기 -->
+                  <div class="detail-right">
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
                 </div>
                 <hr>
-                <div class="detail-description detail-primary-text">
-                  <span>배송</span>
-                  <span class="detail-subtitle-right detail-gray">일반 배송 / 오늘 도착</span>
+                <div class="detail-description detail-desc-text">
+                  <span class="detail-primary-text">배송</span>
+                  <div class="detail-right">
+                    <span class="detail-gray detail-bold">일반 배송 / 오늘 도착</span>
+                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                </div>
                   <!-- 아래방향 화살표 아이콘 넣기 -->
                 </div>
                 <hr>
-                <div class="detail-description detail-primary-text">
-                  <span>반품/AS</span>
-                  <span class="detail-subtitle-right detail-gray">온라인 접수 / 매장 접수</span>
-                  <!-- 아래방향 화살표 아이콘 넣기 -->
+                <div class="detail-description detail-desc-text">
+                  <span class="detail-primary-text">반품/AS</span>
+                  <div class="detail-right">
+                    <span class="detail-gray detail-bold">온라인 접수 / 매장 접수</span>
+                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                    <!-- 아래방향 화살표 아이콘 넣기 -->
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- ========== DETAILS-FOOTER ========== -->
-          <div class="details-footer">
-            <div class="contents-grid-detail">
-              <div class="df-title">
-                <h3>Featured Shoes</h3>
-              </div>
-              <div class="contents-detail-row">
-                <div class="grid-row-box detail-wrap">
-                  <div class="content-detail">
-                    <picture class="image-media">
-                      <a href="#">
-                        <img
-                          src="img/210219_hp_p8_bg1.jpg"
-                          alt=""
-                          class="content__img content-row"
-                        />
-                      </a>
-                    </picture>
-                    <figcaption class="content-title detail">
-                      <h4 class="primary-text detail-headline">
-                        나이키 데이브레이크
-                      </h4>
-                      <p class="primary-text detail-text">
-                        여성 신발 라이프스타일
-                      </p>
-                      <p class="primary-text detail-price">119,000원</p>
-                    </figcaption>
-                  </div>
-                  <div class="content-detail">
-                    <picture class="image-media">
-                      <a href="#">
-                        <img
-                          src="img/210219_hp_p8_bg2.jpg"
-                          alt=""
-                          class="content__img content-row"
-                        />
-                      </a>
-                    </picture>
-                    <figcaption class="content-title detail">
-                      <h4 class="primary-text detail-headline">
-                        나이키 에어맥스 97
-                      </h4>
-                      <p class="primary-text detail-text">
-                        남성 신발 라이프스타일
-                      </p>
-                      <p class="primary-text detail-price">199,000원</p>
-                    </figcaption>
-                  </div>
-                  <div class="content-detail">
-                    <picture class="image-media">
-                      <a href="#">
-                        <img
-                          src="img/210219_hp_p8_bg3.jpg"
-                          alt=""
-                          class="content__img content-row"
-                        />
-                      </a>
-                    </picture>
-                    <figcaption class="content-title detail">
-                      <h4 class="primary-text detail-headline">
-                        나이키 코트 레거시
-                      </h4>
-                      <p class="primary-text detail-text">여성 몰</p>
-                      <p class="primary-text detail-price">69,000원</p>
-                    </figcaption>
-                  </div>
+                <!-- 스크롤시 화살표  -->
+                <div>
+                  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ========== FOOTER ========== -->
-      <footer class="section footer">
-        <div class="user-grid">
-          <ul class="gnb-locator">
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">나이키 트레이닝 가이드</a></li>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">멤버 가입</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">고객센터</a></li>
-            <li><a href="#">080-022-0182</a></li>
-            <li><a href="#">주문/결제</a></li>
-            <li><a href="#">배송</a></li>
-            <li><a href="#">주문배송조회</a></li>
-            <li><a href="#">멤버쉽 혜택/서비스</a></li>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">1:1 채팅 문의</a></li>
-            <li><a href="#">1:1 이메일문의</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">ABOUT NIKE</a></li>
-            <li><a href="#">나이키에 대하여</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">SOCIAL</a></li>
-            <li>
-              <a href="#"
-                ><span class="twitter"
-                  ><i class="fab fa-twitter-square"></i></span
-              ></a>
-              <a href="#"
-                ><span class="facebook"
-                  ><i class="fab fa-facebook-square"></i></span
-              ></a>
-              <a href="#"
-                ><span class="youtube"
-                  ><i class="fab fa-youtube-square"></i></span
-              ></a>
-              <a href="#"
-                ><span class="instagram"
-                  ><i class="fab fa-instagram-square"></i></span
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-copy">
-          <a href="">
-            <span><i class="fas fa-map-marker"></i></span>
-            <span>대한민국</span>
-          </a>
-        </div>
-      </footer>
+      
+      <div id="footer"></div>
     </div>
   </body>
 </html>

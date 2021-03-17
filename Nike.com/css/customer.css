@@ -1,53 +1,50 @@
 /* header section */
 .section-category {
     background-color: white;
-    padding: 0 32px;
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1808px;
-    margin: 0 auto;
+    padding: 30px 48px 30px 30px;
+    display: table;
+    width: 93%;
+    table-layout: fixed;
+    /* position: fixed; */
+    z-index: 9999;
+}
+.section-category>.section-title {
+    display: table-cell;
+    font-size: 23px;
+}
+.section-category>.section-control {
+    display: table-cell;
+    width: 20%;
+    position: relative;
+    left: 55px;
 }
 .section-title,.section-control {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 17px;
+    letter-spacing: -1px;
+    font-size: 16px;
 }
-.section-title {
-    font-size: 23px;
-    font-weight: 500;
-}
-.filterBtn-wrap:nth-child(1) {
-    margin-right:30px;
-}
-.filterBtn-wrap {
-    margin-right:10px;
-}
-.filterBtn {
-    margin: 0 5px;
-}   
-.filterBtn:hover {
-    color: #8d8d8d;
-}
-.ifilter,.neworder {
-    font-size: 15px;
+#filter, #neworder {
+    width:30px;
     vertical-align: middle;
+    padding-bottom: 2px;
+    left: -10px;
+    margin-right: 30px;
+}
+#neworder {
+    width: 18px;
 }
 /* 본문 전체 감싸는 영역 */
 .category-wrap {
     padding: 0 30px;
-    display: flex;
-    justify-content: space-around;
-    max-width: 1808px;
-    margin: 0 auto;
 }
 /* 왼쪽 카테고리 네비 */
-.left_navi_emp {
-    width: 240.67px;
-    height: 48px;
+.left_navi_wrap {
+    width: 20%;
+    float: left;
 }
 .left_navi {
-    width: 240.67px;
+    width: 240px;
+    padding-top: 48px;
 }
 .navi_inner,.navi_inner2{
     width: 210px;
@@ -67,39 +64,41 @@
     width: 90%;
 }
 .toparrow {
-    cursor: pointer;
-    font-size: 14px;
-    position: relative;
-    right: 12px;
-    top: 22px;
+    width: 18px;
+    display: inline;
+    height: 18px;
+    margin: 26px 0 0 -15px;
 }
-.input-checkbox,.section-control {
+.navi_inner_list>li>span {
     cursor: pointer;
 }
-.input-checkbox:hover {
+.navi_inner_list>li>span:hover {
     color: #8d8d8d;
 }
-.ckbox_wrap {
+.navi_inner_list>li {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     padding-bottom: 17px;
     vertical-align: middle;
     clear:both;
 } 
-.ckbox_wrap:last-child {
+.navi_inner_list>li:last-child {
     padding: 5px 0 40px 0;
 }
-.navi_color .color-wrap {
+.navi_inner_list>li>.jordan {
+    padding-top: 0;
+}
+.navi_inner2>ul>li {
     float: left;
     width: 33.3%;
     text-align: center;
     line-height: 25px;
     padding-bottom: 20px;
 }
-.color-checkbox {
+.navi_inner2>ul>li>span {
     padding-top: 20px;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     cursor: pointer;
 }
 .color-border {
@@ -163,6 +162,10 @@
     background-color: #c40001;
     border-color: #c40001;
 }
+.silver {
+    background-color: #c4c4c4;
+    border-color: #c4c4c4;
+}
 .white {
     background-color: #ffffff;
     border-color: #807c7c;
@@ -171,43 +174,50 @@
     background-color: #fcc300;
     border-color: #fcc300;
 }
+/* 오른쪽 전체를 감싸는 영역 */
+.right-content-wrap {
+    float: left;
+    width:80%;
+}
 /* 컨텐츠 영역 */
-.category-content {
+.right-content-wrap>ul {
     margin-left: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
 }
-.category-content li {
-    height: 450px;
-    width: 288px;
+.category-content>li {
+    /* float: left;
+    width: 33.3333333333%; */
+    margin-bottom: 150px;
+    height: 300px;
 }
-.category-content-img {
+.category-content>li>a>img {
     width: 288px;
     height: 288px;
 }
-.category-content-price {
+.category-content-detail>div {
     width: 288px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size:16px;
     line-height: 23px;
     display: inline-block;
 }
-.ecoFriendly {
+.category-content-detail>div>.to_be_released {
     display: inline-block;
     width: 208px;
     color: #AA8375;
     font-size: 15px;
     font-weight: 100;
 }
-.category-content-price .soldout {
+.category-content-detail>div>.soldout {
     display: inline-block;
     width: 208px;
     color: #FD4D4D;
     font-size:14px;
     font-weight: lighter;
 }
-.category-content-info {
+.category-content-price>.category-content-info {
     float:left;
     width: 210px;
     cursor: pointer;
@@ -217,9 +227,8 @@
 }
 .category-content-detail {
     margin-top: 10px;
-    line-height: 20px;
 }
-.content-sort {
+.category-content-detail>.content-sort {
     width: 205px;
 }
 .content-sort,.content-color {
