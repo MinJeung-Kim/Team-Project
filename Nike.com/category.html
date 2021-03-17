@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <title>신상품 전체보기 - 나이키</title>
+    <title>신상품 전체보기 - Nike</title>
 
     <!-- 작성자 -->
     <meta name="author" content="Tem Project" />
@@ -67,105 +67,70 @@
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
+      rel="stylesheet"/>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/categorypage.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
+    <link rel="stylesheet" href="css/categorypage.css" />  
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
-</head>
-<body>
-    <!-- ========== HEADER ========== -->
-    <header class="section header">
-        <div class="inner clearfix">
-          <div class="menu-top">
-            <img class="menu-top__img" src="img/jd_logo.png" alt="" />
-            <ul class="user-menu">
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">멤버 가입</a></li>
-              <li><a href="#">로그인</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <!-- ========== SECTION__HEADER ========== -->
-      <div class="section section__header">
-        <div class="inner clearfix">
-          <div class="gnv">
-            <img
-              class="gnv__img"
-              src="img/nike-logo-on.png"
-              alt=""
-              class="nike-logo"
-            />
-            <ul class="gnv__nav">
-              <li><a href="#">New Releases</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">Kids</a></li>
-              <li><a href="#">Sale</a></li>
-            </ul>
-            <div class="gnv-search">
-              <form class="search-form">
-                <span class="icon search"><i class="fas fa-search"></i></span>
-                <input placeholder="검색" type="text" />
-              </form>
-              <div class="gnv-icons">
-                <span class="icon heart"><i class="far fa-heart"></i></span>
-                <span class="icon cart">
-                  <i class="fas fa-shopping-cart"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
+  </head>
+    <body>
       <!-- section category -->
     <div class="section-category">
         <div class="section-title">
-            <a href="#"><h1>신상품 전체보기</h1></a>
+            <div>신상품 전체보기</div>
         </div>
         <div class="section-control">
             <span class="filterBtn">FILTER</span>
             <a><img id="filter" src="img/img.category/filter.png"></a>
-            <span clas="orderBtn">신상품순</span>
+            <span class="filterBtn">신상품순</span>
             <a><img id="neworder" src="img/img.category/arrow.png"></a>
         </div>
     </div>
     <!-- left navi -->
     <div class="category-wrap"> 
         <div class="left_navi_wrap">
+            <div class="left_navi_emp"></div>
             <div class="left_navi">
                 <div class="navi_borderline_top"></div>
                 <div class="navi_inner">
                     <div>
                         <div class="border-top-title">성별</div>
-                        <a><img src="img/img.category/toparrow.png" class="toparrow"></a>
+                        <i class="fas fa-chevron-up"></i>
                     </div>
                     <ul class="navi_inner_list">
-                        <li><span class="input-checkbox">여성</span></li>
-                        <li><span class="input-checkbox">남성</span></li>
-                        <li><span class="input-checkbox">여아</span></li>
-                        <li><span class="input-checkbox">남아</span></li>
-                        <li><span class="input-checkbox">성인공용</span></li>
-                        <li><span class="input-checkbox">+ 더보기</span></li>
+                        <li class="ckbox_wrap">
+                            <span class="input-checkbox" 
+                            onclick="location.href='w.category.html'">여성</span>
+                        </li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">남성</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">여아</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">남아</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">성인공용</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">+ 더보기</span></li>
                     </ul>
                 </div>
                 <div class="navi_inner2">
                     <div>
                         <div class="border-top-title">색상</div>
-                        <a><img src="img/img.category/toparrow.png" class="toparrow"></a>
+                        <i class="fas fa-chevron-up"></i>  
                     </div>
-                    <ul>
+                    <ul class="navi_color">
                         <li>
                             <div class="color-border beige"></div>
                             <span class="color-checkbox">베이지</span>
@@ -235,42 +200,42 @@
                 <div class="navi_inner">
                     <div>
                         <div class="border-top-title">스포츠</div>
-                        <a><img src="img/img.category/toparrow.png" class="toparrow"></a>   
+                        <i class="fas fa-chevron-up"></i>    
                     </div>
                     <ul class="navi_inner_list">
-                        <li><span class="input-checkbox">라이프스타일</span></li>
-                        <li><span class="input-checkbox">러닝</span></li>
-                        <li><span class="input-checkbox">농구</span></li>
-                        <li><span class="input-checkbox">축구</span></li>
-                        <li><span class="input-checkbox">트레이닝&짐</span></li>
-                        <li><span class="input-checkbox">+ 더보기</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">라이프스타일</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">러닝</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">농구</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">축구</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">트레이닝&짐</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">+ 더보기</span></li>
                     </ul>
                 </div>
                 <div class="navi_inner">
                     <div>
                         <div class="border-top-title">브랜드</div>
-                        <a><img src="img/img.category/toparrow.png" class="toparrow"></a>   
+                        <i class="fas fa-chevron-up"></i>  
                     </div>
                     <ul class="navi_inner_list">
-                        <li><span class="input-checkbox">ACG</span></li>
-                        <li><span class="input-checkbox">NikeLab</span></li>
-                        <li><span class="input-checkbox">나이키 스포츠웨어</span></li>
-                        <li><span class="input-checkbox jordan">조던</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">ACG</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">NikeLab</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">나이키 스포츠웨어</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox jordan">조던</span></li>
                     </ul>
                 </div>
                 <div class="navi_inner">
                     <div>
                         <div class="border-top-title">아이콘</div>
-                        <a><img src="img/img.category/toparrow.png" class="toparrow"></a>   
+                        <i class="fas fa-chevron-up"></i>  
                     </div>
                     <ul class="navi_inner_list">
-                        <li><span class="input-checkbox">에어포스1</span></li>
-                        <li><span class="input-checkbox">에어맥스90</span></li>
-                        <li><span class="input-checkbox">블레이저</span></li>
-                        <li><span class="input-checkbox">코르테즈</span></li>
-                        <li><span class="input-checkbox">나이키 덩크</span></li>
-                        <li><span class="input-checkbox">나이키 줌</span></li>
-                        <li><span class="input-checkbox">+ 더보기</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">에어포스1</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">에어맥스90</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">블레이저</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">코르테즈</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">나이키 덩크</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">나이키 줌</span></li>
+                        <li class="ckbox_wrap"><span class="input-checkbox">+ 더보기</span></li>
                     </ul>
                 </div>
             </div>
@@ -626,6 +591,6 @@
            </ul>
         </div>
     </div>
-</body>
+    </body>
 
 </html>

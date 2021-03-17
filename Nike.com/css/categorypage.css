@@ -6,22 +6,26 @@
     width: 93%;
     table-layout: fixed;
     /* position: fixed; */
-    z-index: 9999;
-}
-.section-category>.section-title {
-    display: table-cell;
-    font-size: 23px;
-}
-.section-category>.section-control {
-    display: table-cell;
-    width: 20%;
-    position: relative;
-    left: 55px;
+    /* z-index: 9999; */
 }
 .section-title,.section-control {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -1px;
     font-size: 16px;
+}
+.section-title {
+    display: table-cell;
+    font-size: 23px;
+}
+.section-control {
+    display: table-cell;
+    cursor: pointer;
+    width: 20%;
+    position: relative;
+    left: 55px;
+}
+.filterBtn:hover {
+    color: #8d8d8d;
 }
 #filter, #neworder {
     width:30px;
@@ -42,9 +46,12 @@
     width: 20%;
     float: left;
 }
+.left_navi_emp {
+    width: 240.67px;
+    height: 48px;
+}
 .left_navi {
-    width: 240px;
-    padding-top: 48px;
+    width: 240.67px;
 }
 .navi_inner,.navi_inner2{
     width: 210px;
@@ -63,39 +70,38 @@
     float: left;
     width: 90%;
 }
-.toparrow {
-    width: 18px;
-    display: inline;
-    height: 18px;
-    margin: 26px 0 0 -15px;
+i.fas {
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    right: 12px;
+    top: 22px;
+
 }
-.navi_inner_list>li>span {
+.input-checkbox {
     cursor: pointer;
 }
-.navi_inner_list>li>span:hover {
+.input-checkbox:hover {
     color: #8d8d8d;
 }
-.navi_inner_list>li {
+.ckbox_wrap {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     padding-bottom: 17px;
     vertical-align: middle;
     clear:both;
 } 
-.navi_inner_list>li:last-child {
+.ckbox_wrap:last-child {
     padding: 5px 0 40px 0;
 }
-.navi_inner_list>li>.jordan {
-    padding-top: 0;
-}
-.navi_inner2>ul>li {
+.navi_color li {
     float: left;
     width: 33.3%;
     text-align: center;
     line-height: 25px;
     padding-bottom: 20px;
 }
-.navi_inner2>ul>li>span {
+.color-checkbox {
     padding-top: 20px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 12px;
@@ -180,44 +186,44 @@
     width:80%;
 }
 /* 컨텐츠 영역 */
-.right-content-wrap>ul {
+.category-content {
     margin-left: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
 }
-.category-content>li {
+.category-content li {
     /* float: left;
     width: 33.3333333333%; */
     margin-bottom: 150px;
     height: 300px;
 }
-.category-content>li>a>img {
+.category-content-img {
     width: 288px;
     height: 288px;
 }
-.category-content-detail>div {
+.category-content-price {
     width: 288px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size:16px;
     line-height: 23px;
     display: inline-block;
 }
-.category-content-detail>div>.to_be_released {
+.to_be_released {
     display: inline-block;
     width: 208px;
     color: #AA8375;
     font-size: 15px;
     font-weight: 100;
 }
-.category-content-detail>div>.soldout {
+.category-content-price .soldout {
     display: inline-block;
     width: 208px;
     color: #FD4D4D;
     font-size:14px;
     font-weight: lighter;
 }
-.category-content-price>.category-content-info {
+.category-content-info {
     float:left;
     width: 210px;
     cursor: pointer;
@@ -228,7 +234,7 @@
 .category-content-detail {
     margin-top: 10px;
 }
-.category-content-detail>.content-sort {
+.content-sort {
     width: 205px;
 }
 .content-sort,.content-color {

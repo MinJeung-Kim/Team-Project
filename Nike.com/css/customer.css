@@ -1,0 +1,109 @@
+.body__container {
+  max-width: 1808px;
+  margin: 0 auto;
+}
+.cstxt {
+    display: inline-block;
+    padding: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+.dashboard-main {
+    display: flex;
+}
+.dashboard-menu {
+    width: 250px;
+    padding: 0 20px;
+}
+.dashboard-menu-list {
+    padding-top: 30px;
+}
+.dashboard-menu-list li {
+    padding: 15px 0;
+}
+.adminCustomer {
+    font-weight: bold;
+}
+.right-content-wrap {
+    width: 990px;
+    padding: 0 30px;    
+}
+.dash-icon .fas,
+.dash-icon .fab {
+    font-size: 18px;
+    padding: 5px;
+}
+.customer-list {
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 30px;
+}
+.list-txt {
+   font-family: 'Noto Sans KR', sans-serif;
+   font-size: 25px;
+   font-weight: 500;
+   letter-spacing: 2px;
+}
+.registerBtn {
+  background: black;
+  color: white;
+  width: 50px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+#divisionLine {
+  width: 100%;
+  background: black;
+  border:1px solid;
+  margin-bottom: 25px;
+}
+.selectMem {
+  background-color: black;
+  color: white;
+  height: 25px;
+}
+.searchBox {
+  width: 150px;
+  border: 1px solid;
+  height: 23px;
+}
+.srhBtnWrap {
+  position: relative;
+  right: 25px;
+  top: 1px;
+}
+.searchBtn {
+  font-size: 15px;
+}
+.memWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+.memTotal {
+  padding-top: 30px;
+  color: #5C5B5B;
+  font-size: 14px;
+}
+.searchLimit {
+  margin-top: 10px;
+  height:100%;
+}
+.gradeWrap {
+  margin-top: 30px;
+  color: #5C5B5B;
+  line-height: 25px;
+  font-size: 14px;
+}
+.gradeTitle {
+  font-weight: bold;
+  font-size: 15px;
+}
+.gradeSubTitle {
+  font-weight: bold; 
+}

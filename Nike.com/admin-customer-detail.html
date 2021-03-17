@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>나이키. Just Do It. Nike.com</title>
+
+    <!-- 작성자 -->
+    <meta name="author" content="Tem Project" />
+
+    <!-- 
+        사이트를 검색하면 사이트 밑에 사이트 설명글
+        웹표준 meta
+     -->
+    <meta
+      name="description"
+      content="나이키 정품, 신상, 베스트셀러. 공식 온라인스토어에서 다양한 제품을 만나보세요. 나이키닷컴과 함께 스포츠의 모든 순간을 함께하세요. 출시예정. THE DRAW. 서비스: 무료배송, 무료반품, 신규회원할인."
+    />
+
+    <!-- 
+        - name="viewport" : 전체화면 (=브라우저가 보여주는 크기)
+        - width=device-width : 해당 기기(device)의 가로 너비를 그대로 사용하겠다.
+        - initial-scale=1 : 다양한 기기(device)의 배율(초기 화면배율 값)을 100%부터 시작하겠다.
+            (1 => 100%, 2=> 200%....)
+        - user-scalable=no : 사용자가 화면을 손가락으로 확대,축소하는 기능을 사용하지 않겠다. (레이아웃의 문제를 막아줌)
+        - maximum-scale=1, minimum-scale=1 : 확대할 수 있는 최대값과 축소할 수 있는 최솟값 지정
+    -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"
+    />
+
+    <!-- 
+        인터넷 익스플로러 브라우저를 사용할때 렌더링하는 방식이 edge(최신)방식으로 렌더링. 
+         (IE8버전 이상에서 렌더링 가능)
+    -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 
+        - property(속성) 
+        - og => Open Graph의 약어
+            => 외부에 제공할 정보를 정의.
+        - og:type : 타입이 website사이트
+    -->
+    <!-- http://ogp.me/    => 페이스북에서 활용 -->
+    <!-- 사이트 타입 -->
+    <meta property="og:type" content="website" />
+    <!-- 사이트이름 -->
+    <meta property="og:site_name" content="나이키" />
+    <!-- 사이트 제목 -->
+    <meta property="og:title" content="나이키. Just Do It. Nike.com" />
+    <!-- 사이트 설명 -->
+    <meta
+      property="og:description"
+      content="나이키 에어 베이퍼맥스 EVO. 클래식한 에어맥스 시리즈를 리믹스하여 더욱 볼드해진 베이퍼맥스 EVO 를 나이키 멤버가 되어 가장 먼저 만나보세요. 구매하기."
+    />
+    <meta property="og:image" content="img/android-icon-36x36.png" />
+    <!-- 실제사이트 주소 -->
+    <meta property="og:url" content="https://www.nike.com/kr/ko_kr/" />
+
+    <!-- CSS 초기화(cdn) => ***초기화css를 제일 먼저 작성 
+           https://cdnjs.com/libraries/meyer-reset 
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+
+    <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/customer.css" />  
+    <link rel="stylesheet" href="css/customer-detail.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- defer : html을 다 읽고 난 후 script 실행 -->
+    <!-- <script defer src="main.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+      $("#contents").load("admin-customer.html");
+    });
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />  
+  </head>
+  <body>
+    <div class="body__container">  
+      <div id="header"></div>
+      <div id="contents"></div>
+      <div class="modalWrap">
+        <div class="csModal">
+          <div class="ModalHeader">
+            <span class="csRegister">고객 등록</span>
+            <a class="cs-closeBtn">&times;</a>
+          </div>
+          <form name="registerForm" id="registerForm" method="post">
+            <table class="registerTable">
+              <tr class="regRow">
+                <td>이름</td>
+                <td colspan="2"><input type="text" name="regName"></td>
+                <td>ID(이메일)</td>
+                <td colspan="2"><input type="text" name="regID" width="100px"></td>
+
+              </tr>
+              <tr class="regRow">
+                <td>비밀번호</td>
+                <td colspan="2"><input type="text" name="regPw"></td>
+                <td>전화번호</td>
+                <td colspan="4"><input type="text" name="regTel"></td>
+                <td>성별
+                  <select name="gender">
+                    <option value="man">남</option>
+                    <option value="woman">여</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td rowspan="2">주소</td>
+                <td>
+                  <input type="text" name="regPost" placeholder="우편번호">
+                  <input type="button" name="searchPost" value="우편번호 찾기"/>
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td>
+                <input type="text" name="regAddr" placeholder="상세주소">
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td>등급</td>
+                <td>
+                  <select name="grade">
+                    <option value="10">FAMILY</option>
+                    <option value="20">SILVER</option>
+                    <option value="30">GOLD</option>
+                    <option value="40">VIP</option>
+                    <option value="50">비회원</option>
+                  </select>
+                </td>
+                <td colspan="2">상태</td>
+                <td>
+                  <select name="status">
+                    <option value="10">정상</option>
+                    <option value="20">휴면</option>
+                    <option value="30">탈퇴</option>
+                  </select>
+                </td>
+              </tr>
+              <tr class="regRow">
+                <td>가입날짜</td>
+                <td colspan="2"><input type="text" name="registerDate"></td>
+                <td>수정날짜</td>
+                <td colspan="2"><input type="text" name="updateDate"></td>
+              </tr>
+              <tr class="regRow">
+                <td>메모</td>
+                <td colspan="5">
+                  <textarea id="memo" name="memo" cols="40" rows="10"></textarea>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+    </div>
+  </body>
+</html>
+    
