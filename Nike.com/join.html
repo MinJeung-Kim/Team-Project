@@ -80,118 +80,80 @@
     ></script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
   </head>
   <body>
     <div class="body__container">
-      <!-- ========== HEADER ========== -->
-      <header class="section header">
-        <div class="inner clearfix">
-          <div class="menu-top">
-            <img class="menu-top__img" src="img/jd_logo.png" alt="" />
-            <ul class="user-menu">
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">멤버 가입</a></li>
-              <li><a href="#">로그인</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <!-- ========== SECTION__HEADER ========== -->
-      <div class="section section__header">
-        <div class="inner clearfix">
-          <div class="gnv">
-            <img
-              class="gnv__img"
-              src="img/nike-logo-on.png"
-              alt=""
-              class="nike-logo"
-            />
-            <ul class="gnv__nav">
-              <li><a href="#">New Releases</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">Kids</a></li>
-              <li><a href="#">Sale</a></li>
-            </ul>
-            <div class="gnv-search">
-              <form class="search-form">
-                <span class="icon search"><i class="fas fa-search"></i></span>
-                <input placeholder="검색" type="text" />
-              </form>
-              <div class="gnv-icons">
-                <span class="icon heart"><i class="far fa-heart"></i></span>
-                <span class="icon cart">
-                  <i class="fas fa-shopping-cart"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="header"></div>
+      
       <!-- ========== CONTENTS ========== -->
       <div class="join-wrap">
         <div class="join-header">
-          <div class="ATitle">
-            <h2 class="title">나이키 멤버 가입</h2>
+          <div class="join_Title">
+            <h2 class="join_title-txt">나이키 멤버 가입</h2>
           </div>
-          <p class="description">
+          <p class="join_description">
             멤버가 되어 나이키가 제공하는<br>
             최고의 제품과 혜택을 만나보세요.
           </p>
         </div>
         <div class="join-body">
-          <div class="social">
-            <div class="Akakao">
+          <div class="join_social">
+            <div class="join_Akakao">
               <a href="#" class="kakao">
-                <div class="icon">
+                <div class="join_icon">
                   <i class="fas fa-comment"></i>
                 </div>
-                <span class="txt">
+                <span class="join_txt">
                   카카오 계정으로 신규 가입
                 </span>
               </a>
             </div>
-            <div class="Afacebook">
-              <div class="Afacebook">
+              <div class="join_Afacebook">
                 <a href="#" class="facebook">
-                  <div class="icon2">
+                  <div class="join_icon2">
                     <i class="fab fa-facebook-f"></i>
                   </div>
-                  <span class="txt2">
+                  <span class="join_txt2">
                     페이스북 계정으로 신규 가입
                   </span>
                 </a>
               </div>
-            </div>
           </div>
-          <div class="h-line">
-            <span class="h-txt">OR</span>
+          <div class="join_h-line">
+            <span class="join_h-txt">OR</span>
           </div>
           <div class="uk-grid">
             <form action="#" method="POST">
               <div class="email">
-                <input type="email" name="id" id="id" placeholder="사용하실 ID를 입력해주세요.(수신 가능 E-mail)">
+                <input type="email" name="id" id="join_id" placeholder="사용하실 ID를 입력해주세요.(수신 가능 E-mail)" required>
               </div>
               <div class="password">
-                <input type="password" name="password" id="password"placeholder="영문 대 소문+숫자+특수문자 8~16자리(괄호(),<>사용 불가)">
+                <input type="password" name="password" id="join_password"placeholder="영문 대 소문+숫자+특수문자 8~16자리(괄호(),<>사용 불가)" required>
               </div>
               <div class="repass">
-                <input type="password" name="repass" id="repass" placeholder="패스워드를 다시 입력해 주세요.">
+                <input type="password" name="repass" id="join_repass" placeholder="패스워드를 다시 입력해 주세요." required>
               </div>
               <div class="name">
-                <input type="text" name="name" id="name" placeholder="이름을 입력해 주세요.">
+                <input type="text" name="name" id="join_name" placeholder="이름을 입력해 주세요." required>
               </div>
               <div class="phone">
-                <input type="text" name="phone" id="phone" placeholder="휴대폰 번호'-'표 없이 입력해 주세요.">
+                <input type="number" name="phone" id="join_phone" placeholder="휴대폰 번호'-'표 없이 입력해 주세요." required>
               </div>
             </form>
             <!-- 이용약관 -->
-            <div class="agree">
-              <div class="agree-top">
-                <h6 class="agree-title">이용약관</h6>
-                <a href="#" class="agree-allview">전문보기</a>
+            <div class="join_agree">
+              <div class="join_agree-top">
+                <h6 class="join_agree-title">이용약관</h6>
+                <a href="#" class="join_agree-allview">전문보기</a>
               </div>
-              <div class="agree-scroll">
+              <div class="join_agree-scroll">
                 <p>
                   <b>나이키 이용약관</b>
                 </p>
@@ -441,14 +403,14 @@
                 </p>
               </div>
               <div class="agree-check">
-                <input type="checkbox" name="agreeCheck" id="agreeCheck" class="inputCh">
-                <label for="agreeCheck">[필수] 약관에 동의 합니다.</label>
+                <input type="checkbox" name="agreeCheck" id="agreeCheck" class="join_inputCh">
+                <label for="agreeCheck" class="join_label">[필수] 약관에 동의 합니다.</label>
               </div>
             </div>
             <!-- 개인정보 -->
             <div class="pinfo">
-              <h6 class="pinfo-txt">개인정보 수집.이용동의</h6>
-              <table id="table">
+              <h6 class="join_pinfo-txt">개인정보 수집.이용동의</h6>
+              <table id="join_table">
                 <thead>
                   <tr>
                     <th>일시</th>
@@ -462,7 +424,7 @@
                     <td>가입시</td>
                     <td>아이디, 이메일, 비밀번호, 이름, 휴대폰 번호, 성별, 생년월일</td>
                     <td>회원식별 및 연락</td>
-                    <td class="b">
+                    <td class="join_b">
                       <strong>회원탈퇴시까지</strong>
                     </td>
                   </tr>
@@ -470,7 +432,7 @@
                     <td>최초 구매시</td>
                     <td>성별, 생년월일, 휴대폰 번호, DI</td>
                     <td>본인확인</td>
-                    <td class="b">
+                    <td class="join_b">
                       <strong>회원탈퇴시까지</strong>
                     </td>
                   </tr>
@@ -478,26 +440,26 @@
                     <td>상품 주문시</td>
                     <td>수령인 정보(이름, 연락처, 주소), 결제수단 정보</td>
                     <td>상품 주문 및 배송 등 구매계약의 이행, 상품구매 관련문의사항과 반품, 환불등 민원사항의 상담 및 처리</td>
-                    <td class="b">
+                    <td class="join_b">
                       <strong>전자상거래법 등 관련 법령에 따른 보관기간</strong>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="pinfo-check">
-                <input type="checkbox" name="pinfoCheck" id="pinfoCheck" class="inputCh">
-                <label for="pinfoCheck">[필수] 개인정보 수집.이용동의</label>
+              <div class="join_pinfo-check">
+                <input type="checkbox" name="pinfoCheck" id="pinfoCheck" class="join_inputCh">
+                <label for="pinfoCheck" class="join_label">[필수] 개인정보 수집.이용동의</label>
               </div>
-              <div class="pinfo-bottom">
+              <div class="join_pinfo-bottom">
 									※ 약관 및 개인정보 처리방침은 홈페이지 하단에 전문이 게재되어 있습니다.<br>
 									※ 이용약관 및 개인정보 수집.이용 내용에 대해 동의 거부가 가능하며, <br>
                   이 경우 회원가입 및 관련 서비스는 이용이 불가합니다.
               </div>
             </div>
             <!-- 개인정보2 -->
-            <div class="pinfo2">
-              <h6 class="pinfo2-txt">선택적 개인정보 수집.이용동의</h6>
-              <table id="table2">
+            <div class="join_pinfo2">
+              <h6 class="join_pinfo2-txt">선택적 개인정보 수집.이용동의</h6>
+              <table id="join_table2">
                 <thead>
                   <tr>
                     <th>일시</th>
@@ -511,88 +473,46 @@
                     <td>가입시</td>
                     <td>성별(선택), 생년월일(선택)</td>
                     <td>맴버십 혜택 제공 및 커뮤니케이션 맞춤화</td>
-                    <td class="b">
+                    <td class="join_b">
                       <strong>회원탈퇴시까지</strong>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="pinfo2-bottom">
-                <input type="checkbox" name="pinfo2Check" id="pinfo2Check" class="inputCh">
-                <label for="pinfo2Check">[선택] 개인정보 수집.이용동의</label>
+              <div class="join_pinfo2-bottom">
+                <input type="checkbox" name="pinfo2Check" id="pinfo2Check" class="join_inputCh">
+                <label for="pinfo2Check" class="join_label">[선택] 개인정보 수집.이용동의</label>
               </div>
               <div class="pinfo-last">
                 <div class="pinfoLast1">
-                  <input type="checkbox" name="pinfoLast1Check" id="pinfoLast1Check" class="inputCh">
-                  <label for="pinfoLast1Check" class="Inlabel">(선택) 쇼핑정보 E-mail 수신 동의</label>
+                  <input type="checkbox" name="pinfoLast1Check" id="pinfoLast1Check" class="join_inputCh">
+                  <label for="pinfoLast1Check" class="join_label" id="join_Inlabel">(선택) 쇼핑정보 E-mail 수신 동의</label>
                 </div>
                 <div class="pinfoLast2">
-                  <input type="checkbox" name="pinfoLast2Check" id="pinfoLast2Check" class="inputCh">
-                  <label for="pinfoLast2Check" class="Inlabel">(선택) 쇼핑정보 SMS 수신 동의</label>
+                  <input type="checkbox" name="pinfoLast2Check" id="pinfoLast2Check" class="join_inputCh">
+                  <label for="pinfoLast2Check" class="join_label" id="join_Inlabel2">(선택) 쇼핑정보 SMS 수신 동의</label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="register-terms">
-            <div class="term1">
+          <div class="join_register-terms">
+            <div class="join_term1">
               ※ 약관 및 개인정보 처리방침은 홈페이지 하단에 전문이 게재되어 있습니다.
             </div>
-            <div class="term2">
+            <div class="join_term2">
               ※ 선택 항목으로 동의하지 않아도 불이익을 받지 않습니다.
             </div>
-            <div class="term3">
+            <div class="join_term3">
               만 14세 미만은 회원가입 및 서비스 이용이 불가합니다.
             </div>
           </div>
           <div class="join-foot">
-            <button class="button" type="submit">회원가입하기 (만 14세 이상)</button>
+            <button class="join_button" type="submit">회원가입하기 (만 14세 이상)</button>
           </div>
         </div>
       </div>
          
-      <!-- ========== FOOTER ========== -->
-      <footer class="section footer">
-        <div class="user-grid">
-          <ul class="gnb-locator">
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">나이키 트레이닝 가이드</a></li>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">멤버 가입</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">고객센터</a></li>
-            <li><a href="#">080-022-0182</a></li>
-            <li><a href="#">주문/결제</a></li>
-            <li><a href="#">배송</a></li>
-            <li><a href="#">주문배송조회</a></li>
-            <li><a href="#">멤버쉽 혜택/서비스</a></li>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">1:1 채팅 문의</a></li>
-            <li><a href="#">1:1 이메일문의</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">ABOUT NIKE</a></li>
-            <li><a href="#">나이키에 대하여</a></li>
-          </ul>
-          <ul class="footer-gnb">
-            <li class="locator"><a href="#">SOCIAL</a></li>
-            <li>
-              <a href="#"><span class="twitter"><i class="fab fa-twitter-square"></i></span></a>
-              <a href="#"><span class="facebook"><i class="fab fa-facebook-square"></i></span></a>
-              <a href="#"><span class="youtube"><i class="fab fa-youtube-square"></i></span></a>
-              <a href="#"><span class="instagram"><i class="fab fa-instagram-square"></i></span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-copy">
-          <a href="">
-            <span><i class="fas fa-map-marker"></i></span>
-            <span>대한민국</span>
-          </a>
-        </div>
-      </footer>
+      <div id="footer"></div>
     </div>
   </body>
 </html>
