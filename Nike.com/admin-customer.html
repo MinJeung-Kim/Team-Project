@@ -137,19 +137,19 @@
             <div class="right-content-wrap">
               <div class="customer-list">
                   <div class="list-txt">고객 목록</div>
-                  <button name="registerBtn" class="registerBtn">등록</button>
               </div>
               <div id="divisionLine"></div>
-              <div class="search">
-                <select name="selectMem" class="selectMem">
-                  <option value="memberY">회원</option>
-                  <option value="memberN">비회원</option>
-                </select>
-                <input type="text" class="searchBox" name="searchBox" placeholder="이름,아이디,등급">
-                <a href="javascript:;" class="srhBtnWrap"><i class="fas fa-search searchBtn"></i></a>
-              </div>
               <div class="memWrap">
                 <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
+              </div>
+              <div class="registerBtnWrap">
+                <button name="registerBtn" class="registerBtn">등록</button>
+              </div>
+
+              <div id="modalWrapper"></div>
+              <div id="wrapper"></div>
+
+              <div class="searchLimitWrap">
                 <select name="searchLimit" class="searchLimit">
                   <option value="5">5건씩보기</option>
                   <option value="10">10건씩보기</option> 
@@ -157,9 +157,6 @@
                   <option value="20">20건씩보기</option>  
                 </select>
               </div>
-              <div id="modalWrapper"></div>
-              <div id="wrapper"></div>
-
               <p class="gradeWrap">
                 <span class="gradeTitle">[ 등급 조건 및 혜택 ]</span><br/>
                 <span class="gradeSubTitle">FAMILY</span> 가입즉시, 1%적립, 무료배송 쿠폰1매 발행<br/>
