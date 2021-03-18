@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
-    
 
     <!-- 작성자 -->
     <meta name="author" content="Tem Project" />
@@ -74,23 +73,27 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/customer.css" />  
+    <link rel="stylesheet" href="css/customer.css" />
+    <link rel="stylesheet" href="css/modal-detail.css" />  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
-
+    
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
-      $("#footer").load("footer.html"); 
+      $("#footer").load("footer.html");
+      $("#modalWrapper").load("customer-modal.html"); 
     });
     </script>
+    <!-- <script src="src/detail-modal.js"></script> -->
+    <script src="src/detail-modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
   </head>
@@ -134,7 +137,7 @@
             <div class="right-content-wrap">
               <div class="customer-list">
                   <div class="list-txt">고객 목록</div>
-                  <input type="submit" name="registerBtn" value="등록" class="registerBtn">
+                  <button name="registerBtn" class="registerBtn">등록</button>
               </div>
               <div id="divisionLine"></div>
               <div class="search">
@@ -154,7 +157,9 @@
                   <option value="20">20건씩보기</option>  
                 </select>
               </div>
+              <div id="modalWrapper"></div>
               <div id="wrapper"></div>
+
               <p class="gradeWrap">
                 <span class="gradeTitle">[ 등급 조건 및 혜택 ]</span><br/>
                 <span class="gradeSubTitle">FAMILY</span> 가입즉시, 1%적립, 무료배송 쿠폰1매 발행<br/>
@@ -162,11 +167,13 @@
                 <span class="gradeSubTitle">GOLD</span> 3개월 구매금액 500,000원 충족시, 3%할인<br/>
                 <span class="gradeSubTitle">VIP</span> 3개월 구매금액 1,000,000원 충족시, 5%할인, 무료배송
               </p>
+              
             </div>
+            
           </div> <!-- dashboard-main-->
+          
       </section>
     </div>
-    
 </body>
 <script src="src/script.js"></script>
 </html>
