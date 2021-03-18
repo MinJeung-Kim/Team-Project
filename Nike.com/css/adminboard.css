@@ -1,0 +1,113 @@
+
+.section-title {
+    font-weight: 700;
+}
+.tit_h1 {
+  display: block;
+  width: 120px;
+}
+.dashboard-main {
+    display: flex;
+  }
+  
+  .dashboard-menu {
+    width: 250px;
+    padding: 0 20px;
+  }
+  
+  .dashboard-menu-list {
+    padding-top: 30px;
+  }
+  
+  .dashboard-menu-list li {
+    padding: 15px 0;
+  }
+  
+  .dash-icon .fas,
+  .dash-icon .fab {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .dashboard-main-right {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 30px;
+  }
+  .adreview_top {
+    width: 100%;
+    border-bottom: 2px solid gray;
+  }
+  .adminboard_tit {
+    font-size: 22px;
+    font-weight: 550;
+    padding-bottom: 20px;
+    display: block;
+    width: 300px;
+}
+  .adminboard_filter {
+    width: 100%;
+    height: 33%;
+  }
+  .t-left {
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.t-right {
+    border-bottom: 1px solid #e5e5e5;
+    width: 92.2%;
+}
+  .adreview_star {
+    margin-left: 15px;
+    width: 110px;
+    height: 20px;
+  }
+  .review_filter {
+    width: 110px;
+    height: 20px;
+    margin-left: 15px;
+  }
+  .search-word {
+    border: 1px solid black;
+    width: 160px;
+}
+  .date_input {
+    width: 105px;
+  }
+  .date_input2 {
+    width: 105px;
+  }
+  .search-button {
+    position: absolute;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    right: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    top: 90px;
+    cursor: pointer;
+  }
+  .day {
+    background: #e5e5e5;
+    border: 1px solid #d3d3d3;
+
+}
+  #wrapper {
+    margin-top: 50px;
+  }
+  .write_button {
+    background: gray;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    float: right;
+    cursor: pointer;
+  }
+
+
+  

@@ -1,6 +1,16 @@
+
+.modal_back {
+    background: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9998;
+    display: none;
+}
 .modal {
     position: absolute;
-    top: -31.5px;
+    top: -31.5px; 
     box-sizing: border-box;
     width: 480px;
     margin: 50px auto;
@@ -8,9 +18,10 @@
     background: white;
     border-radius: 4px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
-    left: 27.5%;
-    display: block;
+    display: none;
     z-index: 9999;
+    left: 50%;
+    margin-left: -240px;
 }
 .modal-content {
     height: 576.8px;
@@ -52,6 +63,7 @@
     background: white;
     padding: 9px 12px;
     border: 1px solid lightgray;
+    margin-left: 10px;
 }
 .modal_psinput,.modal_check {
     margin-top: 15px;
@@ -61,6 +73,7 @@
     height: 19px;
     margin: 0px 5px 0px 0px;
     cursor: pointer;
+    margin-left: 10px;
 }
 .log-label {
     font-size: 12px;
@@ -75,6 +88,7 @@
     position: relative;
     left: 300px;
     top: -23px;
+    margin-left: 15px;
 }
 .log-button {
     width: 420px;
@@ -84,6 +98,7 @@
     font-weight: 700;
     cursor: pointer;
     border-radius: 4px;
+    margin-left: 10px
 }
 .log-button:hover {
     background: gray;
@@ -100,6 +115,7 @@
     background-color: yellow;
     margin: 0px 0px 10px;
     border-radius: 4px;
+    margin-left: 10px
 }
 .modal_icon {
     width: 24px;
@@ -125,6 +141,7 @@
     position: relative;
     background-color: #21538a;
     border-radius: 4px;
+    margin-left: 10px
 }
 .modal_txt2 {
     font-size: 15px;
@@ -141,7 +158,7 @@
     height: 24px;
     position: relative;
     top: 11px;
-    left: 23px;
+    left: 15px;
     display: inline-block;
     vertical-align: middle;
 }
