@@ -1,109 +1,236 @@
-.body__container {
-  max-width: 1808px;
-  margin: 0 auto;
+/* header section */
+.section-category {
+    background-color: white;
+    padding: 30px 48px 30px 30px;
+    display: table;
+    width: 93%;
+    table-layout: fixed;
+    /* position: fixed; */
+    z-index: 9999;
 }
-.cstxt {
-    display: inline-block;
-    padding: 30px;
+.section-category>.section-title {
+    display: table-cell;
+    font-size: 23px;
+}
+.section-category>.section-control {
+    display: table-cell;
+    width: 20%;
+    position: relative;
+    left: 55px;
+}
+.section-title,.section-control {
     font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: 2px;
-    font-size: 25px;
+    letter-spacing: -1px;
+    font-size: 16px;
 }
-.dashboard-main {
-    display: flex;
+#filter, #neworder {
+    width:30px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+    left: -10px;
+    margin-right: 30px;
 }
-.dashboard-menu {
-    width: 250px;
-    padding: 0 20px;
+#neworder {
+    width: 18px;
 }
-.dashboard-menu-list {
-    padding-top: 30px;
+/* 본문 전체 감싸는 영역 */
+.category-wrap {
+    padding: 0 30px;
 }
-.dashboard-menu-list li {
-    padding: 15px 0;
+/* 왼쪽 카테고리 네비 */
+.left_navi_wrap {
+    width: 20%;
+    float: left;
 }
-.adminCustomer {
-    font-weight: bold;
+.left_navi {
+    width: 240px;
+    padding-top: 48px;
 }
+.navi_inner,.navi_inner2{
+    width: 210px;
+}
+.navi_inner2 {
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+.border-top-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5; 
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    float: left;
+    width: 90%;
+}
+.toparrow {
+    width: 18px;
+    display: inline;
+    height: 18px;
+    margin: 26px 0 0 -15px;
+}
+.navi_inner_list>li>span {
+    cursor: pointer;
+}
+.navi_inner_list>li>span:hover {
+    color: #8d8d8d;
+}
+.navi_inner_list>li {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    padding-bottom: 17px;
+    vertical-align: middle;
+    clear:both;
+} 
+.navi_inner_list>li:last-child {
+    padding: 5px 0 40px 0;
+}
+.navi_inner_list>li>.jordan {
+    padding-top: 0;
+}
+.navi_inner2>ul>li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.navi_inner2>ul>li>span {
+    padding-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+.color-border {
+    border: 1px solid;
+    border-radius: 17px;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    /* margin-bottom:10px; */
+}
+.beige {
+    background-color: #f0e68c;
+    border-color: #f0e68c;
+}
+.black {
+    background-color: #000000;
+    border-color: #000000;
+}
+.blue {
+    background-color: #3786d5;
+    border-color: #3786d5;
+}
+.brown {
+    background-color: #765439;
+    border-color: #765439;
+}
+.gold {
+    background-color: #d5d603;
+    border-color: #d5d603;
+}
+.gray {
+    background-color: #737373;
+    border-color: #737373;
+}
+.green {
+    background-color: #0d9300;
+    border-color: #0d9300;
+}
+.ssuk {
+    background-color: #7f7f00;
+    border-color: #7f7f00;
+}
+.navy {
+    background-color: #3b4a75;
+    border-color: #3b4a75;
+}
+.orange {
+    background-color: #eb621e;
+    border-color: #eb621e;
+}
+.pink {
+    background-color: #ea008a;
+    border-color: #ea008a;
+}
+.purple {
+    background-color: #693cb1;
+    border-color:#693cb1;
+}
+.red {
+    background-color: #c40001;
+    border-color: #c40001;
+}
+.silver {
+    background-color: #c4c4c4;
+    border-color: #c4c4c4;
+}
+.white {
+    background-color: #ffffff;
+    border-color: #807c7c;
+}
+.yellow {
+    background-color: #fcc300;
+    border-color: #fcc300;
+}
+/* 오른쪽 전체를 감싸는 영역 */
 .right-content-wrap {
-    width: 990px;
-    padding: 0 30px;    
+    float: left;
+    width:80%;
 }
-.dash-icon .fas,
-.dash-icon .fab {
-    font-size: 18px;
-    padding: 5px;
+/* 컨텐츠 영역 */
+.right-content-wrap>ul {
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
 }
-.customer-list {
-   display: flex;
-   justify-content: space-between;
-   padding-bottom: 30px;
+.category-content>li {
+    /* float: left;
+    width: 33.3333333333%; */
+    margin-bottom: 150px;
+    height: 300px;
 }
-.list-txt {
-   font-family: 'Noto Sans KR', sans-serif;
-   font-size: 25px;
-   font-weight: 500;
-   letter-spacing: 2px;
+.category-content>li>a>img {
+    width: 288px;
+    height: 288px;
 }
-.registerBtn {
-  background: black;
-  color: white;
-  width: 50px;
-  height: 22px;
-  line-height: 22px;
-  text-align: center;
-  font-size: 15px;
-  cursor: pointer;
+.category-content-detail>div {
+    width: 288px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:16px;
+    line-height: 23px;
+    display: inline-block;
 }
-#divisionLine {
-  width: 100%;
-  background: black;
-  border:1px solid;
-  margin-bottom: 25px;
+.category-content-detail>div>.to_be_released {
+    display: inline-block;
+    width: 208px;
+    color: #AA8375;
+    font-size: 15px;
+    font-weight: 100;
 }
-.selectMem {
-  background-color: black;
-  color: white;
-  height: 25px;
+.category-content-detail>div>.soldout {
+    display: inline-block;
+    width: 208px;
+    color: #FD4D4D;
+    font-size:14px;
+    font-weight: lighter;
 }
-.searchBox {
-  width: 150px;
-  border: 1px solid;
-  height: 23px;
+.category-content-price>.category-content-info {
+    float:left;
+    width: 210px;
+    cursor: pointer;
 }
-.srhBtnWrap {
-  position: relative;
-  right: 25px;
-  top: 1px;
+.ct-content-price {
+    display: inline;
 }
-.searchBtn {
-  font-size: 15px;
+.category-content-detail {
+    margin-top: 10px;
 }
-.memWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 15px;
+.category-content-detail>.content-sort {
+    width: 205px;
 }
-.memTotal {
-  padding-top: 30px;
-  color: #5C5B5B;
-  font-size: 14px;
-}
-.searchLimit {
-  margin-top: 10px;
-  height:100%;
-}
-.gradeWrap {
-  margin-top: 30px;
-  color: #5C5B5B;
-  line-height: 25px;
-  font-size: 14px;
-}
-.gradeTitle {
-  font-weight: bold;
-  font-size: 15px;
-}
-.gradeSubTitle {
-  font-weight: bold; 
+.content-sort,.content-color {
+    color: #8d8d8d;
 }
