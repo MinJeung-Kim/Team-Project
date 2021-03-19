@@ -186,6 +186,13 @@
     width: 288px;
     height: 288px;
 }
+.smallImg {
+    display: none;
+}
+.smallImg img {
+    width: 50px;
+    cursor: pointer;
+}
 .category-content-price {
     width: 288px;
     font-family: 'Noto Sans KR', sans-serif;

@@ -69,9 +69,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"/>
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap">
     <link rel="stylesheet" href="css/categorypage.css" />  
@@ -82,7 +80,7 @@
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="src/category.js"></script>
+    <script defer src="src/category.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
@@ -95,7 +93,7 @@
       <!-- section category -->
     <div class="section-category">
         <div class="section-title">
-            <span class="newitem">신상품 전체보기</span>
+            <a href="category.html"><span class="newitem">신상품 전체보기</span></a>
         </div>
         <div class="section-control">
             <span class="filterBtn-wrap">
@@ -262,7 +260,7 @@
                     </li>
                 <li>
                     <a href="detail.html">
-                        <img src="img/img.category/00.jpg" class="category-content-img">
+                        <img src="img/img.category/00.jpg" class="category-content-img ">
                     </a>
                     <figcaption class="category-content-detail">
                         <div class="category-content-price">
@@ -275,7 +273,7 @@
                     </li>
                     <li>
                         <a href="detail.html">
-                            <img src="img/img.category/01.jpg" class="category-content-img">
+                            <img src="img/img.category/01.jpg" class="category-content-img" id="big1">
                         </a>
                         <figcaption class="category-content-detail">
                             <div class="category-content-price">
@@ -284,6 +282,11 @@
                             </div>
                                 <div class="content-sort">남성 신발 라이프스타일</div>
                                 <div class="content-color">3 컬러</div>
+                                <div class="smallImg">
+                                    <img src="img/img.category/01.jpg" id="s0">
+                                    <img src="img/img.category/s1.jpg" id="s1">
+                                    <img src="img/img.category/s2.jpg" id="s2">
+                                </div>
                         </figcaption>
                     </li>
                     <li>
@@ -297,6 +300,10 @@
                             </div>
                                 <div class="content-sort">남성 신발 라이프스타일</div>
                                 <div class="content-color">2 컬러</div>
+                                <div class="smallImg">
+                                    <img src="img/img.category/02rr.jpg" id="s0">
+                                    <img src="img/img.category/s3.jpg" id="s1">
+                                </div>
                         </figcaption>
                     </li>
                     <li>
@@ -328,7 +335,9 @@
                         </figcaption>
                     </li>
                     <li>
-                        <a href="#"><img src="img/img.category/06.jpg" class="category-content-img"></a>
+                        <a href="#">
+                            <img src="img/img.category/06.jpg" class="category-content-img">
+                        </a>
                         <figcaption class="category-content-detail">
                             <div class="category-content-price">
                                 <div class="category-content-info">나이키 스포츠웨어 헤리티지</div>
