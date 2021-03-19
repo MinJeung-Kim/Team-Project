@@ -106,6 +106,9 @@
     width: 70px;
     height: 20px;
 }
+.join_input:focus {
+    outline: none;
+}
 #join_id {
     border: 1px solid;
     border-color:#cfcaca;
@@ -281,4 +284,6 @@ thead th {
     color: red;
     display: block;
     height: 35px;
+    display: table-cell;
+    vertical-align: middle;
 }
