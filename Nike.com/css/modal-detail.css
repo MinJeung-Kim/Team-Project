@@ -1,6 +1,5 @@
 body.back {
     overflow: hidden;
-    width:inherit;
 }
 .modalWrapper {
     opacity: 0;
@@ -13,12 +12,13 @@ body.back {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 .modalWrapper.unstaged {
     opacity: 1;
     z-index: 9999;
+    transition: opacity 0.3s;
 }
-
 .csModal {
     background: white;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);

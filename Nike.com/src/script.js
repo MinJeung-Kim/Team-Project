@@ -1,10 +1,40 @@
 
       new gridjs.Grid({
-      columns: ['No', '이름', '등급', '아이디', '전화번호', '성별', '유형'],
+      columns: [{
+                  name: 'No',
+                  width: '20px'
+                },
+                '이름',
+                '등급',
+                '아이디',
+                  { 
+                    name : '전화번호',
+                    sort: {
+                      enabled: false
+                    }
+                  },
+                '성별', 
+                '유형'],
       sort: true,
       search: true,
       pagination: {
-        limit: 5
+        limit: 5,
+      },
+      language: {
+        'search': {
+          'placeholder': '관련 검색어 입력'
+        },
+        'pagination': {
+          'previous': '⬅',
+          'next': '➡',
+          'showing': ' ',
+          'results': () => 'Records'
+        }
+      },
+      style: {
+        table: {
+          'text-align': 'center'
+        },
       },
       data: [
         ['10', 'bom', 'VIP', 'bmbm1', '010-4464-7124', '여', '정상'],

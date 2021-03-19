@@ -1,13 +1,15 @@
 'use strict';
 
     const csModal = document.querySelector('.modalWrapper');
+    const registerBtnWrap = document.querySelector('.registerBtnWrap');
+    const csCloseBtn =  document.querySelector('.csCloseBtn');
+
     const handleModal = function() {
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');
     } 
-
-    document.querySelector('.registerBtnWrap').addEventListener('click', handleModal);
-    document.querySelector('.csCloseBtn').addEventListener('click', handleModal);
+    registerBtnWrap.addEventListener('click', handleModal);
+    csCloseBtn.addEventListener('click', handleModal);
 
         // const csModal = document.querySelector('.modalWrapper');
         // const openModal = function() {

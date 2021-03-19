@@ -88,10 +88,9 @@
     $(function(){
       $("#header").load("header.html"); 
       $("#footer").load("footer.html");
-      $("#modalWrapper").load("customer-modal.html"); 
     });
     </script>
-    <script src="src/detail-modal.js"></script>
+    <script defer src="src/detail-modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
   </head>
@@ -144,7 +143,6 @@
                 <button name="registerBtn" class="registerBtn">등록</button>
               </div>
 
-              <div id="modalWrapper"></div>
               <div id="wrapper"></div>
 
               <div class="searchLimitWrap">
@@ -168,6 +166,15 @@
           </div> <!-- dashboard-main-->
           
       </section>
+    </div>
+    <div class="modalWrapper">
+      <div class="csModal">
+        <div class="ModalHeader">
+          <span class="csRegister">고객 등록</span>
+          <a class="csCloseBtn">&times;</a>
+        </div>
+        <p>회원 상세보기 창</p>
+      </div>
     </div>
 </body>
 <script src="src/script.js"></script>
