@@ -1,5 +1,7 @@
+/* 모달창 layout */
 body.back {
     overflow: hidden;
+    max-width: 1263px;
 }
 .modalWrapper {
     opacity: 0;
@@ -32,8 +34,10 @@ body.back {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:whitesmoke;
+    background-color:lightgray;
     height: 40px;
+    margin-bottom: 5px;
+    padding: 0 5px;
 }
 .csRegister {
     font-family: 'Noto Sans KR', sans-serif;
@@ -42,6 +46,63 @@ body.back {
 .csCloseBtn {
     font-size: 30px;
     border: none;
-    background: whitesmoke;
+    background: lightgray;
     cursor: pointer;
+    
+}
+
+/* 모달창 inner */
+.rg-container {
+    /* border: 2px solid; */
+    display: grid;
+    width: 600px;
+    height: 360px;
+    grid-template-columns: repeat(2, 100px 200px);
+    grid-template-rows: repeat(10, 1fr);
+}
+.rg-item {
+    border: 1px solid lightgray;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    /* line-height: 36px; */
+}
+.rg-item:nth-child(1),
+.rg-item:nth-child(3),
+.rg-item:nth-child(5),
+.rg-item:nth-child(9),
+.rg-item:nth-child(11) {
+    grid-column: 1 / span 2;
+}
+.rg-item:nth-child(2),
+.rg-item:nth-child(4),
+.rg-item:nth-child(6),
+.rg-item:nth-child(10),
+.rg-item:nth-child(12) {
+    grid-column: 3 / span 2;
+}
+.rg-item:nth-child(7) {
+    grid-row: 4 / span 2;
+}
+.rg-item:nth-child(8) {
+    grid-area: 4 / 2 / span 2 / span 3;
+}
+.rg-item:nth-child(13) {
+    grid-area: 8 / 1 / span 2 / span 4;  
+}
+.rg-item:nth-child(14) {
+    grid-column: 3 / 4;
+}
+.rg-item .title {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    border-right: 1px solid lightgray;
+    background-color: whitesmoke;
+}
+.write {
+    border: 1px solid gray;
+    width: 150px;
+    height: 20px;
+    vertical-align: middle;
+
 }
