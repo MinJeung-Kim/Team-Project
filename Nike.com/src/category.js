@@ -35,28 +35,23 @@
 
 	
 	//이미지 mouseover
-	const big1 = document.getElementById('big1');
-	const smallImg = document.querySelector('.smallImg');
-	const sImgfirst = smallImg.querySelector('img');
-	const sImg = smallImg.querySelectorAll('img'); //배열 리턴
-	
-	function appear() {
-		smallImg.style.display = "block";
+	const bigImg = document.querySelectorAll('.category-content-img');
+		//큰 이미지 배열을 bigImg라는 변수에 넣음
+	let i = 0;
+	for(i = 0; i < bigImg.length; i++) { //bigImg의 개수만큼 for문 돌리기
+		bigImg[i].addEventListener('mouseover', function() {
+			console.log(this.parentNode.parentNode.querySelector('.smallImg'));
+				//여기서 this는 내가 mouseover한 큰 사진을 가리킴
+			let smallImg = this.parentNode.parentNode.querySelector('.smallImg');
+			if(smallImg) {
+				smallImg.style.display = "block";
+			}
+		});
+		bigImg[i].addEventListener('mouseout', function() {
+			let smallImg = this.parentNode.parentNode.querySelector('.smallImg');
+			if(smallImg) {
+				smallImg.style.display = "none";
+			}
+		})
 	}
-	function disappear() {
-		smallImg.style.display = "none";
-	}
-	
-	for(let i = 0; i < sImg.length; i++) {
-		sImg[i].onmouseover = function() {
-			big1.src=this.src;
-		}
-		sImg[i].onmouseout = function() {
-			big1.src=sImgfirst.src;
-		}
-	}
-	
-	big1.addEventListener('mouseover', appear);
-	big1.addEventListener('mouseout', disappear);
-
 
