@@ -9,7 +9,7 @@
 
   width: calc(100% - 449px);
   max-width: 991px;
-  padding: 0 44px 0 54px;
+  padding: 0 44px 0 100px;
 
   border: 3px solid white;
 }
@@ -84,7 +84,7 @@
   position: relative;
 
   width: 425px;
-  padding: 0 30px 0 20px;
+  padding: 0 30px 0 45px;
 
   border: 3px solid white;
 }
@@ -201,6 +201,8 @@
 {
   position: relative;
 
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,6 +223,10 @@
 
 .input-radio:hover {
   border:1.5px solid black;
+}
+
+.input-radio:active {
+  background-color: black;
 }
 .radio-text
 {
@@ -296,6 +302,8 @@
   border: none;
   outline: none;
   background-color: white;
+
+  cursor: pointer;
 }
 
 
@@ -313,6 +321,8 @@ button .fas {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
 
   height: 55px;
   margin-bottom: 10px;
@@ -351,6 +361,8 @@ button .fas {
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+
   width: 47%;
   height: 55px;
 
@@ -376,6 +388,8 @@ button .fas {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
 
   width: 47%;
   height: 55px;
@@ -419,6 +433,8 @@ button .fas {
   margin-bottom: 20px;
   padding: 15px;
 
+  cursor: pointer;
+
   text-align: center;
   vertical-align: middle;
 
@@ -440,8 +456,12 @@ button .fas {
 }
 .store-reserve-info {
   letter-spacing: -0.1px;
-  font-size: 14px;
-  font-weight:500;
+  font-size: 13.5px;
+  font-weight:530;
+}
+
+.detail-review, .detail-delivery, .detail-return {
+  cursor: pointer;
 }
 
 /*DETAIL-DESCRIPTION*/
@@ -476,6 +496,10 @@ button .fas {
 
 .detail-underline {
   text-decoration: underline;
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 550;
 }
 
 .detail-plus-right
@@ -504,28 +528,20 @@ button .fas {
 }
 
 /*SCROLL*/
-#myBtn
+.scroll-arrow
 {
-  font-size: 18px;
-
+  font-size: 15px;
   position: fixed;
   z-index: 99;
-  right: 30px;
-  bottom: 20px;
+  right: 15px;
+  bottom: 55px;
 
-  display: none;
-
+  height: 45px;
   padding: 15px;
-
   cursor: pointer;
 
-  color: white;
   border: none;
   border-radius: 4px;
   outline: none;
-  background-color: red;
-}
-
-#myBtn:hover {
-  background-color: #555;
+  background-color: rgb(240, 238, 238);
 }
