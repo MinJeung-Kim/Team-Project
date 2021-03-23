@@ -2,13 +2,14 @@
       new gridjs.Grid({
       columns: [{
                   name: 'No',
-                  width: '20px'
+                  width: '30px'
                 },
                 '이름',
                 '등급',
                 '아이디',
                   { 
                     name : '전화번호',
+                    width: '90px',
                     sort: {
                       enabled: false
                     }
@@ -18,7 +19,7 @@
       sort: true,
       search: true,
       pagination: {
-        limit: 5,
+        limit: 7,
       },
       language: {
         'search': {

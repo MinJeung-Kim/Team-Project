@@ -15,6 +15,7 @@
   .dashboard-menu {
       width: 250px;
       padding: 0 20px;
+      min-width: 110px;
   }
   .dashboard-menu-list {
       padding-top: 30px;
