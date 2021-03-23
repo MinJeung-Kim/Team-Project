@@ -34,7 +34,7 @@ body.back {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:lightgray;
+    /* background-color:lightgray; */
     height: 40px;
     margin-bottom: 5px;
     padding: 0 5px;
@@ -46,9 +46,8 @@ body.back {
 .csCloseBtn {
     font-size: 30px;
     border: none;
-    background: lightgray;
+    /* background: lightgray; */
     cursor: pointer;
-    
 }
 
 /* 모달창 inner */
@@ -64,7 +63,7 @@ body.back {
     border: 1px solid lightgray;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
-    /* line-height: 36px; */
+    line-height: 30px;
 }
 .rg-item:nth-child(1),
 .rg-item:nth-child(3),
@@ -90,7 +89,9 @@ body.back {
     grid-area: 8 / 1 / span 2 / span 4;  
 }
 .rg-item:nth-child(14) {
-    grid-column: 3 / 4;
+    grid-column: 4 / 5;
+    text-align: end;
+    border: none;
 }
 .rg-item .title {
     display: inline-block;
@@ -104,5 +105,12 @@ body.back {
     width: 150px;
     height: 20px;
     vertical-align: middle;
-
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.bday {
+    width: 120px;
 }
