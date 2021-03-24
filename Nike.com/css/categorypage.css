@@ -89,6 +89,12 @@
 .ckbox_wrap:last-child {
     padding: 5px 0 40px 0;
 }
+.ckbox_wrap.child {
+    display: none;
+}
+.child.staged {
+    display: block;
+}
 .navi_color .color-wrap {
     float: left;
     width: 33.3%;
@@ -185,6 +191,13 @@
 .category-content-img {
     width: 288px;
     height: 288px;
+}
+.smallImg {
+    display: none;
+}
+.smallImg img {
+    width: 40px;
+    cursor: pointer;
 }
 .category-content-price {
     width: 288px;
