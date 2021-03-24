@@ -1,14 +1,48 @@
 
       new gridjs.Grid({
-      columns: ['No', '이름', '등급', '아이디', '전화번호', '성별', '유형', '관리'],
+      columns: [{
+                  name: 'No',
+                  width: '30px'
+                },
+                '이름',
+                '등급',
+                '아이디',
+                  { 
+                    name : '전화번호',
+                    width: '90px',
+                    sort: {
+                      enabled: false
+                    }
+                  },
+                '성별', 
+                '유형'],
       sort: true,
-      pagination: true,
+      search: true,
+      pagination: {
+        limit: 7,
+      },
+      language: {
+        'search': {
+          'placeholder': '관련 검색어 입력'
+        },
+        'pagination': {
+          'previous': '⬅',
+          'next': '➡',
+          'showing': ' ',
+          'results': () => 'Records'
+        }
+      },
+      style: {
+        table: {
+          'text-align': 'center'
+        },
+      },
       data: [
-        ['10', 'bom', 'VIP', 'bmbm1', '010-4464-7124', '여', '외국인', '수정   삭제'],
-        ['09', '김민정', 'GOLD', 'mj114', '010-0011-4468', '여', '개인', '수정   삭제'],
-        ['07', '통붕이', 'FAMILY', 'tb991', '', '남', '개인', '수정   삭제'],
-        ['07', '김예담', '비회원', '', '', '여', '비회원', '수정   삭제'],
-        ['06', '박서윤', 'SILVER', 'sysy66', '010-9977-4687', '여', '휴면', '수정   삭제']
+        ['10', 'bom', 'VIP', 'bmbm1', '010-4464-7124', '여', '정상'],
+        ['09', '김민정', 'GOLD', 'mj114', '010-0011-4468', '여', '정상'],
+        ['08', '통붕이', 'FAMILY', 'tb991', '', '남', '탈퇴'],
+        ['07', '김예담', 'FAMILY', '', '', '여', '휴면'],
+        ['06', '박서윤', 'SILVER', 'sysy66', '010-9977-4687', '여', '휴면'],
+        ['05', '산타', 'VIP', 'stst32', '010-8765-1234', '남', '탈퇴']
       ]
-
     }).render(document.getElementById("wrapper"));
