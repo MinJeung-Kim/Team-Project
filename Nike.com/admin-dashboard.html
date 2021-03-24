@@ -18,8 +18,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/categorypage.css" />
 
@@ -42,15 +40,12 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
-        $('#header').load('header.html');
-        $('#footer').load('footer.html');
         $('#admin-menu').load('admin-menu-common.html');
       });
     </script>
   </head>
   <body>
     <div class="body__container">
-      <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
       <section class="section dashboard">
         <div class="section-category">
@@ -133,7 +128,6 @@
           </div>
         </div>
       </section>
-      <div id="footer"></div>
     </div>
   </body>
 </html>
