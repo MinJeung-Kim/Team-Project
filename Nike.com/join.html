@@ -81,6 +81,7 @@
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script defer src="src/join.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
@@ -132,19 +133,24 @@
           <div class="uk-grid">
             <form action="#" method="POST">
               <div class="email">
-                <input type="email" name="id" id="join_id" placeholder="사용하실 ID를 입력해주세요.(수신 가능 E-mail)" required>
+                <input type="email" name="id" class="join_input" id="join_id" placeholder="사용하실 ID를 입력해주세요.(수신 가능 E-mail)" required>
+                <span class="check" id="checkId"></span>
               </div>
               <div class="password">
-                <input type="password" name="password" id="join_password"placeholder="영문 대 소문+숫자+특수문자 8~16자리(괄호(),<>사용 불가)" required>
+                <input type="password" name="password" class="join_input" id="join_password"placeholder="영문 대 소문+숫자+특수문자 8~16자리(괄호(),<>사용 불가)" required>
+                <div class="check" id="checkPasswd"></div>
               </div>
               <div class="repass">
-                <input type="password" name="repass" id="join_repass" placeholder="패스워드를 다시 입력해 주세요." required>
+                <input type="password" name="repass" class="join_input" id="join_repass" placeholder="패스워드를 다시 입력해 주세요." required>
+                <div class="check" id="checkRepass"></div>
               </div>
               <div class="name">
-                <input type="text" name="name" id="join_name" placeholder="이름을 입력해 주세요." required>
+                <input type="text" name="name" class="join_input" id="join_name" placeholder="이름을 입력해 주세요." required>
+                <div class="check" id="checkName"></div>
               </div>
               <div class="phone">
-                <input type="number" name="phone" id="join_phone" placeholder="휴대폰 번호'-'표 없이 입력해 주세요." required>
+                <input type="number" name="phone" class="join_input" id="join_phone" placeholder="휴대폰 번호'-'표 없이 입력해 주세요." required>
+                <div class="check" id="checkPhone"></div>
               </div>
             </form>
             <!-- 이용약관 -->
