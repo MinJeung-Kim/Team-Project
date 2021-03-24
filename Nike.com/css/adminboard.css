@@ -108,6 +108,13 @@
     float: right;
     cursor: pointer;
   }
+  .grid-th {
+    text-align: center;
+  }
+  .grid-td {
+    text-align: center;
+    font-size: 13px;
+  }
 
 
   
