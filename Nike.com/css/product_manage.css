@@ -141,13 +141,21 @@ table, th, td {
 .nothing {
   padding:3px 0;
 }
-.prd-register
+
+.prd-rgs-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.prd-register, .prd-delete
 {
   font-size: 14px;
   font-weight: bold;
   line-height: 15px;
 
   float: right;
+
+  margin-right: 10px;
 
   width: 50px;
   height: 22px;
