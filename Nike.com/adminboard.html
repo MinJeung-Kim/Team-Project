@@ -93,6 +93,7 @@
     />
 
     <script defer src="src/adminboard.js"></script>
+    <script defer src="src/board_day.js"></script>
 
     <script>
       $(function () {
@@ -144,52 +145,44 @@
                       <input type="submit" class="search-button" value="검색">
                   </div>
                   <div class="adminboard_filter">
-                      <form action="#">
-                          <table>
-                            <tr>
-                                <td class="t-left">상품만족도</td>
-                                <td class="t-right">
-                                    <select name="star" class="adreview_star">
-                                        <option value="5" selected>★★★★★</option>
-                                        <option value="4">★★★★</option>
-                                        <option value="3">★★★</option>
-                                        <option value="2">★★</option>
-                                        <option value="1">★</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-left">세부 정보</td>
-                                <td class="t-right">
-                                    <select name="filter" class="review_filter">
-                                        <option value="product_name" selected>상품 코드</option>
-                                        <option value="email">고객 ID</option>
-                                        <option value="name">고객명</option>
-                                    </select>
-                                    <input type="text" class="search-word">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-left">기간</td>
-                                <td class="t-right">
-                                    <input type="date" name="date" value="reg_date-s" class="date_input"/>
-                                    <span class="wave">~</span>
-                                    <input type="date" name="date" value="reg_date-e" class="date_input2"/>
-                                    <button class="day">오늘</button>
-                                    <button class="day">1주일</button>
-                                    <button class="day">1개월</button>
-                                    <button class="day">3개월</button>
-                                    <button class="day">6개월</button>
-                                </td>
-                            </tr>
-                          </table>
-                      </form>
+                    <form action="#">
+                      <div class="item itemL">상품만족도</div>
+                      <div class="item">
+                        <select name="star" class="adreview_star">
+                          <option value="5" selected>★★★★★</option>
+                          <option value="4">★★★★</option>
+                          <option value="3">★★★</option>
+                          <option value="2">★★</option>
+                          <option value="1">★</option>
+                        </select>
+                      </div>
+                      <div class="item itemL">세부 정보</div>
+                      <div class="item">
+                        <select name="filter" class="review_filter">
+                          <option value="product_name" selected>상품 코드</option>
+                          <option value="email">고객 ID</option>
+                          <option value="name">고객명</option>
+                      </select>
+                      <input type="text" class="search-word">
+                      </div>
+                      <div class="item itemL">기간</div>
+                      <div class="item">
+                        <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
+                        <span class="wave">~</span>
+                        <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
+                        <button class="day" id="bt1">오늘</button>
+                        <button class="day" id="bt2">1주일</button>
+                        <button class="day" id="bt3">1개월</button>
+                        <button class="day" id="bt4">3개월</button>
+                        <button class="day" id="bt5">6개월</button>
+                      </div>
+                    </form>
                   </div>
                   <div id="wrapper"></div>
                   <div class="admin_write">
-                      <button class="write_button" id="delete-review">글삭제</button>
-                      <button class="write_button" id="update-review">글수정</button>
-                      <button class="write_button" id="write-review">글쓰기</button>
+                    <button class="write_button" id="write-review">등록</button>
+                    <button class="write_button" id="update-review">수정</button>
+                    <button class="write_button" id="delete-review">삭제</button>  
                   </div>
               </div>
           </div>
