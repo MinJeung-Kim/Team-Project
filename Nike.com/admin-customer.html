@@ -93,7 +93,6 @@
     <script defer src="src/detail-modal.js"></script>
     <script defer src="src/script.js"></script>
     <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
-    <script defer src="address.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
   </head>
@@ -193,14 +192,14 @@
           </div>
           <div class="rg-item">
             <span class="title">성별</span>
-            <select nmae="gender">
+            <select nmae="write gender">
               <option value="man">남자</option>
               <option value="woman">여자</option>
             </select>
           </div>
           <div class="rg-item">
             <span class="title">생년월일</span>
-            <input type="date" name="bday" class="bday" min="1900-01-01" max="2022-01-01">
+            <input type="date" name="bday" class="write bday" min="1900-01-01" max="2022-01-01">
           </div>
           <div class="rg-item">
             <span class="title addrTitle">주소</span>
@@ -216,7 +215,7 @@
           </div>
           <div class="rg-item">
             <span class="title">등급</span>
-            <select nmae="grade">
+            <select nmae="write grade">
               <option value="family">Family</option>
               <option value="silver">SILVER</option>
               <option value="gold">GOLD</option>
@@ -233,19 +232,19 @@
           </div>
           <div class="rg-item">
             <span class="title">가입날짜</span>
-            <input type="text" name="joinDate" class="write joinDate">
+            <input type="text" name="joinDate" class="joinDate" readonly>
           </div>
           <div class="rg-item">
             <span class="title">수정날짜</span>
-            <input type="text" name="updateDate" class="write updateDate">
+            <input type="text" name="updateDate" class="updateDate" readonly>
           </div>
           <div class="rg-item memoWrap">
             <span class="title memoTitle">메모</span>
             <textarea name="memo" class="write memo"></textarea>
           </div>
           <div class="rg-item">
-            <button type="reset" class="reset">다시쓰기</button>
-            <button type="submit" class="submit">등록</button>
+            <input type="button" class="reset" value="다시쓰기"></input>
+            <input type="submit" class="submit" value="등록"></input>
           </div>
         </form>
 
