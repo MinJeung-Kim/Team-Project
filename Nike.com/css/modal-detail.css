@@ -127,7 +127,10 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.bday { width: 120px; }
+.bday { 
+    width: 120px;
+    border: none; 
+}
 
 .title.addrTitle {
     height: 100%;
@@ -150,6 +153,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .write.addrDetail { width: 450px; }
 
+.joinDate,
+.updateDate {
+    outline: none;
+}
+
 .memoWrap { border-bottom: 2px solid lightgray; }
 
 .title.memoTitle {
@@ -163,6 +171,10 @@ input[type="number"]::-webkit-inner-spin-button {
     vertical-align: middle;
     resize: none;
     border: none;
+}
+.rg-item .reset,
+.rg-item .submit {
+    width: auto;
 }
 
 .rg-item .reset,
@@ -182,3 +194,4 @@ input[type="number"]::-webkit-inner-spin-button {
     background: rgb(53, 52, 52);
     cursor: pointer;
 }
+
