@@ -168,6 +168,7 @@
 }
 .product-star i {
     cursor: pointer;
+    color: gray;
 }
 .reviewform_gage-wrap {
     width: 250px;
