@@ -105,7 +105,38 @@
     margin-top: 5px;
     resize: none;
 }
+.filewrap {
+    display: flex;
+    margin-top: 5px;
+}
+.upload-name {
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #cecece;
+    margin-right: 5px;
+    width: 173px;
+    height: 21px;
+}
+.fileLabel {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    background: black;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    align-items: center;
+}
+.fileLabel:hover {
+    background: gray;
+    border-color: gray;
+}
 .review_input3 {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+.review_input4 {
     width: 175px;
     height:20px;
     border: 2px solid #cecece;
