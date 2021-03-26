@@ -81,6 +81,7 @@
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script defer src="src/addfile.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
@@ -120,12 +121,15 @@
                             </div>
                             <div class="reviewform_file">
                                 <span class="cont-1_tit">첨부파일</span>
-                                <input type="text" class="review_input3">
-                                <input type="button" class="file_button" value="파일첨부">
+                                <div class="filewrap">
+                                    <input class="upload-name" disabled="disabled">
+                                    <label for="addfile" class="fileLabel">파일선택</label>
+                                    <input type="file" id="addfile"class="review_input3" multiple accept="image/*">
+                                </div>
                             </div>
                             <div class="reviewform_passwd">
                                 <span class="cont-1_tit">비밀번호</span>
-                                <input type="password" class="review_input3">
+                                <input type="password" class="review_input4">
                             </div>
                         </div>
                         
