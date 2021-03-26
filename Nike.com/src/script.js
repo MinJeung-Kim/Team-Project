@@ -13,13 +13,21 @@
         // add these attributes to the td elements only
         if (cell) { 
           return {
-            'data-cell-content': cell,
+            // 'data-cell-content': cell,
             'onclick': () => alert(cell),
             'style': 'cursor: pointer',
           };
         }
       }
     },
+    // { 
+    //   name: '이름',
+    //   formatter: (cell, row) => {
+    //     return {
+    //       onClick: () => alert(`"${row.cells[0].data}"+"${row.cells[1].data}"`)
+    //     };
+    //   }
+    // },
     '등급',
     {
       name: '아이디',
@@ -51,7 +59,7 @@
   style: {
     table: {
       'text-align': 'center'
-    },
+    }
   },
   data: [
     ['10', 'bom', 'VIP', 'bmbm1@naver.com', '010-4464-7124', '여', '정상'],

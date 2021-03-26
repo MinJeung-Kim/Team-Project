@@ -32,7 +32,6 @@
 
     const joinDate = document.querySelector('.joinDate');
     const updateDate = document.querySelector('.updateDate');
-    const reset = document.querySelector('.reset');
     const getDate = () => {
         const date = new Date();
         const year = date.getFullYear();
@@ -44,5 +43,22 @@
         joinDate.value=getToday;
     }
     registerBtnWrap.addEventListener('click', getDate);
-    reset.addEventListener('click', getDate);
+
+//등록Form 부분 초기화
+
+    const reset = document.querySelector('.reset');
+    const writes = document.querySelectorAll('.write');
+    const resetContents = () => {  
+        writes.forEach(formData => {
+            if(formData.nodeName == "SELECT") {
+                formData.value = formData.firstElementChild.value;
+            } else {
+                formData.value = "";
+            }
+        })
+    }
+    reset.addEventListener('click', resetContents);
+    csCloseBtn.addEventListener('click', resetContents);
+
+
 
