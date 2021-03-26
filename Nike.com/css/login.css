@@ -54,7 +54,6 @@
 }
 .login-body{
     width: 420px;
-    height: 138px;
 }
 .modal_input {
     width: 394px;
@@ -64,6 +63,9 @@
     padding: 9px 12px;
     border: 1px solid lightgray;
     margin-left: 10px;
+}
+.modal_input:focus, .modal_psinput:focus{
+    outline: none;
 }
 .modal_psinput,.modal_check {
     margin-top: 15px;
@@ -107,7 +109,7 @@
     height: 100px;
     width: 420px;
     position: relative;
-    top: 60px;
+    top: 10px;
 }
 .modal_Akakao {
     width: 420px;
@@ -166,7 +168,6 @@
     width: 420px;
     height: 64px;
     position: relative;
-    top: 68px;
 }
 .modal_join-line {
     width: 420px;
@@ -188,4 +189,9 @@
     position: relative;
     top: 30px;
     left: 170px;
+}
+.check {
+    font-size: 11px;
+    color: red;
+    margin-left: 10px;
 }
