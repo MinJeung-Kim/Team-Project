@@ -119,7 +119,7 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #e5e5e5;
 }
-.review_filter {
+.chk_label {
     width: 55px;
     border: 1px solid #E5E5E5;
     font-size: 11px;
@@ -129,13 +129,17 @@
     padding-bottom: 7px;
 
 }
+.chk_input {
+    /* position: absolute;
+    clip: rect(0,0,0,0); */
+}
 .review_grid {
     height: 414px;
     border-top: 1px solid #e5e5e5;
     display: flex;
 }
 .review_grid_left {
-    width: 500px;
+    width: 80%;
     height: 383px;
     padding: 30px 10px 0px;
     text-align: left;
