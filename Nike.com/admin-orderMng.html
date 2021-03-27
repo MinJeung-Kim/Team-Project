@@ -17,7 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/admin-orderMng.css" />
 
     <script defer src="src/admin-orderMng.js"></script>
@@ -100,12 +99,20 @@
                       <option value="">발송일</option>
                       <option value="">주문완료일</option>
                     </select>
-                    <a class="day-btn" href="">오늘</a
-                    ><a class="day-btn" href="">3일</a
-                    ><a class="day-btn" href="">1개월</a>
-                    <input class="order-calender date-start" type="date" />
+                    <a class="day-btn day-today">오늘</a
+                    ><a class="day-btn day-three">3일</a
+                    ><a class="day-btn day-month">1개월</a>
+                    <input
+                      class="order-calender date-start"
+                      type="date"
+                      required
+                    />
                     ~
-                    <input class="order-calender date-end" type="date" />
+                    <input
+                      class="order-calender date-end"
+                      type="date"
+                      required
+                    />
                   </div>
                   <div class="order-items">
                     <select name="" id="">
