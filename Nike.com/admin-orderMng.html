@@ -17,17 +17,30 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/admin-orderMng.css" />
-
-    <script defer src="src/admin-orderMng.js"></script>
-    <script defer src="src/common-dateSetting.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
-    <!-- defer : html을 다 읽고 난 후 script 실행 -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <link rel="stylesheet" href="css/admin-orderMng.css" />
+
+    <script defer src="src/common-dateSetting.js"></script>
+    <script defer src="src/admin-orderMng-grid.js"></script>
+    <script defer src="src/admin-orderMng.js"></script>
+
+    <!-- noUiSlider 슬라이더 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"
+      integrity="sha512-0Z2o7qmtl7ixxWcEQxxTCT8mX4PsdffSGoVJ7A80zqt6DvdEHF800xrsSmKPkSoUaHtlIhkLAhCPb/tkf78SCA=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.css"
+      integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
+      crossorigin="anonymous"
+    />
 
     <!-- Grid.js -->
     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
@@ -37,6 +50,8 @@
       href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
       rel="stylesheet"
     />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script> -->
 
@@ -123,7 +138,9 @@
                     <input type="text" />
                   </div>
                   <div class="order-items">
-                    <input type="range" value="0" min="0" max="1000" />
+                    <!-- <input type="range" value="0" min="0" max="1000" /> -->
+                    <div id="slider"></div>
+                    <div id="slider-non-linear-step-value"></div>
                   </div>
                 </div>
                 <div class="order-buttons">
