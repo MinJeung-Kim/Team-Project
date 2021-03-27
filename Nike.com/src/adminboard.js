@@ -33,7 +33,13 @@
     name: '제목',
     sort: {
       enabled:false
-    }
+    },
+    formatter: (data) => gridjs.html (
+      `<a style="display:block;margin-left:-20px;
+      overflow:hidden;text-overflow:ellipsis;
+      margin-left:3px;
+      white-space:nowrap;width:150px;height:40.8;">${data}</a>`
+    )
   },
   {
     name: '내용',
@@ -43,7 +49,9 @@
     width: '200px',
     height:'44px',
     formatter: (data) => gridjs.html (
-      `<a style="overflow:hidden;height:44px;">${data}</a>`
+      `<a style="display:block;margin-left:-20px;
+      overflow:hidden;text-overflow:ellipsis;
+      white-space:nowrap;width:248.8px;height:40.8;">${data}</a>`
     )
   },
   {
@@ -63,13 +71,13 @@
       '10000-265942',
       '★★★★★',
       '좋아여',
-      '배송도 빠르고 나이스하네요',
+      '배송도 빠르고 나이스하네요ㅋㅋ이제길게써도됨',
       '홍긍정',
       '2021-03-16',
       '1'
     ],
     ['11111-565654', '★★★', '그저그럼', '생각보단 별로', '김깐깐', '2021-03-14', '16'],
-    ['12625-120052', '★★★★', '이쁘네요', '무난하니 이뻐요', '이평범', '2021-03-13', '10'],
+    ['12625-120052', '★★★★', '이쁘네요.제목이 줄어드는게 기분이 좋아요', '무난하니 이뻐요', '이평범', '2021-03-13', '10'],
     ['16259-756498', '★', '너무하네요', '배송이 이틀이나걸림ㅡㅡ', '김파탄', '2021-03-01', '126'],
     ['19562-775986', '★★★★★', '착한가격', '천산줄', '나천사', '2021-02-26','21'],
     ['13359-126498', '★★', '귀여움', 'ㅇㅇ', '김미역', '2021-02-22', '312'],
