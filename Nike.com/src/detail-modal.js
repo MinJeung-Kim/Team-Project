@@ -9,9 +9,25 @@
     const handleModal = function() {
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');
+        getDate();
     } 
     registerBtnWrap.addEventListener('click', handleModal);
     csCloseBtn.addEventListener('click', handleModal);
+
+//가입날짜, 수정날짜
+
+    const joinDate = document.querySelector('.joinDate');
+    const updateDate = document.querySelector('.updateDate');
+    const getDate = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = ("0" + (1 + date.getMonth())).slice(-2);
+    const day = ("0" + date.getDate()).slice(-2);
+
+    const getToday = year + "-" + month + "-" + day;
+    updateDate.innerHTML=getToday;
+    joinDate.innerHTML=getToday;
+}
 
 // 우편번호 검색
     
@@ -28,22 +44,6 @@
     }
     postBtn.addEventListener("click", openZipSearch);
 
-//가입날짜, 수정날짜
-
-    const joinDate = document.querySelector('.joinDate');
-    const updateDate = document.querySelector('.updateDate');
-    const getDate = () => {
-        const date = new Date();
-        const year = date.getFullYear();
-        const month = ("0" + (1 + date.getMonth())).slice(-2);
-        const day = ("0" + date.getDate()).slice(-2);
-
-        const getToday = year + "-" + month + "-" + day;
-        updateDate.value=getToday;
-        joinDate.value=getToday;
-    }
-    registerBtnWrap.addEventListener('click', getDate);
-
 //등록Form 부분 초기화
 
     const reset = document.querySelector('.reset');
@@ -53,12 +53,8 @@
             if(formData.nodeName == "SELECT") {
                 formData.value = formData.firstElementChild.value;
             } else {
-                formData.value = "";
+                formData.value="";
             }
         })
     }
-    reset.addEventListener('click', resetContents);
-    csCloseBtn.addEventListener('click', resetContents);
-
-
-
+    csCloseBtn.addEventListener('click', resetContents);    

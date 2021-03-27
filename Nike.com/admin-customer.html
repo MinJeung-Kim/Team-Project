@@ -90,8 +90,9 @@
       $("#footer").load("footer.html");
     });
     </script>
-    <script defer src="src/detail-modal.js"></script>
+    
     <script defer src="src/script.js"></script>
+    <script defer src="src/detail-modal.js"></script>
     <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
@@ -173,7 +174,7 @@
           <a class="csCloseBtn">&times;</a>
         </div>
         
-        <form action="#" method="post" name="registerForm" class="rg-container">
+        <form action="#" method="post" name="registerForm" class="rg-container" id="reg_form" onsubmit="return regCheck()">
           <div class="rg-item">
             <span class="title">이름 *</span>
             <input type="text" name="name" class="write name">
@@ -192,7 +193,7 @@
           </div>
           <div class="rg-item">
             <span class="title">성별</span>
-            <select nmae="write gender">
+            <select nmae="gender" class="write gender">
               <option value="man">남자</option>
               <option value="woman">여자</option>
             </select>
@@ -232,18 +233,18 @@
           </div>
           <div class="rg-item">
             <span class="title">가입날짜</span>
-            <input type="text" name="joinDate" class="joinDate" readonly>
+            <span class="joinDate"></span>
           </div>
           <div class="rg-item">
             <span class="title">수정날짜</span>
-            <input type="text" name="updateDate" class="updateDate" readonly>
+            <span class="updateDate"></span>
           </div>
           <div class="rg-item memoWrap">
             <span class="title memoTitle">메모</span>
             <textarea name="memo" class="write memo"></textarea>
           </div>
           <div class="rg-item">
-            <input type="button" class="reset" value="다시쓰기"></button>
+            <button type="reset" class="reset">다시쓰기</button>
             <input type="submit" class="submit" value="등록"></input>
           </div>
         </form>

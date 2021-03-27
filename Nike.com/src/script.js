@@ -9,25 +9,16 @@
     },
     { 
       name: '이름',
-      attributes: (cell) => {
-        // add these attributes to the td elements only
-        if (cell) { 
+      attributes: (cell, row) => {
+        if (cell, row) { 
           return {
-            // 'data-cell-content': cell,
-            'onclick': () => alert(cell),
+            'onClick': () => handleModal(),
+            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
-          };
+          }
         }
-      }
+      },
     },
-    // { 
-    //   name: '이름',
-    //   formatter: (cell, row) => {
-    //     return {
-    //       onClick: () => alert(`"${row.cells[0].data}"+"${row.cells[1].data}"`)
-    //     };
-    //   }
-    // },
     '등급',
     {
       name: '아이디',
