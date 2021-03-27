@@ -1,10 +1,48 @@
 'user strict';
 
-new gridjs.Grid({
+const grid = new gridjs.Grid({
+  search: true,
+  pagination: {
+    limit: 2,
+  },
+  language: {
+    search: {
+      placeholder: '🔍 Search...',
+    },
+    pagination: {
+      previous: '⬅️',
+      next: '➡️',
+      showing: '😃 Displaying',
+      results: () => 'Records',
+    },
+  },
+  sort: {
+    multiColumn: false,
+    server: {
+      url: (prev, columns) => {
+        if (!columns.length) return prev;
+
+        const col = columns[0];
+        const dir = col.direction === 1 ? 'asc' : 'desc';
+        let colName = [
+          'payDt',
+          'userNm',
+          'sendNum',
+          'sendPrice',
+          'prdNm',
+          'orderCnt',
+          'prdPrice',
+        ][col.index];
+
+        return `${prev}&order=${colName}&dir=${dir}`;
+      },
+    },
+  },
   columns: [
     {
       id: 'awesomeCheckbox',
       name: 'Select',
+      width: '30px',
       plugin: {
         component: gridjs.selection.RowSelection,
         props: {
@@ -15,7 +53,21 @@ new gridjs.Grid({
     '주문일(결제일)',
     '주문번호(주문자)',
     '운송장정보(송장번호)',
-    '배송비',
+    {
+      name: '배송비',
+      formatter: (cell, row) => {
+        return gridjs.h(
+          'button',
+          {
+            className:
+              'py-2 mb-4 px-4 border rounded-md text-white bg-blue-600',
+            onClick: () =>
+              alert(`배송비 "${row.cells[0].data}" "${row.cells[1].data}"`),
+          },
+          '2500'
+        );
+      },
+    },
     '상품명/옵션',
     '수량',
     '판매가(상품구매금액)',
@@ -23,44 +75,31 @@ new gridjs.Grid({
       name: '총 금액',
       data: null,
       formatter: (_, row) =>
-        `$${(row.cells[4].data + row.cells[7].data).toLocaleString()} 원`,
+        `${(row.cells[4].data + row.cells[7].data).toLocaleString()} 원`,
+    },
+    {
+      name: 'Image',
+      width: '50px',
+      sort: false,
+      formatter: (img) =>
+        gridjs.html(
+          `<center><img style="width: 100px;" src='${img}'/></center>`
+        ),
     },
   ],
-  pagination: {
-    //페이징 처리
-    limit: 3,
+  server: {
+    url: 'data/order-data.json',
+    then: (data) =>
+      data.data.map((order) => [
+        order.payDt,
+        order.userNm,
+        order.sendNum,
+        order.sendPrice,
+        order.prdNm,
+        order.orderCnt,
+        order.prdPrice,
+        order.image_uris.small,
+      ]),
+    total: (data) => data.total_cards,
   },
-  search: true, //검색
-  fixedHeader: true,
-  data: [
-    [
-      '2021-03-11 10:06:30',
-      '20210311-00000031 (김민정)',
-      '우체국택배 (123123)',
-      2500,
-      '나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF 스타일 : CV8122-700 사이즈 : 250 수량 : 1',
-      '1',
-      149000,
-      Array(10)
-        .fill()
-        .map((x) => [
-          Math.round(Math.random() * 100000),
-          Math.round(Math.random() * 100000),
-        ]),
-    ],
-    ['Mark', 'mark@gmail.com', '(01) 22 888 4444'],
-    ['Eoin', 'eoin@gmail.com', '0097 22 654 00033'],
-    ['Sarah', 'sarahcdd@gmail.com', '+322 876 1233'],
-    ['Afshin', 'afshin@mail.com', '(353) 22 87 8356'],
-  ],
 }).render(document.getElementById('wrapper'));
-
-// grid.on('ready', () => {
-//   // find the plugin with the give plugin ID
-//   const checkboxPlugin = grid.config.plugin.get('awesomeCheckbox');
-
-//   // subscribe to the store events
-//   checkboxPlugin.props.store.on('updated', function (state, prevState) {
-//     console.log('checkbox updated', state, prevState);
-//   });
-// });
