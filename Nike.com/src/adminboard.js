@@ -35,7 +35,7 @@
       enabled:false
     },
     formatter: (data) => gridjs.html (
-      `<a style="display:block;margin-left:-20px;
+      `<a style="display:inline-block;text-align:center;
       overflow:hidden;text-overflow:ellipsis;
       margin-left:3px;
       white-space:nowrap;width:150px;height:40.8;">${data}</a>`
@@ -49,9 +49,9 @@
     width: '200px',
     height:'44px',
     formatter: (data) => gridjs.html (
-      `<a style="display:block;margin-left:-20px;
+      `<a style="display:inline-block;text-align:center;
       overflow:hidden;text-overflow:ellipsis;
-      white-space:nowrap;width:248.8px;height:40.8;">${data}</a>`
+      white-space:nowrap;width:80%;height:40.8;">${data}</a>`
     )
   },
   {
