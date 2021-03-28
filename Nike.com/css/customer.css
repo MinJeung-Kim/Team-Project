@@ -148,3 +148,5 @@
     font-size: 15px;
   }
   .gradeSubTitle { font-weight: bold; }
+
+  .status-un { display: none; }
