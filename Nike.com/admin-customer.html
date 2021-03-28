@@ -139,23 +139,52 @@
                   <div class="list-txt">고객 목록</div>
               </div>
               <div id="divisionLine"></div>
-              <div class="memWrap">
-                <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
+              <!-- ======= 고객 검색 ======= -->
+              <div class="search-customer">
+                <div class="search-option">검색어</div>
+                <div class="search-option">
+                  <select name="">
+                    <option value="">이름</option>
+                    <option value="">이메일</option>
+                    <option value="">전화번호</option>
+                  </select>
+                  <input type="text" class="searchText"></input>
+                  <button class="search-customerBtn">찾기</button>
+                </div>
+                <div class="search-option">성별</div>
+                <div class="search-option">
+                  <input type="radio" name="" class="select-gender">남
+                  <input type="radio" name="" class="select-gender">여
+                </div>
+                <div class="search-option">등급</div>
+                <div class="search-option">
+                  <select>
+                    <option value="">FAMILY</option>
+                    <option value="">SILVER</option>
+                    <option value="">GOLD</option>
+                    <option value="">VIP</option>
+                  </select>
+                </div>
               </div>
+
               <div class="registerBtnWrap">
-                <button name="registerBtn" class="registerBtn">등록</button>
+                <button class="registerBtn">등록</button>
               </div>
 
               <div id="wrapper"></div>
 
-              <!-- <div class="searchLimitWrap">
-                <select name="searchLimit" class="searchLimit">
-                  <option value="5">5건씩보기</option>
-                  <option value="10">10건씩보기</option> 
-                  <option value="15">15건씩보기</option> 
-                  <option value="20">20건씩보기</option>  
-                </select>
-              </div> -->
+              <div class="memWrap">
+                <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
+                <div class="searchLimitWrap">
+                  <select name="searchLimit" class="searchLimit">
+                    <option value="5">5건씩보기</option>
+                    <option value="10">10건씩보기</option> 
+                    <option value="15">15건씩보기</option> 
+                    <option value="20">20건씩보기</option>  
+                  </select>
+                </div>
+              </div>
+              
               <p class="gradeWrap">
                 <span class="gradeTitle">[ 등급 조건 및 혜택 ]</span><br/>
                 <span class="gradeSubTitle">FAMILY</span> 가입즉시, 1%적립, 무료배송 쿠폰1매 발행<br/>
@@ -207,11 +236,12 @@
           </div>
           <div class="rg-item addrSub">
             <div class="postWrap">
-              <input type="text" name="post" class="write post" placeholder="예)선유로 82">
+              <input type="text" name="post" class="write post" placeholder="예)선유로 82" readonly>
               <button type="button" class="postBtn">우편번호검색</button>
             </div>
             <div class="detailWrap">
-              <input type="text" name="addrDetail" class="write addrDetail" placeholder="상세주소">
+              <input type="text" name="addrDetail" class="write addrDetail" placeholder="상세주소" readonly>
+              <input type="text" name="addrDetail2" class="write addrDetail" placeholder="나머지주소">
             </div>
           </div>
           <div class="rg-item">
