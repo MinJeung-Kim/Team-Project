@@ -173,13 +173,19 @@ input[type="number"]::-webkit-inner-spin-button {
     resize: none;
     border: none;
 }
-.rg-item .reset,
-.rg-item .submit {
+
+.modal-last {
     width: auto;
 }
 
-.rg-item .reset,
-.rg-item .submit,
+.modal-last.update {
+    display: none;
+    width: 30px;
+    height: 17.3px;
+    text-align: center;
+}
+
+.modal-last,
 .postBtn {
     background: black;
     color: white;
@@ -189,8 +195,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 12px;
 }
 
-.rg-item .reset:hover,
-.rg-item .submit:hover,
+.modal-last:hover,
 .postBtn:hover {
     background: rgb(53, 52, 52);
     cursor: pointer;
