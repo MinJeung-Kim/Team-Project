@@ -9,6 +9,7 @@
     const status = document.querySelectorAll('.status-un');
     const update = document.querySelector('.update');
     const csRegister = document.querySelector('.csRegister');
+    const csCheck = document.querySelector('.csCheck');
 
     const handleModal = (test) => { 
         if(test == 'register') {
@@ -16,12 +17,14 @@
                 cStatus.style.display = "none";
             })
             update.style.display = "none";
+            csCheck.style.display = "inline";
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
             status.forEach(cStatus => {
                 cStatus.style.display = "block";
             })
             update.style.display = "inline";
+            csCheck.style.display = "none";
             csRegister.textContent = "고객 정보";
         }
         csModal.classList.toggle('unstaged');
