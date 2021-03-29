@@ -2,14 +2,9 @@
 
 // 최신,도움순 클릭 이벤트
 
-// const filter1 = document.getElementById('filter1');
-// const filter2 = document.getElementById('filter2');
+ const filter1 = document.getElementById('filter1');
+ const filter2 = document.getElementById('filter2');
 // const reviewsort = document.querySelector('.review_sort');
-
-//버블링 이용
-// reviewsort.addEventListener('click', () => {
-//     event.target.classList.toggle('clicked');
-// },true)
 
 
 // const filter2Clicked = () => {
@@ -25,13 +20,15 @@
 
 //체크박스 선택시 라벨 디자인 변경
 
-const chk_input = document.querySelector('.chk_input');
-const chk_lb = document.querySelector('.chk_label');
+//const chk_input = document.querySelector('.chk_input');
+const chk_lb = document.querySelector('.review_filter');
 const reviewsort = document.querySelector('.review_sort');
 
-reviewsort.addEventListener('click' , () => {
-    event.target.classList.toggle('clicked');
-    event.stopPropagation;
+reviewsort.addEventListener('click' , (event) => {
+    if(event.target.className=='review_filter'){
+    filter1.classList.toggle('clicked');
+    filter2.classList.toggle('clicked');
+    }
 })
 
 //더보기
