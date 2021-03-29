@@ -16,21 +16,22 @@ gnvSub.forEach(function (userItem) {
 });
 
 function mouseEntEvent(event) {
-  console.log(event.target.textContent);
   switch (event.target.textContent) {
     case 'New Releases':
-      releases.className = 'on';
+      releases.classList.add('on');
       break;
     case 'Men':
-      men.className = 'on';
+      men.classList.add('on');
       break;
   }
   // gnvSub.style.display = 'block';
   // gnvNavLi.style.cssText = 'border-bottom: 3px solid #111';
 }
 
-function mouseLeaveEvent(event) {
-  if (event.target.className === 'on') event.target.className = 'off';
+function mouseLeaveEvent() {
+  console.log(releases.className);
+  releases.classList.remove('on');
+  men.classList.remove('on');
   // gnvSub.style.display = 'none';
   // gnvNavLi.style.cssText = '';
 }
