@@ -1,3 +1,11 @@
+.on {
+  display: block;
+}
+
+.off {
+  display: none;
+}
+
 /*  HEADER */
 .header {
   background-color: #f5f5f5;
