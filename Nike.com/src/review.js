@@ -2,25 +2,8 @@
 
 // 최신,도움순 클릭 이벤트
 
- const filter1 = document.getElementById('filter1');
- const filter2 = document.getElementById('filter2');
-// const reviewsort = document.querySelector('.review_sort');
-
-
-// const filter2Clicked = () => {
-//     filter1.classList.remove('clicked');
-//     filter2.classList.add('clicked');
-// }
-// const filter1Clicked = () => {
-//     filter2.classList.remove('clicked');
-//     filter1.classList.add('clicked');
-// }
-// filter2.addEventListener('click',filter2Clicked);
-// filter1.addEventListener('click',filter1Clicked);
-
-//체크박스 선택시 라벨 디자인 변경
-
-//const chk_input = document.querySelector('.chk_input');
+const filter1 = document.getElementById('filter1');
+const filter2 = document.getElementById('filter2');
 const chk_lb = document.querySelector('.review_filter');
 const reviewsort = document.querySelector('.review_sort');
 
@@ -46,3 +29,14 @@ const readMore = () => {
 }
 
 button.addEventListener('click', readMore);
+
+//엄지 클릭이벤트
+
+const thumbs = document.querySelector('.far');
+const review_read = document.querySelector('.review_read');
+
+review_read.addEventListener('click', (event) => {
+    if(event.target==thumbs){
+        thumbs.classList.toggle('fas');
+    }
+})
