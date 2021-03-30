@@ -62,7 +62,7 @@
   },
   '작성일',
   {
-    name: '조회수',
+    name: '도움수',
     width: '55px'
   },],
   sort: true,
