@@ -1,28 +1,77 @@
 
 new gridjs.Grid({
   //width조정 했지만 체크박스는 그대로인 이유?
-    columns: [
-      {
-        id: 'awesomeCheckbox',
-        name: '',
-        width:'3%',
-        plugin: {
-          component: gridjs.selection.RowSelection,
-          props: {
-            id: (row) => row.cell(2).data,
-          },
-        },
+  columns: [
+    {
+      id: 'myCheckbox',
+      name: gridjs.html('<input type="checkbox"'+
+      ' style="margin-left:-50px;margin-top:-5px;position:absolute;"'+
+       'name="chk" id="inputA">'),
+      formatter: (cell,row) => gridjs.html(
+          `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
+      ),
+      plugin: {
+        // install the RowSelection plugin
+        component: gridjs.selection.RowSelection,
+        // RowSelection config
+        props: {
+          // use the "email" column as the row identifier
+          id: (row) => row.cell(1).data,
+        }
       },
-      '상품 코드',
-      '상품 이미지',
-      '상품명',
-      '가격',
-      '전체수량',
-      '재고량',
-      '상품리뷰',
-      '등록날짜',
-      '관리',
-    ],
+      width: '10px',
+      sort: {
+        enabled:false
+      }
+    },
+    {
+      name: '상품코드',
+      sort: {
+        enabled:false
+      }
+    },
+    {
+      name: '상품이미지',
+      sort: {
+        enabled:false
+      }
+    },
+    {
+      name: '상품명',
+      sort: {
+        enabled:false
+      }
+    },
+    {
+      name: '가격',
+      
+    },
+    {
+      name: '전체수량',
+      width:'70px'
+    },
+    {
+      name: '재고량',
+      width:'70px'
+    },
+    {
+      name: '상품리뷰',
+      sort: {
+        enabled:false
+      }
+    },
+    {
+      name: '등록날짜',
+      sort: {
+        enabled:false
+      }
+    },
+    {
+      name: '관리',
+      sort: {
+        enabled:false
+      }
+    } ],
     pagination: {
       //페이징 처리
       limit: 5,
