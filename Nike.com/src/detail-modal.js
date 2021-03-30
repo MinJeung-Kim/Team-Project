@@ -8,6 +8,7 @@
 
     const status = document.querySelectorAll('.status-un');
     const update = document.querySelector('.update');
+    const csdelete = document.querySelector('.delete');
     const csRegister = document.querySelector('.csRegister');
     const csCheck = document.querySelector('.csCheck');
 
@@ -17,6 +18,7 @@
                 cStatus.style.display = "none";
             })
             update.style.display = "none";
+            csdelete.style.display = "none";
             csCheck.style.display = "inline";
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
@@ -24,6 +26,7 @@
                 cStatus.style.display = "block";
             })
             update.style.display = "inline";
+            csdelete.style.display = "inline";
             csCheck.style.display = "none";
             csRegister.textContent = "고객 정보";
         }
@@ -33,7 +36,6 @@
     } 
     registerBtnWrap.addEventListener('click', event => handleModal('register'));
     csCloseBtn.addEventListener('click', event => handleModal('register'));
-
 
 //가입날짜, 수정날짜
 
@@ -79,3 +81,28 @@
         })
     }
     csCloseBtn.addEventListener('click', resetContents);    
+
+//등록
+    function regCheck() {
+        if(confirm("등록하시겠습니까?") == false) return false;
+    }
+
+//수정
+    function updateCheck() {
+        if (confirm("정말 수정하시겠습니까?") == true){//확인
+            document.registerForm.submit();
+        }else{//취소
+            return false;
+        }
+    }
+    update.addEventListener('click', updateCheck);
+
+//삭제
+    function deleteCheck() {
+        if (confirm("정말 삭제하시겠습니까?") == true){//확인
+            document.registerForm.submit();
+        }else{//취소
+            return false;
+        }
+    }
+    csdelete.addEventListener('click', deleteCheck);

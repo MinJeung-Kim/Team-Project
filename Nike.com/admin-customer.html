@@ -257,7 +257,7 @@
             <span class="title">상태</span>
             <select name="status" class="write status">
               <option value="normal">정상</option>
-              <!-- 수정창에서만 보이게 -->
+              <!-- 수정창에서만 보임 -->
               <option value="dormant" class="status-un">휴면</option>
               <option value="withdrawal" class="status-un">탈퇴</option>
             </select>
@@ -278,8 +278,10 @@
             <button type="reset" class="modal-last reset">다시쓰기</button>
             <input type="submit" class="modal-last submit" value="등록"></input>
           </div>
-          <div class="rg-item csUpdate">
-            <button type="button" class="modal-last update">수정</input>
+          <!-- 수정창에서만 보임 -->
+          <div class="rg-item UptandDel">
+            <button type="button" class="modal-last update">수정</button>
+            <button type="button" class="modal-last delete">삭제</button>
           </div>
         </form>
 
