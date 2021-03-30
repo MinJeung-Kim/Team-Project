@@ -129,10 +129,6 @@
     padding-bottom: 7px;
 
 }
-/* .chk_input {
-     position: absolute;
-    clip: rect(0,0,0,0);
-} */
 .review_grid {
     height: 414px;
     border-top: 1px solid #e5e5e5;
@@ -143,6 +139,15 @@
     height: 383px;
     padding: 30px 10px 0px;
     text-align: left;
+}
+.review_grid_top {
+    display: flex;
+}
+.fa-thumbs-up {
+    margin-left: 20px;
+    margin-top: -5px;
+    font-size: 20px;
+    cursor: pointer;
 }
 .review_subject {
     font-size: 14px;
