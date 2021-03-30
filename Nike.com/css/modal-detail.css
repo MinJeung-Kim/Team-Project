@@ -183,7 +183,8 @@ input[type="number"]::-webkit-inner-spin-button {
     width: auto;
 }
 
-.modal-last.update {
+.modal-last.update,
+.modal-last.delete {
     display: none;
     text-align: center;
 }
@@ -203,4 +204,3 @@ input[type="number"]::-webkit-inner-spin-button {
     background: rgb(53, 52, 52);
     cursor: pointer;
 }
-
