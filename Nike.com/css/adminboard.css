@@ -99,8 +99,20 @@
     border-radius: 6px;
     top: 90px;
     cursor: pointer;
+  }.reset-button {
+    position: absolute;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    right: 100px;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    top: 90px;
+    cursor: pointer;
+    
   }
-  .search-button:hover {
+  .search-button:hover, .reset-button:hover {
     background: gray;
     border: 1px solid gray;
   }
