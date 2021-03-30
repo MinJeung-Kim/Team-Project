@@ -5,8 +5,23 @@ const st2 = document.getElementById("star2");
 const st3 = document.getElementById("star3");
 const st4 = document.getElementById("star4");
 const st5 = document.getElementById("star5");
+const star = document.querySelector('.product-star');
 
 //클릭시 색 바꾸기
+
+// const $starWrap = document.querySelector('.product-star')
+// const $stars = document.querySelectorAll('.fas.fa-star')
+
+// $starWrap.addEventListener('click', (e) => {
+//   console.log(e)
+//   console.log(e.target)
+//   console.log(e.target.className)
+
+//    $stars.forEach((star) => {
+//     console.log(star.id)
+//    })
+// })
+
 st5.addEventListener('click', () => {
     st1.style.color = 'black';
     st2.style.color = 'black';
