@@ -7,27 +7,25 @@
     const csCloseBtn =  document.querySelector('.csCloseBtn');
 
     const status = document.querySelectorAll('.status-un');
-    const update = document.querySelector('.update');
-    const csdelete = document.querySelector('.delete');
+    const uptAndDel = document.querySelector('.uptAndDel');
+    const reAndSub = document.querySelector('.reAndSub');
     const csRegister = document.querySelector('.csRegister');
-    const csCheck = document.querySelector('.csCheck');
 
     const handleModal = (test) => { 
         if(test == 'register') {
             status.forEach(cStatus => {
                 cStatus.style.display = "none";
             })
-            update.style.display = "none";
-            csdelete.style.display = "none";
-            csCheck.style.display = "inline";
+
+            reAndSub.classList.add('stage');
+            uptAndDel.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
             status.forEach(cStatus => {
                 cStatus.style.display = "block";
             })
-            update.style.display = "inline";
-            csdelete.style.display = "inline";
-            csCheck.style.display = "none";
+            uptAndDel.classList.add('stage1');
+            reAndSub.classList.remove('stage');
             csRegister.textContent = "고객 정보";
         }
         csModal.classList.toggle('unstaged');
@@ -83,11 +81,13 @@
     csCloseBtn.addEventListener('click', resetContents);    
 
 //등록
-    function regCheck() {
-        if(confirm("등록하시겠습니까?") == false) return false;
-    }
+
+    // function regCheck() {
+    //     if(confirm("등록하시겠습니까?") == false) return false;
+    // }
 
 //수정
+    const update = document.querySelector('.update');
     function updateCheck() {
         if (confirm("정말 수정하시겠습니까?") == true){//확인
             document.registerForm.submit();
@@ -98,6 +98,8 @@
     update.addEventListener('click', updateCheck);
 
 //삭제
+
+    const csdelete = document.querySelector('.delete');
     function deleteCheck() {
         if (confirm("정말 삭제하시겠습니까?") == true){//확인
             document.registerForm.submit();
