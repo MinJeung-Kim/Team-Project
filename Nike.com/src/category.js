@@ -4,12 +4,12 @@
 
 	const seeMore = document.querySelector('.seeMore');
 	const nFirst = document.querySelector('.nFirst');
-	const staged = document.querySelector('.staged');
+	const child = document.querySelector('.child');
 	const more = function() {
-		nFirst.insertBefore(staged, nFirst.lastElementChild);
-		seeMore.innerHTML='접기';
+		child.style.display = "block";
+		seeMore.innerHTML='- 접기';
 	}
-	seeMore.addEventListener('click',more);
+	seeMore.addEventListener('click', more);
 
 //여성 상품으로 변경
 
