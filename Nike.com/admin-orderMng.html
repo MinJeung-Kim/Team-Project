@@ -4,24 +4,13 @@
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
 
-    <!-- CSS 초기화(cdn) => ***초기화css를 제일 먼저 작성 
-                   https://cdnjs.com/libraries/meyer-reset 
-            -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
-    />
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <script
-      src="https://kit.fontawesome.com/9eb162ac0d.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/admin-orderMng.css" />
 
@@ -40,30 +29,22 @@
       integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
       crossorigin="anonymous"
     />
-    <script
-      src="https://unpkg.com/wnumb@1.2.0/wNumb.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://unpkg.com/wnumb@1.2.0/wNumb.js" crossorigin="anonymous"></script>
 
     <!-- Grid.js -->
     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
     <script src="https://unpkg.com/gridjs-selection/dist/gridjs-selection.production.min.js"></script>
 
-    <link
-      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script> -->
 
     <!-- 페이지 공통 메뉴 불러오기 -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
-        $('#admin-menu').load('admin-menu-common.html');
-      });
+        $('#admin-menu').load('admin-menu-common.html')
+      })
     </script>
   </head>
   <body>
@@ -95,20 +76,10 @@
                         <option value="">발송일</option>
                         <option value="">주문완료일</option>
                       </select>
-                      <a class="day-btn day-today">오늘</a
-                      ><a class="day-btn day-three">3일</a
-                      ><a class="day-btn day-month">1개월</a>
-                      <input
-                        class="order-calender date-start"
-                        type="date"
-                        required
-                      />
+                      <a class="day-btn day-today">오늘</a><a class="day-btn day-three">3일</a><a class="day-btn day-month">1개월</a>
+                      <input class="order-calender date-start" type="date" required />
                       ~
-                      <input
-                        class="order-calender date-end"
-                        type="date"
-                        required
-                      />
+                      <input class="order-calender date-end" type="date" required />
                     </div>
                     <div class="order-items">
                       <input type="text" />

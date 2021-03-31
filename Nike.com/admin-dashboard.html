@@ -4,19 +4,12 @@
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
 
-    <!-- CSS 초기화(cdn) => ***초기화css를 제일 먼저 작성 
-               https://cdnjs.com/libraries/meyer-reset 
-        -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
-    />
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/admin-dashboard.css" />
     <link rel="stylesheet" href="css/categorypage.css" />
@@ -24,11 +17,8 @@
     <script defer src="src/admin-dashboard-chart.js"></script>
     <script defer src="src/admin-dashboard-canvas.js"></script>
 
-    <script
-      src="https://kit.fontawesome.com/9eb162ac0d.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- defer : html을 다 읽고 난 후 script 실행 -->
+    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
     <!-- 차트 -->
@@ -41,8 +31,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
-        $('#admin-menu').load('admin-menu-common.html');
-      });
+        $('#admin-menu').load('admin-menu-common.html')
+      })
     </script>
   </head>
   <body>
@@ -62,15 +52,9 @@
                 <a href="#">
                   <span class="dashboard-title">주문현황</span>
                   <ul class="detail-status">
-                    <li class="status-li">
-                      <span>입금대기</span><span>54 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>신규주문</span><span>6 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>구매확정</span><span>10 건</span>
-                    </li>
+                    <li class="status-li"><span>입금대기</span><span>54 건</span></li>
+                    <li class="status-li"><span>신규주문</span><span>6 건</span></li>
+                    <li class="status-li"><span>구매확정</span><span>10 건</span></li>
                   </ul>
                 </a>
               </li>
@@ -78,15 +62,9 @@
                 <a href="#">
                   <span class="dashboard-title">배송현황</span>
                   <ul class="detail-status">
-                    <li class="status-li">
-                      <span>배송준비</span><span>54 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>배송중</span><span>6 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>배송완료</span><span>10 건</span>
-                    </li>
+                    <li class="status-li"><span>배송준비</span><span>54 건</span></li>
+                    <li class="status-li"><span>배송중</span><span>6 건</span></li>
+                    <li class="status-li"><span>배송완료</span><span>10 건</span></li>
                   </ul>
                 </a>
               </li>
@@ -94,15 +72,9 @@
                 <a href="#">
                   <span class="dashboard-title">취소/반품/교환현황</span>
                   <ul class="detail-status">
-                    <li class="status-li">
-                      <span>취소요청</span><span>54 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>반품요청</span><span>6 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>교환요청</span><span>10 건</span>
-                    </li>
+                    <li class="status-li"><span>취소요청</span><span>54 건</span></li>
+                    <li class="status-li"><span>반품요청</span><span>6 건</span></li>
+                    <li class="status-li"><span>교환요청</span><span>10 건</span></li>
                   </ul>
                 </a>
               </li>
@@ -110,15 +82,9 @@
                 <a href="#">
                   <span class="dashboard-title">통계</span>
                   <ul class="detail-status">
-                    <li class="status-li">
-                      <span>오늘 방문자</span><span>54 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>오늘 가입자</span><span>6 건</span>
-                    </li>
-                    <li class="status-li">
-                      <span>총 회원수</span><span>10 건</span>
-                    </li>
+                    <li class="status-li"><span>오늘 방문자</span><span>54 건</span></li>
+                    <li class="status-li"><span>오늘 가입자</span><span>6 건</span></li>
+                    <li class="status-li"><span>총 회원수</span><span>10 건</span></li>
                   </ul>
                 </a>
               </li>

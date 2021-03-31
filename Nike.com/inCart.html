@@ -4,25 +4,24 @@
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
 
-    <!-- CSS 초기화(cdn) => ***초기화css를 제일 먼저 작성 
-               https://cdnjs.com/libraries/meyer-reset 
-        -->
+    <!-- CSS 초기화 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/cart.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+
     <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
-    <!-- defer : html을 다 읽고 난 후 script 실행 -->
-    <!-- <script defer src="main.js"></script> -->
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
-        $('#header').load('header.html')
+        $('#header').load('comm-header.html')
         $('#footer').load('comm-footer.html')
       })
     </script>
