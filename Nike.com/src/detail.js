@@ -32,3 +32,25 @@ upButton.addEventListener('click', (event) => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     });
+
+
+//quantity
+
+  // 결과를 표시할 element
+const result = document.querySelector('numberUpDown');
+result.addEventListener('click',function count(type) {
+
+  // 현재 화면에 표시된 값
+  let number = result.innerText;
+  
+  // 더하기/빼기
+  if(type === 'increaseQuantity') {
+    number = parseInt(number) + 1;
+  }else if(type === 'decreaseQuantity')  {
+    number = parseInt(number) - 1;
+  }
+  
+  // 결과 출력
+  result.innerText = number;
+});
+  

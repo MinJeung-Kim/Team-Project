@@ -8,13 +8,15 @@ const searchModal = document.querySelector('big-search');
 
 
 function onClick() {
-    searchModal.style.display = 'block';
+
     console.log(gnvSearchInput);
     console.log(searchModal);
+
 }
 function offClick() {
-    searchModal.style.display = 'none';
 
+    searchModal.style.display = 'none';
+    
 }
 gnvSearchInput.addEventListener('click',onClick);
 document.querySelector('.search-close').addEventListener('click',offClick);
