@@ -1,0 +1,152 @@
+.body__container {
+    max-width: 1808px;
+    margin: 0 auto;
+  }
+  .cstxt {
+      display: inline-block;
+      padding: 30px;
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: 2px;
+      font-size: 25px;
+  }
+  .dashboard-main {
+      display: flex;
+  }
+  .dashboard-menu {
+      width: 250px;
+      padding: 0 20px;
+      min-width: 110px;
+  }
+  .dashboard-menu-list {
+      padding-top: 30px;
+  }
+  .dashboard-menu-list li {
+      padding: 15px 0;
+  }
+  .adminCustomer {
+      font-weight: bold;
+  }
+  .right-content-wrap {
+      width: 990px;
+      padding: 0 30px;    
+  }
+  .dash-icon .fas,
+  .dash-icon .fab {
+      font-size: 18px;
+      padding: 5px;
+  }
+  .customer-list {
+     display: flex;
+     justify-content: space-between;
+     padding: 15px;
+  }
+  .list-txt {
+     font-family: 'Noto Sans KR', sans-serif;
+     font-size: 25px;
+     font-weight: 500;
+     letter-spacing: 2px;
+  }
+  #divisionLine {
+    width: 100%;
+    background: black;
+    border:1px solid;
+    margin-bottom: 25px;
+  }
+
+  /* 고객 검색 */
+  .search-customer {
+    display: grid;
+    width: 100%;
+    height: 90px;
+    align-items: center;
+    grid-template-columns: repeat(2, 100px 5fr);
+    border-top: 3px solid lightgray;
+    border-bottom: 3px solid lightgray;
+  }
+  .search-customer select {
+    height: 25px;
+  }
+  .search-option {
+    height: 100%;
+    line-height: 43px;
+    padding-left: 8px;
+  }
+  .search-option:nth-child(2) { grid-column: 2/6; }
+  .search-option:nth-child(3), 
+  .search-option:nth-child(4),
+  .search-option:nth-child(5),
+  .search-option:nth-child(6) {
+    border-top: 1px solid lightgray;
+  }
+  
+  .search-option:nth-child(1),
+  .search-option:nth-child(3),
+  .search-option:nth-child(5) {
+    background: rgb(245, 245, 245);
+  }
+  .search-option:nth-child(2),
+  .search-option:nth-child(6) {
+    padding-left: 8px;
+  }
+  .searchText {
+    width: 150px;
+    height: 21px;
+    border: 1px solid gray;
+  }
+  .search-customerBtn,
+  .registerBtn {
+    outline: none;
+  }
+  .search-customerBtn {
+    position: relative;
+    top: 2px;
+    left: 10px;
+  }
+
+  .registerBtnWrap {
+    position: relative;
+    top: 50px;
+    z-index: 99;
+    float: right;
+  }
+  .registerBtn,
+  .search-customerBtn {
+    background: black;
+    color: white;
+    height: 23px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .select-gender { width: 20px; }
+  .memWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+  .memTotal {
+    padding-top: 30px;
+    color: #5C5B5B;
+    font-size: 14px;
+  }
+  .searchLimit {
+    margin-top: 10px;
+    height:100%;
+    float: right;
+    z-index: 99;
+  }
+  .gradeWrap {
+    margin-top: 30px;
+    color: #5C5B5B;
+    line-height: 25px;
+    font-size: 14px;
+  }
+  .gradeTitle {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .gradeSubTitle { font-weight: bold; }
+
+  .status-un { display: none; }

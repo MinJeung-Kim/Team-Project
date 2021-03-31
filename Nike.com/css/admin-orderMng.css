@@ -1,0 +1,107 @@
+/* ORDER COMMON */
+
+select {
+  margin-right: 20px;
+  padding: 3px 8px;
+
+  color: rgb(107, 114, 128);
+}
+
+.body__container input {
+  padding: 3px 8px;
+  color: rgb(107, 114, 128);
+  border: 1px solid #8d8d8d;
+  width: 40%;
+  border-radius: 4px;
+}
+
+/* ORDER CSS */
+
+.order-status {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+}
+
+.order-status li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 20%;
+  height: 70px;
+  padding: 10px;
+
+  border: 1px solid darkgrey;
+  cursor: pointer;
+}
+
+.order-title {
+  font-size: 18px;
+
+  padding-bottom: 20px;
+}
+
+.order-num {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.order-search-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 1295px;
+  /* align-items: center; */
+  margin-bottom: 50px;
+}
+
+.order-search {
+  display: grid;
+
+  margin-bottom: 50px;
+
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 150px;
+  grid-auto-flow: column;
+}
+
+.f-title,
+.order-items {
+  line-height: initial;
+
+  box-sizing: content-box;
+  padding: 14px 24px;
+
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+  box-shadow: 0 1px 0 0 #e5e7eb;
+}
+
+.day-btn {
+  font-size: 14px;
+  border: 1px solid #d2d6dc;
+  padding: 4px;
+  background-color: #f9fafb;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.order-items .order-calender {
+  width: 20%;
+}
+
+.f-title {
+  background-color: #f9fafb;
+}
+
+.order-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.order-btn {
+  cursor: pointer;
+}

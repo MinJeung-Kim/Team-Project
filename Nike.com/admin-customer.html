@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
-    
 
     <!-- 작성자 -->
     <meta name="author" content="Tem Project" />
@@ -71,26 +70,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/customer.css" />  
+    <link rel="stylesheet" href="css/admin-customer.css" />
+    <link rel="stylesheet" href="css/admin-customer-modal.css" />  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
-
+    
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script> 
     $(function(){
       $("#header").load("header.html"); 
-      $("#footer").load("footer.html"); 
+      $("#footer").load("footer.html");
     });
     </script>
+    
+    <script defer src="src/admin-customer-grid.js"></script>
+    <script defer src="src/admin-customer.js"></script>
+    <script defer src="src/comm-validate.js"></script>
+    <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
   </head>
@@ -134,27 +138,54 @@
             <div class="right-content-wrap">
               <div class="customer-list">
                   <div class="list-txt">고객 목록</div>
-                  <input type="submit" name="registerBtn" value="등록" class="registerBtn">
               </div>
               <div id="divisionLine"></div>
-              <div class="search">
-                <select name="selectMem" class="selectMem">
-                  <option value="memberY">회원</option>
-                  <option value="memberN">비회원</option>
-                </select>
-                <input type="text" class="searchBox" name="searchBox" placeholder="이름,아이디,등급">
-                <a href="javascript:;" class="srhBtnWrap"><i class="fas fa-search searchBtn"></i></a>
+              <!-- ======= 고객 검색 ======= -->
+              <div class="search-customer">
+                <div class="search-option">검색어</div>
+                <div class="search-option">
+                  <select name="">
+                    <option value="">이름</option>
+                    <option value="">이메일</option>
+                    <option value="">전화번호</option>
+                  </select>
+                  <input type="text" class="searchText"></input>
+                  <button class="search-customerBtn">찾기</button>
+                </div>
+                <div class="search-option">성별</div>
+                <div class="search-option">
+                  <input type="radio" name="searchGender" class="select-gender">남
+                  <input type="radio" name="searchGender" class="select-gender">여
+                </div>
+                <div class="search-option">등급</div>
+                <div class="search-option">
+                  <select>
+                    <option value="">FAMILY</option>
+                    <option value="">SILVER</option>
+                    <option value="">GOLD</option>
+                    <option value="">VIP</option>
+                  </select>
+                </div>
               </div>
+
+              <div class="registerBtnWrap">
+                <button class="registerBtn">등록</button>
+              </div>
+
+              <div id="wrapper"></div>
+
               <div class="memWrap">
                 <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
-                <select name="searchLimit" class="searchLimit">
-                  <option value="5">5건씩보기</option>
-                  <option value="10">10건씩보기</option> 
-                  <option value="15">15건씩보기</option> 
-                  <option value="20">20건씩보기</option>  
-                </select>
+                <div class="searchLimitWrap">
+                  <select name="searchLimit" class="searchLimit">
+                    <option value="5">5건씩보기</option>
+                    <option value="10">10건씩보기</option> 
+                    <option value="15">15건씩보기</option> 
+                    <option value="20">20건씩보기</option>  
+                  </select>
+                </div>
               </div>
-              <div id="wrapper"></div>
+              
               <p class="gradeWrap">
                 <span class="gradeTitle">[ 등급 조건 및 혜택 ]</span><br/>
                 <span class="gradeSubTitle">FAMILY</span> 가입즉시, 1%적립, 무료배송 쿠폰1매 발행<br/>
@@ -163,11 +194,100 @@
                 <span class="gradeSubTitle">VIP</span> 3개월 구매금액 1,000,000원 충족시, 5%할인, 무료배송
               </p>
             </div>
-          </div> <!-- dashboard-main-->
+        </div> <!-- dashboard-main-->
       </section>
     </div>
-    
-</body>
-<script src="src/script.js"></script>
+    <div class="modalWrapper">
+      <div class="csModal">
+        <div class="ModalHeader">
+          <span class="csRegister">고객 등록</span>
+          <a class="csCloseBtn">&times;</a>
+        </div>
+        
+        <form action="#" method="post" name="registerForm" class="rg-container" id="reg_form" onsubmit="return regCheck()">
+          <div class="rg-item">
+            <span class="title">이름 *</span>
+            <input type="text" name="name" class="write name">
+          </div>
+          <div class="rg-item">
+            <span class="title">이메일 *</span>
+            <input type="text" name="email" class="write email">
+          </div>
+          <div class="rg-item">
+            <span class="title">비밀번호 *</span>
+            <input type="text" name="password" class="write password">
+          </div>
+          <div class="rg-item">
+            <span class="title">전화번호 *</span>
+            <input type="number" name="phone" class="write phone" placeholder="&nbsp;'-'없이 입력">
+          </div>
+          <div class="rg-item">
+            <span class="title">성별</span>
+            <select name="" class="write gender">
+              <option value="man">남자</option>
+              <option value="woman">여자</option>
+            </select>
+          </div>
+          <div class="rg-item">
+            <span class="title">생년월일</span>
+            <input type="date" name="bday" class="write bday" min="1900-01-01" max="2022-01-01">
+          </div>
+          <div class="rg-item">
+            <span class="title addrTitle">주소</span>
+          </div>
+          <div class="rg-item addrSub">
+            <div class="postWrap">
+              <input type="text" name="post" class="write post" placeholder="예)선유로 82" readonly>
+              <button type="button" class="postBtn">우편번호검색</button>
+            </div>
+            <div class="detailWrap">
+              <input type="text" name="addrDetail" class="write addrDetail" placeholder="상세주소" readonly>
+              <input type="text" name="addrDetail2" class="write addrDetail" placeholder="나머지주소">
+            </div>
+          </div>
+          <div class="rg-item">
+            <span class="title">등급</span>
+            <select nmae="grade" class="write grade">
+              <option value="family" selected>Family</option>
+              <option value="silver">SILVER</option>
+              <option value="gold">GOLD</option>
+              <option value="VIP">VIP</option>
+            </select>
+          </div>
+          <div class="rg-item">
+            <span class="title">상태</span>
+            <select name="status" class="write status">
+              <option value="normal">정상</option>
+              <!-- 수정창에서만 보임 -->
+              <option value="dormant" class="status-un">휴면</option>
+              <option value="withdrawal" class="status-un">탈퇴</option>
+            </select>
+          </div>
+          <div class="rg-item">
+            <span class="title">가입날짜</span>
+            <span class="joinDate"></span>
+          </div>
+          <div class="rg-item">
+            <span class="title">수정날짜</span>
+            <span class="updateDate"></span>
+          </div>
+          <div class="rg-item memoWrap">
+            <span class="title memoTitle">메모</span>
+            <textarea name="memo" class="write memo"></textarea>
+          </div>
+          <div class="rg-item csCheck">
+            <button type="reset" class="modal-last reset">다시쓰기</button>
+            <input type="submit" class="modal-last submit" value="등록"></input>
+          </div>
+          <!-- 수정창에서만 보임 -->
+          <div class="rg-item UptandDel">
+            <button type="button" class="modal-last update">수정</button>
+            <button type="button" class="modal-last delete">삭제</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </body>
 </html>
     

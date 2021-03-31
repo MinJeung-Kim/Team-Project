@@ -46,40 +46,48 @@
     width: 300px;
 }
   .adminboard_filter {
-    width: 100%;
-    height: 33%;
+    display: grid;
+    height: 200px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 2fr 8fr;
   }
-  .t-left {
-    width: 80px;
-    text-align: center;
+  .item {
+    border: 1px solid #e5e5e5;
     padding: 10px;
-    border-bottom: 1px solid #e5e5e5;
-    border-right: 1px solid #e5e5e5;
-}
-.t-right {
-    border-bottom: 1px solid #e5e5e5;
-    width: 92.2%;
-}
+    display: flex;
+    align-items: center;
+  }
+  .itemL {
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+  }
   .adreview_star {
     margin-left: 15px;
-    width: 110px;
-    height: 20px;
+    width: 130px;
+    height: 25px;
+    font-size: 18px;
+    border-radius: 6px;
   }
   .review_filter {
-    width: 110px;
-    height: 20px;
-    margin-left: 15px;
+    width: 130px;
+    height: 25px;
+    margin: 0 15px;
+    border-radius: 6px;
   }
   .search-word {
-    border: 1px solid black;
-    width: 160px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 200px;
+    height: 22px;
 }
   .date_input {
-    width: 105px;
-  }
-  .date_input2 {
-    width: 105px;
-  }
+    width: 130px;
+    height: 25px;
+    border: 1px solid gray;
+    margin: 0 15px;
+    border-radius: 6px;
+}
   .search-button {
     position: absolute;
     border: 1px solid black;
@@ -88,25 +96,56 @@
     right: 10px;
     width: 80px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: 6px;
     top: 90px;
     cursor: pointer;
+  }.reset-button {
+    position: absolute;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    right: 100px;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    top: 90px;
+    cursor: pointer;
+    
+  }
+  .search-button:hover, .reset-button:hover {
+    background: gray;
+    border: 1px solid gray;
   }
   .day {
-    background: #e5e5e5;
     border: 1px solid #d3d3d3;
-
-}
+    border-radius: 6px;
+    margin: 0 5px;
+    height: 28px;
+    width: 50px;
+    cursor: pointer;
+  }
+  .day:hover {
+    background: gray;
+    color: white;
+  }
   #wrapper {
     margin-top: 50px;
   }
+  .admin_write {
+    text-align: right;
+  }
   .write_button {
-    background: gray;
-    color: white;
+    background: lightgray;
+    color: black;
     padding: 5px 10px;
     margin: 10px;
-    float: right;
     cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 6px;
+  }
+  .write_button:hover {
+    background: gray;
+    color: white;
   }
 
 

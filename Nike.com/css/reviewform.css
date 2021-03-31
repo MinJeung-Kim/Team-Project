@@ -1,0 +1,228 @@
+
+.write_modal_back {
+    background: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9998;
+    //display: none;
+}
+.write_modal {
+    position: absolute;
+    top: -31.5px; 
+    box-sizing: border-box;
+    width: 550px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    //display: none;
+    z-index: 9999;
+    left: 50%;
+    margin-left: -240px;
+}
+.write_modal-content {
+    height: 576.8px;
+}
+.write_close-button {
+    font-size: 30px;
+    position: relative;
+    left: 490px;  
+}
+.write_close-button:hover {
+    color: gray;
+}
+.write_img-div {
+    width: 30%;
+    height: 30px;
+    display: block;
+    left: -20px;
+    margin-top: -25px;
+}
+.write_product-img{
+    width: 40px;
+    height: 40px;
+}
+.write_product-info {
+    padding-left: 45px;
+    margin-top: -30px;
+}
+.write_info_tit {
+    font-size: 10px;
+    margin: 10px 0px 0px;
+
+}
+.write_info_price {
+    font-size: 10px;
+    display: block;
+    margin-top: 15px;
+}
+.write_modal_title {
+    width: 420px;
+    height: 90px;
+    margin-top: -25px;
+}
+.write_modal_logo{
+    width: 53.5px;
+    height: 24.8px;
+    margin-left: 235px;
+}
+.write_modal_title_txt {
+    font-size: 30px;
+    font-weight: 550;
+    display: block;
+    margin-top: 15px;
+    margin-left: 80px;
+    text-align: center;
+}
+.write_body{
+    width: 420px;
+    height: 138px;
+}
+.cont-1_tit {
+    font-size: 14px;
+    font-weight: bolder;
+    display: block;
+    margin-top: 10px;
+}
+.writeform {
+    display: flex;
+}
+.cont-l {
+    width: 70%;
+    height: 350px;
+    float: left;
+}
+.review_input1 {
+    width: 250px;
+    height: 23px;
+    border: 2px solid #cecece;
+    margin-top: 5px;
+}
+.review_input2 {
+    width: 250px;
+    height:200px;
+    border: 2px solid #cecece;
+    margin-top: 5px;
+    resize: none;
+}
+.filewrap {
+    display: flex;
+    margin-top: 5px;
+}
+.upload-name {
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #cecece;
+    margin-right: 5px;
+    width: 173px;
+    height: 21px;
+}
+.fileLabel {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    background: black;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    align-items: center;
+}
+.fileLabel:hover {
+    background: gray;
+    border-color: gray;
+}
+.review_input3 {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+.review_input4 {
+    width: 175px;
+    height:20px;
+    border: 2px solid #cecece;
+    margin-top: 5px;
+}
+.file_button {
+    background: black;
+    height: 25px;
+    width: 75px;
+    color: white;
+    vertical-align: -1.5px;
+    cursor: pointer;
+}
+.file_button:hover {
+    background: gray;
+}
+.cont-r {
+    text-align: center;
+}
+.reviewform_star {
+    width: 100%;
+    height: 60px;
+}
+.product-star {
+    margin-top: 5px;
+}
+.product-star i {
+    cursor: pointer;
+    color: gray;
+}
+.reviewform_gage-wrap {
+    width: 250px;
+    height: 100%;
+}
+.rangebar {
+    width: 100%;
+    height: 5px;
+    color: #cecece;
+    cursor: pointer;
+}
+.reviewform_gage {
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: left;
+}
+.reviewform_gage-title {
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.reviewform_value-box{
+    width: 187px;
+    height: 34px;
+    margin: 10px;
+    margin-top: 0px;
+}
+.reviewform_value-txtLeft {
+    color: gray;
+    font-size: 11px;
+    float: left;
+    margin-top: 10px;
+}
+.reviewform_value-txtRight {
+    color: gray;
+    font-size: 11px;
+    float: right;
+    margin-top: 10px;
+}
+.reviewform_button {
+    position: absolute;
+    top: 555px;
+    width: 70%;
+    left: 80px;
+}
+.review-save {
+    width: 100%;
+    height: 40px;
+    background: black;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.review-save:hover {
+    background: gray;
+}

@@ -77,6 +77,7 @@
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="src/review.js"></script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
 </head>
@@ -151,15 +152,22 @@
                 </div>
             </div>
             <div class="review_sort">
-                <a id="review_filter1">최신순</a>
-                <a id="review_filter2">도움순</a>
+                <!-- <label for="chk_1" class="chk_label">최신순</label>
+                <input type="checkbox" id="chk_1" class="chk_input">
+                <label for="chk_2" class="chk_label">도움순</label>
+                <input type="checkbox" id="chk_2" class="chk_input"> -->
+                <a class="review_filter clicked" id="filter1">최신순</a>
+                <a class="review_filter" id="filter2">도움순</a>
             </div>
             <div class="review_read">
                 <ul id="review_list">
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">색감 좋아요</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">색감 좋아요</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -171,9 +179,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>정*훈 - </span>
+                                    <span class="write-date">2021.03.08</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.03.08</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">색상이 너무 좋아서 마음에 들어요</p>
                                 <p class="review-img"></p>
@@ -227,7 +235,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">플라이트 조던 후드</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">플라이트 조던 후드</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -239,9 +250,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>김*수 - </span>
+                                    <span class="write-date">2021.03.02</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.03.02</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">175/75 3XL 오버핏 좋아해서 딱 좋네요 ㅎㅎㅎㅎ</p>
                                 <p class="review-img">
@@ -302,7 +313,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">세일할때</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">세일할때</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -314,9 +328,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>김*연 - </span>
+                                    <span class="write-date">2021.02.25</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.25</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">잘산것같아요...이디자인 세번째 구매했어요..</p>
                                 <p class="review-img">
@@ -373,7 +387,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">기모가있네</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">기모가있네</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -385,9 +402,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>오*환 - </span>
+                                    <span class="write-date">2021.02.25</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.25</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">겨울엔 따뜻하지만 언젠가 더워질수도</p>
                                 <p class="review-img">
@@ -444,7 +461,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">리뷰</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">리뷰</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -456,9 +476,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>임*규 - </span>
+                                    <span class="write-date">2021.02.23</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.23</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">색감 이쁘고 좋음요</p>
                                 <p class="review-img">
@@ -515,7 +535,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">95샀는지 알았는데 ㅠㅠ</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">95샀는지 알았는데</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -527,9 +550,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>이*영 - </span>
+                                    <span class="write-date">2021.02.22</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.22</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">L사쥬 샀네용 박시하게 웃엉덩이 덮히긴하는데.... 박시하게 입어도 예쁘지만딱 맞게 입으면 더 예벘을거같아요ㅠㅠㅠㅠ생삭 예쁘고 이비고있으니 화사해서 얼굴이 확 살아보여서 좋아용ㅋ
                                     할인할때 착하게 잘 샀습니다!:-)리뷰어스펙:woman/165/66/28-29size
@@ -588,7 +611,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">조던 후드</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">조던 후드</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -600,9 +626,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>김*리 - </span>
+                                    <span class="write-date">2021.02.22</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.22</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">색상이 칙칙하지않고 고급스럽고 너무 예뻐요.</p>
                                 <p class="review-img">
@@ -659,7 +685,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">누가 크다고 그랬음??</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">누가 크다고 그랬음??</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -671,9 +700,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>김*현 - </span>
+                                    <span class="write-date">2021.02.21</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.21</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">167/74 근육돼지 남자가 M사이즈 샀는데 저스트 핏입니다. 오버핏 좋아하시는 분들은 L로 가세요,
                                     색깔은 기가막히게 이쁩니다. 왼쪽 어깨 마이클조던 사인 들어간것도 굳
@@ -732,7 +761,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">편하게 입기 좋은 후드에요</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">편하게 입기 좋은 후드에요</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -744,9 +776,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>변*윤 - </span>
+                                    <span class="write-date">2021.02.15</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.15</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">사이즈가 넉넉하니 좋네요.다만 색상이 조금 더 밝은 색인거 같아요.</p>
                                 <p class="review-img">
@@ -803,7 +835,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">핑쿠 핑쿠~~</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">핑쿠 핑쿠~~</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -815,9 +850,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>이*호 - </span>
+                                    <span class="write-date">2021.02.10</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.02.10</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">핑쿠 핑쿠~~</p>
                                 <p class="review-img">
@@ -874,7 +909,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">조던플라이트 플리즈 팬츠와 함께 구매했습니다</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">조던플라이트 플리즈 팬츠와 함께 구매했습니다</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -886,9 +924,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>김*우 - </span>
+                                    <span class="write-date">2021.01.22</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.01.22</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">색상이 바지와 많이 다릅니다세트로 구매하실 의향이
                                     있으신 분은 비추입니다그리고 마무리가 별로라 실밥이 많이 나옵니다
@@ -947,7 +985,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">좋아요~</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">좋아요~</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -959,9 +1000,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>소*호 - </span>
+                                    <span class="write-date">2021.01.22</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.01.22</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">사이즈도 딱맞고 180-84 XL(105)사이즈 잘맞습니다~
                                     가격때문에 고민을했는데 빠른배송에 받아보니 옷감핏도 좋고 부들부들해서 잘입을것같아요~
@@ -1025,7 +1066,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">굿</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">굿</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1037,9 +1081,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>홍*현 - </span>
+                                    <span class="write-date">2021.01.08</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.01.08</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">정사이즈여서 넉넉하게 입으실분들은 한치수 업하시는게 좋을듯합니다
                                 </p>
@@ -1097,7 +1141,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">역쉬 조던 후디입니다.</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">역쉬 조던 후디입니다.</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1109,9 +1156,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>배*석 - </span>
+                                    <span class="write-date">2021.01.06</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2021.01.06</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">정말 너무 이뻐요
                                 </p>
@@ -1173,7 +1220,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">이뻐요~</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">이뻐요~</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1185,9 +1235,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>이*영 - </span>
+                                    <span class="write-date">2020.12.25</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2020.12.25</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">색상디자인 모두 이뻐요~
                                 </p>
@@ -1245,7 +1295,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">넌무 좋아요</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">너무 좋아요</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1257,9 +1310,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>박*도 - </span>
+                                    <span class="write-date">2020.12.25</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2020.12.25</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">넉넉하게 xl로 구입했는데 착용감이 넘 편하고
                                     좋네여다만 동일 시리즈 하의와 색깔이 차이가 있는 것 같아요상의가 좀더
@@ -1319,7 +1372,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">이뻐요</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">이뻐요</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1331,9 +1387,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>한*성 - </span>
+                                    <span class="write-date">2020.12.24</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2020.12.24</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">노란옷은 첫 도전인데이쁩니다
                                 </p>
@@ -1391,7 +1447,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">된장맛</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">된장맛</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1403,9 +1462,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>박*수 - </span>
+                                    <span class="write-date">2020.12.23</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2020.12.23</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">오늘 저녁은 된장이네요.
                                 </p>
@@ -1463,7 +1522,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">175/65 만족합니다</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">175/65 만족합니다</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1475,9 +1537,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>문*수 - </span>
+                                    <span class="write-date">2020.12.22</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2020.12.22</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">175/65(M)부드럽고 맘에 쏙 들어요기장 적당하구요
                                      팔품이 좀크지만 박시하고 이쁘네요만족합니다
@@ -1536,7 +1598,10 @@
                     <li>
                         <div class="review_grid">
                             <div class="review_grid_left">
-                                <p class="review_subject">아주 마음에 드네요.</p>
+                                <div class="review_grid_top">
+                                    <p class="review_subject">아주 마음에 드네요.</p>
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
                                 <p class="review_content-star">
                                     <span class="customer-star">
                                         <i class="fas fa-star"></i>
@@ -1548,9 +1613,9 @@
                                 </p>
                                 <div class="user-name">
                                     <span>김*현 - </span>
+                                    <span class="write-date">2020.12.20</span>
+                                    <span class="product-code">CK6469-630</span>
                                 </div>
-                                <span class="write-date">2020.12.20</span>
-                                <span class="product-code">CK6469-630</span>
                                 <p></p>
                                 <p class="comment">상품 이름은 풀오버 후디 인데막상 받아보니 스텐다드핏 이였어요..1사이즈
                                     마이너스 해서 샀는데요.충분히 입을수 있어 좋았습니다.디자인 이뻐서 셋업으로 구매 했습니다.
