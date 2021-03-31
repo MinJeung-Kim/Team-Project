@@ -7,33 +7,24 @@
     <!-- CSS 초기화(cdn) => ***초기화css를 제일 먼저 작성 
                https://cdnjs.com/libraries/meyer-reset 
         -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/cart.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <script
-      src="https://kit.fontawesome.com/9eb162ac0d.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="css/comm-header.css" />
+    <link rel="stylesheet" href="css/comm-footer.css" />
+    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
     <!-- defer : html을 다 읽고 난 후 script 실행 -->
     <!-- <script defer src="main.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
-        $('#header').load('header.html');
-        $('#footer').load('footer.html');
-      });
+        $('#header').load('header.html')
+        $('#footer').load('comm-footer.html')
+      })
     </script>
   </head>
   <body>
@@ -64,8 +55,7 @@
                     </ul>
                   </div>
                   <div class="product-option">
-                    <span class="underline">옵션변경</span
-                    ><span class="orange">199,000 원</span>
+                    <span class="underline">옵션변경</span><span class="orange">199,000 원</span>
                     <span><i class="fas fa-times"></i></span>
                   </div>
                 </li>
@@ -77,30 +67,16 @@
                 <ul class="order-price-info">
                   <li><span>상품 금액</span><span>199,000 원</span></li>
                   <li><span>예상 배송비</span><span>0 원</span></li>
-                  <li>
-                    <span>상품 할인 금액</span><span class="orange">0 원</span>
-                  </li>
-                  <li>
-                    <span>주문 할인 금액</span><span class="orange">0 원</span>
-                  </li>
-                  <li class="order-total-price">
-                    <span>총 결제 예정 금액</span
-                    ><span class="orange">199,000 원</span>
-                  </li>
+                  <li><span>상품 할인 금액</span><span class="orange">0 원</span></li>
+                  <li><span>주문 할인 금액</span><span class="orange">0 원</span></li>
+                  <li class="order-total-price"><span>총 결제 예정 금액</span><span class="orange">199,000 원</span></li>
                   <a class="order-btn">주문하기</a>
                 </ul>
                 <form class="promo-box" action="">
-                  <input
-                    class="promo"
-                    type="text"
-                    placeholder="프로모 코드 입력"
-                  />
+                  <input class="promo" type="text" placeholder="프로모 코드 입력" />
                   <button class="promo-btn">적용</button>
                 </form>
-                <span class="promo-title">
-                  장기간 장바구니에 보관하신 상품은 시간이 지남에 따라 가격과
-                  혜택이 변동 될 수 있으며, 최대 30일동안 보관됩니다.
-                </span>
+                <span class="promo-title"> 장기간 장바구니에 보관하신 상품은 시간이 지남에 따라 가격과 혜택이 변동 될 수 있으며, 최대 30일동안 보관됩니다. </span>
               </div>
             </div>
           </div>
