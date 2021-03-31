@@ -8,7 +8,7 @@ console.log(inputRadio);
 
 for (const size of inputRadio) {
   size.addEventListener('click', function(event) {
-    size.style.backgroundColor = '#FFFFFF';
+    size.style.backgroundColor = '#000000';
     size.style.cssText = 'color: white';
   })
 }
@@ -38,6 +38,8 @@ upButton.addEventListener('click', (event) => {
 
   // 결과를 표시할 element
 const result = document.querySelector('numberUpDown');
+console.log(result);
+
 result.addEventListener('click',function count(type) {
 
   // 현재 화면에 표시된 값
