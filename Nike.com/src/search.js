@@ -12,6 +12,7 @@ function onClick() {
     console.log(gnvSearchInput);
     console.log(searchModal);
 
+
 }
 function offClick() {
 
