@@ -48,11 +48,11 @@ new gridjs.Grid({
     },
     {
       name: '전체수량',
-      width:'70px'
+      width:'100px'
     },
     {
       name: '재고량',
-      width:'70px'
+      width:'100px'
     },
     {
       name: '상품리뷰',
@@ -80,13 +80,13 @@ new gridjs.Grid({
     search:true,
     language: {
       'search': {
-        'placeholder': '🔍 Search...'
+        'placeholder': '상품 정보를 검색해주세요!'
       },
       'pagination': {
         'previous': '⬅️',
         'next': '➡️',
-        'showing': '😃 Displaying',
-        'results': () => 'Records'
+        'showing': ' 검색 결과 상품',
+        'results': () => '건 '
       }
     },
     fixedHeader: true,
