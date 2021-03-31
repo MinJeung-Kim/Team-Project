@@ -5,6 +5,7 @@
     const csModal = document.querySelector('.modalWrapper');
     const registerBtnWrap = document.querySelector('.registerBtnWrap');
     const csCloseBtn =  document.querySelector('.csCloseBtn');
+
     const status = document.querySelectorAll('.status-un');
     const uptAndDel = document.querySelector('.uptAndDel');
     const reAndSub = document.querySelector('.reAndSub');
@@ -15,6 +16,7 @@
             status.forEach(cStatus => {
                 cStatus.style.display = "none";
             })
+
             reAndSub.classList.add('stage');
             uptAndDel.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
@@ -79,6 +81,7 @@
     csCloseBtn.addEventListener('click', resetContents);    
 
 //등록
+
     // function regCheck() {
     //     if(confirm("등록하시겠습니까?") == false) return false;
     // }
@@ -95,6 +98,7 @@
     update.addEventListener('click', updateCheck);
 
 //삭제
+
     const csdelete = document.querySelector('.delete');
     function deleteCheck() {
         if (confirm("정말 삭제하시겠습니까?") == true){//확인

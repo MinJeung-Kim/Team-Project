@@ -17,20 +17,33 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/orderMng.css" />
-    <link rel="stylesheet" href="css/categorypage.css" />
-
-    <script defer src="src/order-grid.js"></script>
-    <script defer src="src/order-datePicker.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
       crossorigin="anonymous"
     ></script>
-    <!-- defer : html을 다 읽고 난 후 script 실행 -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <link rel="stylesheet" href="css/admin-orderMng.css" />
+
+    <script defer src="src/admin-orderMng-grid.js"></script>
+    <script type="module" src="src/admin-orderMng.js"></script>
+
+    <!-- noUiSlider 슬라이더 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"
+      integrity="sha512-0Z2o7qmtl7ixxWcEQxxTCT8mX4PsdffSGoVJ7A80zqt6DvdEHF800xrsSmKPkSoUaHtlIhkLAhCPb/tkf78SCA=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.css"
+      integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/wnumb@1.2.0/wNumb.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Grid.js -->
     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
@@ -40,6 +53,10 @@
       href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
       rel="stylesheet"
     />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script> -->
 
     <!-- 페이지 공통 메뉴 불러오기 -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -62,67 +79,50 @@
           <div class="dashboard-main">
             <div id="admin-menu"></div>
             <div class="dashboard-main-right">
-              <ul class="order-status">
-                <li>
-                  <span class="order-title">입금전</span
-                  ><span class="order-num">10</span>
-                </li>
-                <li>
-                  <span class="order-title">배송준비중</span
-                  ><span class="order-num">20</span>
-                </li>
-                <li>
-                  <span class="order-title">배송중</span
-                  ><span class="order-num">40</span>
-                </li>
-                <li>
-                  <span class="order-title">배송완료</span
-                  ><span class="order-num">50</span>
-                </li>
-              </ul>
               <div class="order-search-box">
-                <div class="order-search">
-                  <div class="order-items f-title">검색어</div>
-                  <div class="order-items f-title">기간</div>
-                  <div class="order-items f-title">상품</div>
-                  <div class="order-items f-title">금액조건</div>
-                  <div class="order-items">
-                    <select name="" id="">
-                      <option value="">주문번호</option>
-                      <option value="">ID</option>
-                      <option value="">Tel</option>
-                    </select>
-                    <input type="text" />
+                <form action="">
+                  <div class="order-search">
+                    <div class="order-items f-title">주문번호</div>
+                    <div class="order-items f-title">기간</div>
+                    <div class="order-items f-title">상품코드/명</div>
+                    <div class="order-items f-title">금액조건</div>
+                    <div class="order-items">
+                      <input type="text" />
+                    </div>
+                    <div class="order-items">
+                      <select name="" id="">
+                        <option value="">결제일</option>
+                        <option value="">발송일</option>
+                        <option value="">주문완료일</option>
+                      </select>
+                      <a class="day-btn day-today">오늘</a
+                      ><a class="day-btn day-three">3일</a
+                      ><a class="day-btn day-month">1개월</a>
+                      <input
+                        class="order-calender date-start"
+                        type="date"
+                        required
+                      />
+                      ~
+                      <input
+                        class="order-calender date-end"
+                        type="date"
+                        required
+                      />
+                    </div>
+                    <div class="order-items">
+                      <input type="text" />
+                    </div>
+                    <div class="order-items">
+                      <div id="slider"></div>
+                      <div id="slider-value"></div>
+                    </div>
                   </div>
-                  <div class="order-items">
-                    <select name="" id="">
-                      <option value="">결제일</option>
-                      <option value="">발송일</option>
-                      <option value="">주문완료일</option>
-                    </select>
-                    <a class="day-btn" href="">오늘</a
-                    ><a class="day-btn" href="">3일</a
-                    ><a class="day-btn" href="">1개월</a>
-                    <input class="order-calender" type="date" />
-                    ~
-                    <input class="order-calender" type="date" />
+                  <div class="order-buttons">
+                    <input class="order-btn" type="submit" value="검색" />
+                    <input class="order-btn" type="reset" />
                   </div>
-                  <div class="order-items">
-                    <select name="" id="">
-                      <option value="">상품명</option>
-                      <option value="dog">Dog</option>
-                      <option value="cat">Cat</option>
-                    </select>
-                    <input type="text" />
-                  </div>
-                  <div class="order-items">
-                    <input type="range" value="0" min="0" max="1000" />
-                  </div>
-                </div>
-                <div class="order-buttons">
-                  <input class="order-btn" type="submit" />
-                  <input class="order-btn" type="reset" />
-                </div>
+                </form>
               </div>
               <div id="wrapper"></div>
             </div>

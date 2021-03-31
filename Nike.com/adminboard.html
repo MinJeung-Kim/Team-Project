@@ -75,6 +75,7 @@
     <link rel="stylesheet" href="css/adminboard.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/adminboard_write.css" />
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -93,6 +94,10 @@
     />
 
     <script defer src="src/adminboard.js"></script>
+    <script defer src="src/board_day.js"></script>
+    <script defer src="src/adminboard_modal.js"></script>
+    <script defer src="src/adminboard_addfile.js"></script>
+    <script defer src="src/adminboard_star.js"></script>
 
     <script>
       $(function () {
@@ -103,6 +108,53 @@
   </head>
   <body>
     <div class="body__container">
+      <!-- 게시물 등록 모달 -->
+      <div class="write_modal_back"></div>
+    <div class="body__container">  
+      
+      <!-- ========== 등록모달 ========== -->
+          <div class="write_modal">
+              <div class="write_modal-content">
+                  <a class="write_close-button">&times;</a>
+                  <div class="write_modal_title">
+                    <img class="write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
+                    <span class="write_modal_title_txt">공지사항</span>
+                  </div>
+                  <div class="write_body">
+                    <form action="#" method="POST">
+                        <div class="writeform">
+                          <div class="cont">
+                              <div class="reviewform_subject">
+                                  <span class="cont-1_tit">제목</span>
+                                  <input type="text" class="review_input1">
+                              </div>
+                              <div class="reviewform_content">
+                                  <span class="cont-1_tit">내용</span>
+                                  <textarea name="reviewform-cont" class="review_input2"></textarea>
+                              </div>
+                              <div class="reviewform_file">
+                                  <span class="cont-1_tit">첨부파일</span>
+                                  <div class="filewrap">
+                                      <input class="upload-name" disabled="disabled">
+                                      <label for="addfile" class="fileLabel">파일선택</label>
+                                      <input type="file" id="addfile"class="review_input3" multiple accept="image/*">
+                                  </div>
+                              </div>
+                              <div class="reviewform_passwd">
+                                  <span class="cont-1_tit">비밀번호</span>
+                                  <input type="password" class="review_input4">
+                              </div>
+                          </div>
+                          <div class="reviewform_button">
+                              <button class="review-save">저장하기</button>
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </div>
       <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
       <section class="section dashboard">
@@ -141,55 +193,47 @@
               <div class="adreview">
                   <div class="adreview_top">
                       <span class="adminboard_tit">상품 리뷰 관리</span>
-                      <input type="submit" class="search-button" value="검색">
                   </div>
-                  <div class="adminboard_filter">
-                      <form action="#">
-                          <table>
-                            <tr>
-                                <td class="t-left">상품만족도</td>
-                                <td class="t-right">
-                                    <select name="star" class="adreview_star">
-                                        <option value="5" selected>★★★★★</option>
-                                        <option value="4">★★★★</option>
-                                        <option value="3">★★★</option>
-                                        <option value="2">★★</option>
-                                        <option value="1">★</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-left">세부 정보</td>
-                                <td class="t-right">
-                                    <select name="filter" class="review_filter">
-                                        <option value="product_name" selected>상품 코드</option>
-                                        <option value="email">고객 ID</option>
-                                        <option value="name">고객명</option>
-                                    </select>
-                                    <input type="text" class="search-word">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="t-left">기간</td>
-                                <td class="t-right">
-                                    <input type="date" name="date" value="reg_date-s" class="date_input"/>
-                                    <span class="wave">~</span>
-                                    <input type="date" name="date" value="reg_date-e" class="date_input2"/>
-                                    <button class="day">오늘</button>
-                                    <button class="day">1주일</button>
-                                    <button class="day">1개월</button>
-                                    <button class="day">3개월</button>
-                                    <button class="day">6개월</button>
-                                </td>
-                            </tr>
-                          </table>
-                      </form>
-                  </div>
+                    <form action="#" class="adminboard_filter">
+                      <div class="item itemL">상품만족도</div>
+                      <div class="item">
+                        <select name="star" class="adreview_star">
+                          <option value="5" selected>★★★★★</option>
+                          <option value="4">★★★★</option>
+                          <option value="3">★★★</option>
+                          <option value="2">★★</option>
+                          <option value="1">★</option>
+                        </select>
+                      </div>
+                      <div class="item itemL">세부 정보</div>
+                      <div class="item">
+                        <select name="filter" class="review_filter">
+                          <option value="product_name" selected>상품 코드</option>
+                          <option value="email">고객 ID</option>
+                          <option value="name">고객명</option>
+                          <option value="name">공지사항</option>
+                      </select>
+                      <input type="text" class="search-word">
+                      </div>
+                      <div class="item itemL">기간</div>
+                      <div class="item">
+                        <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
+                        <span class="wave">~</span>
+                        <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
+                        <button type="button" class="day" id="bt1">오늘</button>
+                        <button type="button" class="day" id="bt2">1주일</button>
+                        <button type="button" class="day" id="bt3">1개월</button>
+                        <button type="button" class="day" id="bt4">3개월</button>
+                        <button type="button" class="day" id="bt5">6개월</button>
+                      </div>
+                      <button type="reset" class="reset-button" >초기화</button>
+                      <button type="submit" class="search-button" >검색</button>
+                    </form>
                   <div id="wrapper"></div>
                   <div class="admin_write">
-                      <button class="write_button" id="delete-review">글삭제</button>
-                      <button class="write_button" id="update-review">글수정</button>
-                      <button class="write_button" id="write-review">글쓰기</button>
+                    <button class="write_button" id="write-review">등록</button>
+                    <button class="write_button" id="update-review">수정</button>
+                    <button class="write_button" id="delete-review">삭제</button>  
                   </div>
               </div>
           </div>

@@ -179,6 +179,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border: none;
 }
 
+
 .reAndSub,
 .uptAndDel {
     display: none;
@@ -201,7 +202,6 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 4px;
     margin-left: 3px;
     font-size: 12px;
-    width: auto;
 }
 
 .modal-last:hover,
@@ -209,4 +209,3 @@ input[type="number"]::-webkit-inner-spin-button {
     background: rgb(53, 52, 52);
     cursor: pointer;
 }
-
