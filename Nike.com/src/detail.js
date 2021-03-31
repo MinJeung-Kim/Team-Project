@@ -8,7 +8,7 @@ console.log(inputRadio);
 
 for (const size of inputRadio) {
   size.addEventListener('click', function(event) {
-    size.style.backgroundColor = '#000000';
+    size.style.backgroundColor = 'black';
     size.style.cssText = 'color: white';
   })
 }

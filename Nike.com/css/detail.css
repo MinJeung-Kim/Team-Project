@@ -225,9 +225,9 @@
   border:1.5px solid black;
 }
 
-.input-radio:active {
+/* .input-radio:active {
   background-color: black;
-}
+} */
 .radio-text
 {
   font-size: 15px;

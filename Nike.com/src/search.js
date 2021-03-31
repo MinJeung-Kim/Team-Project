@@ -8,7 +8,7 @@ const searchModal = document.querySelector('big-search');
 
 
 function onClick() {
-
+    
     console.log(gnvSearchInput);
     console.log(searchModal);
 
