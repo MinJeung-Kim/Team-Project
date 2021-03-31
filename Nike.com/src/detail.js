@@ -7,10 +7,12 @@ const inputRadio = document.querySelectorAll('.input-radio');
 console.log(inputRadio);
 
 for (const size of inputRadio) {
+  if(size.length=1) {
   size.addEventListener('click', function(event) {
-    size.style.backgroundColor = 'black';
-    size.style.cssText = 'color: white';
+    size.style.backgroundColor = 'black'
+    size.style.color = 'white'
   })
+  }
 }
 
 
@@ -35,24 +37,28 @@ upButton.addEventListener('click', (event) => {
 
 
 //quantity
+const num = document.querySelector('#numberUpDown');
 
-  // 결과를 표시할 element
-const result = document.querySelector('numberUpDown');
-console.log(result);
+console.log(num);
 
-result.addEventListener('click',function count(type) {
+const add = document.querySelector('.increaseQuantity');
+const dec = document.querySelector('.decreaseQuantity');
 
-  // 현재 화면에 표시된 값
-  let number = result.innerText;
-  
-  // 더하기/빼기
-  if(type === 'increaseQuantity') {
-    number = parseInt(number) + 1;
-  }else if(type === 'decreaseQuantity')  {
-    number = parseInt(number) - 1;
+//default값
+num.value=1;
+
+add.addEventListener('click', () => {
+  num.value = `${parseInt(num.value) + 1}`;
+  if(num.value>=10) {
+    alert("10개이상은 구매하실 수 없습니다!");
+    num.value--;
   }
-  
-  // 결과 출력
-  result.innerText = number;
 });
-  
+
+dec.addEventListener('click', () => {
+  if (num.value > 0) num.value = `${parseInt(num.value) - 1}`;
+  if(num.value==0) {
+    alert("0개는 구매하실 수 없습니다!");
+    num.value=1;
+  }
+});
