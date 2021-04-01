@@ -10,8 +10,9 @@
 
 #### 😷 코로나 거리두기로 인한 온라인 미팅
 
-- 1주일에 한 번, Google meet을 통해 온라인 미팅을 진행합니다.
-- 온라인 미팅은 수요일 저녁 9시로 정해져 있으나, 유동적으로 변경될 수 있습니다.
+- 월, 금 Google meet을 통해 개발 진행 방향 및 각종 투표를 하여 결정하는 미팅을 진행합니다.
+- 1주일에 한 번(수요일), 정기적 온라인 미팅을 진행하여 코드리뷰 및 질문과 답변을 합니다.
+- 온라인 미팅은 월,금 오후 5시, 수요일 저녁 9시로 정해져 있으나, 유동적으로 변경될 수 있습니다.
 
 </br>
 
@@ -23,7 +24,11 @@
 
 <br/>
 
-### 3. 업무분담
+### 3. 우리는 이렇게 업무를 분담해요 !
+
+- 사용자UI와 관리자UI로 나눠 페이지 단위로 분담합니다.
+- Html5, CSS3, Javascript, OpenSource를 사용하여 프론트엔드를 구현 합니다.
+- Java Spring, RDBMS(MariaDB)를 사용하여 백엔드를 구현합니다.
 
 <br/>
 
@@ -39,7 +44,7 @@
         <tr style="collapse;border: 1px solid black;">
             <td rowspan=2  style="collapse;border: 1px solid black;">사용자UI</td>
             <td style="collapse;border: 1px solid black;">메인</td>
-            <td rowspan=2  style="collapse;border: 1px solid black;">김민정</td>
+            <td rowspan=2  style="collapse;border: 1px solid black;">김민정(Roxie)</td>
         </tr>
         <tr style="collapse;border: 1px solid black;"> 
             <td style="collapse;border: 1px solid black;">장바구니</td> 
@@ -47,7 +52,7 @@
         <tr>
             <td rowspan=2 style="collapse;border: 1px solid black;">관리자UI</td>
             <td style="collapse;border: 1px solid black;">대시보드</td>
-            <td rowspan=2 style="collapse;border: 1px solid black;">김민정</td>
+            <td rowspan=2 style="collapse;border: 1px solid black;">김민정(Roxie)</td>
         </tr>
         <tr style="collapse;border: 1px solid black;"> 
             <td style="collapse;border: 1px solid black;">주문관리</td> 
@@ -69,7 +74,7 @@
         <tr style="collapse;border: 1px solid black;">
             <td rowspan=2  style="collapse;border: 1px solid black;">사용자UI</td>
             <td style="collapse;border: 1px solid black;">카테고리</td>
-            <td rowspan=2  style="collapse;border: 1px solid black;">박서윤</td>
+            <td rowspan=2  style="collapse;border: 1px solid black;">박서윤(Lena)</td>
         </tr>
         <tr style="collapse;border: 1px solid black;"> 
             <td style="collapse;border: 1px solid black;">마이페이지</td> 
@@ -77,7 +82,7 @@
         <tr>
             <td rowspan=2 style="collapse;border: 1px solid black;">관리자UI</td>
             <td style="collapse;border: 1px solid black;">고객관리</td>
-            <td style="collapse;border: 1px solid black;">박서윤</td>
+            <td style="collapse;border: 1px solid black;">박서윤(Lena)</td>
         </tr> 
     </tbody>
 </table>
@@ -96,7 +101,7 @@
         <tr style="collapse;border: 1px solid black;">
             <td rowspan=2  style="collapse;border: 1px solid black;">사용자UI</td>
             <td style="collapse;border: 1px solid black;">상품 상세</td>
-            <td rowspan=2  style="collapse;border: 1px solid black;">김예담</td>
+            <td rowspan=2  style="collapse;border: 1px solid black;">김예담(Kate)</td>
         </tr>
         <tr style="collapse;border: 1px solid black;"> 
             <td style="collapse;border: 1px solid black;">검색창</td> 
@@ -104,7 +109,7 @@
         <tr>
             <td rowspan=2 style="collapse;border: 1px solid black;">관리자UI</td>
             <td style="collapse;border: 1px solid black;">상품관리</td>
-            <td style="collapse;border: 1px solid black;">김예담</td>
+            <td style="collapse;border: 1px solid black;">김예담(Kate)</td>
         </tr> 
     </tbody>
 </table>
@@ -123,7 +128,7 @@
         <tr style="collapse;border: 1px solid black;">
             <td rowspan=2  style="collapse;border: 1px solid black;">사용자UI</td>
             <td style="collapse;border: 1px solid black;">회원가입/로그인</td>
-            <td rowspan=2  style="collapse;border: 1px solid black;">김보미</td>
+            <td rowspan=2  style="collapse;border: 1px solid black;">김보미(Bom)</td>
         </tr>
         <tr style="collapse;border: 1px solid black;"> 
             <td style="collapse;border: 1px solid black;">리뷰 게시판</td> 
@@ -131,7 +136,15 @@
         <tr>
             <td rowspan=2 style="collapse;border: 1px solid black;">관리자UI</td>
             <td style="collapse;border: 1px solid black;">게시판관리</td>
-            <td style="collapse;border: 1px solid black;">김보미</td>
+            <td style="collapse;border: 1px solid black;">김보미(Bom)</td>
         </tr> 
     </tbody>
 </table>
+
+<br/>
+
+### 4. 우리는 이렇게 정해요 ! </br>
+
+#### 🎆Git Branching Convention
+
++ 호칭/페이지명-issu번호
