@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>신상품 전체보기 - Nike</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+
+    <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/comm-header.css" />
+    <link rel="stylesheet" href="css/comm-footer.css" />
+
+    <script defer src="src/category.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="css/category.css" />
+
+    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+      $(function () {
+        $('#header').load('comm-header.html')
+        $('#footer').load('comm-footer.html')
+      })
+    </script>
+  </head>
+  <div id="header"></div>
+  <body>
+    <!-- section category -->
+    <div class="section-category">
+      <div class="section-title">
+        <a href="category.html"><span class="newitem">신상품 전체보기</span></a>
+      </div>
+      <div class="section-control">
+        <span class="filterBtn-wrap">
+          <span class="filterBtn">FILTER</span>
+          <i class="fas fa-sliders-h ifilter"></i>
+        </span>
+        <span class="filterBtn-wrap">
+          <span class="filterBtn">신상품순</span>
+          <i class="fas fa-chevron-down neworder"></i>
+        </span>
+      </div>
+    </div>
+    <!-- left navi -->
+    <div class="category-wrap">
+      <div class="left_navi_wrap">
+        <div class="left_navi_emp"></div>
+        <div class="left_navi">
+          <div class="navi_borderline_top"></div>
+          <div class="navi_inner">
+            <div>
+              <div class="border-top-title gender">성별</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <ul class="navi_inner_list nFirst">
+              <li class="ckbox_wrap">
+                <span class="input-checkbox" id="woman">여성</span>
+              </li>
+              <li class="ckbox_wrap"><span class="input-checkbox">남성</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">여아</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">남아</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox adult">성인공용</span></li>
+              <li class="ckbox_wrap child"><span class="input-checkbox">아동공용</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox seeMore">+ 더보기</span></li>
+            </ul>
+          </div>
+          <div class="navi_inner2">
+            <div>
+              <div class="border-top-title">색상</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <ul class="navi_color">
+              <li class="color-wrap">
+                <div class="color-border beige"></div>
+                <span class="color-checkbox">베이지</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border black"></div>
+                <span class="color-checkbox">검정색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border blue"></div>
+                <span class="color-checkbox">파랑색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border brown"></div>
+                <span class="color-checkbox">갈색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border gold"></div>
+                <span class="color-checkbox">금색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border gray"></div>
+                <span class="color-checkbox">회색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border green"></div>
+                <span class="color-checkbox">녹색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border ssuk"></div>
+                <span class="color-checkbox">쑥색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border navy"></div>
+                <span class="color-checkbox">남색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border orange"></div>
+                <span class="color-checkbox">주황색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border pink"></div>
+                <span class="color-checkbox">분홍색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border purple"></div>
+                <span class="color-checkbox">보라색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border red"></div>
+                <span class="color-checkbox">빨강색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border white"></div>
+                <span class="color-checkbox">흰색</span>
+              </li>
+              <li class="color-wrap">
+                <div class="color-border yellow"></div>
+                <span class="color-checkbox">노란색</span>
+              </li>
+            </ul>
+          </div>
+          <div class="navi_inner">
+            <div>
+              <div class="border-top-title">스포츠</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <ul class="navi_inner_list">
+              <li class="ckbox_wrap"><span class="input-checkbox">라이프스타일</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">러닝</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">농구</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">축구</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">트레이닝&짐</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">+ 더보기</span></li>
+            </ul>
+          </div>
+          <div class="navi_inner">
+            <div>
+              <div class="border-top-title">브랜드</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <ul class="navi_inner_list">
+              <li class="ckbox_wrap"><span class="input-checkbox">ACG</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">NikeLab</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">나이키 스포츠웨어</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox jordan">조던</span></li>
+            </ul>
+          </div>
+          <div class="navi_inner">
+            <div>
+              <div class="border-top-title">아이콘</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <ul class="navi_inner_list">
+              <li class="ckbox_wrap"><span class="input-checkbox">에어포스1</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">에어맥스90</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">블레이저</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">코르테즈</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">나이키 덩크</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">나이키 줌</span></li>
+              <li class="ckbox_wrap"><span class="input-checkbox">+ 더보기</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- right contents -->
+      <div class="right-content-wrap">
+        <ul class="category-content">
+          <li th:each="category : ${category}">
+            <a href="detail.html">
+              <img th:src="'img/img.category/0' + ${category.prdCd} + '.jpg'" class="category-content-img" />
+              <figcaption class="category-content-detail">
+                <div class="category-content-price">
+                  <div class="to_be_released" th:text="${category.prdCd}">디폴트 값</div>
+                  <div class="category-content-info" th:text="${category.prdNm}">디폴트 이름값</div>
+                  <div class="ct-content-price" th:text="${category.prdPrice}">0원</div>
+                </div>
+                <div class="content-sort">성인공용 신발 액션스포츠</div>
+                <div class="content-color">1 컬러</div>
+              </figcaption>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
