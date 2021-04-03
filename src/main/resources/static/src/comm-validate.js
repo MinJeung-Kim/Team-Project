@@ -8,7 +8,7 @@ const regCheck = function(){
         frm.name.style.border = "1px solid gray";
     } else if(fName.test(frm.name.value) == false) {//test()로 유효성 검사 false
         alert("이름은 한글과 영문만 입력 가능합니다.");
-        frm.name.style.border = "1px solid red";
+        frm.name.value = '';
         frm.name.focus();
         return false; 
     }
