@@ -1,17 +1,6 @@
 'use strict';
-	
-//더보기
 
-	const seeMore = document.querySelector('.seeMore');
-	const nFirst = document.querySelector('.nFirst');
-	const child = document.querySelector('.child');
-	const more = function() {
-		child.style.display = "block";
-		seeMore.innerHTML='- 접기';
-	}
-	seeMore.addEventListener('click', more);
-
-//여성 상품으로 변경
+//여성카테고리 페이지
 
 	const woman = document.getElementById('woman');
 	const url="./category-w.html";
@@ -32,19 +21,55 @@
 //이미지 mouseover
 
 	const bigImg = document.querySelectorAll('.category-content-img');
-	bigImg.forEach((bigs) => {
-		bigs.addEventListener('mouseover',function() {
-			let smallImg = this.parentNode.querySelector('.smallImg');
-			if(smallImg) {
-				smallImg.style.display = "block";
-			}
-		});
-	});
-	
 	const smallImg = document.querySelectorAll('.smallImg');
-	smallImg.forEach((smalls) => {
-		smalls.addEventListener('mouseleave',function() {
-			smalls.style.display = "none";
+	const clist = document.querySelectorAll('.list-wrap');
+
+	bigImg.forEach((bigs) => {
+		bigs.addEventListener('mouseover', (e) => {
+			console.log(e.target);
+			let smalls = e.target.parentNode.querySelector('.smallImg');
+			if(smalls) {
+				smalls.style.display = "block";
+			}
+		})
+	})
+	
+	clist.forEach((list) => {
+		list.addEventListener('mouseleave',function() {
+			console.log(list);
+			smallImg.forEach((eachSmall) => {
+				eachSmall.style.display = 'none';
+			})
 		})
 	})
 		
+//left navi 접고 펼치기
+
+	const menuBar = document.querySelectorAll('.menuBar');
+
+	menuBar.forEach((element) => {
+		element.addEventListener('click', (e) => {;
+			console.log(e.currentTarget.parentNode)
+			let opennn = e.currentTarget.parentNode; //navi_inner
+			let navList = opennn.querySelector('.navList');
+			let navi_ck = opennn.querySelector('.navi_ck');
+
+			if(navList.style.display = 'block') {
+				let mtop = e.currentTarget.querySelector('.topa');
+				let mdown = e.currentTarget.querySelector('.downb');	
+				navi_ck.classList.toggle('openCk');
+				mtop.classList.toggle('toparr');
+				mdown.classList.toggle('dwnarr');
+			}
+		})
+	})
+
+//filter 접고 펼치기
+
+	const hfilter = document.querySelector('#header-filter');
+	const none = document.querySelector('.left_navi_title');
+
+	hfilter.addEventListener('click', (e) => {
+		console.log(none);
+		none.classList.toggle('closed');
+	})
