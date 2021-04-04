@@ -29,7 +29,11 @@
 .write_close-button {
     font-size: 30px;
     position: relative;
-    left: 490px;  
+    left: 490px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    top: -10px;
 }
 .write_close-button:hover {
     color: gray;
@@ -136,4 +140,7 @@
 }
 .review-save:hover {
     background: gray;
+}
+.open {
+    display: block;
 }
