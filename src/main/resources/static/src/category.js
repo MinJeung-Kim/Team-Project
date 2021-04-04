@@ -11,7 +11,7 @@
 			const applyData = await getData.text();
 			content.innerHTML = '';
 			content.innerHTML = applyData;
-			console.log(applyData);
+			//console.log(applyData);
 		}catch {
 			error => console.log('Error :', error);
 		}	
@@ -26,7 +26,7 @@
 
 	bigImg.forEach((bigs) => {
 		bigs.addEventListener('mouseover', (e) => {
-			console.log(e.target);
+			//console.log(e.target);
 			let smalls = e.target.parentNode.querySelector('.smallImg');
 			if(smalls) {
 				smalls.style.display = "block";
@@ -36,40 +36,35 @@
 	
 	clist.forEach((list) => {
 		list.addEventListener('mouseleave',function() {
-			console.log(list);
+			//console.log(list);
 			smallImg.forEach((eachSmall) => {
 				eachSmall.style.display = 'none';
 			})
 		})
 	})
 		
-//left navi 접고 펼치기
+//left navi 각 메뉴 접고 펼치기
 
 	const menuBar = document.querySelectorAll('.menuBar');
 
 	menuBar.forEach((element) => {
 		element.addEventListener('click', (e) => {;
-			console.log(e.currentTarget.parentNode)
+			//console.log(e.currentTarget.parentNode)
 			let opennn = e.currentTarget.parentNode; //navi_inner
-			let navList = opennn.querySelector('.navList');
 			let navi_ck = opennn.querySelector('.navi_ck');
+			let fas = e.currentTarget.querySelector('.fas');
 
-			if(navList.style.display = 'block') {
-				let mtop = e.currentTarget.querySelector('.topa');
-				let mdown = e.currentTarget.querySelector('.downb');	
-				navi_ck.classList.toggle('openCk');
-				mtop.classList.toggle('toparr');
-				mdown.classList.toggle('dwnarr');
-			}
+			navi_ck.classList.toggle('openCk');
+			["fa-chevron-up", "fa-chevron-down"].forEach( //배열 직접 지정
+				c => fas.classList.toggle(c));
 		})
 	})
 
-//filter 접고 펼치기
+//left navi 전체 접고 펼치기
 
 	const hfilter = document.querySelector('#header-filter');
-	const none = document.querySelector('.left_navi_title');
+	const naviTitle = document.querySelector('.left_navi_title');
 
 	hfilter.addEventListener('click', (e) => {
-		console.log(none);
-		none.classList.toggle('closed');
+		naviTitle.classList.toggle('closed');
 	})
