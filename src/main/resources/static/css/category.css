@@ -63,6 +63,11 @@
     overflow: hidden;
     margin-bottom: 13px;
 }
+.menuBar::after {
+    clear: both;
+    display: block;
+    content: '';
+}
 .border-top-title {
     font-family: 'Noto Sans KR', sans-serif;
     padding-top: 20px;
@@ -73,29 +78,14 @@
     float: left;
     width: 90%;
 }
-.topa.toparr {
-    display: none;
-}
-.downb {
-    display: none;
-}
-.downb.dwnarr {
-    display: block;
-}
-.fas.toparrow {
+.menuBar .fas {
     cursor: pointer;
     font-size: 14px;
     position: relative;
     right: 12px;
     top: 22px;
 }
-.fas.downarrow {
-    cursor: pointer;
-    font-size: 14px;
-    position: relative;
-    right: 12px;
-    top: 22px;
-}
+
 .input-checkbox,.section-control {
     cursor: pointer;
 }
@@ -216,6 +206,10 @@
 .category-content-img {
     width: 288px;
     height: 288px;
+}
+.to_be_released {
+    color: brown;
+    font-size: 15px;
 }
 .smallImg {
     display: none;
