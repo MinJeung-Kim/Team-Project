@@ -44,3 +44,11 @@ input {
 .fas {
   font-size: 24px;
 }
+
+.on {
+  display: block;
+}
+
+.off {
+  display: none;
+}
