@@ -1,4 +1,4 @@
-'use stict'
+'use strict'
 
 // 최신,도움순 클릭 이벤트
 
@@ -32,11 +32,13 @@ button.addEventListener('click', readMore);
 
 //엄지 클릭이벤트
 
-const thumbs = document.querySelector('.far');
+//const thumbs = document.querySelector('.far');
 const review_read = document.querySelector('.review_read');
 
 review_read.addEventListener('click', (event) => {
-    if(event.target==thumbs){
-        thumbs.classList.toggle('fas');
+    if(event.target.className=='far fa-thumbs-up'){
+        event.target.classList.replace('far','fas');
+    }else if(event.target.className=='fas fa-thumbs-up'){
+        event.target.classList.replace('fas','far');
     }
 })
