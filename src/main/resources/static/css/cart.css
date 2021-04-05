@@ -224,6 +224,10 @@
   padding-bottom: 0;
 }
 
+.mini-count::before {
+  content: '수량 : ';
+}
+
 .popup-close {
   cursor: pointer;
 }
