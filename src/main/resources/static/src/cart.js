@@ -13,6 +13,8 @@ const price = document.querySelector('.detail-price-text > span');
 const sizeSelect = document.querySelector('.opt-list');
 const count = document.querySelector('#numberUpDown');
 
+const miniCount = document.querySelector('.mini-count');
+
 function styleHandler() {
   popupOn.classList.add('on');
   background.classList.add('on');
@@ -22,7 +24,6 @@ function styleHandler() {
 
 function innerTextHandler() {
   const miniName = document.querySelector('.mini-name');
-  const miniCount = document.querySelector('.mini-count');
   const miniPrice = document.querySelector('.mini-price');
   const totalPrice = document.querySelector('.total-orange');
   const miniImg = document.querySelector('.mini-wrap > img');
@@ -32,6 +33,10 @@ function innerTextHandler() {
   miniCount.innerText += count.value;
   miniPrice.innerText = price.textContent;
   totalPrice.innerText = price.textContent;
+}
+
+function resetHandler() {
+  miniCount.innerText = '수량 : ';
 }
 
 sizeSelect.addEventListener('click', (e) => {
@@ -49,4 +54,5 @@ close.addEventListener('click', () => {
   popupOn.classList.remove('on');
   background.classList.remove('on');
   body.style.overflow = '';
+  resetHandler();
 });
