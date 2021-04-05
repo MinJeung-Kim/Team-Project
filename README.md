@@ -147,4 +147,24 @@
 
 #### 🎆Git Branching Convention
 
-+ 호칭/페이지명-issu번호
+- 호칭/페이지명-issu번호
+
+#### 🎆File Nameing Convention
+
+- 관리자 : admin-페이지명-연관된 페이지명.확장자
+- 사용자 : 페이지명-연관된 페이지명.확장자
+- js, css : .html 파일과 같게 한다.
+
+#### 🎆abbreviation Convention
+
+| full name | abbreviation | content     |
+| --------- | ------------ | ----------- |
+| customer  | cd           | 고객        |
+| admin     | ad           | 관리자      |
+| detail    | det          | 상세 페이지 |
+| cart      | cart         | 장바구니    |
+| Dashboard | dash         | 대시보드    |
+| customer  | cd           | 고객관리    |
+| product   | pd           | 상품관리    |
+| order     | or           | 주문관리    |
+| review    | rv           | 리뷰관리    |
