@@ -52,3 +52,7 @@ input {
 .off {
   display: none;
 }
+
+.hidden {
+  overflow: hidden;
+}

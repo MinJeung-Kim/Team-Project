@@ -18,8 +18,8 @@ const miniCount = document.querySelector('.mini-count');
 function styleHandler() {
   popupOn.classList.add('on');
   background.classList.add('on');
+  body.classList.add('hidden');
   window.scrollTo(0, 0);
-  body.style.overflow = 'hidden';
 }
 
 function innerTextHandler() {
@@ -36,7 +36,7 @@ function innerTextHandler() {
 }
 
 function resetHandler() {
-  miniCount.innerText = '수량 : ';
+  miniCount.innerText = ' ';
 }
 
 sizeSelect.addEventListener('click', (e) => {
@@ -53,6 +53,6 @@ btn.addEventListener('click', () => {
 close.addEventListener('click', () => {
   popupOn.classList.remove('on');
   background.classList.remove('on');
-  body.style.overflow = '';
+  body.classList.remove('hidden');
   resetHandler();
 });
