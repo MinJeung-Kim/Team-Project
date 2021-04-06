@@ -1,20 +1,14 @@
 'use strict';
 
-//따로했을때는 되는데 같이 했을 때 안되는 이유
-//하나만 선택되도록 All안하면 
-const inputRadio = document.querySelectorAll('.input-radio');
+//버블링으로 하나씩 가져오기
+const sizeOpt= document.querySelector('#sizeOpt');
+console.log(sizeOpt);
 
-console.log(inputRadio);
-
-for (const size of inputRadio) {
-  if(size.length=1) {
-  size.addEventListener('click', function(event) {
-    size.style.backgroundColor = 'black'
-    size.style.color = 'white'
-  })
-  }
-}
-
+sizeOpt.addEventListener('click', (e) => {
+  alert(e.target.innerText);
+  e.target.style.cssText = 'color: white'
+  e.target.style.backgroundColor = 'black'
+});
 
 
 //scroll
