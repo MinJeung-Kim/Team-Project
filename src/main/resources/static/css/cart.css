@@ -85,6 +85,7 @@
 
 .product-wrap img {
   width: 110px;
+  margin-right: 15px;
 }
 
 .product-option {
@@ -224,8 +225,16 @@
   padding-bottom: 0;
 }
 
+.mini-style::before {
+  content: '스타일 : ';
+}
+
 .mini-count::before {
   content: '수량 : ';
+}
+
+.mini-size::before {
+  content: '사이즈 : ';
 }
 
 .popup-close {
