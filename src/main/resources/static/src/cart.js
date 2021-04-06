@@ -22,6 +22,7 @@ function styleHandler() {
   window.scrollTo(0, 0);
 }
 
+// 미니 장바구니와 장바구니의 공통 함수
 function innerTextHandler() {
   const miniName = document.querySelector('.mini-name');
   const miniPrice = document.querySelector('.mini-price');
@@ -39,10 +40,10 @@ function resetHandler() {
   miniCount.innerText = ' ';
 }
 
-sizeSelect.addEventListener('click', (e) => {
-  const size = document.querySelector('.mini-size');
-  size.innerText += e.target.textContent;
-});
+// sizeSelect.addEventListener('click', (e) => {
+//   const size = document.querySelector('.mini-size');
+//   size.innerText += e.target.textContent;
+// });
 
 // 장바구니 버튼 클릭 시  미니 장바구니 팝업 창 활성화
 btn.addEventListener('click', () => {
