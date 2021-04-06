@@ -346,3 +346,6 @@
     border: 2px solid black;
     box-sizing: border-box;
 }
+.open {
+    display: block !important;
+}
