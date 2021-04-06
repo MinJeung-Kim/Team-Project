@@ -35,6 +35,10 @@
   font-size: 65px;
 }
 
+.fa-times {
+  cursor: pointer;
+}
+
 .current-status {
   margin-bottom: 35px;
   margin-top: 15px;
@@ -69,6 +73,8 @@
 
 .underline {
   text-decoration: underline;
+  cursor: pointer;
+  height: 20px;
 }
 
 .product-list {
