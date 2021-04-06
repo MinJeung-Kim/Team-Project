@@ -26,12 +26,31 @@
 .filterBtn {
     margin: 0 5px;
 }   
-.filterBtn:hover {
+.currentOpt:hover,
+.neworder:hover,
+.ifilter:hover {
     color: #8d8d8d;
 }
 .ifilter,.neworder {
     font-size: 15px;
     vertical-align: middle;
+}
+#filterOpt {
+    background: rgb(252, 252, 252);
+    text-align: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 109px;
+    position: relative;
+    left: 93px;
+    display: none;
+    /* z-index:999; */
+}
+#filterOpt.openFilter {
+    display: block;
+}
+.currentOpt {
+    line-height: 18px;
+    font-size: 15px;
 }
 /* 본문 전체 감싸는 영역 */
 .category-wrap {
@@ -102,10 +121,10 @@
 .ckbox_wrap:last-child {
     padding: 5px 0 40px 0;
 }
-.ckbox_wrap.child {
+.ckbox_wrap.moreOpt {
     display: none;
 }
-.child.staged {
+.moreOpt.staged {
     display: block;
 }
 .navi_color .color-wrap {
