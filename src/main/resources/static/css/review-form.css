@@ -170,6 +170,12 @@
     cursor: pointer;
     color: gray;
 }
+#star1 {
+    color: black !important;
+}
+.click {
+    color: black !important;
+}
 .reviewform_gage-wrap {
     width: 250px;
     height: 100%;

@@ -9,19 +9,28 @@ const star = document.querySelector('.product-star');
 
 //클릭시 색 바꾸기
 
-// const $starWrap = document.querySelector('.product-star')
-// const $stars = document.querySelectorAll('.fas.fa-star')
+const $starWrap = document.querySelector('.product-star')
+const $stars = document.querySelectorAll('.fas.fa-star')
 
-// $starWrap.addEventListener('click', (e) => {
-//   console.log(e)
-//   console.log(e.target)
-//   console.log(e.target.className)
+$starWrap.addEventListener('click', (e) => {
+  
+    $stars.forEach((star) => {
+        if(star==e.target){
+            alert(star.id)
+        }
+       })
+})
 
-//    $stars.forEach((star) => {
-//     console.log(star.id)
-//    })
-// })
 
+/*console.log(e)
+  console.log(e.target)
+  console.log(e.target.className)
+
+   $stars.forEach((star) => {
+    console.log(star.id)
+   })*/
+
+/*
 st5.addEventListener('click', () => {
     st1.style.color = 'black';
     st2.style.color = 'black';
@@ -57,4 +66,4 @@ st1.addEventListener('click', () => {
     st3.style.color = 'gray';
     st4.style.color = 'gray';
     st5.style.color = 'gray';
-})
+})*/
