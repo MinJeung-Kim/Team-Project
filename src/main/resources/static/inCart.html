@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/cart-in-option.css" />
+
     <script defer src="src/cart-in.js"></script>
 
     <script
@@ -38,6 +40,90 @@
   </head>
   <body>
     <div class="body__container">
+      <!-- OPTION POPUP START-->
+      <div class="popup-back">
+        <div class="option-popup">
+          <div class="option-wrap">
+            <ul class="option-img">
+              <li>
+                <img
+                  src="img/details/2e0ecc3b-681a-45bc-9e03-29da51d3ee0c_primary.jpg"
+                  alt=""
+                /><img
+                  src="img/details/e821fe0a-4bf0-4a18-9d7a-3682656596bb_2.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="img/details/4339fef7-329d-442c-b011-7b62d7307031_3.jpg"
+                  alt=""
+                /><img
+                  src="img/details/67cc65c6-f30a-439c-85aa-3a0fbdde836d_4.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="img/details/bb1bf666-aa4d-4c8e-9a07-b8749f74ef8c_5.jpg"
+                  alt=""
+                /><img
+                  src="img/details/1f748124-06f1-4d96-bbf6-4f64246c50d6_6.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="img/details/d5e30fdf-994a-40c8-b5a1-88eaef4ed96d_7.jpg"
+                  alt=""
+                /><img
+                  src="img/details/5ee5da3e-6ff3-4126-81e9-02e99238865f_8.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+            <div class="option-info">
+              <ul class="option-right-info">
+                <li>
+                  <span class="option-sub-title">남성 신발 라이프스타일</span
+                  ><span class="option-price">83,300 원</span>
+                </li>
+                <li><span class="option-title">나이키 데이브레이크</span></li>
+                <li><span class="option-sale">30% off</span></li>
+              </ul>
+              <span class="option-size-title">사이즈 선택</span>
+              <ul class="option-size-warp">
+                <li class="option-size">
+                  <span>225</span><span>230</span><span>235</span
+                  ><span>240</span><span>245</span>
+                </li>
+                <li class="option-size">
+                  <span>250</span><span>255</span><span>260</span
+                  ><span>265</span><span>270</span>
+                </li>
+                <li class="option-size">
+                  <span>275</span><span>280</span><span>285</span
+                  ><span>290</span><span>295</span>
+                </li>
+                <li class="option-size">
+                  <span>300</span><span>305</span><span>310</span
+                  ><span>320</span><span>330</span>
+                </li>
+              </ul>
+              <div class="option-count">
+                <span class="option-count-title">수량</span
+                ><input type="number" value="1" />
+                <span class="minus"><i class="fas fa-minus"></i></span
+                ><span class="puls"><i class="fas fa-plus"></i></span>
+              </div>
+              <span class="msg"></span>
+              <div class="option-update"><a href="">옵션변경하기</a></div>
+            </div>
+            <span class="option-close"><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- OPTION POPUP END-->
       <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
       <section class="section contents">
@@ -70,7 +156,7 @@
                     </ul>
                   </div>
                   <div class="product-option">
-                    <span class="underline">옵션변경</span
+                    <span class="underline option-btn">옵션변경</span
                     ><span class="orange mini-price">199,000 원</span>
                     <span><i class="fas fa-times"></i></span>
                   </div>
