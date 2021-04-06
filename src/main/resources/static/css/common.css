@@ -12,6 +12,10 @@ input {
   background: transparent;
 }
 
+span {
+  cursor: default;
+}
+
 .body__container {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: inherit;
