@@ -36,9 +36,7 @@ button.addEventListener('click', readMore);
 const review_read = document.querySelector('.review_read');
 
 review_read.addEventListener('click', (event) => {
-    if(event.target.className=='far fa-thumbs-up'){
-        event.target.classList.replace('far','fas');
-    }else if(event.target.className=='fas fa-thumbs-up'){
-        event.target.classList.replace('fas','far');
+    if(event.target.classList.contains('fa-thumbs-up')){
+        event.target.classList.toggle('fas');
     }
 })
