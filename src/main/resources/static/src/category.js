@@ -68,3 +68,59 @@
 	hfilter.addEventListener('click', (e) => {
 		naviTitle.classList.toggle('closed');
 	})
+
+//신상품순 filter option
+
+	const optTitle = document.querySelector('#header-filter2');
+	const newitem = optTitle.firstElementChild;
+	const neworder = document.querySelector('.neworder');
+	const filterOpt = document.querySelector('#filterOpt');
+	const currentOpt = document.querySelectorAll('.currentOpt');
+
+	const openFilter = function(e) {
+		["fa-chevron-up", "fa-chevron-down"].forEach( //배열 직접 지정
+			c => neworder.classList.toggle(c));
+		// console.log(filterOpt.classList)
+		console.log(newitem)
+		filterOpt.classList.toggle('openFilter');
+		currentOpt.forEach((curopts) => {
+			curopts.addEventListener('click', (event) => {
+				console.log(event.target)
+				newitem.textContent = event.target.textContent;
+				filterOpt.classList.remove('openFilter');
+			})
+		})
+	}
+	optTitle.addEventListener('click', openFilter);
+
+//메뉴 더보기
+	
+	const seemore = document.querySelectorAll('.seeMore');
+	
+
+	seemore.forEach((more) => {
+		more.addEventListener('click', (e) => {
+			let naviList = e.target.parentNode.parentNode;
+			let moreOpt = naviList.querySelectorAll('.moreOpt');
+
+			moreOpt.forEach((moreopt) => {
+				if(!moreopt.classList.contains('staged')){
+					moreopt.classList.toggle('staged');
+					more.textContent = '- 접기';
+				}else{
+					moreopt.classList.toggle('staged');
+					more.textContent = '+ 더보기';
+				}
+			})
+			
+			// console.log("staged = " + e.target.parentNode.classList);
+				
+			
+			
+				
+			
+			
+		})
+	})
+	
+
