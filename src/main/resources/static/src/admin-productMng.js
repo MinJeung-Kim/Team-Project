@@ -70,7 +70,15 @@ new gridjs.Grid({
       name: '관리',
       sort: {
         enabled:false
-      }
+      },
+      attributes: (cell, row) => {
+        if (cell, row) { 
+          return {
+            'onClick': () => handleModal('update'),
+            'style': 'cursor: pointer',
+          }
+        }
+      },
     } ],
     pagination: {
       //페이징 처리
@@ -128,12 +136,5 @@ new gridjs.Grid({
     ],
   }).render(document.getElementById('wrapper'));
   
-  grid.on('ready', () => {
-    // find the plugin with the give plugin ID
-    const checkboxPlugin = grid.config.plugin.get('awesomeCheckbox');
-  
-    // subscribe to the store events
-    checkboxPlugin.props.store.on('updated', function (state, prevState) {
-      console.log('checkbox updated', state, prevState);
-    });
-  });
+
+//금액 슬라이더
