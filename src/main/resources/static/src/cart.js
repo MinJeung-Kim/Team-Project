@@ -68,4 +68,7 @@ orderGo.addEventListener('click', (e) => {
   const size = document.querySelector('.mini-size');
   e.preventDefault();
   location.href = `./inCart.html?style=${style.innerText}&size=${size.innerText}&count=${count.value}`;
+  localStorage.setItem('name', name.textContent);
+  localStorage.setItem('img', img.src);
+  localStorage.setItem('price', price.textContent);
 });

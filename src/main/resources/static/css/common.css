@@ -60,3 +60,7 @@ span {
 .hidden {
   overflow: hidden;
 }
+
+.clickNone {
+  color: #ddd;
+}
