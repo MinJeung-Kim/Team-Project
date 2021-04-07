@@ -1,11 +1,13 @@
 'use strict';
 
-//이름
+
 const frm = document.getElementById('reg_form'); //form id값 가져오기
 const fName = /^[가-힣a-zA-Z]+/; //정규식
 const fEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 
-const regCheck = function(){
+frm.addEventListener('submit', (e) => {
+    e.preventDefault();
+//이름
     if(fName.test(frm.name.value) == true){ //test()로 유효성 검사 true
         frm.name.style.border = "1px solid gray";
     } else if(fName.test(frm.name.value) == false) {//test()로 유효성 검사 false
@@ -24,4 +26,4 @@ const regCheck = function(){
         frm.email.focus();
         return false;
     }
-}
+});
