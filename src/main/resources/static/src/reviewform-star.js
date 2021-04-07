@@ -14,56 +14,13 @@ const $stars = document.querySelectorAll('.fas.fa-star')
 
 $starWrap.addEventListener('click', (e) => {
   
-    $stars.forEach((star) => {
-        if(star==e.target){
-            alert(star.id)
-        }
-       })
+    let flag = true;
+    if(e.target.nodeName == 'I'){
+        $stars.forEach((star) => {
+            flag ? star.classList.add('click') :
+            star.classList.remove('click')
+            if(e.target==star) flag = false;
+        })
+    }
 })
 
-
-/*console.log(e)
-  console.log(e.target)
-  console.log(e.target.className)
-
-   $stars.forEach((star) => {
-    console.log(star.id)
-   })*/
-
-/*
-st5.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'black';
-    st4.style.color = 'black';
-    st5.style.color = 'black';
-    
-})
-st4.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'black';
-    st4.style.color = 'black';
-    st5.style.color = 'gray';
-})
-st3.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'black';
-    st4.style.color = 'gray';
-    st5.style.color = 'gray';
-})
-st2.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'gray';
-    st4.style.color = 'gray';
-    st5.style.color = 'gray';
-})
-st1.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'gray';
-    st3.style.color = 'gray';
-    st4.style.color = 'gray';
-    st5.style.color = 'gray';
-})*/
