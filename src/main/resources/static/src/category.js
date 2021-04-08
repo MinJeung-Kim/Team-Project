@@ -23,7 +23,7 @@
 	const bigImg = document.querySelectorAll('.category-content-img');
 	const smallImg = document.querySelectorAll('.smallImg');
 	const clist = document.querySelectorAll('.list-wrap');
-
+	//console.log(document.location.href)
 	bigImg.forEach((bigs) => {
 		bigs.addEventListener('mouseover', (e) => {
 			//console.log(e.target);
