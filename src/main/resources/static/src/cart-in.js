@@ -19,8 +19,11 @@ cartCount.innerText = getUrlParan()[2];
 const cartName = document.querySelector('.mini-name');
 const cartImg = document.querySelector('.cart-wrap > img');
 const cartPrice = document.querySelectorAll('.mini-price');
+const cartSubTitle = document.querySelectorAll('.option-sub-title');
+console.log(cartSubTitle);
 cartName.innerText = localStorage.getItem('name');
 cartImg.src = localStorage.getItem('img');
+cartSubTitle.innerText = localStorage.getItem('subTitle');
 
 cartPrice.forEach((priceNode) => {
   priceNode.innerText = localStorage.getItem('price');
@@ -31,7 +34,6 @@ const cartClose = document.querySelector('.fa-times');
 
 cartClose.addEventListener('click', (e) => {
   const products = document.querySelector('.product-list');
-  console.log(e.target);
   products.remove();
 });
 
