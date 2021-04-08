@@ -8,6 +8,7 @@ const background = document.querySelector('.popup-back');
 const popupOn = document.querySelector('.cart-popup');
 
 const img = document.querySelector('.detail-product-list > li > a > img');
+const subName = document.querySelector('.detail-subtitle-text');
 const name = document.querySelector('.title-wrap');
 const style = document.querySelector('.style-code > p');
 const price = document.querySelector('.detail-price-text > span');
@@ -68,6 +69,7 @@ orderGo.addEventListener('click', (e) => {
   const size = document.querySelector('.mini-size');
   e.preventDefault();
   location.href = `./inCart.html?style=${style.innerText}&size=${size.innerText}&count=${count.value}`;
+  localStorage.setItem('subTitle', subName.textContent);
   localStorage.setItem('name', name.textContent);
   localStorage.setItem('img', img.src);
   localStorage.setItem('price', price.textContent);

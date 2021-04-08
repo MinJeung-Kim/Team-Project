@@ -261,3 +261,7 @@
   color: #888888;
   background-color: transparent;
 }
+
+.won::after {
+  content: ' 원';
+}
