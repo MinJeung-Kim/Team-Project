@@ -8,7 +8,7 @@ const background = document.querySelector('.popup-back');
 const popupOn = document.querySelector('.cart-popup');
 
 const img = document.querySelector('.detail-product-list > li > a > img');
-const subName = document.querySelector('.detail-subtitle-text');
+const subName = document.querySelector('.detail-subtitle-text > span');
 const name = document.querySelector('.title-wrap');
 const style = document.querySelector('.style-code > p');
 const price = document.querySelector('.detail-price-text > span');
@@ -34,7 +34,7 @@ function innerTextHandler() {
   miniImg.src = `${img.src}`;
   miniName.innerText = name.textContent;
   minStyle.innerText = style.textContent;
-  miniCount.innerText += count.value;
+  miniCount.innerText = count.value;
   miniPrice.innerText = price.textContent;
   totalPrice.innerText = price.textContent;
 }
@@ -45,7 +45,7 @@ function resetHandler() {
 
 sizeSelect.addEventListener('click', (e) => {
   const size = document.querySelector('.mini-size');
-  size.innerText += e.target.textContent;
+  size.innerText = e.target.textContent;
 });
 
 // 장바구니 버튼 클릭 시  미니 장바구니 팝업 창 활성화

@@ -8,7 +8,7 @@ function getUrlParan() {
   ];
 }
 
-// 받아온 파라미터 값 넣기
+// 미니장바구니에서 받아온 파라미터 값 장바구니에 넣기
 const cartStyle = document.querySelector('.mini-style');
 const cartSize = document.querySelector('.mini-size');
 const cartCount = document.querySelector('.mini-count');
@@ -19,18 +19,24 @@ cartCount.innerText = getUrlParan()[2];
 const cartName = document.querySelector('.mini-name');
 const cartImg = document.querySelector('.cart-wrap > img');
 const cartPrice = document.querySelectorAll('.mini-price');
-const cartSubTitle = document.querySelectorAll('.option-sub-title');
-console.log(cartSubTitle);
+const optionPrice = document.querySelector('.option-price');
+
 cartName.innerText = localStorage.getItem('name');
 cartImg.src = localStorage.getItem('img');
-cartSubTitle.innerText = localStorage.getItem('subTitle');
 
 cartPrice.forEach((priceNode) => {
   priceNode.innerText = localStorage.getItem('price');
+  optionPrice.innerText = localStorage.getItem('price');
 });
 
+const optionTitle = document.querySelector('.option-title');
+const optionSubTitle = document.querySelector('.option-sub-title');
+
+optionTitle.innerText = cartName.textContent;
+optionSubTitle.innerText = localStorage.getItem('subTitle');
+
 // 상품 삭제
-const cartClose = document.querySelector('.fa-times');
+const cartClose = document.querySelector('.cart-close');
 
 cartClose.addEventListener('click', (e) => {
   const products = document.querySelector('.product-list');
@@ -53,10 +59,19 @@ optionClose.addEventListener('click', () => {
   optionPopup.classList.remove('on');
 });
 
-//선택한 사이즈 색상 변경
 const optionSize = document.querySelectorAll('.option-size span');
 const sizeDiv = document.querySelector('.option-size-warp');
 
+//미니 장바구니에서 선택된 사이즈 옵션 -> 옵션 변경 팝업에 적용
+optionSize.forEach((op) => {
+  console.log(op.textContent);
+  if (op.textContent === cartSize.textContent) {
+    console.log(cartSize.textContent);
+    op.classList.add('change-color');
+  }
+});
+
+//선택에 따른 사이즈 색상 변경
 sizeDiv.addEventListener('click', (e) => {
   if (e.target.nodeName === 'SPAN') {
     optionSize.forEach((option) => {
@@ -66,24 +81,14 @@ sizeDiv.addEventListener('click', (e) => {
     });
   }
 });
-// optionSize.forEach((seleSize) => {
-//   seleSize.addEventListener('click', (e) => {
-//     // 클릭 요소 담아서 이전 클릭 요소와 현재 클릭 요소 비교
-//     const clickNode = e.target;
-//     if (clickNode === e.target) {
-//       e.target.classList.add('change-color');
-//     } else {
-//       //클릭 되지않은 노드의 change-color클래스 삭제하기
-//       e.target.classList.remove('change-color');
-//     }
-//   });
-// });
 
 // 수량 변경
-
 const minus = document.querySelector('.minus');
 const puls = document.querySelector('.puls');
 const optionCount = document.querySelector('.option-count > input');
+
+//미니 장바구니에서 선택된 수량 옵션 -> 옵션 변경 팝업에 적용
+optionCount.value = cartCount.innerText;
 
 const msg = document.querySelector('.msg');
 minus.addEventListener('click', () => {
