@@ -1,11 +1,21 @@
 
  'use strict';
-
+ 
  new gridjs.Grid({
   columns: [
+    {id: 'myCheckbox',
+      name: gridjs.html('<input type="checkbox"'+
+      ' style="margin-left:-50px;margin-top:-5px;position:absolute;"'+
+       'name="chk" id="inputA">'),
+      formatter: (cell,row) => gridjs.html(
+          `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
+      ),
+      sort: false,
+      width: '10px',
+    },
     {
       name: 'No',
-      width: '30px'
+      width: '40px'
     },
     { 
       name: '이름',
@@ -13,11 +23,11 @@
         if (cell, row) { 
           return {
             'onClick': () => handleModal('update'),
-            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
           }
         }
       },
+     
     },
     '등급',
     {
@@ -26,7 +36,7 @@
     },
     { 
       name : '전화번호',
-      width: '90px',
+      // width: '90px',
       sort: false,
     },
     '성별', 
@@ -53,11 +63,12 @@
     }
   },
   data: [
-    ['10', 'bom', 'VIP', 'bmbm1@naver.com', '010-4464-7124', '여', '정상'],
-    ['09', '김민정', 'GOLD', 'mj114@gmail.com', '010-0011-4468', '여', '정상'],
-    ['08', '통붕이', 'FAMILY', 'tb991@hanmail.net', '010-3320-0201', '남', '탈퇴'],
-    ['07', '김예담', 'FAMILY', 'yyee@hotmail.com', '010-1234-4928', '여', '휴면'],
-    ['06', '박서윤', 'SILVER', 'sysy66@nate.com', '010-9977-4687', '여', '휴면'],
-    ['05', '산타', 'VIP', 'stst32@stst.net', '010-8765-1234', '남', '탈퇴']
+    ['','10', 'bom', 'VIP', 'bmbm1@naver.com', '010-4464-7124', '여', '정상'],
+    ['','09', '김민정', 'GOLD', 'mj114@gmail.com', '010-0011-4468', '여', '정상'],
+    ['','08', '통붕이', 'FAMILY', 'tb991@hanmail.net', '010-3320-0201', '남', '탈퇴'],
+    ['','07', '김예담', 'FAMILY', 'yyee@hotmail.com', '010-1234-4928', '여', '휴면'],
+    ['','06', '박서윤', 'SILVER', 'sysy66@nate.com', '010-9977-4687', '여', '휴면'],
+    ['','05', '산타', 'VIP', 'stst32@stst.net', '010-8765-1234', '남', '탈퇴']
   ],
+  
 }).render(document.getElementById("wrapper"));
