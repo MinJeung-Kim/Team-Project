@@ -8,7 +8,8 @@
       ' style="margin-left:-50px;margin-top:-5px;position:absolute;"'+
        'name="chk" id="inputA">'),
       formatter: (cell,row) => gridjs.html(
-          `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
+        `<input type="checkbox" style="margin-left:-50px;position:absolute;"`+
+        `name="chk">`
       ),
       sort: false,
       width: '10px',
@@ -27,7 +28,6 @@
           }
         }
       },
-     
     },
     '등급',
     {
@@ -70,5 +70,4 @@
     ['','06', '박서윤', 'SILVER', 'sysy66@nate.com', '010-9977-4687', '여', '휴면'],
     ['','05', '산타', 'VIP', 'stst32@stst.net', '010-8765-1234', '남', '탈퇴']
   ],
-  
 }).render(document.getElementById("wrapper"));
