@@ -1,4 +1,13 @@
 'use strict';
+// 회원 목록 테이블 checkbox 전체 선택
+    const inputA = document.querySelector('#inputA');
+    const inputAll = document.querySelectorAll('input[type="checkbox"]');
+    //console.log(inputA)
+    inputA.addEventListener('click', () => {
+        inputAll.forEach((checkbox) => {
+            checkbox.checked = inputA.checked
+        })
+    })
 
 // 모달창 띄우기
 
@@ -99,7 +108,7 @@
 
 //삭제
 
-    const csdelete = document.querySelector('.delete');
+    const csdelete = document.querySelector('.deleteBtn');
     function deleteCheck() {
         if (confirm("정말 삭제하시겠습니까?") == true){//확인
             document.registerForm.submit();
