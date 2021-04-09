@@ -3,11 +3,11 @@
 // 모달창 띄우기
 
     const csModal = document.querySelector('.modalWrapper');
-    const registerBtnWrap = document.querySelector('.registerBtnWrap');
+    const registerBtn = document.querySelector('.registerBtn');
     const csCloseBtn =  document.querySelector('.csCloseBtn');
 
     const status = document.querySelectorAll('.status-un');
-    const uptAndDel = document.querySelector('.uptAndDel');
+    const updateWrap = document.querySelector('.updateWrap');
     const reAndSub = document.querySelector('.reAndSub');
     const csRegister = document.querySelector('.csRegister');
 
@@ -18,13 +18,13 @@
             })
 
             reAndSub.classList.add('stage');
-            uptAndDel.classList.remove('stage1');
+            updateWrap.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
             status.forEach(cStatus => {
                 cStatus.style.display = "block";
             })
-            uptAndDel.classList.add('stage1');
+            updateWrap.classList.add('stage1');
             reAndSub.classList.remove('stage');
             csRegister.textContent = "고객 정보";
         }
@@ -32,7 +32,7 @@
         document.body.classList.toggle('back');
         getDate();
     } 
-    registerBtnWrap.addEventListener('click', event => handleModal('register'));
+    registerBtn.addEventListener('click', event => handleModal('register'));
     csCloseBtn.addEventListener('click', event => handleModal('register'));
 
 //가입날짜, 수정날짜

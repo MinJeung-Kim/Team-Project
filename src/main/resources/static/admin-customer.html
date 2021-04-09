@@ -87,7 +87,7 @@
               </div>
               <div id="divisionLine"></div>
               <!-- ======= 고객 검색 ======= -->
-              <div class="search-customer">
+              <form name="searchCs" class="search-customer">
                 <div class="search-option">검색어</div>
                 <div class="search-option">
                   <select name="">
@@ -96,7 +96,7 @@
                     <option value="">전화번호</option>
                   </select>
                   <input type="text" class="searchText"></input>
-                  <input type="submit" class="search-customerBtn" value="찾기"></input>
+                  
                 </div>
                 <div class="search-option">성별</div>
                 <div class="search-option">
@@ -112,14 +112,19 @@
                     <option value="">VIP</option>
                   </select>
                 </div>
-              </div>
-
-              <div class="registerBtnWrap">
-                <button class="registerBtn">등록</button>
-              </div>
+                <div class="searchCs-btn">
+                  <input type="submit" class="search-customerBtn" value="찾기"></input>
+                  <input type="reset" class="search-customerBtn" value="초기화"></input>
+                </div>
+              </form>
 
               <div id="wrapper"></div>
 
+              <div class="regAndDel">
+                <button type="button" class="regdel registerBtn">등록</button>
+                <button type="button" class="regdel deleteBtn">삭제</button>
+              </div>
+              
               <div class="memWrap">
                 <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
                 <div class="searchLimitWrap">
@@ -227,11 +232,9 @@
               <input type="submit" class="modal-last submit" value="등록"></input>
             </div>
             <!-- 수정창에서만 보임 -->
-            <div class="uptAndDel">
+            <div class="updateWrap">
               <button type="button" class="modal-last update">수정</button>
-              <button type="button" class="modal-last delete">삭제</button>
             </div>
-
           </div>
         </form>
 
