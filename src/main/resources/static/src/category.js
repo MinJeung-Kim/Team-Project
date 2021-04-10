@@ -77,19 +77,19 @@
 	const filterOpt = document.querySelector('#filterOpt');
 	const currentOpt = document.querySelectorAll('.currentOpt');
 
+	currentOpt.forEach((curopts) => {
+		curopts.addEventListener('click', (event) => {
+			//console.log(event.target)
+			newitem.textContent = event.target.textContent;
+			filterOpt.classList.toggle('openFilter');
+			["fa-chevron-up", "fa-chevron-down"].forEach( //배열 직접 지정
+				c => neworder.classList.toggle(c));
+		})
+	})
 	const openFilter = function(e) {
 		["fa-chevron-up", "fa-chevron-down"].forEach( //배열 직접 지정
 			c => neworder.classList.toggle(c));
-		// console.log(filterOpt.classList)
-		console.log(newitem)
 		filterOpt.classList.toggle('openFilter');
-		currentOpt.forEach((curopts) => {
-			curopts.addEventListener('click', (event) => {
-				console.log(event.target)
-				newitem.textContent = event.target.textContent;
-				filterOpt.classList.remove('openFilter');
-			})
-		})
 	}
 	optTitle.addEventListener('click', openFilter);
 
@@ -97,7 +97,6 @@
 	
 	const seemore = document.querySelectorAll('.seeMore');
 	
-
 	seemore.forEach((more) => {
 		more.addEventListener('click', (e) => {
 			let naviList = e.target.parentNode.parentNode;
@@ -112,14 +111,6 @@
 					more.textContent = '+ 더보기';
 				}
 			})
-			
-			// console.log("staged = " + e.target.parentNode.classList);
-				
-			
-			
-				
-			
-			
 		})
 	})
 	
