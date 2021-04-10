@@ -1,6 +1,6 @@
 'user strict';
 
-const grid = new gridjs.Grid({
+new gridjs.Grid({
   search: true,
   pagination: {
     limit: 2,
@@ -40,18 +40,43 @@ const grid = new gridjs.Grid({
   },
   columns: [
     {
-      id: 'awesomeCheckbox',
-      name: 'Select',
-      width: '30px',
+      id: 'myCheckbox',
+      name: gridjs.html(
+        '<input type="checkbox"' +
+          ' style="margin-left:-50px;margin-top:-5px;position:absolute;"' +
+          'name="chk" id="inputA">'
+      ),
+      formatter: (cell, row) =>
+        gridjs.html(
+          `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
+        ),
       plugin: {
+        // install the RowSelection plugin
         component: gridjs.selection.RowSelection,
+        // RowSelection config
         props: {
-          id: (row) => row.cell(2).data,
+          // use the "email" column as the row identifier
+          id: (row) => row.cell(1).data,
         },
+      },
+      width: '10px',
+      sort: {
+        enabled: false,
       },
     },
     '주문일(결제일)',
-    '주문번호(주문자)',
+    {
+      name: '주문번호(주문자)',
+      attributes: (cell, row) => {
+        if ((cell, row)) {
+          return {
+            onClick: () => handleModal('update'),
+            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
+            style: 'cursor: pointer; color: blue',
+          };
+        }
+      },
+    },
     '운송장정보(송장번호)',
     {
       name: '배송비',
@@ -101,5 +126,8 @@ const grid = new gridjs.Grid({
         order.image_uris.small,
       ]),
     total: (data) => data.total_cards,
+  },
+  className: {
+    td: 'gridjs-checkbox',
   },
 }).render(document.getElementById('wrapper'));
