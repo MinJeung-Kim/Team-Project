@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/admin-orderMng.css" />
     <link rel="stylesheet" href="css/admin-board.css" />
+    <link rel="stylesheet" href="css/admin-orderMng-popup.css" />
 
     <script type="module" src="src/admin-orderMng.js"></script>
     <script defer src="src/admin-orderMng-grid.js"></script>
@@ -55,7 +56,8 @@
       rel="stylesheet"
     />
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- 우편번호검색 -->
+    <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
 
     <!-- 페이지 공통 메뉴 불러오기 -->
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -67,6 +69,112 @@
   </head>
   <body>
     <div class="body__container">
+      <!-- ORDER DETAIL POPUP START-->
+      <div class="popup-back">
+        <div class="or-popup">
+          <div class="or-detail-title">주문상세정보</div>
+          <div class="or-detail-info">
+            <span class="or-num">주문번호 : 20210411HDNDW</span
+            ><span class="or-date">주문일시 : 2021-04-11 22:30:22</span>
+          </div>
+          <div class="or-wrap">
+            <div class="or-title or-product">주문상품</div>
+            <div class="or-title or-price">주문금액</div>
+            <div class="or-title or-status">상태</div>
+            <div class="or-title or-send">배송료</div>
+            <div class="or-title or-songjang">송장번호</div>
+            <div class="or-content content-product">
+              <img
+                src="img/210219_hp_p8_bg6.jpg"
+                alt=""
+                class="or-content-img"
+              />
+              <ul class="or-content-option">
+                <li>
+                  <span class="or-content-title">나이키 에어맥스 GENOME</span>
+                </li>
+                <li>
+                  <span class="or-content-style">스타일 : CW1648-004</span>
+                </li>
+                <li><span class="or-content-size">사이즈 : 250</span></li>
+                <li><span class="or-content-count">수량 : 1</span></li>
+              </ul>
+            </div>
+            <div class="or-content content-price">199,000 원</div>
+            <div class="or-content content-status">
+              <select name="" id="">
+                <option value="">입금대기</option>
+                <option value="">입금확인</option>
+                <option value="">배송완료</option>
+                <option value="">구매확정</option>
+                <option value="">취소요청</option>
+                <option value="">교환요청</option>
+                <option value="">환불완료</option>
+                <option value="">교환완료</option>
+              </select>
+            </div>
+            <div class="or-content content-send">2,500 원</div>
+            <div class="or-content content-songjang">
+              <input type="text" placeholder="송장번호" />
+            </div>
+          </div>
+
+          <span class="or-section-title">결제정보</span>
+          <div class="or-pay-info">
+            <div class="or-pay or-pay-title">결제방식</div>
+            <div class="or-pay or-content">무통장</div>
+            <div class="or-pay or-pay-title">결제금액</div>
+            <div class="or-pay or-content">8,000 원</div>
+            <div class="or-pay or-pay-title">입금자명</div>
+            <div class="or-pay or-content">김민정</div>
+            <div class="or-pay or-pay-title">입금계좌</div>
+            <div class="or-pay or-content">농협 123 123</div>
+            <div class="or-pay or-pay-title">현금영수증</div>
+            <div class="or-pay or-content">개인</div>
+            <div class="or-pay or-pay-title">연락처</div>
+            <div class="or-pay or-content">010-1234-1234</div>
+          </div>
+
+          <span class="or-section-title">주문정보</span>
+          <div class="or-pay-info">
+            <div class="or-pay or-pay-title">수령인</div>
+            <div class="or-pay or-content">록시</div>
+            <div class="or-pay or-pay-title">전화번호</div>
+            <div class="or-pay or-content">010-1111-2222</div>
+            <div class="or-pay or-pay-title">주소</div>
+            <div class="or-pay or-content or-addr">
+              <div class="postWrap">
+                <input
+                  type="text"
+                  name="post"
+                  class="write post"
+                  placeholder="예)선유로 82"
+                  readonly
+                />
+                <button type="button" class="postBtn">우편번호검색</button>
+              </div>
+              <div class="detailWrap">
+                <input
+                  type="text"
+                  name="addrDetail"
+                  class="write addrDetail"
+                  placeholder="상세주소"
+                  readonly
+                />
+                <input
+                  type="text"
+                  name="addrDetail2"
+                  class="write addrDetail"
+                  placeholder="나머지주소"
+                />
+              </div>
+            </div>
+            <div class="or-pay or-pay-title">배송메모</div>
+            <div class="or-pay or-content or-memo">빠른배송 부탁</div>
+          </div>
+        </div>
+      </div>
+      <!-- ORDER DATAIL POPUP END-->
       <!-- ========== TOP MENU ========== -->
       <div class="admin-top-menu">
         <div class="admin-top-left">
