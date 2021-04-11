@@ -22,7 +22,7 @@
     },
     {
       name: 'No',
-      width: '40px'
+      width: '30px',
     },
     { 
       name: '이름',
@@ -35,10 +35,12 @@
           }
         }
       },
+      sort: false,
     },
     {
       name: '등급',
       width: "45px",
+      sort: false,
     },
     {
       name: '아이디',
@@ -49,8 +51,15 @@
       // width: '90px',
       sort: false,
     },
-    '성별', 
-    '유형'],
+    { 
+      name : '성별',
+      sort: false,
+    },
+    { 
+      name : '유형',
+      sort: false,
+    },
+  ],
   sort: true,
   search: true,
   pagination: {
@@ -76,7 +85,6 @@
     url: 'data/customer-data.json',
     then: (data) =>
       data.data.map((cs) => [
-        // cs.check,
         cs.no,
         cs.userNm,
         cs.grade,
