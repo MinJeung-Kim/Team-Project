@@ -1,17 +1,6 @@
 'use strict';
-	
-//더보기
 
-	const seeMore = document.querySelector('.seeMore');
-	const nFirst = document.querySelector('.nFirst');
-	const child = document.querySelector('.child');
-	const more = function() {
-		child.style.display = "block";
-		seeMore.innerHTML='- 접기';
-	}
-	seeMore.addEventListener('click', more);
-
-//여성 상품으로 변경
+//여성카테고리 페이지
 
 	const woman = document.getElementById('woman');
 	const url="./category-w.html";
@@ -22,7 +11,7 @@
 			const applyData = await getData.text();
 			content.innerHTML = '';
 			content.innerHTML = applyData;
-			console.log(applyData);
+			//console.log(applyData);
 		}catch {
 			error => console.log('Error :', error);
 		}	
@@ -32,19 +21,106 @@
 //이미지 mouseover
 
 	const bigImg = document.querySelectorAll('.category-content-img');
-	bigImg.forEach((bigs) => {
-		bigs.addEventListener('mouseover',function() {
-			let smallImg = this.parentNode.querySelector('.smallImg');
-			if(smallImg) {
-				smallImg.style.display = "block";
-			}
-		});
-	});
-	
 	const smallImg = document.querySelectorAll('.smallImg');
-	smallImg.forEach((smalls) => {
-		smalls.addEventListener('mouseleave',function() {
-			smalls.style.display = "none";
+	const clist = document.querySelectorAll('.list-wrap');
+
+	bigImg.forEach((bigs) => {
+		bigs.addEventListener('mouseover', (e) => {
+			//console.log(e.target);
+			let smalls = e.target.parentNode.querySelector('.smallImg');
+			if(smalls) {
+				smalls.style.display = "block";
+			}
+		})
+	})
+	
+	clist.forEach((list) => {
+		list.addEventListener('mouseleave',function() {
+			//console.log(list);
+			smallImg.forEach((eachSmall) => {
+				eachSmall.style.display = 'none';
+			})
 		})
 	})
 		
+//left navi 각 메뉴 접고 펼치기
+
+	const menuBar = document.querySelectorAll('.menuBar');
+
+	menuBar.forEach((element) => {
+		element.addEventListener('click', (e) => {;
+			//console.log(e.currentTarget.parentNode)
+			let opennn = e.currentTarget.parentNode; //navi_inner
+			let navi_ck = opennn.querySelector('.navi_ck');
+			let fas = e.currentTarget.querySelector('.fas');
+
+			navi_ck.classList.toggle('openCk');
+			["fa-chevron-up", "fa-chevron-down"].forEach( //배열 직접 지정
+				c => fas.classList.toggle(c));
+		})
+	})
+
+//left navi 전체 접고 펼치기
+
+	const hfilter = document.querySelector('#header-filter');
+	const naviTitle = document.querySelector('.left_navi_title');
+
+	hfilter.addEventListener('click', (e) => {
+		naviTitle.classList.toggle('closed');
+	})
+
+//신상품순 filter option
+
+	const optTitle = document.querySelector('#header-filter2');
+	const newitem = optTitle.firstElementChild;
+	const neworder = document.querySelector('.neworder');
+	const filterOpt = document.querySelector('#filterOpt');
+	const currentOpt = document.querySelectorAll('.currentOpt');
+
+	const openFilter = function(e) {
+		["fa-chevron-up", "fa-chevron-down"].forEach( //배열 직접 지정
+			c => neworder.classList.toggle(c));
+		// console.log(filterOpt.classList)
+		console.log(newitem)
+		filterOpt.classList.toggle('openFilter');
+		currentOpt.forEach((curopts) => {
+			curopts.addEventListener('click', (event) => {
+				console.log(event.target)
+				newitem.textContent = event.target.textContent;
+				filterOpt.classList.remove('openFilter');
+			})
+		})
+	}
+	optTitle.addEventListener('click', openFilter);
+
+//메뉴 더보기
+	
+	const seemore = document.querySelectorAll('.seeMore');
+	
+
+	seemore.forEach((more) => {
+		more.addEventListener('click', (e) => {
+			let naviList = e.target.parentNode.parentNode;
+			let moreOpt = naviList.querySelectorAll('.moreOpt');
+
+			moreOpt.forEach((moreopt) => {
+				if(!moreopt.classList.contains('staged')){
+					moreopt.classList.toggle('staged');
+					more.textContent = '- 접기';
+				}else{
+					moreopt.classList.toggle('staged');
+					more.textContent = '+ 더보기';
+				}
+			})
+			
+			// console.log("staged = " + e.target.parentNode.classList);
+				
+			
+			
+				
+			
+			
+		})
+	})
+	
+
