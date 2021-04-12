@@ -545,3 +545,17 @@ button .fas {
   outline: none;
   background-color: rgb(240, 238, 238);
 }
+
+.change-color {
+  background-color: #111;
+  color: white !important;
+}
+
+.msg {
+  margin: 6px 0 15px 0;
+  padding-left: 4px;
+  color: #fe0000;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+}
