@@ -1,19 +1,28 @@
 'use strict';
-// // 회원 목록 테이블 checkbox 전체 선택
-// grid.on('ready', () => {
-//     // find the plugin with the give plugin ID
-//     const checkboxPlugin = grid.config.plugin.get('myCheckbox');
-//     // read the selected rows from the plugin's store
-//     console.log('selected rows:', checkboxPlugin.props.store.state);
-//   })
-    // const inputA = document.querySelector('#inputA');
-    // const inputAll = document.querySelectorAll('input[type="checkbox"]');
-    // //console.log(inputA)
-    // inputA.addEventListener('click', () => {
-    //     inputAll.forEach((checkbox) => {
-    //         checkbox.checked = inputA.checked
-    //     })
-    // })
+// 회원 목록 테이블 checkbox 전체 선택
+
+    const checkbox = document.querySelector('#inputA');
+
+    checkbox.addEventListener('click', (e) => {
+        let ckAll = document.querySelectorAll('.ckAll');
+        if(e.target.checked) { 
+            console.log('되나?');
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = true;
+            })
+        } else {
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = false;
+            })
+        }
+        ckAll.forEach((ckbox) => {
+            ckbox.addEventListener('click', () => {
+                checkbox.checked = false;
+            })
+        })
+        
+    })
+     
 
 // 모달창 띄우기
 
