@@ -4,13 +4,10 @@
   columns: [
     {
       id: 'myCheckbox',
-      data: () => true, 
       name: gridjs.html('<input type="checkbox"'+
-      ' style="margin-left:-50px;margin-top:-5px;position:absolute;"'+
-       'name="chk" id="inputA">'),
+      ' style="margin-left:-50px;margin-top:-5px;position:absolute; name="chk" id="inputA">'),
       formatter: (cell,row) => gridjs.html(
-        `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
-      ),
+        `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk">`),
       width: '10px',
       sort: false,
       plugin: {
