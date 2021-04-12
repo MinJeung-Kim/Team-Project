@@ -1,12 +1,36 @@
+.popup-back {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .or-popup {
   padding: 20px;
-  width: 100%;
+  width: 915px;
+  z-index: 9999;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 20px;
 }
 
 .or-detail-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
   color: white;
   padding: 10px;
+}
+
+.or-close {
+  cursor: pointer;
 }
 
 .or-detail-info {
@@ -21,7 +45,7 @@
 .or-wrap {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-columns: 500px 150px 150px 150px 300px;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
 }
 
 .or-title,
@@ -57,8 +81,7 @@
 
 .or-pay-info {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: 225px 400px 225px 400px;
+  grid-template-columns: repeat(2, 2fr 4fr);
 }
 
 .or-pay {

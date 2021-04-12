@@ -51,11 +51,8 @@ new gridjs.Grid({
           `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
         ),
       plugin: {
-        // install the RowSelection plugin
         component: gridjs.selection.RowSelection,
-        // RowSelection config
         props: {
-          // use the "email" column as the row identifier
           id: (row) => row.cell(1).data,
         },
       },

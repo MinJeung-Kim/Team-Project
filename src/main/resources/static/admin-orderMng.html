@@ -72,7 +72,10 @@
       <!-- ORDER DETAIL POPUP START-->
       <div class="popup-back">
         <div class="or-popup">
-          <div class="or-detail-title">주문상세정보</div>
+          <div class="or-detail-title">
+            <span>주문상세정보</span
+            ><span class="or-close"><i class="fas fa-times"></i></span>
+          </div>
           <div class="or-detail-info">
             <span class="or-num">주문번호 : 20210411HDNDW</span
             ><span class="or-date">주문일시 : 2021-04-11 22:30:22</span>
@@ -188,77 +191,92 @@
       </div>
       <section class="section order">
         <!-- ========== SIDE MENU ========== -->
-        <div class="admin-left">
-          <ul class="admin-side-menu">
-            <li>
-              <span class="side-img"><i class="fas fa-home"></i></span
-              ><a href="">대시보드</a>
-            </li>
-            <li>
-              <span class="side-img"><i class="fas fa-gift"></i></span
-              ><a href="">상품관리</a>
-            </li>
-            <li>
-              <span class="side-img"><i class="fas fa-shopping-cart"></i></span
-              ><a href="">주문관리</a>
-            </li>
-            <li>
-              <span class="side-img"><i class="fas fa-user-cog"></i></span
-              ><a href="">고객관리</a>
-            </li>
-            <li>
-              <span class="side-img"><i class="fas fa-keyboard"></i></span
-              ><a href="">게시판관리</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="admin-side-menu">
+          <li>
+            <span class="side-img"><i class="fas fa-home"></i></span
+            ><a href="">대시보드</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-gift"></i></span
+            ><a href="">상품관리</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-shopping-cart"></i></span
+            ><a href="">주문관리</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-user-cog"></i></span
+            ><a href="">고객관리</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-keyboard"></i></span
+            ><a href="">게시판관리</a>
+          </li>
+        </ul>
         <!-- ========== CONTENTS ========== -->
         <div class="admin-right">
           <span class="admin-content-title adminboard_tit">주문관리</span>
-          <div class="order-search-wrap">
-            <form action="">
-              <div class="order-search">
-                <div class="order-items f-title">주문번호</div>
-                <div class="order-items f-title">기간</div>
-                <div class="order-items f-title">상품코드/명</div>
-                <div class="order-items f-title">금액조건</div>
-                <div class="order-items order-num">
-                  <input type="text" />
-                </div>
-                <div class="order-items">
-                  <select name="" id="">
-                    <option value="">결제일</option>
-                    <option value="">발송일</option>
-                    <option value="">주문완료일</option>
-                  </select>
-                  <input
-                    class="order-calender date-start"
-                    type="date"
-                    required
-                  />
-                  ~
-                  <input class="order-calender date-end" type="date" required />
-                  <a class="day-btn day-today">오늘</a
-                  ><a class="day-btn day-three">7일</a
-                  ><a class="day-btn day-month">1개월</a>
-                </div>
-                <div class="order-items order-num">
-                  <input type="text" />
-                </div>
-                <div class="order-items">
-                  <div id="slider"></div>
-                  <div id="slider-value"></div>
-                </div>
-              </div>
-              <div class="order-buttons">
-                <input
-                  class="order-btn order-search-btn"
-                  type="submit"
-                  value="검색"
-                />
-                <input class="order-btn order-reset-btn" type="reset" />
-              </div>
-            </form>
+          <!-- <div class="order-search">
+            <div class="order-items f-title">주문번호</div>
+            <div class="order-items f-title">기간</div>
+            <div class="order-items f-title">상품코드/명</div>
+            <div class="order-items f-title">금액조건</div>
+            <div class="order-items order-num">
+              <input type="text" />
+            </div>
+            <div class="order-items">
+              <select name="" id="">
+                <option value="">결제일</option>
+                <option value="">발송일</option>
+                <option value="">주문완료일</option>
+              </select>
+              <input class="order-calender date-start" type="date" required />
+              ~
+              <input class="order-calender date-end" type="date" required />
+              <a class="day-btn day-today">오늘</a
+              ><a class="day-btn day-three">7일</a
+              ><a class="day-btn day-month">1개월</a>
+            </div>
+            <div class="order-items order-num">
+              <input type="text" />
+            </div>
+            <div class="order-items">
+              <div id="slider"></div>
+              <div id="slider-value"></div>
+            </div>
+          </div> -->
+          <div class="order-search">
+            <div class="or-search or-pay-title">주문번호</div>
+            <div class="or-pay or-content order-num"><input type="text" /></div>
+            <div class="or-search or-pay-title">기간</div>
+            <div class="or-pay or-content">
+              <select name="" id="">
+                <option value="">결제일</option>
+                <option value="">발송일</option>
+                <option value="">주문완료일</option>
+              </select>
+              <input class="order-calender date-start" type="date" required />
+              ~
+              <input class="order-calender date-end" type="date" required />
+              <a class="day-btn day-today">오늘</a
+              ><a class="day-btn day-three">7일</a
+              ><a class="day-btn day-month">1개월</a>
+            </div>
+            <div class="or-search or-pay-title">상품코드/명</div>
+            <div class="or-pay or-content order-num"><input type="text" /></div>
+            <div class="or-search or-pay-title">금액조건</div>
+            <div class="or-pay or-content or-pay-price">
+              <div id="slider"></div>
+              <div id="slider-value"></div>
+            </div>
+          </div>
+          <div class="order-buttons">
+            <input
+              class="order-btn order-search-btn"
+              type="submit"
+              value="검색"
+            />
+            <input class="order-btn order-reset-btn" type="reset" />
           </div>
           <div id="wrapper"></div>
         </div>
