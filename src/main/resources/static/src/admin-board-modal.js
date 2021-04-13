@@ -10,7 +10,6 @@ function offClick() {
     document.querySelector('.write_modal').classList.remove('open');
 }
 document.getElementById('write-review').addEventListener('click',onClick);
-document.getElementById('update-review').addEventListener('click',onClick);
 document.querySelector('.write_close-button').addEventListener('click',offClick);
 
 

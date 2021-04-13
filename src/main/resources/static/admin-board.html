@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/categorypage.css" />
     <link rel="stylesheet" href="css/admin-board.css" />
     <link rel="stylesheet" href="css/admin-board-write.css" />
 
@@ -27,7 +26,6 @@
     <script defer src="src/admin-board-day.js"></script>
     <script defer src="src/admin-board-modal.js"></script>
     <script defer src="src/admin-board-addfile.js"></script>
-    <script defer src="src/admin-board-star.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -140,47 +138,56 @@
                   <div class="adreview_top">
                       <span class="adminboard_tit">상품 리뷰 관리</span>
                   </div>
-                    <form action="#" class="adminboard_filter">
-                      <div class="item itemL">상품만족도</div>
-                      <div class="item">
-                        <select name="star" class="adreview_star">
-                          <option value="5" selected>★★★★★</option>
-                          <option value="4">★★★★</option>
-                          <option value="3">★★★</option>
-                          <option value="2">★★</option>
-                          <option value="1">★</option>
+                    <form action="#">
+                      <div class="adminboard_filter">
+                        <div class="item itemL">상품만족도</div>
+                        <div class="item">
+                          <select name="star" class="adreview_star">
+                            <option value="5" selected>★★★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="3">★★★</option>
+                            <option value="2">★★</option>
+                            <option value="1">★</option>
+                          </select>
+                        </div>
+                        <div class="item itemL">세부 정보</div>
+                        <div class="item">
+                          <select name="filter" class="review_filter">
+                            <option value="product_name" selected>상품 코드</option>
+                            <option value="email">고객 ID</option>
+                            <option value="name">고객명</option>
+                            <option value="name">공지사항</option>
                         </select>
-                      </div>
-                      <div class="item itemL">세부 정보</div>
-                      <div class="item">
-                        <select name="filter" class="review_filter">
-                          <option value="product_name" selected>상품 코드</option>
-                          <option value="email">고객 ID</option>
-                          <option value="name">고객명</option>
-                          <option value="name">공지사항</option>
-                      </select>
-                      <input type="text" class="search-word">
-                      </div>
-                      <div class="item itemL">기간</div>
-                      <div class="item">
-                        <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
-                        <span class="wave">~</span>
-                        <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
-                        <button type="button" class="day" id="bt1">오늘</button>
-                        <button type="button" class="day" id="bt2">1주일</button>
-                        <button type="button" class="day" id="bt3">1개월</button>
-                        <button type="button" class="day" id="bt4">3개월</button>
-                        <button type="button" class="day" id="bt5">6개월</button>
+                        <input type="text" class="search-word">
+                        </div>
+                        <div class="item itemL">기간</div>
+                        <div class="item">
+                          <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
+                          <span class="wave">~</span>
+                          <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
+                          <button type="button" class="day" id="bt1">오늘</button>
+                          <button type="button" class="day" id="bt2">1주일</button>
+                          <button type="button" class="day" id="bt3">1개월</button>
+                          <button type="button" class="day" id="bt4">3개월</button>
+                          <button type="button" class="day" id="bt5">6개월</button>
+                        </div>
                       </div>
                       <div class="bt-wrap">
                         <button type="reset" class="reset-button" >초기화</button>
                         <button type="submit" class="search-button" >검색</button>
                       </div>
                     </form>
+                    <div class="searchLimitWrap">
+                      <select name="searchLimit" class="searchLimit">
+                        <option value="5">5건씩보기</option>
+                        <option value="10">10건씩보기</option> 
+                        <option value="15">15건씩보기</option> 
+                        <option value="20">20건씩보기</option>  
+                      </select>
+                    </div>
                   <div id="wrapper"></div>
                   <div class="admin_write">
                     <button class="write_button" id="write-review">등록</button>
-                    <button class="write_button" id="update-review">수정</button>
                     <button class="write_button" id="delete-review">삭제</button>  
                   </div>
               </div>
