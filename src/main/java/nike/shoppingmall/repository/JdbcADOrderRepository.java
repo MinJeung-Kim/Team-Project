@@ -26,15 +26,15 @@ public class JdbcADOrderRepository implements ADOrderRepository {
   private RowMapper<ADOrder> ADOrderRowMapper() {
     return (rs, rowNum) -> {
       ADOrder adDOrder = new ADOrder();
-      adDOrder.setOrderCd(rs.getLong("orderCd"));
-      // adDOrder.setUserID(rs.getString("userID"));
-      // adDOrder.setPrdCd(rs.getString("prdCd"));
-      // adDOrder.setStatusCd(rs.getInt("statusCd"));
-      // adDOrder.setOrderDt(rs.getDate("orderDt"));
-      // adDOrder.setPayDt(rs.getDate("payDt"));
-      // adDOrder.setTotalPrice(rs.getLong("totalPrice"));
-      // adDOrder.setInsDt(rs.getDate("insDt"));
-      // adDOrder.setUptDt(rs.getDate("uptDt"));
+      adDOrder.setOrderCd(rs.getLong("ORDER_CD"));
+      adDOrder.setUserID(rs.getString("USER_ID"));
+      adDOrder.setPrdCd(rs.getString("PRD_CD"));
+      adDOrder.setStatusCd(rs.getInt("STATUS_CD"));
+      adDOrder.setOrderDt(rs.getDate("ORDER_DT"));
+      adDOrder.setPayDt(rs.getDate("PAY_DT"));
+      adDOrder.setTotalPrice(rs.getLong("TOTAL_PRICE"));
+      adDOrder.setInsDt(rs.getDate("INS_DT"));
+      adDOrder.setUptDt(rs.getDate("UPT_DT"));
       return adDOrder;
     };
   }

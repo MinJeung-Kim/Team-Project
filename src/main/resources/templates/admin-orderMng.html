@@ -82,8 +82,8 @@
                     <div class="order-items f-title">기간</div>
                     <div class="order-items f-title">상품코드/명</div>
                     <div class="order-items f-title">금액조건</div>
-                    <div class="order-items">
-                      <!-- <input type="text" th:value="${adDOrder}" /> -->
+                    <div class="order-items" th:each="adDOrder : ${adDOrder}">
+                      <input type="text" th:value="${adDOrder.orderCd}" />
                     </div>
                     <div class="order-items">
                       <select name="" id="">

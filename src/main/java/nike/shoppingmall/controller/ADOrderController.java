@@ -25,7 +25,6 @@ public class ADOrderController {
     List<ADOrder> adDOrder = adDOrderService.findADOrderyAll();
     model.addAttribute("adDOrder", adDOrder);
 
-    System.out.println(adDOrder.get(1));
-    return "orderMng";
+    return "admin-orderMng";
   }
 }
