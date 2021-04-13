@@ -90,7 +90,7 @@ new gridjs.Grid({
       }
     },
     fixedHeader: true,
-    //이미지 넣는 방법, 관리에 버튼 추가하는 방법..
+    //이미지 넣는 방법
     data: [
       [
         'A-123',
@@ -125,5 +125,19 @@ new gridjs.Grid({
     ],
   }).render(document.getElementById('wrapper'));
   
+//금액 설정 슬라이더
+var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
 
-//금액 슬라이더
+noUiSlider.create(nonLinearStepSlider, {
+    start: [50, 1000],
+    range: {
+        'min': [0],
+        'max': [1000]
+    }
+});
+
+var nonLinearStepSliderValueElement = document.getElementById('slider-non-linear-step-value');
+
+nonLinearStepSlider.noUiSlider.on('update', function (values) {
+    nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
+});
