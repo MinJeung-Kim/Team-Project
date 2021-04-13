@@ -154,18 +154,15 @@ table, th, td {
 }
 .prd-register, .prd-delete
 {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 15px;
-  float: right;
-  margin-right: 10px;
-  text-align: center;
-  border: 1px solid #d3d3d3;
+  border: 1px solid black;
+  background: black;
+  color: white;
+  width: 80px;
+  height: 30px;
   border-radius: 6px;
-  margin: 0 5px;
-  height: 25px;
-  width: 50px;
   cursor: pointer;
+  margin-left: 5px;
+  margin-top:15px;
 }
 
 .adminboard_filter {
