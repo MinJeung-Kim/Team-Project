@@ -27,7 +27,7 @@
     padding: 15px 0;
 }
 .right-content-wrap {
-    width: 990px;
+    width: 1200px;
     padding: 0 20px;    
 }
 .dash-icon .fas,
@@ -162,15 +162,21 @@ table, th, td {
   border-radius: 6px;
   cursor: pointer;
   margin-left: 5px;
+  margin-right: 5px;
   margin-top:15px;
 }
 
-.adminboard_filter {
+.adminproduct_filter {
   display: grid;
   height: 200px;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 2fr 8fr;
 }
+
+.prd_filter {
+  margin:0 15px;
+}
+
 .item {
   border: 1px solid #e5e5e5;
   padding: 10px;

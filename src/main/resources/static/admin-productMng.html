@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="css/admin-customer-modal.css">
 
     <script defer src="src/admin-productMng.js"></script>
+    <script defer src="src/admin-product-day.js"></script>
+
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -105,10 +107,10 @@
                   <div class="prd-txt">상품 목록</div>
                   <div class="prd-tit-hr"></div>
               </div>
-              <form action="#" class="adminboard_filter">
+              <form action="#" class="adminproduct_filter">
                 <div class="item itemL">상품 정보</div>
                 <div class="item">
-                  <select name="filter" class="review_filter">
+                  <select name="filter" class="prd_filter">
                     <option value="product_name" selected>상품명</option>
                     <option value="product_cd">상품코드</option>
                   </select>
@@ -117,7 +119,10 @@
                 <div class="item itemL">가격 정보</div>
                 <div class="item">
                   <!-- 슬라이더 -->
-                  
+                  <div class="order-items">
+                    <div id="slider-non-linear-step"></div>
+                    <div id="slider-non-linear-step-value'"></div>
+                  </div>
                 </div>
                 <div class="item itemL">상품 등록기간</div>
                 <div class="item">
