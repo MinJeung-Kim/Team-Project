@@ -5,10 +5,16 @@
     <title>나이키. Just Do It. Nike.com</title>
 
     <!-- CSS 초기화 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/admin-dashboard.css" />
@@ -17,7 +23,10 @@
     <script defer src="src/admin-dashboard-chart.js"></script>
     <script defer src="src/admin-dashboard-canvas.js"></script>
 
-    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
@@ -27,73 +36,122 @@
       integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
       crossorigin="anonymous"
     ></script>
-
+    <!-- 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
         $('#admin-menu').load('comm-admin-menu.html')
       })
-    </script>
+    </script> -->
   </head>
   <body>
     <div class="body__container">
-      <!-- ========== CONTENTS ========== -->
-      <section class="section dashboard">
-        <div class="section-category">
-          <div class="section-title">
-            <a href="#"> <h1>대시보드</h1></a>
-          </div>
+      <!-- ========== TOP MENU ========== -->
+      <div class="admin-top-menu">
+        <div class="admin-top-left">
+          <span class="admin-menu-btn"><i class="fas fa-bars"></i></span>
+          <span class="admin-menu-title">Nike 관리자</span>
         </div>
-        <div class="dashboard-main">
-          <div id="admin-menu"></div>
-          <div class="dashboard-main-right">
-            <ul class="dashboard-status">
-              <li class="dashboard-status-list">
-                <a href="#">
-                  <span class="dashboard-title">주문현황</span>
-                  <ul class="detail-status">
-                    <li class="status-li"><span>입금대기</span><span>54 건</span></li>
-                    <li class="status-li"><span>신규주문</span><span>6 건</span></li>
-                    <li class="status-li"><span>구매확정</span><span>10 건</span></li>
-                  </ul>
-                </a>
-              </li>
-              <li class="dashboard-status-list">
-                <a href="#">
-                  <span class="dashboard-title">배송현황</span>
-                  <ul class="detail-status">
-                    <li class="status-li"><span>배송준비</span><span>54 건</span></li>
-                    <li class="status-li"><span>배송중</span><span>6 건</span></li>
-                    <li class="status-li"><span>배송완료</span><span>10 건</span></li>
-                  </ul>
-                </a>
-              </li>
-              <li class="dashboard-status-list">
-                <a href="#">
-                  <span class="dashboard-title">취소/반품/교환현황</span>
-                  <ul class="detail-status">
-                    <li class="status-li"><span>취소요청</span><span>54 건</span></li>
-                    <li class="status-li"><span>반품요청</span><span>6 건</span></li>
-                    <li class="status-li"><span>교환요청</span><span>10 건</span></li>
-                  </ul>
-                </a>
-              </li>
-              <li class="dashboard-status-list">
-                <a href="#">
-                  <span class="dashboard-title">통계</span>
-                  <ul class="detail-status">
-                    <li class="status-li"><span>오늘 방문자</span><span>54 건</span></li>
-                    <li class="status-li"><span>오늘 가입자</span><span>6 건</span></li>
-                    <li class="status-li"><span>총 회원수</span><span>10 건</span></li>
-                  </ul>
-                </a>
-              </li>
-            </ul>
-            <div style="width: 75%">
-              <canvas id="canvas"></canvas>
-            </div>
-            <br />
-            <br />
+        <div class="admin-top-right">
+          <span class="admin-time">00:00</span>
+          <button class="admin-login">login</button>
+        </div>
+      </div>
+      <section class="section dash">
+        <!-- ========== SIDE MENU ========== -->
+        <ul class="admin-side-menu">
+          <li>
+            <span class="side-img"><i class="fas fa-home"></i></span
+            ><a href="">대시보드</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-gift"></i></span
+            ><a href="">상품관리</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-shopping-cart"></i></span
+            ><a href="">주문관리</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-user-cog"></i></span
+            ><a href="">고객관리</a>
+          </li>
+          <li>
+            <span class="side-img"><i class="fas fa-keyboard"></i></span
+            ><a href="">게시판관리</a>
+          </li>
+        </ul>
+        <div class="dashboard-main-right">
+          <ul class="dashboard-status">
+            <li class="dashboard-status-list">
+              <a href="#">
+                <span class="dashboard-title">주문현황</span>
+                <ul class="detail-status">
+                  <li class="status-li">
+                    <span>입금대기</span><span>54 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>신규주문</span><span>6 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>구매확정</span><span>10 건</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="dashboard-status-list">
+              <a href="#">
+                <span class="dashboard-title">배송현황</span>
+                <ul class="detail-status">
+                  <li class="status-li">
+                    <span>배송준비</span><span>54 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>배송중</span><span>6 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>배송완료</span><span>10 건</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="dashboard-status-list">
+              <a href="#">
+                <span class="dashboard-title">취소/반품/교환현황</span>
+                <ul class="detail-status">
+                  <li class="status-li">
+                    <span>취소요청</span><span>54 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>반품요청</span><span>6 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>교환요청</span><span>10 건</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="dashboard-status-list">
+              <a href="#">
+                <span class="dashboard-title">통계</span>
+                <ul class="detail-status">
+                  <li class="status-li">
+                    <span>오늘 방문자</span><span>54 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>오늘 가입자</span><span>6 건</span>
+                  </li>
+                  <li class="status-li">
+                    <span>총 회원수</span><span>10 건</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <div class="canvas-wrap">
+            <canvas id="canvas"></canvas>
+          </div>
+          <div class="canvas-btns">
             <button id="randomizeData">Randomize Data</button>
             <button id="addDataset">Add Dataset</button>
             <button id="removeDataset">Remove Dataset</button>
