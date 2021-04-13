@@ -1,8 +1,5 @@
 'use strict';
 
-const gnvSearch = document.querySelector('.gnv-search');
-const gnvSearchInput = document.querySelector('.search-form')
-
 //검색상단 모달
 const searchWrap = document.querySelector('.search-wrap');
 const searchBack = document.querySelector('.search-back');
