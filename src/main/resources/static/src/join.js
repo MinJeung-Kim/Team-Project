@@ -4,7 +4,7 @@
 const email = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 const pass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@%^&*-]).{8,16}$/;
 const name = /^[가-힣a-zA-Z]+/;
-const phone = /^[0-9]+/;
+const phone = /^[0-9]+$/;
 
 const join_id = document.getElementById('join_id');
 const checkId = document.getElementById('checkId');
@@ -83,9 +83,10 @@ const pinfoCheck = document.getElementById('pinfoCheck');
         }
     })
     //전화번호
-    join_phone.addEventListener('keyup', () => {
+    join_phone.addEventListener('keyup', (e) => {
         
-        let user_phone=join_phone.value;
+        let user_phone=e.target.value;
+        console.log(user_phone);
         if (user_phone==""){
             join_phone.style.border = "1px solid red";
             checkPhone.innerText = "필수 입력 항목입니다.";
