@@ -1,3 +1,51 @@
+/* TOP MENU */
+.admin-top-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+/* SIDE MENU */
+.dash {
+  display: grid;
+  grid-template-columns: 1fr 18fr;
+}
+
+.admin-side-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #105275;
+  color: #fff;
+  width: 100px;
+}
+
+.admin-side-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 10px;
+}
+
+.admin-side-menu li::after {
+  content: '';
+  border-bottom: 1px solid rgba(187, 185, 189, 0.877);
+  width: 100%;
+  height: 4px;
+}
+
+.side-img,
+.admin-side-menu a {
+  padding-bottom: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .dashboard-main {
   display: flex;
 }
@@ -70,4 +118,18 @@
 .big-title {
   font-size: 30px;
   padding: 15px 0;
+}
+
+.canvas-wrap {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.canvas-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.canvas-btns button {
+  margin: 10px;
 }
