@@ -89,14 +89,6 @@
   outline:none;
 }
 
-.big-search {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: white;
-  height:450px;
-}
-
 .gnv-icons {
   display: flex;
   align-items: center;
