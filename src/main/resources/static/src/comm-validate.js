@@ -1,12 +1,15 @@
 'use strict';
 
 const frm = document.getElementById('reg_form'); //form id값 가져오기
+const update = document.querySelector('.update'); //수정 버튼
+
 const regName = /^[가-힣a-zA-Z]+/; //정규식
 const regEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 const regPass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@%^&*-]).{8,16}$/;
 const regPhone = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}/;
 
-frm.addEventListener('submit', (e) => {
+const regFunc = function(e) {
+    console.log('h2')
     e.preventDefault();
     //이름
     if(frm.name.value==null || frm.name.value=="") {
@@ -79,4 +82,6 @@ frm.addEventListener('submit', (e) => {
             frm.submit();
         }
     }
-});
+}
+frm.addEventListener('submit', regFunc);
+update.addEventListener('submit', regFunc);

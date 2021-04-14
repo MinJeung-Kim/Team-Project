@@ -79,32 +79,3 @@
         })
     }
     csCloseBtn.addEventListener('click', resetContents);    
-
-//등록
-
-    // function regCheck() {
-    //     if(confirm("등록하시겠습니까?") == false) return false;
-    // }
-
-//수정
-    const update = document.querySelector('.update');
-    function updateCheck() {
-        if (confirm("정말 수정하시겠습니까?") == true){//확인
-            document.registerForm.submit();
-        }else{//취소
-            return false;
-        }
-    }
-    update.addEventListener('click', updateCheck);
-
-//삭제
-
-    const csdelete = document.querySelector('.delete');
-    function deleteCheck() {
-        if (confirm("정말 삭제하시겠습니까?") == true){//확인
-            document.registerForm.submit();
-        }else{//취소
-            return false;
-        }
-    }
-    csdelete.addEventListener('click', deleteCheck);
