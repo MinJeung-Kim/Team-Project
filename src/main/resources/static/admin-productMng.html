@@ -37,12 +37,12 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/admin-productMng.css" />  
-    <link rel="stylesheet" href="css/admin-customer-modal.css">
+    <link rel="stylesheet" href="css/admin-productMng-modal.css" />
 
     <script defer src="src/admin-productMng.js"></script>
     <script defer src="src/admin-product-day.js"></script>
+    <script defer src="src/admin-product-modal.js"></script>
 
 
 
@@ -69,6 +69,7 @@
     <div class="body__container">  
       <div id="header"></div>
        <!-- ========== CONTENTS ========== -->
+       
        <section class="section dashboard">
         <div class="section-category">
           <div class="section-title">
@@ -106,6 +107,11 @@
               <div class="prdList-title">
                   <div class="prd-txt">상품 목록</div>
                   <div class="prd-tit-hr"></div>
+              </div>
+              <div class="prd-register-back"></div>
+              <!-- 상품등록 모달 -->
+              <div class="prd-register-modal">
+                <button type="reset" class="write_close-button">x</button>
               </div>
               <form action="#" class="adminproduct_filter">
                 <div class="item itemL">상품 정보</div>
@@ -152,9 +158,11 @@
 
               <!-- ===========상품 리스트========== -->
               <div id="wrapper"></div>
+
+
               <div class="prd-rgs-button">
-                <input type="button" class="prd-register" value="등록">
-                <input type="button" class="prd-delete" value="삭제">
+                <button class="prd-register">등록</button>
+                <button class="prd-delete">삭제</button>  
               </div>
               
             </div>

@@ -105,4 +105,3 @@ document.querySelector('.R-write_close-button').addEventListener('click',rClose)
 document.querySelector('.write_close-button').addEventListener('click',nClose);
 
 
-
