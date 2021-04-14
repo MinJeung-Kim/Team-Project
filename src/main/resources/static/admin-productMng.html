@@ -66,6 +66,8 @@
     </script>
   </head>
   <body>
+    <!-- 모달back -->
+    <div class="prd-register-back"></div>
     <div class="body__container">  
       <div id="header"></div>
        <!-- ========== CONTENTS ========== -->
@@ -107,11 +109,6 @@
               <div class="prdList-title">
                   <div class="prd-txt">상품 목록</div>
                   <div class="prd-tit-hr"></div>
-              </div>
-              <div class="prd-register-back"></div>
-              <!-- 상품등록 모달 -->
-              <div class="prd-register-modal">
-                <button type="reset" class="write_close-button">x</button>
               </div>
               <form action="#" class="adminproduct_filter">
                 <div class="item itemL">상품 정보</div>
@@ -159,13 +156,21 @@
               <!-- ===========상품 리스트========== -->
               <div id="wrapper"></div>
 
-
               <div class="prd-rgs-button">
                 <button class="prd-register">등록</button>
                 <button class="prd-delete">삭제</button>  
               </div>
               
             </div>
+            <!-- 상품등록 모달 -->
+            <div class="prd-register-modal">
+              <div class="prdRegHeader">
+                <span class="prRegister">상품 등록</span>
+              </div>
+              <button type="reset" class="prd_close-button">x</button>
+            
+            </div>
+            
           </div> <!-- dashboard-main-->
       </section>
     </div>
