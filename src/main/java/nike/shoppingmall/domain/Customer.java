@@ -3,8 +3,8 @@ package nike.shoppingmall.domain;
 import java.util.Date;
 
 public class Customer {
-    private String name;
-    private Long userId;
+    private String userNm;
+    private String userId;
     private String password;
     private String tel;
     private String gender;
@@ -13,22 +13,23 @@ public class Customer {
     // private String post;
     private String gradeNm;
     private String statusNm;
+    private String memo;
     private Date insDt;
     private Date uptDt;
 
-    public String getName() {
-        return this.name;
+    public String getUserNm() {
+        return this.userNm;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserNm(String userNm) {
+        this.userNm = userNm;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return this.userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -94,6 +95,14 @@ public class Customer {
 
     public void setStatusNm(String statusNm) {
         this.statusNm = statusNm;
+    }
+
+    public String getMemo() {
+        return this.memo;
+    }
+
+    public void setMemo(String memo) {
+        this.memo = memo;
     }
 
     public Date getInsDt() {
