@@ -1,5 +1,6 @@
 'use strict'
 
+console.log(review);
 // 최신,도움순 클릭 이벤트
 
 const filter1 = document.getElementById('filter1');

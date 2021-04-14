@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/review.css" />
 
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const review = '[[${review}]]'
+      /*]]>*/
+    </script>
     <script defer src="src/review.js"></script>
     <script defer src="src/review-notice.js"></script>
 
