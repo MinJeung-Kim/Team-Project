@@ -1,15 +1,15 @@
 'use strict';
 
 const frm = document.getElementById('reg_form'); //form id값 가져오기
-const fName = /^[가-힣a-zA-Z]+/; //정규식
-const fEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
-const fPass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@%^&*-]).{8,16}$/;
-const fPhone = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}/;
+const regName = /^[가-힣a-zA-Z]+/; //정규식
+const regEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+const regPass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@%^&*-]).{8,16}$/;
+const regPhone = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}/;
 
 frm.addEventListener('submit', (e) => {
     e.preventDefault();
 //이름
-    if(fName.test(frm.name.value) == false) {//test()로 유효성 검사 false
+    if(regName.test(frm.name.value) == false) {//test()로 유효성 검사 false
         alert("이름은 한글과 영문만 입력 가능합니다.");
         frm.name.value = '';
         frm.name.focus();
@@ -17,7 +17,7 @@ frm.addEventListener('submit', (e) => {
     }
 
 //ID(이메일)
-    if(fEmail.test(frm.email.value) == false) {
+    if(regEmail.test(frm.email.value) == false) {
         alert("이메일 형태로 입력해주세요. \n이메일은 영문만 가능합니다. \n예시)abcd@efg.com");
         frm.email.value = '';
         frm.email.focus();
@@ -25,7 +25,7 @@ frm.addEventListener('submit', (e) => {
     }
 
 //비밀번호
-    if(fPass.test(frm.password.value) == false){
+    if(regPass.test(frm.password.value) == false){
         alert("비밀번호는 영문 대 소문+숫자+특수문자 8~16자리로 입력해주세요."+
         "\n특수문자 괄호(),<>는 사용 불가");
         frm.password.value = '';
@@ -34,7 +34,7 @@ frm.addEventListener('submit', (e) => {
     }
 
 //전화번호
-    if(fPhone.test(frm.phone.value) == false) {
+    if(regPhone.test(frm.phone.value) == false) {
         if(frm.phone.value.includes("-")) {
             alert("전화번호는 -없이 입력해주세요.");
             frm.phone.value = '';
