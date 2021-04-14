@@ -14,4 +14,3 @@ document.getElementById('update-review').addEventListener('click',onClick);
 document.querySelector('.write_close-button').addEventListener('click',offClick);
 
 
-

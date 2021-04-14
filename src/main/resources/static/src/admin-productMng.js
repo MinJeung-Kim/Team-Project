@@ -126,19 +126,3 @@ new gridjs.Grid({
     ],
   }).render(document.getElementById('wrapper'));
   
-//금액 설정 슬라이더
-var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
-
-noUiSlider.create(nonLinearStepSlider, {
-    start: [50, 1000],
-    range: {
-        'min': [0],
-        'max': [1000]
-    }
-});
-
-var nonLinearStepSliderValueElement = document.getElementById('slider-non-linear-step-value');
-
-nonLinearStepSlider.noUiSlider.on('update', function (values) {
-    nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
-});
