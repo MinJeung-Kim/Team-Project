@@ -23,10 +23,16 @@
     <link rel="stylesheet" href="css/admin-board-write.css" />
     <link rel="stylesheet" href="css/admin-board-review.css" />
 
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const adBoard = '[[${adBoard}]]'
+      /*]]>*/
+    </script>
     <script defer src="src/admin-board.js"></script>
     <script defer src="src/admin-board-day.js"></script>
     <script defer src="src/admin-board-modal.js"></script>
     <script defer src="src/admin-board-addfile.js"></script>
+    
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -59,7 +65,7 @@
         <div class="R-write_modal-content">
             <a class="R-write_close-button">&times;</a>
             <div class="R-write_modal_title">
-              <img class="R-write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
+              <!-- <img class="R-write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/> -->
               <span class="R-write_modal_title_txt">REVIEW</span>
             </div>
             <div class="R-review-body">
@@ -146,7 +152,7 @@
                 <button type="reset" class="write_close-button">&times;
                 </button>
                   <div class="write_modal_title">
-                    <img class="write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
+                    <!-- <img class="write_modal_logo" src="'../static/img/nike-logo-on.png'" alt="" class="nike-logo"/> -->
                     <span class="write_modal_title_txt">공지사항</span>
                   </div>
                   <div class="write_body">
