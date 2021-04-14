@@ -23,6 +23,7 @@ public class ReviewController {
     @GetMapping("/review")
     public String list(Model model) {
         List<Review> review = reviewService.findReviewAll();
+        model.addAttribute("review",review);
 
         return "review";
     }
