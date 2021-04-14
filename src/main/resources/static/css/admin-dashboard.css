@@ -1,3 +1,9 @@
+/* ADMIN MENU COMMON */
+.text-shadow {
+  color: #032a32 !important;
+  text-shadow: 0 1px 0 #126d7e, 0 -1px 0 #020e1f;
+}
+
 /* TOP MENU */
 .admin-top-menu {
   position: relative;
@@ -44,6 +50,7 @@
   padding-bottom: 15px;
   color: #fff;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .dashboard-main {
