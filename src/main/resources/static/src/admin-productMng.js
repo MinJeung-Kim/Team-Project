@@ -29,7 +29,15 @@ new gridjs.Grid({
       name: '상품코드',
       sort: {
         enabled:false
-      }
+      },
+      attributes: (cell, row) => {
+        if (cell, row) { 
+          return {
+            'onClick': () => handleModal('update'),
+            'style': 'cursor: pointer',
+          }
+        }
+      },
     },
     {
       name: '상품이미지',
@@ -66,13 +74,7 @@ new gridjs.Grid({
       sort: {
         enabled:false
       }
-    },
-    {
-      name: '관리',
-      sort: {
-        enabled:false
-      }
-    } ],
+    },],
     pagination: {
       //페이징 처리
       limit: 5,
@@ -84,14 +86,12 @@ new gridjs.Grid({
         'placeholder': '상품 정보를 검색해주세요!'
       },
       'pagination': {
-        'previous': '⬅️',
-        'next': '➡️',
         'showing': ' 검색 결과 상품',
         'results': () => '건 '
       }
     },
     fixedHeader: true,
-    //이미지 넣는 방법, 관리에 버튼 추가하는 방법..
+    //이미지 넣는 방법
     data: [
       [
         'A-123',
@@ -102,7 +102,6 @@ new gridjs.Grid({
         '품절',
         '21',
         '2021-03-16',
-        '수정',
       ],
       [
         'B-456',
@@ -113,7 +112,6 @@ new gridjs.Grid({
         '100',
         '5',
         '2021-02-16',
-        '수정',
       ],
       [
         'C-456',
@@ -124,17 +122,23 @@ new gridjs.Grid({
         '50',
         '0',
         '2021-03-01',
-        '수정',
       ],
     ],
   }).render(document.getElementById('wrapper'));
   
-  grid.on('ready', () => {
-    // find the plugin with the give plugin ID
-    const checkboxPlugin = grid.config.plugin.get('awesomeCheckbox');
-  
-    // subscribe to the store events
-    checkboxPlugin.props.store.on('updated', function (state, prevState) {
-      console.log('checkbox updated', state, prevState);
-    });
-  });
+//금액 설정 슬라이더
+var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
+
+noUiSlider.create(nonLinearStepSlider, {
+    start: [50, 1000],
+    range: {
+        'min': [0],
+        'max': [1000]
+    }
+});
+
+var nonLinearStepSliderValueElement = document.getElementById('slider-non-linear-step-value');
+
+nonLinearStepSlider.noUiSlider.on('update', function (values) {
+    nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
+});
