@@ -1,3 +1,4 @@
+'use strict';
 
 new gridjs.Grid({
   //width조정 했지만 체크박스는 그대로인 이유?
