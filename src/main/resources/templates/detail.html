@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>나이키. Just Do It. Nike.com</title>
+
+    <!-- CSS 초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+
+    <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <link rel="stylesheet" href="css/comm-header.css" />
+    <link rel="stylesheet" href="css/comm-footer.css" />
+    <link rel="stylesheet" href="css/cart.css" /> 
+
+    <script defer src="src/detail.js" type="text/javascript"></script>
+    <script defer src="src/cart.js"></script>
+    <script defer src="src/cart-in.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/22d211cb30.js" 
+      crossorigin="anonymous">
+    </script> 
+ 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("comm-header.html"); 
+      $("#footer").load("comm-footer.html"); 
+    });
+    </script> 
+  </head>
+  <body> 
+    <div class="popup-back"></div>
+    <div class="body__container">
+      <!-- CART POPUP START-->
+    <div class="cart-popup">
+      <div class="cart-popup-title">
+        <h3>미니 장바구니</h3> 
+      </div>
+      <div class="pop-wrap">
+        <div class="mini-wrap">
+          <img src="img/210219_hp_p8_bg2.jpg" alt="" />
+          <ul class="product-info">
+            <li class="product-title">
+              <span class="detail-headline mini-name"></span>
+            </li>
+            <li>
+              <span class="primary-text mini-style"></span>
+            </li>
+            <li><span class="primary-text mini-size"></span></li>
+            <li><span class="primary-text mini-count"></span></li>
+            <li><span class="orange mini-price won"></span></li>
+          </ul>
+        </div> 
+        <span class="popup-close"><i class="fas fa-times"></i></span> 
+      </div> 
+      <ul class="order-price-info mini-info">
+        <li><span>총 상품금액</span><span class="orange total-orange won"></span></li>
+      </ul>
+      <span class="promo-title mini-title"> 배송비는 주문서에서 확인이 가능합니다. </span>
+      <a href="inCart.html" class="order-btn order-go">장바구니 가기</a> 
+      <a class="order-btn">바로구매</a>
+    </div>
+    <!-- CART POPUP END-->
+      <div id="header"></div>
+      <!-- ========== CONTENTS ========== -->
+      <section class="section contents">
+        <div class="inner clearfix">
+          <!-- ========== DETAILS-MAIN ========== -->
+          <div class="details-main">
+            <div class="detail-product">
+              <ul class="detail-product-list">
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/2e0ecc3b-681a-45bc-9e03-29da51d3ee0c_primary.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/e821fe0a-4bf0-4a18-9d7a-3682656596bb_2.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/4339fef7-329d-442c-b011-7b62d7307031_3.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/67cc65c6-f30a-439c-85aa-3a0fbdde836d_4.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/bb1bf666-aa4d-4c8e-9a07-b8749f74ef8c_5.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/1f748124-06f1-4d96-bbf6-4f64246c50d6_6.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/d5e30fdf-994a-40c8-b5a1-88eaef4ed96d_7.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/5ee5da3e-6ff3-4126-81e9-02e99238865f_8.jpg"
+                      alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="img/details/a10281f4-98c7-4349-8ddd-19aa85308832_9.jpg"
+                      alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="detail-product-info">
+              <div class="detail-info-top">
+                <div class="">
+                  <div class="detail-subtitle-left detail-subtitle-text">
+                    <span>성인공용 인조 잔디 축구화</span>
+                  </div>
+                  <div class="detail-subtitle-right detail-price-text">
+                    <span class="won">119,000</span>
+                  </div>
+                </div>
+              </div>
+              <h1 class="title-wrap">
+                나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF
+              </h1>
+              <div class="detail-size">
+                <span class="detail-subtitle-left">사이즈 선택</span>
+                <span class="detail-subtitle-right size-guide">사이즈 가이드</span>
+              </div>
+              <div class="detail-product-option">
+                <div id="sizeOpt" class="opt-list radio-text">
+                  <span class="input-radio">230</span>
+                  <span class="input-radio">235</span>
+                  <span class="input-radio">240</span>
+                  <span class="input-radio">245</span>
+                  <span class="input-radio">250</span>
+                  <span class="input-radio">255</span>
+                  <span class="input-radio">260</span>
+                  <span class="input-radio">265</span>
+                  <span class="input-radio">270</span>
+                  <span class="input-radio">275</span>
+                  <span class="input-radio">280</span>
+                  <span class="input-radio">285</span>
+                  <span class="input-radio">290</span>
+                  <span class="input-radio">295</span>
+                  <span class="input-radio">300</span>
+                  <span class="input-radio">305</span>
+                  <span class="input-radio">310</span>
+                </div>
+              </div>
+                <div class="detail-subtitle-left detail-primary-text notify-alert">
+                  <span class="notify-icon"><i class="fas fa-comment-dots"></i></span>
+                  <span>NOTIFY ME 입고 알림 신청</span>
+                </div><br>
+                <div class="btn-qty detail-primary-text notify-alert">
+                  <span class="qty">수량</span>
+                  <span>
+                    <input name="quantity" id="numberUpDown" class="label" type="number">
+                    <button class="decreaseQuantity"><i class="fas fa-minus"></i></button>
+                    <button class="increaseQuantity"><i class="fas fa-plus"></i></button>
+                  </span>
+                </div>
+                <span class="msg"></span>
+                <hr>
+                <div class="order-wrap">
+                  <div class="buy">
+                    <a>바로 구매</a>
+                  </div>
+                  <div class="shopwish">
+                    <div class="shopbasket">
+                      <a href="">장바구니</a>
+                    </div>
+                    <div class="wishlist">
+                      <a>위시리스트</a>
+                      <span><i class="far fa-heart"></i></span>
+                      <!-- 클릭시 찬 하트 <i class="fas fa-heart"></i> -->
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="store-reverse-wrap">
+                  <div class="reservation-btn">
+                      <span><i class="fas fa-house-user"></i></span>
+                      <span class="btn-storereserve detail-pickup">배송보다 빠른, 매장픽업 서비스</span>
+                  </div>
+                  <div>
+                    <span class="store-reserve-info">지금 주문하고, 매장에서 바로 픽업하세요.</span>
+                    <a class="detail-underline detail-right">자세히 보기</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="detail-description detail-desc-text">
+                  <p>
+                    <strong class="detail-desc-title">스피드가 느껴지는 룩. 속도감 있는 경기.</strong>
+                  </p>
+                  <br>
+                  <p>
+                    나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF는 초음속으로 지구 대기권에 
+                    진입하는 물체에서 영감을 받은 새로운 룩을 연출합니다. 
+                    독특한 디자인에 최적의 터치와 접지력에 필요한 필수 요소를 결합했습니다.<br><br>
+                  </p>
+                  <span class="style-color">
+                    º  현재 컬러 : 화이트/화이트/브라이트 망고<br>
+                  </span>
+                  <span class="style-code">
+                    º  스타일 : <p>CV0952-118</p><br>
+                  </span>
+                  <a href="#" class="detail-underline">더보기</a>
+                </div>
+                <hr>
+                <div class="detail-review detail-description detail-primary-text">
+                  <span><a href="review.html">리뷰</span>
+                  <div class="detail-right">
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span>
+                      <i class="far fa-star"></i>
+                    </span>
+                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                    </a>
+                  </div>
+                </div>
+                <hr>
+                <div class="detail-delivery detail-description detail-desc-text">
+                  <span class="detail-primary-text">배송</span>
+                  <div class="detail-right">
+                    <span class="detail-gray detail-bold">일반 배송 / 오늘 도착</span>
+                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                </div>
+                <hr>
+                <div class="detail-return detail-description detail-desc-text">
+                  <span class="detail-primary-text">반품/AS</span>
+                  <div class="detail-right">
+                    <span class="detail-gray detail-bold">온라인 접수 / 매장 접수</span>
+                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                  </div>
+                </div>
+
+                <!-- 스크롤시 화살표  -->
+                <div class="scroll">
+                  <button class="scroll-arrow">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div id="footer"></div>
+    </div>
+
+
+  </body>
+</html>
