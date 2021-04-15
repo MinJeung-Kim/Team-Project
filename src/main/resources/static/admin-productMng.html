@@ -28,6 +28,7 @@
       integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/wnumb@1.2.0/wNumb.js" crossorigin="anonymous"></script>
 
     <link
     href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
@@ -37,7 +38,6 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/admin-productMng.css" />  
     <link rel="stylesheet" href="css/admin-customer-modal.css">
 
@@ -118,11 +118,10 @@
                 </div>
                 <div class="item itemL">가격 정보</div>
                 <div class="item">
-                  <!-- 슬라이더 -->
-                  <div class="order-items">
-                    <div id="slider-non-linear-step"></div>
-                    <div id="slider-non-linear-step-value'"></div>
-                  </div>
+    
+                  <div id="slider"></div>
+                  <div id="slider-value"></div>
+                  
                 </div>
                 <div class="item itemL">상품 등록기간</div>
                 <div class="item">

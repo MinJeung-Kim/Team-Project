@@ -126,18 +126,27 @@ new gridjs.Grid({
   }).render(document.getElementById('wrapper'));
   
 //금액 설정 슬라이더
-var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
+var pipsSlider = document.getElementById('slider');
 
-noUiSlider.create(nonLinearStepSlider, {
-    start: [50, 1000],
-    range: {
-        'min': [0],
-        'max': [1000]
-    }
+noUiSlider.create(pipsSlider, {
+  start: [0, 90],
+  step: 30,
+  range: {
+    min: 0,
+    max: 210,
+  },
+  pips: {
+    mode: 'steps',
+    density: 3,
+    format: wNumb({
+      decimals: 2,
+      prefix: '$',
+    }),
+  },
 });
 
-var nonLinearStepSliderValueElement = document.getElementById('slider-non-linear-step-value');
+var nonLinearStepSliderValueElement = document.getElementById('slider-value');
 
-nonLinearStepSlider.noUiSlider.on('update', function (values) {
-    nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
+pipsSlider.noUiSlider.on('update', function (values) {
+  nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
 });

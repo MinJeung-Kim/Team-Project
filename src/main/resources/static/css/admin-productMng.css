@@ -224,9 +224,9 @@ table, th, td {
 }
 
 .reset-button {
-  border: 1px solid black;
-  background: black;
-  color: white;
+  border: 1px solid rgb(226, 223, 223);
+  background: white;
+  color: black;
   width: 80px;
   height: 30px;
   border-radius: 6px;
