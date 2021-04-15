@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
@@ -22,8 +22,14 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
-    <link rel="stylesheet" href="static/css/admin-customer.css" />
-    <link rel="stylesheet" href="static/css/admin-customer-modal.css" /> 
+    <link rel="stylesheet" href="css/admin-customer.css" />
+    <link rel="stylesheet" href="css/admin-customer-modal.css" /> 
+
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const customer = '[[${customer}]]'
+      /*]]>*/
+    </script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -37,9 +43,9 @@
       })
     </script>
     
-    <script defer src="static/src/admin-customer-grid.js"></script>
-    <script defer src="static/src/admin-customer.js"></script>
-    <script defer src="static/src/comm-validate.js"></script>
+    <script defer src="src/admin-customer-grid.js"></script>
+    <script defer src="src/admin-customer.js"></script>
+    <script defer src="src/comm-validate.js"></script>
     <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
@@ -96,6 +102,7 @@
                     <option value="">전화번호</option>
                   </select>
                   <input type="text" class="searchText"></input>
+                  <!-- <input th:value="${customer[0].userNm}" class="searchText"></input> -->
                   <input type="submit" class="search-customerBtn" value="찾기"></input>
                 </div>
                 <div class="search-option">성별</div>

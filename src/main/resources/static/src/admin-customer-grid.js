@@ -1,6 +1,6 @@
 
  'use strict';
-
+console.log(customer)
  new gridjs.Grid({
   columns: [
     {
@@ -12,7 +12,7 @@
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
-            'onClick': () => handleModal('update'),
+            'onClick': () => handleModal('update',row.cells[3].data),
             //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
           }
@@ -52,12 +52,5 @@
       'text-align': 'center'
     }
   },
-  data: [
-    ['10', 'bom', 'VIP', 'bmbm1@naver.com', '010-4464-7124', '여', '정상'],
-    ['09', '김민정', 'GOLD', 'mj114@gmail.com', '010-0011-4468', '여', '정상'],
-    ['08', '통붕이', 'FAMILY', 'tb991@hanmail.net', '010-3320-0201', '남', '탈퇴'],
-    ['07', '김예담', 'FAMILY', 'yyee@hotmail.com', '010-1234-4928', '여', '휴면'],
-    ['06', '박서윤', 'SILVER', 'sysy66@nate.com', '010-9977-4687', '여', '휴면'],
-    ['05', '산타', 'VIP', 'stst32@stst.net', '010-8765-1234', '남', '탈퇴']
-  ],
+  data: JSON.parse(customer).map(({memo, userNm, gradeCd, userId, tel, gender, statusCd}) => [memo, userNm, gradeCd, userId, tel, gender, statusCd]),
 }).render(document.getElementById("wrapper"));
