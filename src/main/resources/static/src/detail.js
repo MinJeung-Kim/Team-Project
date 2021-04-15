@@ -1,19 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
-//size option
-//하나만 선택되도록 >버블링으로 변경
-const inputRadio = document.querySelectorAll('.input-radio');
-
-console.log(inputRadio);
-
-for (const size of inputRadio) {
-  if(size.length=1) {
-  size.addEventListener('click', function(event) {
-    size.style.backgroundColor = 'black'
-    size.style.color = 'white'
-  })
-=======
 //버블링으로 하나씩 가져오기
 const sizeOpt= document.querySelectorAll('#sizeOpt span');
 const allSize = document.querySelector('#sizeOpt');
@@ -26,7 +12,6 @@ allSize.addEventListener('click', e => {
         ? opt.classList.add('change-color')
         : opt.classList.remove('change-color');
     });
->>>>>>> d178f874ccdf84dc59852959edc2d7699fe68c2b
   }
 });
 
@@ -51,11 +36,8 @@ upButton.addEventListener('click', (event) => {
 
 //수량제한
 const num = document.querySelector('#numberUpDown');
-<<<<<<< HEAD
-=======
 const msg = document.querySelector('.msg');
 
->>>>>>> d178f874ccdf84dc59852959edc2d7699fe68c2b
 const add = document.querySelector('.increaseQuantity');
 const dec = document.querySelector('.decreaseQuantity');
 
