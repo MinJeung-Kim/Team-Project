@@ -1,6 +1,7 @@
 package nike.shoppingmall.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.sql.DataSource;
 
@@ -24,8 +25,10 @@ public class JdbcADBoardRepository implements ADBoardRepository{
     }
 
     @Override
-    public List<ADBoard> findById(int boardNum) {
-        return jdbcTemplate.query("SELECT A.*, B.* FROM BOARD A LEFT JOIN GRADE B ON B.BOARD_NUM = A.BOARD_NUM where board_num=?",ADBoardRowMapper(),boardNum);
+    public Optional<ADBoard> findById(int boardNum) {
+        List<ADBoard> result =  jdbcTemplate.query("SELECT A.*, B.* FROM BOARD A LEFT JOIN GRADE B ON B.BOARD_NUM = A.BOARD_NUM where A.board_num=?",ADBoardRowMapper(),boardNum);
+
+        return result.stream().findAny();
     }
 
     private RowMapper<ADBoard> ADBoardRowMapper() {

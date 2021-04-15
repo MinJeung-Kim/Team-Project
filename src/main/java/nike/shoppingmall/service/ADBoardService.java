@@ -1,6 +1,7 @@
 package nike.shoppingmall.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ public class ADBoardService {
         return adBoardRepository.findAll();
     }
 
-    public List<ADBoard> findById(int boardNum) {
+    public Optional<ADBoard> findById(int boardNum) {
         return adBoardRepository.findById(boardNum);
     }
 }

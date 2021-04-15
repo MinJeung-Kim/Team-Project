@@ -57,7 +57,7 @@
     attributes: (cell, row) => {
       if (cell, row) {
         return {
-          'onClick': () => rOpen()
+          'onClick': () => rOpen(row.cell[1].data)
         }
       }
     }
