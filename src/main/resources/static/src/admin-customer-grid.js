@@ -28,7 +28,7 @@
         if (cell, row) { 
           return {
             'onClick': () => handleModal('update'),
-            'style': 'cursor: pointer',
+            'style': 'cursor: pointer; color: purple;',
           }
         }
       },
@@ -92,12 +92,4 @@
       ]),
     total: (data) => data.total_cards,
   },
-  // data: [
-  //   ['','10', 'bom', 'VIP', 'bmbm1@naver.com', '010-4464-7124', '여', '정상'],
-  //   ['','09', '김민정', 'GOLD', 'mj114@gmail.com', '010-0011-4468', '여', '정상'],
-  //   ['','08', '통붕이', 'FAMILY', 'tb991@hanmail.net', '010-3320-0201', '남', '탈퇴'],
-  //   ['','07', '김예담', 'FAMILY', 'yyee@hotmail.com', '010-1234-4928', '여', '휴면'],
-  //   ['','06', '박서윤', 'SILVER', 'sysy66@nate.com', '010-9977-4687', '여', '휴면'],
-  //   ['','05', '산타', 'VIP', 'stst32@stst.net', '010-8765-1234', '남', '탈퇴']
-  // ],
 }).render(document.getElementById("wrapper"));
