@@ -34,8 +34,9 @@
     const updateWrap = document.querySelector('.updateWrap');
     const reAndSub = document.querySelector('.reAndSub');
     const csRegister = document.querySelector('.csRegister');
-
-    const handleModal = (test) => { 
+    
+    const handleModal = async(test,userId) => { 
+        console.log(userId)
         if(test == 'register') {
             status.forEach(cStatus => {
                 cStatus.style.display = "none";
@@ -44,6 +45,9 @@
             updateWrap.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
+            const res = await fetch(`/customer/${userId}`)
+            const customer = await res.json() //json 뽑을 때
+            console.log(customer)
             status.forEach(cStatus => {
                 cStatus.style.display = "block";
             })

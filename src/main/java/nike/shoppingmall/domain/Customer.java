@@ -11,8 +11,8 @@ public class Customer {
     private Date birth;
     private String address;
     // private String post;
-    private String gradeNm;
-    private String statusNm;
+    private int gradeCd;
+    private int statusCd;
     private String memo;
     private Date insDt;
     private Date uptDt;
@@ -81,20 +81,20 @@ public class Customer {
     //     this.post = post;
     // }
 
-    public String getGradeNm() {
-        return this.gradeNm;
+    public int getGradeCd() {
+        return this.gradeCd;
     }
 
-    public void setGradeNm(String gradeNm) {
-        this.gradeNm = gradeNm;
+    public void setGradeCd(int gradeCd) {
+        this.gradeCd = gradeCd;
     }
 
-    public String getStatusNm() {
-        return this.statusNm;
+    public int getStatusCd() {
+        return this.statusCd;
     }
 
-    public void setStatusNm(String statusNm) {
-        this.statusNm = statusNm;
+    public void setStatusCd(int statusCd) {
+        this.statusCd = statusCd;
     }
 
     public String getMemo() {
