@@ -41,8 +41,7 @@ const msg = document.querySelector('.msg');
 const add = document.querySelector('.increaseQuantity');
 const dec = document.querySelector('.decreaseQuantity');
 
-//default값
-num.value=1;
+num.value=1;//default값
 
 add.addEventListener('click', () => {
   
@@ -61,3 +60,20 @@ dec.addEventListener('click', () => {
     msg.innerText = ' ';
   }
 });
+
+
+//review
+const dtReview = document.querySelector('#dt-review');
+const rvBox = document.querySelector('.review-box'); //보여지는 내용 받아오기
+const arrow = document.querySelector(".fa-chevron-down");
+
+//화살표 변경
+arrow.addEventListener("click", (e) => {
+  ["fa-chevron-down", "fa-chevron-up"].forEach(
+    c => e.target.classList.toggle(c));
+});
+
+// div 클릭 시 내용보여지는 것
+dtReview.addEventListener('click', () => {
+  rvBox.classList.toggle('act');
+})
