@@ -1,5 +1,4 @@
  'use strict';
- 
  new gridjs.Grid({
   columns: [
     {
@@ -27,8 +26,9 @@
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
-            'onClick': () => handleModal('update'),
-            'style': 'cursor: pointer; color: purple;',
+            'onClick': () => handleModal('update',row.cells[3].data),
+            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
+            'style': 'cursor: pointer',
           }
         }
       },
@@ -78,18 +78,5 @@
       'text-align': 'center'
     }
   },
-  server: {
-    url: 'data/customer-data.json',
-    then: (data) =>
-      data.data.map((cs) => [
-        cs.no,
-        cs.userNm,
-        cs.grade,
-        cs.userId,
-        cs.tel,
-        cs.gender,
-        cs.status,
-      ]),
-    total: (data) => data.total_cards,
-  },
+  data: JSON.parse(customer).map(({memo, userNm, gradeCd, userId, tel, gender, statusCd}) => [memo, userNm, gradeCd, userId, tel, gender, statusCd]),
 }).render(document.getElementById("wrapper"));
