@@ -24,6 +24,7 @@
 
     <script defer src="src/detail.js" type="text/javascript"></script>
     <script defer src="src/cart.js"></script>
+    <script defer src="src/cart-in.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -44,7 +45,7 @@
   <body> 
     <div class="popup-back"></div>
     <div class="body__container">
-      <!-- CART POPUP -->
+      <!-- CART POPUP START-->
     <div class="cart-popup">
       <div class="cart-popup-title">
         <h3>미니 장바구니</h3> 
@@ -57,22 +58,23 @@
               <span class="detail-headline mini-name"></span>
             </li>
             <li>
-              <span class="primary-text">스타일 : CV0959-108</span>
+              <span class="primary-text mini-style"></span>
             </li>
-            <li><span class="primary-text mini-size">사이즈 : </span></li>
+            <li><span class="primary-text mini-size"></span></li>
             <li><span class="primary-text mini-count"></span></li>
-            <li><span class="orange mini-price"></span></li>
+            <li><span class="orange mini-price won"></span></li>
           </ul>
         </div> 
         <span class="popup-close"><i class="fas fa-times"></i></span> 
       </div> 
       <ul class="order-price-info mini-info">
-        <li><span>총 상품금액</span><span class="orange total-orange"></span></li>
+        <li><span>총 상품금액</span><span class="orange total-orange won"></span></li>
       </ul>
       <span class="promo-title mini-title"> 배송비는 주문서에서 확인이 가능합니다. </span>
       <a href="inCart.html" class="order-btn order-go">장바구니 가기</a> 
       <a class="order-btn">바로구매</a>
     </div>
+    <!-- CART POPUP END-->
       <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
       <section class="section contents">
@@ -150,10 +152,10 @@
               <div class="detail-info-top">
                 <div class="">
                   <div class="detail-subtitle-left detail-subtitle-text">
-                    <span>성인공용 인조 잔디 축구화 </span>
+                    <span>성인공용 인조 잔디 축구화</span>
                   </div>
                   <div class="detail-subtitle-right detail-price-text">
-                    <span>119,000 원</span>
+                    <span class="won">119,000</span>
                   </div>
                 </div>
               </div>
@@ -165,7 +167,7 @@
                 <span class="detail-subtitle-right size-guide">사이즈 가이드</span>
               </div>
               <div class="detail-product-option">
-                <div class="opt-list radio-text">
+                <div id="sizeOpt" class="opt-list radio-text">
                   <span class="input-radio">230</span>
                   <span class="input-radio">235</span>
                   <span class="input-radio">240</span>
@@ -197,6 +199,7 @@
                     <button class="increaseQuantity"><i class="fas fa-plus"></i></button>
                   </span>
                 </div>
+                <span class="msg"></span>
                 <hr>
                 <div class="order-wrap">
                   <div class="buy">
@@ -239,7 +242,7 @@
                     º  현재 컬러 : 화이트/화이트/브라이트 망고<br>
                   </span>
                   <span class="style-code">
-                    º  스타일 : CV0952-118<br>
+                    º  스타일 : <p>CV0952-118</p><br>
                   </span>
                   <a href="#" class="detail-underline">더보기</a>
                 </div>
