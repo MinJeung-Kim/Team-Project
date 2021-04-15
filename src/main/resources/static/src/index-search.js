@@ -4,6 +4,7 @@
 const searchWrap = document.querySelector('.search-wrap');
 const searchBack = document.querySelector('.search-back');
 const searchModal = document.querySelector('.search-modal');
+const searchInput = document.querySelector('.search-input');
 
 console.log(searchWrap);
 console.log(searchModal);
@@ -17,5 +18,6 @@ function offClick() {
     searchBack.classList.remove('open');
     searchModal.classList.remove('open');
 }
-gnvSearchInput.addEventListener('click',onClick);
+searchInput.addEventListener('click',onClick);
 document.querySelector('.search-close').addEventListener('click',offClick);
+
