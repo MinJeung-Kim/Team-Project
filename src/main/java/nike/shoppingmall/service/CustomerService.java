@@ -22,6 +22,7 @@ public class CustomerService {
     return customerRepository.findAll();
   }
 
+  //userId로 select
   public Optional<Customer> findById(String userId) {
     return customerRepository.findById(userId);
   }

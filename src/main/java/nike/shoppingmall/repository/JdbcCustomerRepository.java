@@ -32,6 +32,7 @@ public class JdbcCustomerRepository implements CustomerRepository {
   private RowMapper<Customer> CustomerRowMapper() {
     return (rs, rowNum) -> {
       Customer customer = new Customer();
+      customer.setBoardNum(rs.getInt("boardNum"));
       customer.setUserId(rs.getString("userId"));
       customer.setUserNm(rs.getString("userNm"));
       customer.setPassword(rs.getString("password"));

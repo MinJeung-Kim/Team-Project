@@ -3,6 +3,7 @@ package nike.shoppingmall.domain;
 import java.util.Date;
 
 public class Customer {
+    private int boardNum;
     private String userNm;
     private String userId;
     private String password;
@@ -17,6 +18,14 @@ public class Customer {
     private Date insDt;
     private Date uptDt;
 
+    public int getBoardNum() {
+        return this.boardNum;
+    }
+
+    public void setBoardNum(int boardNum) {
+        this.boardNum = boardNum;
+    }
+    
     public String getUserNm() {
         return this.userNm;
     }

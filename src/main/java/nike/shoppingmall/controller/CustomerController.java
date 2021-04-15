@@ -30,6 +30,9 @@ public class CustomerController {
     return "customer";
   }
 
+  // 데이터 넘김 없이 페이지 이동 -> get
+  // 데이터 넘기면서 이동 -> post
+  // Optional 가져올 데이터가 한 줄일 때
   @GetMapping("/customer/{userId}")
   @ResponseBody
   public Optional<Customer> board(@PathVariable("userId") String userId) {
