@@ -97,7 +97,7 @@
     width: 80px;
     height: 30px;
     border-radius: 6px;
-    top: 90px;
+    top:270px;
     cursor: pointer;
   }.reset-button {
     position: absolute;
@@ -108,7 +108,7 @@
     width: 80px;
     height: 30px;
     border-radius: 6px;
-    top: 90px;
+    top:270px;
     cursor: pointer;
     
   }

@@ -9,52 +9,18 @@ const star = document.querySelector('.product-star');
 
 //클릭시 색 바꾸기
 
-// const $starWrap = document.querySelector('.product-star')
-// const $stars = document.querySelectorAll('.fas.fa-star')
+const $starWrap = document.querySelector('.product-star')
+const $stars = document.querySelectorAll('.fas.fa-star')
 
-// $starWrap.addEventListener('click', (e) => {
-//   console.log(e)
-//   console.log(e.target)
-//   console.log(e.target.className)
+$starWrap.addEventListener('click', (e) => {
+  
+    let flag = true;
+    if(e.target.nodeName == 'I'){
+        $stars.forEach((star) => {
+            flag ? star.classList.add('click') :
+            star.classList.remove('click')
+            if(e.target==star) flag = false;
+        })
+    }
+})
 
-//    $stars.forEach((star) => {
-//     console.log(star.id)
-//    })
-// })
-
-st5.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'black';
-    st4.style.color = 'black';
-    st5.style.color = 'black';
-    
-})
-st4.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'black';
-    st4.style.color = 'black';
-    st5.style.color = 'gray';
-})
-st3.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'black';
-    st4.style.color = 'gray';
-    st5.style.color = 'gray';
-})
-st2.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'black';
-    st3.style.color = 'gray';
-    st4.style.color = 'gray';
-    st5.style.color = 'gray';
-})
-st1.addEventListener('click', () => {
-    st1.style.color = 'black';
-    st2.style.color = 'gray';
-    st3.style.color = 'gray';
-    st4.style.color = 'gray';
-    st5.style.color = 'gray';
-})

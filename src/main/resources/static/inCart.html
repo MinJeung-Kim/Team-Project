@@ -5,29 +5,125 @@
     <title>나이키. Just Do It. Nike.com</title>
 
     <!-- CSS 초기화 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/cart-in-option.css" />
 
-    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+    <script defer src="src/cart-in.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
-        $('#header').load('comm-header.html')
-        $('#footer').load('comm-footer.html')
-      })
+        $('#header').load('comm-header.html');
+        $('#footer').load('comm-footer.html');
+      });
     </script>
   </head>
   <body>
     <div class="body__container">
+      <!-- OPTION POPUP START-->
+      <div class="popup-back">
+        <div class="option-popup">
+          <div class="option-wrap">
+            <ul class="option-img">
+              <li>
+                <img
+                  src="img/details/2e0ecc3b-681a-45bc-9e03-29da51d3ee0c_primary.jpg"
+                  alt=""
+                /><img
+                  src="img/details/e821fe0a-4bf0-4a18-9d7a-3682656596bb_2.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="img/details/4339fef7-329d-442c-b011-7b62d7307031_3.jpg"
+                  alt=""
+                /><img
+                  src="img/details/67cc65c6-f30a-439c-85aa-3a0fbdde836d_4.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="img/details/bb1bf666-aa4d-4c8e-9a07-b8749f74ef8c_5.jpg"
+                  alt=""
+                /><img
+                  src="img/details/1f748124-06f1-4d96-bbf6-4f64246c50d6_6.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="img/details/d5e30fdf-994a-40c8-b5a1-88eaef4ed96d_7.jpg"
+                  alt=""
+                /><img
+                  src="img/details/5ee5da3e-6ff3-4126-81e9-02e99238865f_8.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+            <div class="option-info">
+              <ul class="option-right-info">
+                <li>
+                  <span class="option-sub-title"></span
+                  ><span class="option-price won"></span>
+                </li>
+                <li><span class="option-title">나이키 데이브레이크</span></li>
+                <li><span class="option-sale">30% off</span></li>
+              </ul>
+              <span class="option-size-title">사이즈 선택</span>
+              <ul class="option-size-warp">
+                <li class="option-size">
+                  <span>225</span><span>230</span><span>235</span
+                  ><span>240</span><span>245</span>
+                </li>
+                <li class="option-size">
+                  <span>250</span><span>255</span><span>260</span
+                  ><span>265</span><span>270</span>
+                </li>
+                <li class="option-size">
+                  <span>275</span><span>280</span><span>285</span
+                  ><span>290</span><span>295</span>
+                </li>
+                <li class="option-size">
+                  <span>300</span><span>305</span><span>310</span
+                  ><span>320</span><span>330</span>
+                </li>
+              </ul>
+              <div class="option-count">
+                <span class="option-count-title">수량</span
+                ><input type="number" value="1" />
+                <span class="minus"><i class="fas fa-minus"></i></span
+                ><span class="puls"><i class="fas fa-plus"></i></span>
+              </div>
+              <span class="msg"></span>
+              <div class="option-update"><a href="">옵션변경하기</a></div>
+            </div>
+            <span class="option-close"><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- OPTION POPUP END-->
       <div id="header"></div>
       <!-- ========== CONTENTS ========== -->
       <section class="section contents">
@@ -40,22 +136,29 @@
               <ul class="order-status">
                 <li><span class="underline">전체삭제</span></li>
                 <li class="product-list">
-                  <div class="product-wrap">
+                  <div class="product-wrap cart-wrap">
                     <img src="img/210219_hp_p8_bg2.jpg" alt="" />
                     <ul class="product-info">
                       <li class="product-title">
-                        <span class="detail-headline">나이키 에어맥스 97</span>
+                        <span class="detail-headline mini-name"
+                          >나이키 에어맥스 97</span
+                        >
                       </li>
                       <li>
-                        <span class="primary-text">스타일 : 921826-001</span>
+                        <span class="primary-text mini-style"></span>
                       </li>
-                      <li><span class="primary-text">사이즈 : 275</span></li>
-                      <li><span class="primary-text">수량 : 1</span></li>
+                      <li>
+                        <span class="primary-text mini-size"></span>
+                      </li>
+                      <li>
+                        <span class="primary-text mini-count"></span>
+                      </li>
                     </ul>
                   </div>
                   <div class="product-option">
-                    <span class="underline">옵션변경</span><span class="orange">199,000 원</span>
-                    <span><i class="fas fa-times"></i></span>
+                    <span class="underline option-btn">옵션변경</span
+                    ><span class="orange mini-price won"></span>
+                    <span><i class="fas fa-times cart-close"></i></span>
                   </div>
                 </li>
               </ul>
@@ -64,18 +167,34 @@
                   <p>주문예정금액</p>
                 </div>
                 <ul class="order-price-info">
-                  <li><span>상품 금액</span><span>199,000 원</span></li>
-                  <li><span>예상 배송비</span><span>0 원</span></li>
-                  <li><span>상품 할인 금액</span><span class="orange">0 원</span></li>
-                  <li><span>주문 할인 금액</span><span class="orange">0 원</span></li>
-                  <li class="order-total-price"><span>총 결제 예정 금액</span><span class="orange">199,000 원</span></li>
+                  <li>
+                    <span>상품 금액</span><span class="mini-price won"></span>
+                  </li>
+                  <li><span>예상 배송비</span><span class="won"></span></li>
+                  <li>
+                    <span>상품 할인 금액</span><span class="orange">0 원</span>
+                  </li>
+                  <li>
+                    <span>주문 할인 금액</span><span class="orange">0 원</span>
+                  </li>
+                  <li class="order-total-price">
+                    <span>총 결제 예정 금액</span
+                    ><span class="orange won"></span>
+                  </li>
                   <a class="order-btn">주문하기</a>
                 </ul>
                 <form class="promo-box" action="">
-                  <input class="promo" type="text" placeholder="프로모 코드 입력" />
+                  <input
+                    class="promo"
+                    type="text"
+                    placeholder="프로모 코드 입력"
+                  />
                   <button class="promo-btn">적용</button>
                 </form>
-                <span class="promo-title"> 장기간 장바구니에 보관하신 상품은 시간이 지남에 따라 가격과 혜택이 변동 될 수 있으며, 최대 30일동안 보관됩니다. </span>
+                <span class="promo-title">
+                  장기간 장바구니에 보관하신 상품은 시간이 지남에 따라 가격과
+                  혜택이 변동 될 수 있으며, 최대 30일동안 보관됩니다.
+                </span>
               </div>
             </div>
           </div>

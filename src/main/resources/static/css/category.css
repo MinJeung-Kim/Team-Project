@@ -26,12 +26,31 @@
 .filterBtn {
     margin: 0 5px;
 }   
-.filterBtn:hover {
+.currentOpt:hover,
+.neworder:hover,
+.ifilter:hover {
     color: #8d8d8d;
 }
 .ifilter,.neworder {
     font-size: 15px;
     vertical-align: middle;
+}
+#filterOpt {
+    background: rgb(252, 252, 252);
+    text-align: right;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 109px;
+    position: relative;
+    left: 93px;
+    display: none;
+    /* z-index:999; */
+}
+#filterOpt.openFilter {
+    display: block;
+}
+.currentOpt {
+    line-height: 18px;
+    font-size: 15px;
 }
 /* 본문 전체 감싸는 영역 */
 .category-wrap {
@@ -42,6 +61,9 @@
     margin: 0 auto;
 }
 /* 왼쪽 카테고리 네비 */
+.left_navi_title.closed {
+    display: none;
+}
 .left_navi_emp {
     width: 240.67px;
     height: 48px;
@@ -52,9 +74,18 @@
 .navi_inner,.navi_inner2{
     width: 210px;
 }
+.navi_ck.openCk {
+    display: none;
+}
+
 .navi_inner2 {
     overflow: hidden;
     margin-bottom: 13px;
+}
+.menuBar::after {
+    clear: both;
+    display: block;
+    content: '';
 }
 .border-top-title {
     font-family: 'Noto Sans KR', sans-serif;
@@ -66,13 +97,14 @@
     float: left;
     width: 90%;
 }
-.toparrow {
+.menuBar .fas {
     cursor: pointer;
     font-size: 14px;
     position: relative;
     right: 12px;
     top: 22px;
 }
+
 .input-checkbox,.section-control {
     cursor: pointer;
 }
@@ -89,10 +121,10 @@
 .ckbox_wrap:last-child {
     padding: 5px 0 40px 0;
 }
-.ckbox_wrap.child {
+.ckbox_wrap.moreOpt {
     display: none;
 }
-.child.staged {
+.moreOpt.staged {
     display: block;
 }
 .navi_color .color-wrap {
@@ -177,6 +209,7 @@
     background-color: #fcc300;
     border-color: #fcc300;
 }
+
 /* 컨텐츠 영역 */
 .category-content {
     margin-left: 10px;
@@ -184,6 +217,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
 }
+.right-content-wrap
 .category-content li {
     height: 450px;
     width: 288px;
@@ -191,6 +225,10 @@
 .category-content-img {
     width: 288px;
     height: 288px;
+}
+.to_be_released {
+    color: brown;
+    font-size: 15px;
 }
 .smallImg {
     display: none;

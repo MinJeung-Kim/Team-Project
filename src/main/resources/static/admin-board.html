@@ -59,13 +59,15 @@
       <!-- ========== 등록모달 ========== -->
           <div class="write_modal">
               <div class="write_modal-content">
-                  <a class="write_close-button">&times;</a>
+                <form action="#" method="POST">
+                <button type="reset" class="write_close-button">&times;
+                </button>
                   <div class="write_modal_title">
                     <img class="write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
                     <span class="write_modal_title_txt">공지사항</span>
                   </div>
                   <div class="write_body">
-                    <form action="#" method="POST">
+                    
                         <div class="writeform">
                           <div class="cont">
                               <div class="reviewform_subject">
@@ -170,8 +172,10 @@
                         <button type="button" class="day" id="bt4">3개월</button>
                         <button type="button" class="day" id="bt5">6개월</button>
                       </div>
-                      <button type="reset" class="reset-button" >초기화</button>
-                      <button type="submit" class="search-button" >검색</button>
+                      <div class="bt-wrap">
+                        <button type="reset" class="reset-button" >초기화</button>
+                        <button type="submit" class="search-button" >검색</button>
+                      </div>
                     </form>
                   <div id="wrapper"></div>
                   <div class="admin_write">
