@@ -12,25 +12,37 @@
     const csRegister = document.querySelector('.csRegister');
     
     const handleModal = async(test,userId) => { 
-        console.log(userId)
+        //console.log(userId)
         if(test == 'register') {
             status.forEach(cStatus => {
                 cStatus.style.display = "none";
             })
-
             reAndSub.classList.add('stage');
             uptAndDel.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
             const res = await fetch(`/customer/${userId}`)
             const customer = await res.json() //json 뽑을 때
-            console.log(customer)
+            //console.log(customer)
             status.forEach(cStatus => {
                 cStatus.style.display = "block";
             })
             uptAndDel.classList.add('stage1');
             reAndSub.classList.remove('stage');
             csRegister.textContent = "고객 정보";
+            //수정 모달창에 데이터 뿌리기
+            frm.name.value = customer.userNm;
+            frm.email.value = customer.userId;
+            frm.password.value = customer.password;
+            frm.tel.value = customer.tel;
+            frm.gender.value = customer.gender;
+            frm.bday.value = customer.birth;
+            frm.addrDetail.value = customer.address;
+            //frm.grade.textContent = customer.gradeCd;
+            frm.status.textContent = customer.statusCd;
+            //frm.insDt.textContent = customer.insDt;
+            //frm.uptDt.textContent = customer.uptDt;
+            frm.memo.value = customer.memo;
         }
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');

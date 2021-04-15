@@ -52,5 +52,5 @@ console.log(customer)
       'text-align': 'center'
     }
   },
-  data: JSON.parse(customer).map(({memo, userNm, gradeCd, userId, tel, gender, statusCd}) => [memo, userNm, gradeCd, userId, tel, gender, statusCd]),
+  data: JSON.parse(customer).map(({boardNum, userNm, gradeCd, userId, tel, gender, statusCd}) => [boardNum, userNm, gradeCd, userId, tel, gender, statusCd]),
 }).render(document.getElementById("wrapper"));
