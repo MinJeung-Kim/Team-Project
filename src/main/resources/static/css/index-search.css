@@ -31,8 +31,13 @@
 
 .search-header {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.search-form-wide .fa-search {
+  position: relative;
+  left:50px;
+  z-index: 10000;
 }
 
 .search-close .fa-times{
@@ -50,7 +55,27 @@
 .fa-times:hover {
   background-color: #e7e7eb;
   background-color: #e7e7eb;
-;
+}
+
+.search-list {
+  visibility:visible;
+  max-width: 656px;
+  margin:0 auto;
+  padding:46px 32px 0;
+  transform: translateY();
+  transition: all 0.65s;
+}
+
+.search-list p {
+  font-size:16px;
+  color:#757575;
+  margin-bottom: 16px;
+}
+
+.search-list li {
+  font-size:20px;
+  color:20px;
+  margin-bottom: 12px;
 }
 
 .gnv__img {
