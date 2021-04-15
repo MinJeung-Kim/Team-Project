@@ -117,7 +117,7 @@
                 </div>
                 <div class="searchCs-btn">
                   <input type="submit" class="search-customerBtn" value="찾기"></input>
-                  <input type="reset" class="search-customerBtn" value="초기화"></input>
+                  <input type="reset" class="search-customerBtn resetBtn" value="초기화"></input>
                 </div>
               </form>
 
@@ -176,10 +176,11 @@
             <input type="number" name="phone" class="write phone" placeholder="&nbsp;'-'없이 입력">
           </div>
           <div class="rg-item">
-            <span class="title">성별</span>
+            <span class="title">성별 *</span>
             <select name="" class="write gender">
-              <option value="man">남자</option>
-              <option value="woman">여자</option>
+              <option value="gender all">전체</option>
+              <option value="gender man">남자</option>
+              <option value="gender woman">여자</option>
             </select>
           </div>
           <div class="rg-item">
@@ -229,6 +230,7 @@
             <span class="title memoTitle">메모</span>
             <textarea name="memo" class="write memo"></textarea>
           </div>
+          <p class="requiredText">* 필수 입력</p>
           <div class="rg-item csCheck">
             <div class="reAndSub">
               <button type="reset" class="modal-last reset">다시쓰기</button>

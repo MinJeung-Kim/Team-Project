@@ -113,6 +113,15 @@
     border: none;
   }
 
+  .search-customerBtn.resetBtn {
+    background: white;
+    border: 1px solid black;
+    color: black;
+  }
+  .search-customerBtn.resetBtn:hover {
+    background-color: whitesmoke;
+  }
+
   .searchCs-btn {
     grid-column: 2;
     position: relative;
