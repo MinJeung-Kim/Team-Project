@@ -20,6 +20,8 @@
             reAndSub.classList.add('stage');
             uptAndDel.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
+            getDate();
+            resetContents();
         } else if(test == "update") {
             const res = await fetch(`/customer/${userId}`)
             const customer = await res.json() //json 뽑을 때
@@ -35,18 +37,25 @@
             frm.email.value = customer.userId;
             frm.password.value = customer.password;
             frm.tel.value = customer.tel;
-            frm.gender.value = customer.gender;
+            console.log("gender = " + customer.gender)  
+            for(let i = 0; i < frm.gender.options.length; i++){
+                console.log(i);
+                if(frm.gender.options[i].value == customer.gender){
+                    frm.gender.options[i].selected = true;
+                }
+            }
             frm.bday.value = customer.birth;
             frm.addrDetail.value = customer.address;
-            //frm.grade.textContent = customer.gradeCd;
-            frm.status.textContent = customer.statusCd;
+            console.log('gradeCd='+customer.gradeCd)
+            //frm.grade.setAttribute('value',customer.gradeCd);
+            // frm.status.value = customer.statusCd;
             //frm.insDt.textContent = customer.insDt;
-            //frm.uptDt.textContent = customer.uptDt;
+            //frm.uptDt.value = customer.uptDt;
             frm.memo.value = customer.memo;
         }
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');
-        getDate();
+        
     } 
     registerBtnWrap.addEventListener('click', event => handleModal('register'));
     csCloseBtn.addEventListener('click', event => handleModal('register'));

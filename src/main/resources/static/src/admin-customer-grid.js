@@ -1,6 +1,5 @@
 
  'use strict';
-console.log(customer)
  new gridjs.Grid({
   columns: [
     {
