@@ -250,3 +250,16 @@ table, th, td {
 #wrapper {
   margin-top: 20px;
 }
+
+.noUi-target {
+  position: relative;
+  width:80%;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+#slider-value {
+  position: relative;
+  left:10px;
+  bottom: 10px;
+}
