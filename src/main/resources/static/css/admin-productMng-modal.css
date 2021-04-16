@@ -14,7 +14,6 @@
     box-sizing: border-box;
     width: 700px;
     height: -webkit-fill-available;
-    margin: 50px auto;
     padding: 20px;
     background: white;
     border-radius: 4px;
@@ -54,3 +53,38 @@
 }
 
 /*상품등록 모달창*/
+.prd-container {
+    display: grid;
+    width: 650px;
+    height: 450px;
+    grid-template-columns: repeat(1, 650px);
+    border-top: 2px solid lightgray;
+}
+
+.prd-item {
+    border-bottom: 1px solid lightgray;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.prd-item .title {
+    display: inline-block;
+    width: 90px;
+    height: 100%;
+    border-right: 1px solid lightgray;
+    background-color: whitesmoke;
+    line-height: 44px;
+    padding-left: 8px;
+}
+
+.wr {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+}
+
+.wr:focus { outline:none; }
