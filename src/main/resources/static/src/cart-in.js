@@ -71,9 +71,10 @@ optionSize.forEach((op) => {
   }
 });
 
-//선택에 따른 사이즈 색상 변경
+//선택에 따른 사이즈 background 색상 변경
 sizeDiv.addEventListener('click', (e) => {
   if (e.target.nodeName === 'SPAN') {
+    console.log(e.target.textContent);
     optionSize.forEach((option) => {
       e.target === option
         ? option.classList.add('change-color')
@@ -106,4 +107,19 @@ puls.addEventListener('click', () => {
   } else if (optionCount.value == 10) {
     msg.innerText = `10개 까지 구매가능 합니다.`;
   }
+});
+
+// 옵션 변경하기 버튼 클릭
+const optBtn = document.querySelector('.option-update');
+
+optBtn.addEventListener('click', () => {
+  popupBack.classList.remove('on');
+  optionPopup.classList.remove('on');
+
+  sizeDiv.addEventListener('click', (e) => {
+    //클릭된 사이즈 값 장바구니에 적용하기 !!!
+    cartSize.innerText = e.target.textContent;
+  });
+  console.log(optionCount.value);
+  cartCount.innerText = optionCount.value;
 });
