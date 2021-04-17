@@ -89,7 +89,6 @@ public class Customer {
     // public void setPost(String post) {
     //     this.post = post;
     // }
-
     public int getGradeCd() {
         return this.gradeCd;
     }
@@ -105,7 +104,6 @@ public class Customer {
     public void setStatusCd(int statusCd) {
         this.statusCd = statusCd;
     }
-
     public String getMemo() {
         return this.memo;
     }
