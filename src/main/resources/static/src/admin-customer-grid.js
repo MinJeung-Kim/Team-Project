@@ -1,36 +1,62 @@
-
  'use strict';
-
+ 
  new gridjs.Grid({
   columns: [
     {
+      id: 'myCheckbox',
+      name: gridjs.html('<input type="checkbox"'+
+      ' style="margin-left:-50px;margin-top:-5px;position:absolute; name="chk" id="inputA">'),
+      formatter: (cell,row) => gridjs.html(
+        `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk">`),
+      width: '10px',
+      sort: false,
+      plugin: {
+        component: gridjs.selection.RowSelection,
+        props: {
+          id: (row) => row.cell(2).data
+        },
+      },
+    },
+    {
       name: 'No',
-      width: '30px'
+      width: '30px',
     },
     { 
       name: '이름',
+      width: "60px",
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
             'onClick': () => handleModal('update'),
-            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
-            'style': 'cursor: pointer',
+            'style': 'cursor: pointer; color: purple;',
           }
         }
       },
+      sort: false,
     },
-    '등급',
+    {
+      name: '등급',
+      width: "45px",
+      sort: false,
+    },
     {
       name: '아이디',
       sort: false,
     },
     { 
       name : '전화번호',
-      width: '90px',
+      // width: '90px',
       sort: false,
     },
-    '성별', 
-    '유형'],
+    { 
+      name : '성별',
+      sort: false,
+    },
+    { 
+      name : '유형',
+      sort: false,
+    },
+  ],
   sort: true,
   search: true,
   pagination: {
@@ -52,12 +78,18 @@
       'text-align': 'center'
     }
   },
-  data: [
-    ['10', 'bom', 'VIP', 'bmbm1@naver.com', '010-4464-7124', '여', '정상'],
-    ['09', '김민정', 'GOLD', 'mj114@gmail.com', '010-0011-4468', '여', '정상'],
-    ['08', '통붕이', 'FAMILY', 'tb991@hanmail.net', '010-3320-0201', '남', '탈퇴'],
-    ['07', '김예담', 'FAMILY', 'yyee@hotmail.com', '010-1234-4928', '여', '휴면'],
-    ['06', '박서윤', 'SILVER', 'sysy66@nate.com', '010-9977-4687', '여', '휴면'],
-    ['05', '산타', 'VIP', 'stst32@stst.net', '010-8765-1234', '남', '탈퇴']
-  ],
+  server: {
+    url: 'data/customer-data.json',
+    then: (data) =>
+      data.data.map((cs) => [
+        cs.no,
+        cs.userNm,
+        cs.grade,
+        cs.userId,
+        cs.tel,
+        cs.gender,
+        cs.status,
+      ]),
+    total: (data) => data.total_cards,
+  },
 }).render(document.getElementById("wrapper"));

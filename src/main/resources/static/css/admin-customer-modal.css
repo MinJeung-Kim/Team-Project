@@ -181,7 +181,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 .reAndSub,
-.uptAndDel {
+.updateWrap {
     display: none;
 }
 
@@ -189,9 +189,16 @@ input[type="number"]::-webkit-inner-spin-button {
     display: inline;
 }
 
-.uptAndDel.stage1 {
+.updateWrap.stage1 {
     display: inline;
     text-align: center;
+}
+
+.requiredText {
+    color: red;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .modal-last,

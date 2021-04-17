@@ -21,10 +21,14 @@
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/cart.css" /> 
+    <link rel="stylesheet" href="css/review-form.css" />
 
     <script defer src="src/detail.js" type="text/javascript"></script>
     <script defer src="src/cart.js"></script>
     <script defer src="src/cart-in.js"></script>
+    <script defer src="src/admin-board-addfile.js"></script>
+    <script defer src="src/reviewform.js"></script>
+    <script defer src="src/review.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -76,6 +80,110 @@
     </div>
     <!-- CART POPUP END-->
       <div id="header"></div>
+      <!-- REVIEW WRITE START -->
+      <div class="write_modal_back"></div>
+      <div class="write_modal">
+        <div class="write_modal-content">
+            <a class="write_close-button">&times;</a>
+            <div class="write_img-div">
+              <img class="write_product-img" src=https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CK6469-290/c34d2857-d29f-4b3d-a4a0-bb5edd743ada_primary.jpg?thumbnail>
+            </div>
+            <div class="write_product-info">
+              <span class="write_info_tit">조던 플라이트 플리스 풀오버 후디</span>
+              <div class="write_info_price">109,000 원</div>
+            </div>
+            <div class="write_modal_title">
+              <img class="write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
+              <span class="write_modal_title_txt">REVIEW</span>
+            </div>
+            <div class="write_body">
+              <form action="#" method="POST" class="writeform">
+                  <div class="cont-l">
+                      <div class="reviewform_subject">
+                          <span class="cont-1_tit">제목</span>
+                          <input type="text" class="review_input1">
+                      </div>
+                      <div class="reviewform_content">
+                          <span class="cont-1_tit">내용</span>
+                          <textarea name="reviewform-cont" class="review_input2"></textarea>
+                      </div>
+                      <div class="reviewform_file">
+                          <span class="cont-1_tit">첨부파일</span>
+                          <div class="filewrap">
+                              <input class="upload-name" disabled="disabled">
+                              <label for="addfile" class="fileLabel">파일선택</label>
+                              <input type="file" id="addfile"class="review_input3" multiple accept="image/*">
+                          </div>
+                      </div>
+                      <div class="reviewform_passwd">
+                          <span class="cont-1_tit">비밀번호</span>
+                          <input type="password" class="review_input4">
+                      </div>
+                  </div>
+                  
+                  <!-- 상품평 -->
+                  <div class="cont-r">
+                      <div class="reviewform_star">
+                          <span class="cont-1_tit">
+                              상품만족도
+                          </span>
+                          <div class="product-star">
+                              <i class="fas fa-star" id="star1"></i>
+                              <i class="fas fa-star" id="star2"></i>
+                              <i class="fas fa-star" id="star3"></i>
+                              <i class="fas fa-star" id="star4"></i>
+                              <i class="fas fa-star" id="star5"></i>
+                          </div>
+                      </div>
+                      <div class="product-gage">
+                          <span class="cont-1_tit">
+                              상품평가
+                          </span>
+                          <div class="reviewform_gage-wrap">
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">편안함</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">편하지 않은</span>
+                                      <span class="reviewform_value-txtRight">편안한</span>
+                                  </div>
+                              </div>
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">사이즈</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">작은</span>
+                                      <span class="reviewform_value-txtRight">큰</span>
+                                  </div>
+                              </div>
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">내구성</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">내구성이 없는</span>
+                                      <span class="reviewform_value-txtRight">내구성이 있는</span>
+                                  </div>
+                              </div>
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">폭</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">좁은</span>
+                                      <span class="reviewform_value-txtRight">넓은</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="reviewform_button">
+                      <button class="review-save">저장하기</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+      <!-- REVIEW WRITE END -->
       <!-- ========== CONTENTS ========== -->
       <section class="section contents">
         <div class="inner clearfix">
@@ -247,26 +355,52 @@
                   <a href="#" class="detail-underline">더보기</a>
                 </div>
                 <hr>
-                <div class="detail-review detail-description detail-primary-text">
-                  <span><a href="review.html">리뷰</span>
+                <div id="dt-review" class="detail-review detail-description detail-primary-text">
+                  <span><a id="reviewIcon">리뷰</span>
                   <div class="detail-right">
                     <span>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </span>
                     <span>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </span>
                     <span>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </span>
                     <span>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </span>
                     <span>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </span>
                     <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
                     </a>
+                  </div>
+                  <!-- 리뷰 더보기 -->
+                  <div class="review-box">
+                    <div>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span></a>
+                    </div>
+                    <div class="review-noti">
+                      이 상품의 첫 번째 리뷰를 작성해 주세요.
+                    </div>
+                    <div class="review-write">
+                      <a class="writeBt">리뷰 작성하기</a>
+                    </div>
                   </div>
                 </div>
                 <hr>

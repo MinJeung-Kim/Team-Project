@@ -1,8 +1,6 @@
 'use strict';
 
 const frm = document.getElementById('reg_form'); //form id값 가져오기
-const update = document.querySelector('.update'); //수정 버튼
-
 const regName = /^[가-힣a-zA-Z]+/; //정규식
 const regEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 const regPass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@%^&*-]).{8,16}$/;
@@ -11,9 +9,10 @@ const regPhone = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}/;
 const regFunc = function(e) {
     console.log('h2')
     e.preventDefault();
-    //이름
-    if(frm.name.value==null || frm.name.value=="") {
-        alert("이름을 입력하세요.");
+//이름
+    if(regName.test(frm.name.value) == false) {//test()로 유효성 검사 false
+        alert("이름은 한글과 영문만 입력 가능합니다.");
+        frm.name.value = '';
         frm.name.focus();
         return false; 
     } else {
@@ -25,9 +24,10 @@ const regFunc = function(e) {
         } 
     }
 
-    //ID(이메일)
-    if(frm.email.value==null || frm.email.value=="") {
-        alert("이메일을 입력하세요.");
+//ID(이메일)
+    if(regEmail.test(frm.email.value) == false) {
+        alert("이메일 형태로 입력해주세요. \n이메일은 영문만 가능합니다. \n예시)abcd@efg.com");
+        frm.email.value = '';
         frm.email.focus();
         return false; 
     } else {

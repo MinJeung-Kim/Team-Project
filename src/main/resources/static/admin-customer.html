@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/admin-customer.css" />
     <link rel="stylesheet" href="css/admin-customer-modal.css" /> 
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -41,8 +42,9 @@
     <script defer src="src/admin-customer.js"></script>
     <script defer src="src/comm-validate.js"></script>
     <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.production.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <script src="https://unpkg.com/gridjs-selection/dist/gridjs-selection.production.min.js"></script>
+    
   </head>
   <body>
     <div class="body__container">  
@@ -87,7 +89,7 @@
               </div>
               <div id="divisionLine"></div>
               <!-- ======= 고객 검색 ======= -->
-              <div class="search-customer">
+              <form name="searchCs" class="search-customer">
                 <div class="search-option">검색어</div>
                 <div class="search-option">
                   <select name="">
@@ -96,30 +98,36 @@
                     <option value="">전화번호</option>
                   </select>
                   <input type="text" class="searchText"></input>
-                  <input type="submit" class="search-customerBtn" value="찾기"></input>
+                  
                 </div>
                 <div class="search-option">성별</div>
                 <div class="search-option">
-                  <input type="radio" name="searchGender" class="select-gender">남
-                  <input type="radio" name="searchGender" class="select-gender">여
+                  <input type="radio" name="searchGender" class="select-gender" value="both" checked>전체
+                  <input type="radio" name="searchGender" class="select-gender" value="man">남
+                  <input type="radio" name="searchGender" class="select-gender" value="woman">여
                 </div>
                 <div class="search-option">등급</div>
                 <div class="search-option">
-                  <select>
-                    <option value="">FAMILY</option>
-                    <option value="">SILVER</option>
-                    <option value="">GOLD</option>
-                    <option value="">VIP</option>
+                  <select name="searchGrade">
+                    <option value="FAMILY">FAMILY</option>
+                    <option value="SILVER">SILVER</option>
+                    <option value="GOLD">GOLD</option>
+                    <option value="VIP">VIP</option>
                   </select>
                 </div>
-              </div>
-
-              <div class="registerBtnWrap">
-                <button class="registerBtn">등록</button>
-              </div>
+                <div class="searchCs-btn">
+                  <input type="submit" class="search-customerBtn" value="찾기"></input>
+                  <input type="reset" class="search-customerBtn resetBtn" value="초기화"></input>
+                </div>
+              </form>
 
               <div id="wrapper"></div>
 
+              <div class="regAndDel">
+                <button type="button" class="regdel registerBtn">등록</button>
+                <button type="button" class="regdel deleteBtn">삭제</button>
+              </div>
+              
               <div class="memWrap">
                 <div class="memTotal">[총 회원 수 50명]  검색결과 50건</div>
                 <div class="searchLimitWrap">
@@ -165,13 +173,14 @@
           </div>
           <div class="rg-item">
             <span class="title">전화번호 *</span>
-            <input type="number" name="phone" class="write phone" placeholder="&nbsp;'-'없이 입력">
+            <input type="text" name="phone" class="write phone" placeholder="&nbsp;'-'없이 입력">
           </div>
           <div class="rg-item">
-            <span class="title">성별</span>
+            <span class="title">성별 *</span>
             <select name="" class="write gender">
-              <option value="man">남자</option>
-              <option value="woman">여자</option>
+              <option value="gender all">전체</option>
+              <option value="gender man">남자</option>
+              <option value="gender woman">여자</option>
             </select>
           </div>
           <div class="rg-item">
@@ -221,17 +230,16 @@
             <span class="title memoTitle">메모</span>
             <textarea name="memo" class="write memo"></textarea>
           </div>
+          <p class="requiredText">* 필수 입력</p>
           <div class="rg-item csCheck">
             <div class="reAndSub">
               <button type="reset" class="modal-last reset">다시쓰기</button>
               <input type="submit" class="modal-last submit" value="등록"></input>
             </div>
             <!-- 수정창에서만 보임 -->
-            <div class="uptAndDel">
-              <button type="submit" class="modal-last update">수정</button>
-              <button type="button" class="modal-last delete">삭제</button>
+            <div class="updateWrap">
+              <button type="button" class="modal-last update">수정</button>
             </div>
-
           </div>
         </form>
 

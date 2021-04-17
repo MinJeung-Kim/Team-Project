@@ -9,11 +9,13 @@
     max-width: 1808px;
     margin: 0 auto;
 }
-.section-title,.section-control {
+.section-control {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 17px;
+    position: relative;
 }
 .section-title {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 23px;
     font-weight: 500;
 }
@@ -36,22 +38,21 @@
     vertical-align: middle;
 }
 #filterOpt {
-    background: rgb(252, 252, 252);
-    text-align: right;
+    background: white;
+    border-radius: 10px;
+    font-size: 16px;
     font-family: 'Noto Sans KR', sans-serif;
-    width: 109px;
-    position: relative;
-    left: 93px;
+    width: 90px;
+    position: absolute;
+    left: 120px;
+    top: 23px;
+    line-height: 25px;
     display: none;
-    /* z-index:999; */
 }
 #filterOpt.openFilter {
     display: block;
 }
-.currentOpt {
-    line-height: 18px;
-    font-size: 15px;
-}
+
 /* 본문 전체 감싸는 영역 */
 .category-wrap {
     padding: 0 30px;
