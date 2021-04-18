@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import nike.shoppingmall.domain.ADBoard;
 import nike.shoppingmall.repository.ADBoardRepository;
 
+
 @Service
 public class ADBoardService {
     private final ADBoardRepository adBoardRepository;

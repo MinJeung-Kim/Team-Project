@@ -57,7 +57,7 @@
     attributes: (cell, row) => {
       if (cell, row) {
         return {
-          'onClick': () => rOpen(row.cell[1].data)
+          'onClick': () => open(row.cell(1).data)
         }
       }
     }
@@ -70,17 +70,10 @@
     width: '200px',
     height:'44px',
     formatter: (data) => gridjs.html (
-      `<a style="display:inline-block;text-align:center;
+      `<span style="display:inline-block;text-align:center;
       overflow:hidden;text-overflow:ellipsis;
-      white-space:nowrap;width:80%;height:40.8;">${data}</a>`
+      white-space:nowrap;width:80%;height:40.8;">${data}</span>`
     ),
-    attributes: (cell, row) => {
-      if (cell, row) {
-        return {
-          'onClick': () => rOpen(row.cell(1).data)
-        }
-      }
-    }
   },
   {
     name: '작성자',
