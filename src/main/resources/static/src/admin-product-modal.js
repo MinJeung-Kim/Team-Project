@@ -21,14 +21,11 @@ document.querySelector('.prd_close-button').addEventListener('click',offClick);
 const rgDate = document.querySelector('.rgDate');
 console.log(rgDate);
 
-const getdate = () => {
-    const d = new Date();
-    const y = d.getFullYear();
-    const m = ("0" + (1 + d.getMonth())).slice(-2);
-    const dy = ("0" + d.getDate()).slice(-2);
+const today = new Date();   
+const year = today.getFullYear(); // 년도
+const month = today.getMonth() + 1;  // 월
+const date = today.getDate();  // 날짜
 
-    const gettoday = y + "-" + m + "-" + d;
-    console.log(gettoday);
-    rgDate.innerHTML=gettoday;
-}
+rgDate.innerHTML=(year + '-' + month + '-' + date);
+
 
