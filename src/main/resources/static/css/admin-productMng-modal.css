@@ -70,7 +70,7 @@
 
 .prd-item .title {
     display: inline-block;
-    width: 90px;
+    width: 100px;
     height: 100%;
     border-right: 1px solid lightgray;
     background-color: whitesmoke;
@@ -88,3 +88,17 @@
 }
 
 .wr:focus { outline:none; }
+
+.rgDate {
+    outline:none;
+    font-size: 14px;
+}
+
+#add-file {
+    width:500px;
+    height: 25px;
+}
+
+.prdModal-register {
+    align-items: center;
+}
