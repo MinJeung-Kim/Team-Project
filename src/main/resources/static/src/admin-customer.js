@@ -49,18 +49,10 @@
         } else if(test == "update") {
             const res = await fetch(`/customer/${userId}`)
             const customer = await res.json() //json 뽑을 때
-            //console.log(customer)
-            status.forEach(cStatus => {
-                cStatus.style.display = "block";
-            })
-            updateWrap.classList.add('stage1');
-            reAndSub.classList.remove('stage');
-            csRegister.textContent = "고객 정보";
-            //수정 모달창에 데이터 뿌리기
-            frm.name.value = customer.userNm;
             frm.email.value = customer.userId;
             frm.password.value = customer.password;
             frm.tel.value = customer.tel;
+            frm.gender.value = customer.gender;
             console.log("gender = " + customer.gender)  
             for(let i = 0; i < frm.gender.options.length; i++){
                 console.log(i);
@@ -136,15 +128,15 @@
     // }
 
 //수정
-    const update = document.querySelector('.update');
-    function updateCheck() {
-        if (confirm("정말 수정하시겠습니까?") == true){//확인
-            document.registerForm.submit();
-        }else{//취소
-            return false;
-        }
-    }
-    update.addEventListener('click', updateCheck);
+    // const update = document.querySelector('.update');
+    // function updateCheck() {
+    //     if (confirm("정말 수정하시겠습니까?") == true){//확인
+    //         document.registerForm.submit();
+    //     }else{//취소
+    //         return false;
+    //     }
+    // }
+    // update.addEventListener('click', updateCheck);
 
 //삭제
 

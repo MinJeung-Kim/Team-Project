@@ -1,6 +1,7 @@
 'use strict';
 
 const frm = document.getElementById('reg_form'); //form id값 가져오기
+const update = document.querySelector('.update');
 const regName = /^[가-힣a-zA-Z]+/; //정규식
 const regEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 const regPass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@%^&*-]).{8,16}$/;
