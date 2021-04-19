@@ -64,7 +64,7 @@ const sizeDiv = document.querySelector('.option-size-warp');
 
 //미니 장바구니에서 선택된 사이즈 옵션 -> 옵션 변경 팝업에 적용
 optionSize.forEach((op) => {
-  console.log(op.textContent);
+  // console.log(op.textContent);
   if (op.textContent === cartSize.textContent) {
     console.log(cartSize.textContent);
     op.classList.add('change-color');
@@ -123,3 +123,10 @@ optBtn.addEventListener('click', () => {
   console.log(optionCount.value);
   cartCount.innerText = optionCount.value;
 });
+
+const sendPrice = document.querySelector('.send-price');
+const pdPrice = document.querySelector('.pd-price');
+const totPrice = document.querySelector('.tot-price');
+
+totPrice.innerText = `${sendPrice.textContent} + ${pdPrice.textContent}`;
+console.log(sendPrice.textContent);
