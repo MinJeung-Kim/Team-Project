@@ -102,7 +102,7 @@
   font-weight: bold;
   line-height: 120%;
 
-  width: 55%;
+  width: 60%;
   margin: 5px 10px 40px 10px;
 
   letter-spacing: -1px;
@@ -180,6 +180,24 @@
   color: gray;
 }
 
+/*SUBIMG -COLOR*/
+.prd-color-option {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.prd-color-option img{
+  width:72px;
+  height:72px;
+}
+
+.color-list img:hover {
+  filter: brightness(80%); 
+}
+
+.color-list {
+  display: inline-block;
+}
 
 /*OPTION LIST*/
 .detail-product-option {
@@ -225,9 +243,6 @@
   border:1.5px solid black;
 }
 
-/* .input-radio:active {
-  background-color: black;
-} */
 .radio-text
 {
   font-size: 15px;
@@ -236,7 +251,6 @@
 
   letter-spacing: -1px;
 }
-
 
 .notify-alert {
   margin-top:10px;
