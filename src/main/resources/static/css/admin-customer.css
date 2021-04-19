@@ -1,6 +1,7 @@
 .body__container {
     max-width: 1808px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
   .cstxt {
       display: inline-block;
@@ -57,33 +58,32 @@
   .search-customer {
     display: grid;
     width: 100%;
-    height: 90px;
+    height: 180px;
     align-items: center;
-    grid-template-columns: repeat(2, 100px 5fr);
-    border-top: 3px solid lightgray;
-    border-bottom: 3px solid lightgray;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: repeat(4, 1fr);
   }
   .search-customer select {
     height: 25px;
   }
   .search-option {
     height: 100%;
-    line-height: 43px;
+    line-height: 50px;
     padding-left: 8px;
+    border: 1px solid #e5e5e5;
   }
-  .search-option:nth-child(2) { grid-column: 2/6; }
-  .search-option:nth-child(3), 
-  .search-option:nth-child(4),
-  .search-option:nth-child(5),
-  .search-option:nth-child(6) {
-    border-top: 1px solid lightgray;
-  }
-  
   .search-option:nth-child(1),
   .search-option:nth-child(3),
-  .search-option:nth-child(5) {
-    background: rgb(245, 245, 245);
+  .search-option:nth-child(5) { 
+    text-align: center;
+    font-weight: bold;
   }
+  .search-option:nth-child(2),
+  .search-option:nth-child(4),
+  .search-option:nth-child(6) { 
+    grid-column: 2/6; 
+  }
+ 
   .search-option:nth-child(2),
   .search-option:nth-child(6) {
     padding-left: 8px;
@@ -93,38 +93,54 @@
     height: 21px;
     border: 1px solid gray;
   }
-  .search-customerBtn,
-  .registerBtn {
-    outline: none;
-  }
-  .search-customerBtn {
-    position: relative;
-    left: 5px;
-    width: auto;
-  }
-
-  .registerBtnWrap {
-    position: relative;
-    top: 50px;
-    z-index: 99;
+  .regAndDel {
     float: right;
   }
-  .registerBtn,
+
+  .regdel,
   .search-customerBtn {
+    width: 60px;
+    height: 28px;
+    margin: 5px;
     background: black;
+    border-radius: 5px;
     color: white;
     height: 23px;
     line-height: 21px;
-    text-align: center;
     font-size: 14px;
     cursor: pointer;
+    outline: none;
+    border: none;
   }
+
+  .search-customerBtn.resetBtn {
+    background: white;
+    border: 1px solid black;
+    color: black;
+  }
+  .search-customerBtn.resetBtn:hover {
+    background-color: whitesmoke;
+  }
+
+  .searchCs-btn {
+    grid-column: 2;
+    position: relative;
+    left: 250px;
+  }
+  
+  .regdel:hover,
+  .search-customerBtn:hover {
+    background: #5C5B5B;
+  }
+
   .select-gender { width: 20px; }
+
   .memWrap {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 15px;
+    display: none;
   }
   .memTotal {
     padding-top: 30px;

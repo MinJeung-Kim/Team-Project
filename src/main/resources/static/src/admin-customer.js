@@ -1,13 +1,37 @@
 'use strict';
+// 회원 목록 테이블 checkbox 전체 선택
+
+    const checkbox = document.querySelector('#inputA');
+
+    checkbox.addEventListener('click', (e) => {
+        let ckAll = document.querySelectorAll('.ckAll');
+        if(e.target.checked) { 
+            console.log('되나?');
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = true;
+            })
+        } else {
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = false;
+            })
+        }
+        ckAll.forEach((ckbox) => {
+            ckbox.addEventListener('click', () => {
+                checkbox.checked = false;
+            })
+        })
+        
+    })
+     
 
 // 모달창 띄우기
 
     const csModal = document.querySelector('.modalWrapper');
-    const registerBtnWrap = document.querySelector('.registerBtnWrap');
+    const registerBtn = document.querySelector('.registerBtn');
     const csCloseBtn =  document.querySelector('.csCloseBtn');
 
     const status = document.querySelectorAll('.status-un');
-    const uptAndDel = document.querySelector('.uptAndDel');
+    const updateWrap = document.querySelector('.updateWrap');
     const reAndSub = document.querySelector('.reAndSub');
     const csRegister = document.querySelector('.csRegister');
 
@@ -16,15 +40,14 @@
             status.forEach(cStatus => {
                 cStatus.style.display = "none";
             })
-
             reAndSub.classList.add('stage');
-            uptAndDel.classList.remove('stage1');
+            updateWrap.classList.remove('stage1');
             csRegister.textContent = "고객 등록";
         } else if(test == "update") {
             status.forEach(cStatus => {
                 cStatus.style.display = "block";
             })
-            uptAndDel.classList.add('stage1');
+            updateWrap.classList.add('stage1');
             reAndSub.classList.remove('stage');
             csRegister.textContent = "고객 정보";
         }
@@ -32,7 +55,7 @@
         document.body.classList.toggle('back');
         getDate();
     } 
-    registerBtnWrap.addEventListener('click', event => handleModal('register'));
+    registerBtn.addEventListener('click', event => handleModal('register'));
     csCloseBtn.addEventListener('click', event => handleModal('register'));
 
 //가입날짜, 수정날짜
@@ -99,7 +122,7 @@
 
 //삭제
 
-    const csdelete = document.querySelector('.delete');
+    const csdelete = document.querySelector('.deleteBtn');
     function deleteCheck() {
         if (confirm("정말 삭제하시겠습니까?") == true){//확인
             document.registerForm.submit();

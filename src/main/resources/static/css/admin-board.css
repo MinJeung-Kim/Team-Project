@@ -88,27 +88,28 @@
     margin: 0 15px;
     border-radius: 6px;
 }
+.bt-wrap {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
   .search-button {
-    position: absolute;
+    margin-left: 5px;
     border: 1px solid black;
     background: black;
     color: white;
-    right: 10px;
-    width: 80px;
-    height: 30px;
+    width: 30%;
+    height: 40px;
     border-radius: 6px;
-    top:270px;
     cursor: pointer;
   }.reset-button {
-    position: absolute;
+    margin-right: 5px;
     border: 1px solid black;
     background: black;
     color: white;
-    right: 100px;
-    width: 80px;
-    height: 30px;
+    width: 30%;
+    height: 40px;
     border-radius: 6px;
-    top:270px;
     cursor: pointer;
     
   }
@@ -128,24 +129,26 @@
     background: gray;
     color: white;
   }
-  #wrapper {
+  .searchLimitWrap {
     margin-top: 50px;
+    text-align: right;
+  }
+  #wrapper {
+    margin-top: 10px;
   }
   .admin_write {
     text-align: right;
   }
   .write_button {
-    background: lightgray;
-    color: black;
+    background: black;
+    color: white;
     padding: 5px 10px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
-    border: 1px solid gray;
     border-radius: 6px;
   }
   .write_button:hover {
     background: gray;
-    color: white;
   }
 
 
