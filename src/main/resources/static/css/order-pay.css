@@ -1,0 +1,117 @@
+.contents {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 60px;
+}
+
+.pay-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding: 50px 0 30px;
+}
+
+.or-cm {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #d1d1d1;
+  padding: 32px 25px;
+}
+
+.or-cm-title {
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+
+.cm-nm,
+.cm-tel,
+.cm-email {
+  margin-bottom: 10px;
+}
+
+.cm-nm {
+  font-size: 16px;
+  color: #111111;
+  font-weight: bold;
+}
+
+.or-addr {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.or-befor,
+.or-after {
+  width: 50%;
+  display: block;
+  height: 40px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #d1d1d1;
+  line-height: 250%;
+}
+
+.or-after {
+  border-left: none;
+  background-color: #f8f8f8;
+}
+
+.send-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.send-cm-info {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.send-list > span {
+  width: 102px;
+  text-align: center;
+  display: block;
+  padding: 13px 0;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+#send-memo-form,
+.send-memo {
+  margin-top: 24px;
+  font-size: 14px;
+  padding: 16px 11px 16px 11px;
+  border-radius: 3px;
+  border: 1px solid #d1d1d1;
+  color: #383838;
+  width: auto;
+}
+
+.fa-check-circle {
+  font-size: 15px;
+}
+
+.send-method {
+  margin-bottom: 10px;
+}
+
+.send-method li {
+  padding: 5px 0;
+}
+
+.go-pay {
+  height: 48px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #000000;
+  border-radius: 6px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
