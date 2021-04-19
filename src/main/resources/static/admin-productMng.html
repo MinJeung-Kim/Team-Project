@@ -44,8 +44,6 @@
     <script defer src="src/admin-product-day.js"></script>
     <script defer src="src/admin-product-modal.js"></script>
 
-
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
     <script
@@ -179,29 +177,57 @@
                   <input type="text" name="name" class="wr prdnm">
                 </div>
                 <div class="prd-item">
-                  <span class="title">상품 분류</span>
-                  <select nmae="grade" class="write grade">
-                    <option value="family" selected>Family</option>
-                    <option value="silver">SILVER</option>
-                    <option value="gold">GOLD</option>
-                    <option value="VIP">VIP</option>
+                  <span class="title">상품 서브타이틀</span>
+                  <select nmae="grade" class="wr prdsubtitle">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">공용</option>
+                    <option value="family">남성</option>
+                    <option value="silver">여성</option>
+                    <option value="silver">주니어</option>
+                    <input type="text" name="name" class="wr prdnm">
                   </select>
                 </div>
                 <div class="prd-item">
-                  <span class="title">상품 품종</span>
-                  <select nmae="grade" class="write grade">
-                    <option value="family" selected>신발</option>
-                    <option value="silver">의류</option>
-                    <option value="gold">모자</option>
+                  <span class="title">상품 종류</span>
+                  <select nmae="grade" class="wr prdtype">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">TOP</option>
+                    <option value="silver">신발</option>
+                    <option value="gold">BOTTOM</option>
+                    <option value="gold">CAP</option>
                   </select>
                 </div>
                 <div class="prd-item">
                   <span class="title">상품 사이즈</span>
-                  <input type="textarea" name="name" class="wr summary">
+                  <select nmae="size" class="wr prdcsize">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">S</option>
+                    <option value="silver">M</option>
+                    <option value="gold">L</option>
+                    <option value="gold">XL</option>
+                  </select>
+                  <select nmae="size" class="wr prdsesize">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">230</option>
+                    <option value="silver">235</option>
+                    <option value="gold">240</option>
+                    <option value="gold">245</option>
+                    <option value="gold">250</option>
+                    <option value="gold">255</option>
+                    <option value="gold">260</option>
+                    <option value="gold">265</option>
+                    <option value="gold">270</option>
+                    <option value="gold">275</option>
+                    <option value="gold">280</option>
+                    <option value="gold">285</option>
+                    <option value="gold">290</option>
+                    <option value="gold">295</option>
+                    <option value="gold">300</option>
+                  </select>
                 </div>
                 <div class="prd-item">
                   <span class="title">상품 요약설명</span>
-                  <input type="textarea" name="name" class="wr summary">
+                  <input type="textarea" name="name" class="wr prdsummary">
                 </div>
                 <div class="prd-item">
                   <span class="title">등록 일자</span>
@@ -209,19 +235,24 @@
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 가격</span>
-                  <input type="text" name="name" class="write name">
+                  <input type="text" name="name" class="wr prdprice"> 원
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 상태</span>
-                  <input type="text" name="name" class="write name">
+                  <input type="radio" name="status" value="정상"> 정상판매 
+                  <span>( 재고</span>
+                  <input type="text" name="name" class="normal" placeholder="">
+                  <span> )</span>
+                  <input type="radio" name="status" value="품절"> 품절
                 </div>
                 <div class="prd-item">
                   <span class="title">상품이미지</span>
-                  <input type="text" name="name" class="write name">
+                  <label for="addfile" class="fileLabel"></label>
+                  <input type="file" id="add-file" class="prd-img" multiple accept="image/*">
                 </div>
+                
               </form>
-
-
+              <button class="prd-register">등록</button>
             </div>
             
           </div> <!-- dashboard-main-->

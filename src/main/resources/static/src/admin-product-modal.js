@@ -16,3 +16,19 @@ function offClick() {
 
 document.querySelector('.prd-rgs-button').addEventListener('click',onClick);
 document.querySelector('.prd_close-button').addEventListener('click',offClick);
+
+//가입날짜
+const rgDate = document.querySelector('.rgDate');
+console.log(rgDate);
+
+const getdate = () => {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = ("0" + (1 + d.getMonth())).slice(-2);
+    const dy = ("0" + d.getDate()).slice(-2);
+
+    const gettoday = y + "-" + m + "-" + d;
+    console.log(gettoday);
+    rgDate.innerHTML=gettoday;
+}
+
