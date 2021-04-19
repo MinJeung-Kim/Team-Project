@@ -478,7 +478,7 @@ button .fas {
 }
 .act {
   visibility: visible;
-  height: 350px;
+  height: 400px;
 }
 
 .fas .fa-chevron-up {display:hidden;}
@@ -505,6 +505,10 @@ button .fas {
   align-items: center;
 
   margin-top: 5px;
+}
+
+.writeBt {
+  margin-top: 20px;
 }
 
 .gray {
@@ -565,11 +569,19 @@ button .fas {
 }
 
 .review-write {
-  margin-top: 20px;
+  margin-top: 12px;
   
   text-decoration: underline;
   font-size: 13px;
-  font-weight: 550;
+  font-weight: 400;
+}
+
+.review-more {
+  margin-top: 25px;
+  
+  text-decoration: underline;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 /*DETAIL-DESCRIPTION*/
