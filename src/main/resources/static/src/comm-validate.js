@@ -11,37 +11,37 @@ const regFunc = function(e) {
     console.log('h2')
     e.preventDefault();
 //이름
-    if(regName.test(frm.name.value) == false) {//test()로 유효성 검사 false
+    if(regName.test(frm.userNm.value) == false) {//test()로 유효성 검사 false
         alert("이름은 한글과 영문만 입력 가능합니다.");
-        frm.name.value = '';
-        frm.name.focus();
+        frm.userNm.value = '';
+        frm.userNm.focus();
         return false; 
     } else {
-        if(regName.test(frm.name.value) == false) {//test()로 유효성 검사 false
+        if(regName.test(frm.userNm.value) == false) {//test()로 유효성 검사 false
             alert("이름은 한글과 영문만 입력 가능합니다.");
-            frm.name.value = '';
-            frm.name.focus();
+            frm.userNm.value = '';
+            frm.userNm.focus();
             return false; 
         } 
     }
 
 //ID(이메일)
-    if(regEmail.test(frm.email.value) == false) {
+    if(regEmail.test(frm.userId.value) == false) {
         alert("이메일 형태로 입력해주세요. \n이메일은 영문만 가능합니다. \n예시)abcd@efg.com");
-        frm.email.value = '';
-        frm.email.focus();
+        frm.userId.value = '';
+        frm.userId.focus();
         return false; 
     } else {
-        if(regEmail.test(frm.email.value) == false) {
+        if(regEmail.test(frm.userId.value) == false) {
             alert("이메일 형태로 입력해주세요. \n이메일은 영문만 가능합니다. \n예시)abcd@efg.com");
-            frm.email.value = '';
-            frm.email.focus();
+            frm.userId.value = '';
+            frm.userId.focus();
             return false;
         } 
     }
 
     //비밀번호
-    if(frm.email.value==null || frm.password.value=="") {
+    if(frm.password.value==null || frm.password.value=="") {
         alert("비밀번호를 입력하세요.");
         frm.password.focus();
         return false; 
@@ -56,27 +56,27 @@ const regFunc = function(e) {
     }
 
     //전화번호
-    if(frm.phone.value==null || frm.phone.value=="") {
+    if(frm.tel.value==null || frm.tel.value=="") {
         alert("전화번호를 입력하세요.");
-        frm.phone.focus();
+        frm.tel.focus();
         return false; 
     } else {
-        if(regPhone.test(frm.phone.value) == false) {
-            if(frm.phone.value.includes("-")) {
+        if(regPhone.test(frm.tel.value) == false) {
+            if(frm.tel.value.includes("-")) {
                 alert("전화번호는 -없이 입력해주세요.");
-                frm.phone.value = '';
-                frm.phone.focus();
+                frm.tel.value = '';
+                frm.tel.focus();
                 return false;
             } else {
                 alert("전화번호는 숫자만 입력 가능합니다.");
-                frm.phone.value = '';
-                frm.phone.focus();
+                frm.tel.value = '';
+                frm.tel.focus();
                 return false;
             }
-        } else if(frm.phone.value.length >= 12) {
+        } else if(frm.tel.value.length >= 12) {
             alert("전화번호는 12자를 넘기 수 없습니다.");
-            frm.phone.value = '';
-            frm.phone.focus();
+            frm.tel.value = '';
+            frm.tel.focus();
             return false;
         } else {
             alert("등록하시겠습니까?")

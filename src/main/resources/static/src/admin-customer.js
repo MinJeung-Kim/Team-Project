@@ -51,8 +51,8 @@
         } else if(test == "update") {
             const res = await fetch(`/customer/${userId}`)
             const customer = await res.json() //json 뽑을 때
-            frm.name.value = customer.userNm;
-            frm.email.value = customer.userId;
+            frm.userNm.value = customer.userNm;
+            frm.userId.value = customer.userId;
             frm.password.value = customer.password;
             frm.tel.value = customer.tel;
             for(let i = 0; i < frm.gender.options.length; i++){
@@ -60,8 +60,8 @@
                     frm.gender.options[i].selected = true;
                 }
             }
-            frm.bday.value = customer.birth;
-            frm.addrDetail.value = customer.address;
+            frm.birth.value = customer.birth;
+            frm.address.value = customer.address;
             // frm.grade.options.forEach((grade,i) => {
             //     if(grade == customer.grade) grade.selected = true;
             // })
@@ -96,8 +96,8 @@
         const day = ("0" + date.getDate()).slice(-2);
 
         const getToday = year + "-" + month + "-" + day;
-        updateDate.innerHTML=getToday;
-        joinDate.innerHTML=getToday;
+        updateDate.value=getToday;
+        joinDate.value=getToday;
     }
     registerBtn.addEventListener('click',getDate);
 

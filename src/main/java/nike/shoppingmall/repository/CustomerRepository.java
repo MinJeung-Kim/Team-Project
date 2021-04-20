@@ -8,4 +8,5 @@ import nike.shoppingmall.domain.Customer;
 public interface CustomerRepository {
   List<Customer> findAll();
   Optional<Customer> findById(String userId);
+  int insertCustomer(Customer customer);
 }

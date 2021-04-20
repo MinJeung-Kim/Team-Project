@@ -26,4 +26,8 @@ public class CustomerService {
   public Optional<Customer> findById(String userId) {
     return customerRepository.findById(userId);
   }
+
+  public int insertCustomer(Customer customer) {
+    return customerRepository.insertCustomer(customer);
+  }
 }
