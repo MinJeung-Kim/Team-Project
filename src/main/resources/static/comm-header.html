@@ -3,12 +3,13 @@
   <head>
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
-    <!-- <link rel="stylesheet" href="css/search.css" /> -->
+    <link rel="stylesheet" href="css/index-search.css" />
     <link rel="stylesheet" href="css/login.css" />
 
     <script defer src="src/comm-header-menu.js"></script>
     <script src="./src/login-modal.js" type="text/javascript"></script>
     <script defer src="src/index-search.js"></script> 
+
   </head>
   <body class="login_body">
     <div class="modal_back"></div>
@@ -46,40 +47,37 @@
               <a href=""
                 ><span class="icon search"><i class="fas fa-search"></i></span
               ></a>
-              <input placeholder="검색" type="text" />
+              <input class="search-input" placeholder="검색" type="text" />
             </form>
             <!-- 검색창 클릭시 -->
-            <div class="big-search">
-              <div class="big-search-header">
-                <a href="index.html">
-                  <img
-                    class="gnv__img"
-                    src="img/nike-logo-on.png"
-                    alt=""
-                    class="nike-logo"
-                  />
-                </a>
-                <!-- input창 넒히기 -->
-                <!-- x버튼 -->
+            <div class="search-wrap">
+              <div class="search-back"></div>
+              <div class="search-modal">
+                <div class="search-header">
+                  <a href="index.html">
+                    <img class="gnv-img" src="img/nike-logo-on.png"></a>
+                  <!-- input창 넒히기 -->
+                  <div class="search-form-wide">
+                      <a href="index.html"><i class="fas fa-search"></i></a>
+                      <input class="search-input-wide" placeholder="검색" type="text" />
+                  </div>
+                </div>
+                <div class="search-list">
+                  <p>추천 검색어</p>
+                  <div>
+                    <ul>
+                      <li><a href="category.html">에어맥스 97</a></li>
+                      <li><a href="category.html">트레일 컬렉션</a></li>
+                      <li><a href="category.html">ACG</a></li>
+                      <li><a href="category.html">에어모지</a></li>
+                    </ul>
+                  </div>
+                </div>
                 <a href="" class="search-close"
-                ><span class="icon search"><i class="far fa-times-circle"></i></span
+                ><span class="icon-search"><i class="fas fa-times"></i></span
                 ></a>
               </div>
-              <div>
-                <div>추천 검색어</div>
-                <div>
-                  <ul>
-                    <li>에어맥스 97</li>
-                    <li>트레일 컬렉션</li>
-                    <li>ACG</li>
-                    <li>에어모지</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="big-search-bottom">
-
-            </div>
+          </div>
             <div class="gnv-icons">
               <a href="#"
                 ><span class="icon heart"><i class="far fa-heart"></i></span
