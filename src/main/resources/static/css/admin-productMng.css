@@ -209,9 +209,9 @@ table, th, td {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-top: 20px;
+  
 }
+
 .search-button {
   border: 1px solid black;
   background: black;
@@ -232,6 +232,10 @@ table, th, td {
   border-radius: 6px;
   cursor: pointer;
   margin-right: 5px;
+}
+
+.reset-button:focus {
+  outline: none;
 }
 
 .day {
