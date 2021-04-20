@@ -180,6 +180,24 @@
   color: gray;
 }
 
+/*SUBIMG -COLOR*/
+.prd-color-option {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.prd-color-option img{
+  width:72px;
+  height:72px;
+}
+
+.color-list img:hover {
+  filter: brightness(80%); 
+}
+
+.color-list {
+  display: inline-block;
+}
 
 /*OPTION LIST*/
 .detail-product-option {
