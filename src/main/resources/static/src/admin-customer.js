@@ -43,31 +43,40 @@
             })
             reAndSub.classList.add('stage');
             updateWrap.classList.remove('stage1');
+            status.forEach(status => {
+                status.classList.remove('on');
+            })
             csRegister.textContent = "고객 등록";
-            getDate();
             resetContents();
         } else if(test == "update") {
             const res = await fetch(`/customer/${userId}`)
             const customer = await res.json() //json 뽑을 때
+            frm.name.value = customer.userNm;
             frm.email.value = customer.userId;
             frm.password.value = customer.password;
             frm.tel.value = customer.tel;
-            frm.gender.value = customer.gender;
-            console.log("gender = " + customer.gender)  
             for(let i = 0; i < frm.gender.options.length; i++){
-                console.log(i);
                 if(frm.gender.options[i].value == customer.gender){
                     frm.gender.options[i].selected = true;
                 }
             }
             frm.bday.value = customer.birth;
             frm.addrDetail.value = customer.address;
-            console.log('gradeCd='+customer.gradeCd)
+            // frm.grade.options.forEach((grade,i) => {
+            //     if(grade == customer.grade) grade.selected = true;
+            // })
             //frm.grade.setAttribute('value',customer.gradeCd);
             // frm.status.value = customer.statusCd;
-            //frm.insDt.textContent = customer.insDt;
+            console.log(customer.insDt)
+            joinDate.textContent = customer.insDt;
             //frm.uptDt.value = customer.uptDt;
+            updateDate.textContent = customer.uptDt;
             frm.memo.value = customer.memo;
+            reAndSub.classList.remove('stage');
+            updateWrap.classList.add('stage1');
+            status.forEach(status => {
+                status.classList.add('on');
+            })
         }
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');
@@ -90,6 +99,7 @@
         updateDate.innerHTML=getToday;
         joinDate.innerHTML=getToday;
     }
+    registerBtn.addEventListener('click',getDate);
 
 // 우편번호 검색
     

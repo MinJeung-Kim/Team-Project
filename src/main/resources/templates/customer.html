@@ -179,14 +179,13 @@
           </div>
           <div class="rg-item">
             <span class="title">전화번호 *</span>
-            <input type="text" name="phone" class="write phone" placeholder="&nbsp;'-'없이 입력">
+            <input type="text" name="tel" class="write phone" placeholder="&nbsp;'-'없이 입력">
           </div>
           <div class="rg-item">
             <span class="title">성별 *</span>
-            <select name="" class="write gender">
-              <option value="gender all">전체</option>
-              <option value="gender man">남자</option>
-              <option value="gender woman">여자</option>
+            <select name="gender" class="write gender">
+              <option value="남">남</option>
+              <option value="여">여</option>
             </select>
           </div>
           <div class="rg-item">
@@ -209,7 +208,7 @@
           <div class="rg-item">
             <span class="title">등급</span>
             <select nmae="grade" class="write grade">
-              <option value="family" selected>Family</option>
+              <option value="family">Family</option>
               <option value="silver">SILVER</option>
               <option value="gold">GOLD</option>
               <option value="VIP">VIP</option>
@@ -226,11 +225,11 @@
           </div>
           <div class="rg-item">
             <span class="title">가입날짜</span>
-            <span class="joinDate"></span>
+            <span name="insDt" class="joinDate"></span>
           </div>
           <div class="rg-item">
             <span class="title">수정날짜</span>
-            <span class="updateDate"></span>
+            <span name="uptDt" class="updateDate"></span>
           </div>
           <div class="rg-item memoWrap">
             <span class="title memoTitle">메모</span>
