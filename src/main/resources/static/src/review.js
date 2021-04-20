@@ -2,10 +2,31 @@
 
 //리뷰 모달 띄우기
 
-function onClick() {
+async function onClick() {
+
+    //데이터 가져오기
+    const res = await fetch('/detail/review');
+    const rv = await res.json()
+    console.log(rv);
     window.scrollTo(0,0);
     document.querySelector('.reviewAllBack').classList.add('on');
     document.querySelector('.review-all').classList.add('on');
+
+    const subject = document.querySelector('.review_subject');
+    const help = document.querySelector('.thums-num');
+    const star = document.querySelector('.customer-star');
+    const userNm = document.querySelector('.userName');
+    const insDt = document.querySelector('.write-date');
+    const prdCd = document.querySelector('.product-code');
+    const content = document.querySelector('.comment');
+    const file = document.querySelector('.review-img');
+    const comfortPt = document.querySelector('#comfortable');
+    const sizePt = document.querySelector('#size');
+    const durablePt = document.querySelector('#durable');
+    const widthPt = document.querySelector('#wide');
+
+    
+    
     
 }
 function offClick() {
@@ -30,6 +51,9 @@ reviewsort.addEventListener('click' , (event) => {
     filter2.classList.toggle('clicked');
     }
 })
+
+
+
 
 //더보기
 

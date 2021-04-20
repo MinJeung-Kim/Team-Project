@@ -1,0 +1,35 @@
+package nike.shoppingmall.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import nike.shoppingmall.domain.ADBoard;
+import nike.shoppingmall.service.ReviewService;
+
+@Controller
+public class ReviewController {
+    private ReviewService reviewService;
+
+    public ReviewController(ReviewService reviewService) {
+        this.reviewService = reviewService;
+    }
+
+    @GetMapping("/detail")
+    public String detail(){
+
+        return "detail";
+    }
+
+    @GetMapping("/detail/review")
+    @ResponseBody
+    public List<ADBoard> reviewAll(Model model){
+        List<ADBoard> review = reviewService.findReview();
+        model.addAttribute("review", review);
+
+        return review;
+    }
+}
