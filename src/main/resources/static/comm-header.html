@@ -6,9 +6,11 @@
     <!-- <link rel="stylesheet" href="css/search.css" /> -->
     <link rel="stylesheet" href="css/login.css" />
 
+    <script defer src="src/login.js"></script>
     <script defer src="src/comm-header-menu.js"></script>
-    <script src="./src/login-modal.js" type="text/javascript"></script>
+    <script src="src/login-modal.js"></script>
     <script defer src="src/index-search.js"></script> 
+     
   </head>
   <body class="login_body">
     <div class="modal_back"></div>
@@ -348,10 +350,8 @@
                     <!-- social -->
                     <div class="modal_social">
                       <div class="modal_Akakao">
-                        <a href="#" class="modal_kakao">
-                          <div class="modal_icon">
-                            <i class="fas fa-comment"></i>
-                          </div>
+                        <a href="https://kauth.kakao.com/oauth/authorize?client_id=b047c29fb14178a1f60fa3f94821e5fc&redirect_uri=http://localhost:9090/kakaoLogin&response_type=code" class="modal_kakao">
+                            <i class="fas fa-comment modal_icon"></i>
                           <span class="modal_txt">
                             카카오계정 로그인
                           </span>
@@ -359,9 +359,7 @@
                       </div>
                       <div class="modal_Afacebook">
                         <a href="#" class="modal_facebook">
-                          <div class="modal_icon2">
-                            <i class="fab fa-facebook-f"></i>
-                          </div>
+                            <i class="fab fa-facebook-f modal_icon2"></i>
                           <span class="modal_txt2">
                             페이스북으로 로그인
                           </span>

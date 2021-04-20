@@ -111,33 +111,30 @@
     position: relative;
     top: 10px;
 }
-.modal_Akakao {
+.modal_kakao {
+    display: block;
     width: 420px;
-    height: 40px;
     background-color: yellow;
     margin: 0px 0px 10px;
     border-radius: 4px;
     margin-left: 10px
 }
 .modal_icon {
-    width: 24px;
-    height: 24px;
     position: relative;
     top: 7px;
     left: 10px;
-    display: inline-block;
-    vertical-align: middle;
 }
 .modal_txt {
     font-size: 15px;
     width: 418px;
-    height: 24.8px;
     position: relative;
     top: -10px;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
 }
-.modal_Afacebook {
+.modal_facebook {
+    display: block;
     width: 420px;
     height: 40px;
     position: relative;
@@ -147,13 +144,12 @@
 }
 .modal_txt2 {
     font-size: 15px;
-    width: 378px;
-    height: 24.8px;
     position: relative;
-    top: 10px;
+    top: -10px;
     text-align: center;
-    display: inline-block;
+    display: block;
     color: white;
+    cursor: pointer;
 }
 .modal_icon2 {
     width: 24px;
