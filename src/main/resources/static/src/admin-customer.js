@@ -1,38 +1,88 @@
 'use strict';
+// 회원 목록 테이블 checkbox 전체 선택
+
+    const checkbox = document.querySelector('#inputA');
+
+    checkbox.addEventListener('click', (e) => {
+        let ckAll = document.querySelectorAll('.ckAll');
+        if(e.target.checked) { 
+            console.log('되나?');
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = true;
+            })
+        } else {
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = false;
+            })
+        }
+        ckAll.forEach((ckbox) => {
+            ckbox.addEventListener('click', () => {
+                checkbox.checked = false;
+            })
+        })
+        
+    })
+     
 
 // 모달창 띄우기
 
     const csModal = document.querySelector('.modalWrapper');
-    const registerBtnWrap = document.querySelector('.registerBtnWrap');
+    const registerBtn = document.querySelector('.registerBtn');
     const csCloseBtn =  document.querySelector('.csCloseBtn');
 
     const status = document.querySelectorAll('.status-un');
-    const uptAndDel = document.querySelector('.uptAndDel');
+    const updateWrap = document.querySelector('.updateWrap');
     const reAndSub = document.querySelector('.reAndSub');
     const csRegister = document.querySelector('.csRegister');
-
-    const handleModal = (test) => { 
+    
+    const handleModal = async(test,userId) => { 
+        //console.log(userId)
         if(test == 'register') {
             status.forEach(cStatus => {
                 cStatus.style.display = "none";
             })
-
             reAndSub.classList.add('stage');
-            uptAndDel.classList.remove('stage1');
-            csRegister.textContent = "고객 등록";
-        } else if(test == "update") {
-            status.forEach(cStatus => {
-                cStatus.style.display = "block";
+            updateWrap.classList.remove('stage1');
+            status.forEach(status => {
+                status.classList.remove('on');
             })
-            uptAndDel.classList.add('stage1');
+            csRegister.textContent = "고객 등록";
+            resetContents();
+        } else if(test == "update") {
+            const res = await fetch(`/customer/${userId}`)
+            const customer = await res.json() //json 뽑을 때
+            frm.name.value = customer.userNm;
+            frm.email.value = customer.userId;
+            frm.password.value = customer.password;
+            frm.tel.value = customer.tel;
+            for(let i = 0; i < frm.gender.options.length; i++){
+                if(frm.gender.options[i].value == customer.gender){
+                    frm.gender.options[i].selected = true;
+                }
+            }
+            frm.bday.value = customer.birth;
+            frm.addrDetail.value = customer.address;
+            // frm.grade.options.forEach((grade,i) => {
+            //     if(grade == customer.grade) grade.selected = true;
+            // })
+            //frm.grade.setAttribute('value',customer.gradeCd);
+            // frm.status.value = customer.statusCd;
+            console.log(customer.insDt)
+            joinDate.textContent = customer.insDt;
+            //frm.uptDt.value = customer.uptDt;
+            updateDate.textContent = customer.uptDt;
+            frm.memo.value = customer.memo;
             reAndSub.classList.remove('stage');
-            csRegister.textContent = "고객 정보";
+            updateWrap.classList.add('stage1');
+            status.forEach(status => {
+                status.classList.add('on');
+            })
         }
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');
-        getDate();
+        
     } 
-    registerBtnWrap.addEventListener('click', event => handleModal('register'));
+    registerBtn.addEventListener('click', event => handleModal('register'));
     csCloseBtn.addEventListener('click', event => handleModal('register'));
 
 //가입날짜, 수정날짜
@@ -49,6 +99,7 @@
         updateDate.innerHTML=getToday;
         joinDate.innerHTML=getToday;
     }
+    registerBtn.addEventListener('click',getDate);
 
 // 우편번호 검색
     
@@ -87,19 +138,19 @@
     // }
 
 //수정
-    const update = document.querySelector('.update');
-    function updateCheck() {
-        if (confirm("정말 수정하시겠습니까?") == true){//확인
-            document.registerForm.submit();
-        }else{//취소
-            return false;
-        }
-    }
-    update.addEventListener('click', updateCheck);
+    // const update = document.querySelector('.update');
+    // function updateCheck() {
+    //     if (confirm("정말 수정하시겠습니까?") == true){//확인
+    //         document.registerForm.submit();
+    //     }else{//취소
+    //         return false;
+    //     }
+    // }
+    // update.addEventListener('click', updateCheck);
 
 //삭제
 
-    const csdelete = document.querySelector('.delete');
+    const csdelete = document.querySelector('.deleteBtn');
     function deleteCheck() {
         if (confirm("정말 삭제하시겠습니까?") == true){//확인
             document.registerForm.submit();

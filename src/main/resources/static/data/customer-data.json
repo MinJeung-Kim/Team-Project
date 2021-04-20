@@ -1,0 +1,76 @@
+{
+    "object": "customer",
+    "total_card": 7,
+    "data":[
+        {  
+            "check": "",
+            "no": 1,                                               
+            "userNm":"산타", 
+            "grade":"VIP",
+            "userId":"santa@santa.com",
+            "tel": "010-1305-4302",
+            "gender": "남",
+            "status": "정상"
+        },
+        {  
+            "check": "",
+            "no": 2,                                               
+            "userNm":"아이스", 
+            "grade":"FAMILY",
+            "userId":"ice@naver.com",
+            "tel": "010-4492-6772",
+            "gender": "남",
+            "status": "휴면"
+        },
+        {  
+            "check": "",
+            "no": 3,                                               
+            "userNm":"아메리", 
+            "grade":"GOLD",
+            "userId":"gold@ameri.com",
+            "tel": "010-8035-9908",
+            "gender": "여",
+            "status": "정상"
+        },
+        {  
+            "check": "",
+            "no": 4,                                               
+            "userNm":"카노", 
+            "grade":"SILVER",
+            "userId":"cano@hanmail.net",
+            "tel": "010-2251-0975",
+            "gender": "여",
+            "status": "휴면"
+        },
+        {  
+            "check": "",
+            "no": 5,                                               
+            "userNm":"아바라", 
+            "grade":"VIP",
+            "userId":"avara@gmail.com",
+            "tel": "010-9012-2051",
+            "gender": "",
+            "status": "정상"
+        },
+        { 
+            "check": "", 
+            "no": 6,                                               
+            "userNm":"다쿠아즈", 
+            "grade":"FAMILY",
+            "userId":"daquoi@as.com",
+            "tel": "010-8801-5743",
+            "gender": "남",
+            "status": "정상"
+        },
+        {  
+            "check": "",
+            "no": 7,                                               
+            "userNm":"호두크림", 
+            "grade":"SILVER",
+            "userId":"hoducream@empas.com",
+            "tel": "010-6305-8789",
+            "gender": "여",
+            "status": "정상"
+        }
+    ]
+}

@@ -67,13 +67,10 @@ const dtReview = document.querySelector('#dt-review');
 const rvBox = document.querySelector('.review-box'); //보여지는 내용 받아오기
 const arrow = document.querySelector(".fa-chevron-down");
 
-//화살표 변경
-arrow.addEventListener("click", (e) => {
-  ["fa-chevron-down", "fa-chevron-up"].forEach(
-    c => e.target.classList.toggle(c));
-});
-
 // div 클릭 시 내용보여지는 것
-dtReview.addEventListener('click', () => {
+dtReview.addEventListener('click', (e) => {
   rvBox.classList.toggle('act');
+  ["fa-chevron-down", "fa-chevron-up"].forEach(
+    c => arrow.classList.toggle(c));
+  
 })

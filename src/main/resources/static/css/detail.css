@@ -180,6 +180,24 @@
   color: gray;
 }
 
+/*SUBIMG -COLOR*/
+.prd-color-option {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.prd-color-option img{
+  width:72px;
+  height:72px;
+}
+
+.color-list img:hover {
+  filter: brightness(80%); 
+}
+
+.color-list {
+  display: inline-block;
+}
 
 /*OPTION LIST*/
 .detail-product-option {
@@ -225,9 +243,12 @@
   border:1.5px solid black;
 }
 
-/* .input-radio:active {
+/*
+ .input-radio:active {
   background-color: black;
-} */
+} 
+*/
+
 .radio-text
 {
   font-size: 15px;
@@ -475,18 +496,85 @@ button .fas {
 }
 .act {
   visibility: visible;
-  height: 100px;
+  height: 400px;
 }
 
 .fas .fa-chevron-up {display:hidden;}
 .detail-right .fa-star {
   font-size:15px;
-  color:#e2e0e0;
+  color:#111;
 }
 
 .review-box .fas {
   font-size:15px;
-  color:#a0a0a0;
+  color:#111;
+}
+
+.star-point {
+  margin-left: 15px;
+}
+
+.review-readWrap {
+  margin-top:30px;
+}
+
+.read-userInfo {
+  display: flex;
+  align-items: center;
+
+  margin-top: 5px;
+}
+
+.writeBt {
+  margin-top: 20px;
+}
+
+.gray {
+  color:#828282;
+  font-size: 12px;
+}
+
+.user-name {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.review-date {
+  margin-left: 5px;
+}
+
+.review-prdCd {
+  margin-left: 15px;
+}
+
+.read-content {
+  margin-top:10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.review-img-info {
+  margin: 15px 0 0;
+}
+
+.review-img-info img{
+  width:200px;
+  height: 150px;
+}
+
+.read-userInfo .fas {
+  font-size: 12px;
+  color: #111;
+}
+
+.read-subject {
+  font-weight:800px;
+  
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22px;
 }
 
 .review-noti {
@@ -496,15 +584,22 @@ button .fas {
   font-size: 13px;
   letter-spacing: -1px;
   line-height: 1.6;
-  
 }
 
 .review-write {
-  margin-top: 20px;
+  margin-top: 12px;
   
   text-decoration: underline;
   font-size: 13px;
-  font-weight: 550;
+  font-weight: 400;
+}
+
+.review-more {
+  margin-top: 25px;
+  
+  text-decoration: underline;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 /*DETAIL-DESCRIPTION*/
@@ -551,7 +646,6 @@ button .fas {
   font-weight: bold;
 
   display: inline-block;
-  float: right;
 }
 
 .detail-right {
