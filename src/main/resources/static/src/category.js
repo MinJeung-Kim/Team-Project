@@ -11,7 +11,7 @@
 			const applyData = await getData.text();
 			content.innerHTML = '';
 			content.innerHTML = applyData;
-			//console.log(applyData);
+			imgFunc();
 		}catch {
 			error => console.log('Error :', error);
 		}	
@@ -19,30 +19,32 @@
 	woman.addEventListener('click', getWomanData);
 
 //이미지 mouseover
-
-	const bigImg = document.querySelectorAll('.category-content-img');
-	const smallImg = document.querySelectorAll('.smallImg');
-	const clist = document.querySelectorAll('.list-wrap');
-	//console.log(document.location.href)
-	bigImg.forEach((bigs) => {
-		bigs.addEventListener('mouseover', (e) => {
-			//console.log(e.target);
-			let smalls = e.target.parentNode.querySelector('.smallImg');
-			if(smalls) {
-				smalls.style.display = "block";
-			}
-		})
-	})
+	const imgFunc = () => {
+		const bigImg = document.querySelectorAll('.category-content-img');
+		const smallImg = document.querySelectorAll('.smallImg');
+		const clist = document.querySelectorAll('.list-wrap');
 	
-	clist.forEach((list) => {
-		list.addEventListener('mouseleave',function() {
-			//console.log(list);
-			smallImg.forEach((eachSmall) => {
-				eachSmall.style.display = 'none';
+		bigImg.forEach((bigs) => {
+			bigs.addEventListener('mouseover', (e) => {
+				//console.log(e.target);
+				let smalls = e.target.parentNode.querySelector('.smallImg');
+				if(smalls) {
+					smalls.style.display = "block";
+				}
 			})
 		})
-	})
 		
+		clist.forEach((list) => {
+			list.addEventListener('mouseleave',function() {
+				//console.log(list);
+				smallImg.forEach((eachSmall) => {
+					eachSmall.style.display = 'none';
+				})
+			})
+		})
+	}
+	imgFunc();
+	
 //left navi 각 메뉴 접고 펼치기
 
 	const menuBar = document.querySelectorAll('.menuBar');
