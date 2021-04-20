@@ -13,10 +13,19 @@ const content = document.querySelector('.review_input2');
 const password = document.querySelector('.review_input4');
 const saveBt = document.querySelector('.review-save');
 
-saveBt.addEventListener('click', () => {
-    if(subject.value == "") alert("제목을 입력하세요");
-    if(content.value == "") alert("내용을 입력하세요");
-    if(password.value == "") alert("비밀번호를 입력하세요");
+saveBt.addEventListener('click', (e) => {
+    if(subject.value == "") {
+        e.preventDefault();
+        alert("제목을 입력하세요");
+    }
+    if(content.value == "") {
+        e.preventDefault();
+        alert("내용을 입력하세요");
+    }
+    if(password.value == "") {
+        e.preventDefault();
+        alert("비밀번호를 입력하세요");
+    }
 })
 
 
