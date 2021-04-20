@@ -1,0 +1,160 @@
+
+.R-write_modal {
+    position: absolute;
+    top: -31.5px; 
+    box-sizing: border-box;
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    display: none;
+    z-index: 9999;
+    left: 50%;
+    margin-left: -240px;
+    overflow: auto;
+}
+.R-write_modal-content {
+    height: 576.8px;
+}
+.R-write_close-button {
+    font-size: 30px;
+    position: relative;
+    left: 540px;  
+}
+.R-write_close-button:hover {
+    color: gray;
+}
+.R-write_modal_title {
+    width: 480px;
+    height: 90px;
+    margin-top: -25px;
+}
+.R-write_modal_logo{
+    width: 53.5px;
+    height: 24.8px;
+    margin-left: 260px;
+}
+.R-write_modal_title_txt {
+    font-size: 30px;
+    font-weight: 550;
+    display: block;
+    margin-top: 15px;
+    margin-left: 80px;
+    text-align: center;
+}
+.R-review-body {
+    display: flex;
+}
+.R-cont-l {
+    width: 80%;
+    height: 383px;
+    padding: 30px 10px 0px;
+    text-align: left;
+}
+.review_grid_top {
+    display: flex;
+}
+.fa-thumbs-up {
+    margin-left: 20px;
+    margin-top: -5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.review_subject {
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.customer-star i{
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+.user-name, .write-date, .product-code {
+    color: gray;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.comment {
+    font-size: 14px;
+    position: relative;
+    margin-top: 40px;
+    line-height: 1.5;
+    max-width: 520px;
+}
+.review-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.appending-img a{
+    max-width: 200px;
+    display: block;
+}
+.review-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.R-cont-r {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reviewform_gage-wrap {
+    width: 250px;
+    height: 100%;
+}
+.rangebar {
+    width: 100%;
+    height: 5px;
+    color: black;
+}
+.reviewform_gage {
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: left;
+}
+.reviewform_gage-title {
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.reviewform_value-box{
+    width: 187px;
+    height: 34px;
+    margin: 10px;
+    margin-top: 0px;
+}
+.reviewform_value-txtLeft {
+    color: gray;
+    font-size: 11px;
+    float: left;
+    margin-top: 10px;
+}
+.reviewform_value-txtRight {
+    color: gray;
+    font-size: 11px;
+    float: right;
+    margin-top: 10px;
+}
+.R-reviewform_button {
+    position: absolute;
+    top: 555px;
+    width: 70%;
+    left: 80px;
+}
+.R-review-save {
+    width: 100%;
+    height: 40px;
+    background: black;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.R-review-save:hover {
+    background: gray;
+}
