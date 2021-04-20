@@ -161,3 +161,7 @@
     margin-left: 15px;
     outline: none;
 }
+
+.prd-price:invalid {
+    border: 2px solid red;
+}
