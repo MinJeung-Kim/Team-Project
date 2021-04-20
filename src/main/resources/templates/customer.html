@@ -164,14 +164,14 @@
           <a class="csCloseBtn">&times;</a>
         </div>
         
-        <form action="#" method="post" name="registerForm" class="rg-container" id="reg_form">
+        <form action="/register" method="post" name="registerForm" class="rg-container" id="reg_form">
           <div class="rg-item">
             <span class="title">이름 *</span>
-            <input type="text" name="name" class="write name">
+            <input type="text" name="userNm" class="write name">
           </div>
           <div class="rg-item">
             <span class="title">이메일 *</span>
-            <input type="text" name="email" class="write email">
+            <input type="text" name="userId" class="write email">
           </div>
           <div class="rg-item">
             <span class="title">비밀번호 *</span>
@@ -190,7 +190,7 @@
           </div>
           <div class="rg-item">
             <span class="title">생년월일</span>
-            <input type="date" name="bday" class="write bday" min="1900-01-01" max="2022-01-01">
+            <input type="date" name="birth" class="write bday" min="1900-01-01" max="2022-01-01">
           </div>
           <div class="rg-item">
             <span class="title addrTitle">주소</span>
@@ -201,8 +201,8 @@
               <button type="button" class="postBtn">우편번호검색</button>
             </div>
             <div class="detailWrap">
-              <input type="text" name="addrDetail" class="write addrDetail" placeholder="상세주소" readonly>
-              <input type="text" name="addrDetail2" class="write addrDetail" placeholder="나머지주소">
+              <input type="text" name="addr" class="write addrDetail" placeholder="상세주소" readonly>
+              <input type="text" name="address" class="write addrDetail" placeholder="나머지주소">
             </div>
           </div>
           <div class="rg-item">
@@ -225,11 +225,11 @@
           </div>
           <div class="rg-item">
             <span class="title">가입날짜</span>
-            <span name="insDt" class="joinDate"></span>
+            <input type="text" name="insDt" class="joinDate"></input>
           </div>
           <div class="rg-item">
             <span class="title">수정날짜</span>
-            <span name="uptDt" class="updateDate"></span>
+            <input type="text" name="uptDt" class="updateDate"></input>
           </div>
           <div class="rg-item memoWrap">
             <span class="title memoTitle">메모</span>

@@ -1,29 +1,27 @@
 package nike.shoppingmall.domain;
 
-import java.util.Date;
-
 public class Customer {
-    private int boardNum;
+    private int listNum;
     private String userNm;
     private String userId;
     private String password;
     private String tel;
     private String gender;
-    private Date birth;
+    private String birth;
     private String address;
     // private String post;
     private int gradeCd;
     private int statusCd;
     private String memo;
-    private Date insDt;
-    private Date uptDt;
+    private String insDt;
+    private String uptDt;
 
-    public int getBoardNum() {
-        return this.boardNum;
+    public int getListNum() {
+        return this.listNum;
     }
 
-    public void setBoardNum(int boardNum) {
-        this.boardNum = boardNum;
+    public void setListNum(int listNum) {
+        this.listNum = listNum;
     }
     
     public String getUserNm() {
@@ -66,11 +64,11 @@ public class Customer {
         this.gender = gender;
     }
 
-    public Date getBirth() {
+    public String getBirth() {
         return this.birth;
     }
 
-    public void setBirth(Date birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 
@@ -112,22 +110,27 @@ public class Customer {
         this.memo = memo;
     }
 
-    public Date getInsDt() {
+    public String getInsDt() {
         return this.insDt;
     }
 
-    public void setInsDt(Date insDt) {
+    public void setInsDt(String insDt) {
         this.insDt = insDt;
     }
 
-    public Date getUptDt() {
+    public String getUptDt() {
         return this.uptDt;
     }
 
-    public void setUptDt(Date uptDt) {
+    public void setUptDt(String uptDt) {
         this.uptDt = uptDt;
     }
-  
+   
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return getUserNm()+"/"+getAddress()+"/"+getGender()+"/"+getMemo()+"/"+getPassword()+"/"+getTel()+"/"+getUserId()+"/"+getBirth()+"/"+getInsDt()+"/"+getUptDt();
+    }
 
 
 
