@@ -194,6 +194,9 @@ input[type="number"]::-webkit-inner-spin-button {
     text-align: center;
 }
 
+.status-un { display: none; }
+.status-un.on { display: block; }
+
 .requiredText {
     color: red;
     font-size: 13px;

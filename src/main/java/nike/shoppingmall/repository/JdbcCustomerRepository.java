@@ -21,7 +21,7 @@ public class JdbcCustomerRepository implements CustomerRepository {
 
   @Override
   public List<Customer> findAll() {
-    return jdbcTemplate.query("SELECT * FROM user", CustomerRowMapper());
+    return jdbcTemplate.query("SELECT * FROM user order by boardNum asc", CustomerRowMapper());
   }
 
   public Optional<Customer> findById(String userId) {

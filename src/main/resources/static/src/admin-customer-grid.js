@@ -26,7 +26,7 @@
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
-            'onClick': () => handleModal('update',row.cells[3].data),
+            'onClick': () => handleModal('update',row.cells[4].data),
             //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
           }
