@@ -235,13 +235,13 @@
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 가격</span>
-                  <input type="text" name="name" class="wr prdprice"> 원
+                  <input type="text" name="name" class="wr prdprice" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /> 원
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 상태</span>
                   <input type="radio" name="status" value="정상"> 정상판매 
                   <span>( 재고</span>
-                  <input type="text" name="name" class="normal" placeholder="">
+                  <input type="text" name="name" class="normal" placeholder="" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
                   <span> )</span>
                   <input type="radio" name="status" value="품절"> 품절
                 </div>
