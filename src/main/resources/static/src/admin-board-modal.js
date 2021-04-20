@@ -7,6 +7,19 @@ function onClick() {
     document.querySelector('.write_modal').classList.add('open');
 }
 
+//등록모달 필수입력
+const subject = document.querySelector('.review_input1');
+const content = document.querySelector('.review_input2');
+const password = document.querySelector('.review_input4');
+const saveBt = document.querySelector('.review-save');
+
+saveBt.addEventListener('click', () => {
+    if(subject.value == "") alert("제목을 입력하세요");
+    if(content.value == "") alert("내용을 입력하세요");
+    if(password.value == "") alert("비밀번호를 입력하세요");
+})
+
+
 //종류별 모달 open
 async function open(boardNum) {
     const res = await fetch(`/board/${boardNum}`)
