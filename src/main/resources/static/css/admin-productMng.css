@@ -209,6 +209,8 @@ table, th, td {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  margin-right: 120px;
   
 }
 
