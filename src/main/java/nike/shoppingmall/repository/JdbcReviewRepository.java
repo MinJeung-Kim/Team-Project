@@ -26,7 +26,7 @@ public class JdbcReviewRepository implements ReviewRepository{
 
     @Override
     public List<ADBoard> findNotice() {
-        List<ADBoard> result = jdbcTemplate.query("SELECT BOARD_NUM,SUBJECT FROM BOARD WHERE board_status=20 ORDER BY board_num desc", reviewRowMapper());
+        List<ADBoard> result = jdbcTemplate.query("SELECT BOARD_NUM,SUBJECT FROM BOARD WHERE board_status=20 ORDER BY board_num desc", noticeRowMapper());
         return result;
     }
 
@@ -49,6 +49,16 @@ public class JdbcReviewRepository implements ReviewRepository{
           adBoard.setHelp(rs.getInt("HELP"));
           adBoard.setInsDt(rs.getDate("INS_DT"));
           adBoard.setUptDt(rs.getDate("UPT_DT"));
+
+          return adBoard;
+        };
+    }
+
+    private RowMapper<ADBoard> noticeRowMapper() {
+        return (rs, rowNum) -> {
+            ADBoard adBoard = new ADBoard();
+          adBoard.setBoardNum(rs.getInt("BOARD_NUM"));
+          adBoard.setSubject(rs.getString("SUBJECT"));
 
           return adBoard;
         };

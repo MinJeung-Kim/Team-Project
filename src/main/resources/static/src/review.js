@@ -11,6 +11,8 @@ async function onClick() {
     const nt = await result.json()
     console.log(nt);
     console.log(rv);
+
+
     window.scrollTo(0,0);
     document.querySelector('.reviewAllBack').classList.add('on');
     document.querySelector('.review-all').classList.add('on');
@@ -230,6 +232,17 @@ async function onClick() {
         customer_value_box4.appendChild(valueRt4);
 
 
+        //공지사항 데이터 그리기
+        const notice_list = document.querySelector('.notice_list');
+        nt.forEach((nt) => {
+            const notice_list_item = document.createElement('li');
+            notice_list_item.classList.add('notice_list-item');
+            notice_list.appendChild(notice_list_item);
+            const link = document.createElement('a');
+            link.classList.add('list-item-link');
+            link.innerText = nt.subject;
+            notice_list_item.appendChild(link);
+        })
     })
     
     
