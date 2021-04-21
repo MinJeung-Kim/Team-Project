@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import nike.shoppingmall.domain.ADBoard;
 import nike.shoppingmall.repository.ReviewRepository;
 
+
 @Service
 public class ReviewService {
     private final ReviewRepository reviewRepository;
