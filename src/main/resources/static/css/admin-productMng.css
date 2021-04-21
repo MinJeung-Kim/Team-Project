@@ -209,6 +209,7 @@ table, th, td {
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-top: 20px;
   margin-right: 120px;
   
@@ -223,6 +224,7 @@ table, th, td {
   border-radius: 6px;
   cursor: pointer;
   margin-left: 5px;
+
 }
 
 .reset-button {

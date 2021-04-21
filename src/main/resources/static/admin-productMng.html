@@ -28,7 +28,9 @@
       integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
       crossorigin="anonymous"
     />
+
     <script src="https://unpkg.com/wnumb@1.2.0/wNumb.js" crossorigin="anonymous"></script>
+
 
     <link
     href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
@@ -39,11 +41,11 @@
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/admin-productMng.css" />  
-    <link rel="stylesheet" href="css/admin-customer-modal.css">
 
+    <link rel="stylesheet" href="css/admin-productMng-modal.css" />
     <script defer src="src/admin-productMng.js"></script>
     <script defer src="src/admin-product-day.js"></script>
-
+    <script defer src="src/admin-product-modal.js"></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -66,9 +68,12 @@
     </script>
   </head>
   <body>
+    <!-- 모달back -->
+    <div class="prd-register-back"></div>
     <div class="body__container">  
       <div id="header"></div>
        <!-- ========== CONTENTS ========== -->
+       
        <section class="section dashboard">
         <div class="section-category">
           <div class="section-title">
@@ -115,6 +120,7 @@
                     <option value="product_cd">상품코드</option>
                   </select>
                   <input type="text" class="search-word">
+
                 </div>
                 <div class="item itemL">가격 정보</div>
                 <div class="item">
@@ -153,12 +159,111 @@
 
               <!-- ===========상품 리스트========== -->
               <div id="wrapper"></div>
+
               <div class="prd-rgs-button">
-                <input type="button" class="prd-register" value="등록">
-                <input type="button" class="prd-delete" value="삭제">
+                <button class="prd-register">등록</button>
+                <button class="prd-delete">삭제</button>  
               </div>
               
             </div>
+            <!-- 상품등록 모달 -->
+            <div class="prd-register-modal">
+              <div class="prdRegHeader">
+                <span class="prRegister">상품 등록</span>
+              </div>
+              <button type="reset" class="prd_close-button">x</button>
+
+              <form action="#" method="post" name="prdRegisterForm" class="prd-container" id="prd_form">
+                <div class="prd-item">
+                  <span class="title">상품 코드</span>
+                  <input type="text" name="name" class="prdcd">
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 이름</span>
+                  <input type="text" name="name" class="prdnm">
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 서브타이틀</span>
+                  <select nmae="grade" class="wr prdsubtitle">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">공용</option>
+                    <option value="family">남성</option>
+                    <option value="silver">여성</option>
+                    <option value="silver">주니어</option>
+                    <input type="text" name="name" class="prdsub">
+                  </select>
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 종류</span>
+                  <select nmae="grade" class="wr prdtype">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">TOP</option>
+                    <option value="silver">신발</option>
+                    <option value="gold">BOTTOM</option>
+                    <option value="gold">CAP</option>
+                  </select>
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 사이즈</span>
+                  <select nmae="size" class="wr prdcsize">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">S</option>
+                    <option value="silver">M</option>
+                    <option value="gold">L</option>
+                    <option value="gold">XL</option>
+                  </select>
+                  <select nmae="size" class="wr prdsesize">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">230</option>
+                    <option value="silver">235</option>
+                    <option value="gold">240</option>
+                    <option value="gold">245</option>
+                    <option value="gold">250</option>
+                    <option value="gold">255</option>
+                    <option value="gold">260</option>
+                    <option value="gold">265</option>
+                    <option value="gold">270</option>
+                    <option value="gold">275</option>
+                    <option value="gold">280</option>
+                    <option value="gold">285</option>
+                    <option value="gold">290</option>
+                    <option value="gold">295</option>
+                    <option value="gold">300</option>
+                  </select>
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 요약설명</span>
+                  <input type="textarea" name="name" class="prdsummary">
+                </div>
+                <div class="prd-item">
+                  <span class="title">등록 일자</span>
+                  <span class="rgDate"></span>
+                </div>
+                <div class="prd-item">
+                  <span class="title">판매 가격</span>
+                  <input type="text" name="name" class="wr prdprice" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /> 원
+                </div>
+                <div class="prd-item">
+                  <span class="title">판매 상태</span>
+                  <input type="radio" name="status" value="정상"> 정상판매 
+                  <span>( 재고</span>
+                  <input type="text" name="name" class="normal" placeholder="" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                  <span> )</span>
+                  <input type="radio" name="status" value="품절"> 품절
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품이미지</span>
+                  <label for="addfile" class="fileLabel"></label>
+                  <input type="file" id="add-file" class="prd-img" multiple accept="image/*">
+                </div>
+                
+              </form>
+              <div class="rgBtn">
+                <button class="prdModal-register">등록</button>
+              </div>
+              
+            </div>
+            
           </div> <!-- dashboard-main-->
       </section>
     </div>
