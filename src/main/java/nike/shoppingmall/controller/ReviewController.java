@@ -29,7 +29,16 @@ public class ReviewController {
     public List<ADBoard> reviewAll(Model model){
         List<ADBoard> review = reviewService.findReview();
         model.addAttribute("review", review);
-
+        
         return review;
+    }
+
+    @GetMapping("/detail/notice")
+    @ResponseBody
+    public List<ADBoard> noticeAll(Model model) {
+        List<ADBoard> notice = reviewService.findNotice();
+        model.addAttribute("notice", notice);
+
+        return notice;
     }
 }

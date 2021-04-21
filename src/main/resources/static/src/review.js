@@ -7,6 +7,9 @@ async function onClick() {
     //데이터 가져오기
     const res = await fetch('/detail/review');
     const rv = await res.json()
+    const result = await fetch('/detail/notice');
+    const nt = await result.json()
+    console.log(nt);
     console.log(rv);
     window.scrollTo(0,0);
     document.querySelector('.reviewAllBack').classList.add('on');

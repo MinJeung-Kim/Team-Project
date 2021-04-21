@@ -20,4 +20,8 @@ public class ReviewService {
     public List<ADBoard> findReview() {
         return reviewRepository.findReview();
     }
+
+    public List<ADBoard> findNotice() {
+        return reviewRepository.findNotice();
+    }
 }

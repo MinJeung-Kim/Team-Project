@@ -7,4 +7,6 @@ import nike.shoppingmall.domain.ADBoard;
 public interface ReviewRepository {
     
     List<ADBoard> findReview();
+
+    List<ADBoard> findNotice();
 }

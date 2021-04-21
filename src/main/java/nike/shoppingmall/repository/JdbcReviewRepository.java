@@ -24,6 +24,12 @@ public class JdbcReviewRepository implements ReviewRepository{
         return result;
     }
 
+    @Override
+    public List<ADBoard> findNotice() {
+        List<ADBoard> result = jdbcTemplate.query("SELECT BOARD_NUM,SUBJECT FROM BOARD WHERE board_status=20 ORDER BY board_num desc", reviewRowMapper());
+        return result;
+    }
+
     private RowMapper<ADBoard> reviewRowMapper() {
         return (rs, rowNum) -> {
             ADBoard adBoard = new ADBoard();
