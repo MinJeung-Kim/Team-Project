@@ -30,4 +30,8 @@ public class CustomerService {
   public int insertCustomer(Customer customer) {
     return customerRepository.insertCustomer(customer);
   }
+  
+  public int deleteCustomer(String userId) {
+    return customerRepository.deleteCustomer(userId);
+  }
 }

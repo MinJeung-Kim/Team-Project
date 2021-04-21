@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import nike.shoppingmall.domain.Customer;
@@ -43,9 +44,16 @@ public class CustomerController {
 
   @PostMapping("/register")
   public String insertCustomer(Model model,Customer customer) {
-    System.out.println(customer.toString());
+    //System.out.println(customer.toString());
     int cus = customerService.insertCustomer(customer);
     model.addAttribute("customer", cus);
+    return "redirect:/customer";
+  }
+
+  @PostMapping("/delete")
+  public String deleteCustomer(@RequestParam("userId") String userId) {
+    int delete = customerService.deleteCustomer(userId);
+    System.out.println(delete);
     return "redirect:/customer";
   }
 }
