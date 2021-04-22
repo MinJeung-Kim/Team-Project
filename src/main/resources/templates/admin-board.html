@@ -148,7 +148,7 @@
       <!-- ========== 등록모달 ========== -->
           <div class="write_modal">
               <div class="write_modal-content">
-                <form action="#">
+                <form action="/insertNotice" method="POST">
                 <button type="reset" class="write_close-button">&times;
                 </button>
                   <div class="write_modal_title">
@@ -161,23 +161,23 @@
                           <div class="cont">
                               <div class="reviewform_subject">
                                   <span class="cont-1_tit">제목</span>
-                                  <input type="text" class="review_input1">
+                                  <input type="text" class="review_input1" name="Nsubject">
                               </div>
                               <div class="reviewform_content">
                                   <span class="cont-1_tit">내용</span>
-                                  <textarea name="reviewform-cont" class="review_input2"></textarea>
+                                  <textarea name="Ncontent" class="review_input2"></textarea>
                               </div>
                               <div class="reviewform_file">
                                   <span class="cont-1_tit">첨부파일</span>
                                   <div class="filewrap">
-                                      <input class="upload-name" disabled="disabled">
+                                      <input class="upload-name" disabled="disabled" name="NfileName">
                                       <label for="addfile" class="fileLabel">파일선택</label>
-                                      <input type="file" id="addfile"class="review_input3" multiple accept="image/*">
+                                      <input type="file" id="addfile"class="review_input3" multiple accept="image/*" name="Nfile">
                                   </div>
                               </div>
                               <div class="reviewform_passwd">
                                   <span class="cont-1_tit">비밀번호</span>
-                                  <input type="password" class="review_input4">
+                                  <input type="password" class="review_input4" name="NpassWd">
                               </div>
                           </div>
                           <div class="reviewform_button">

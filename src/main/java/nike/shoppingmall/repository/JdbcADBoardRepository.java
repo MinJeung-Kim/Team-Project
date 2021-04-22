@@ -30,6 +30,17 @@ public class JdbcADBoardRepository implements ADBoardRepository{
 
         return result.stream().findAny();
     }
+    public int maxNum() {
+        int rs = jdbcTemplate.queryForObject("SELECT MAX(BOARD_NUM) FROM BOARD",Integer.class);
+        int max = rs+1;
+        return max;
+    }
+    @Override
+    public int insertNotice(String subject, String content, String passWd) {
+        int boardNum = maxNum();
+        return jdbcTemplate.update("INSERT INTO board (BOARD_NUM,USER_ID,BOARD_STATUS,SUBJECT,CONTENT,BOARD_PW) VALUES ("+boardNum+",'관리자',20,?,?,?)",subject,content,passWd);
+        
+    }
 
     private RowMapper<ADBoard> ADBoardRowMapper() {
         return (rs, rowNum) -> {

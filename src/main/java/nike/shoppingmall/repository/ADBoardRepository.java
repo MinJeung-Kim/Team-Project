@@ -9,6 +9,8 @@ public interface ADBoardRepository {
     List<ADBoard> findAll();
 
     Optional<ADBoard> findById(int boardNum);
+
+    int insertNotice(String subject, String content, String passWd);
 }
 
 
