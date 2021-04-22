@@ -42,6 +42,16 @@ public class JdbcADBoardRepository implements ADBoardRepository{
         
     }
 
+    @Override
+    public int deleteBoard(int boardNum) {
+        return jdbcTemplate.update("delete from board where board_Num=?",boardNum);
+    }
+
+    @Override
+    public int deleteGrade(int boardNum) {
+        return jdbcTemplate.update("delete from grade where board_Num=?",boardNum);
+    }
+
     private RowMapper<ADBoard> ADBoardRowMapper() {
         return (rs, rowNum) -> {
           ADBoard adBoard = new ADBoard();

@@ -94,7 +94,7 @@
   justify-content: center;
 }
   .search-button {
-    margin-left: 5px;
+    margin-right: 5px;
     border: 1px solid black;
     background: black;
     color: white;
@@ -103,10 +103,11 @@
     border-radius: 6px;
     cursor: pointer;
   }.reset-button {
-    margin-right: 5px;
+    font-weight: 600;
+    margin-left: 5px;
     border: 1px solid black;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     width: 30%;
     height: 40px;
     border-radius: 6px;

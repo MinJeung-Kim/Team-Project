@@ -49,7 +49,19 @@ public class ADBoardController {
                       @RequestParam("Ncontent") String content,
                       @RequestParam("NpassWd") String passWd){
 
-        int adNotice = adBoardService.insertNotice(subject,content,passWd);
+        adBoardService.insertNotice(subject,content,passWd);
+        return "redirect:/admin-board";
+    }
+
+    @PostMapping("/deleteBoard/{idx}")
+    public String deleteBoard(@PathVariable("idx") int boardNum) {
+        adBoardService.deleteBoard(boardNum);
+        return "redirect:/admin-board";
+    }
+
+    @PostMapping("deleteGrade/{idx}")
+    public String deleteGrade(@PathVariable("idx") int boardNum) {
+        adBoardService.deleteGrade(boardNum);
         return "redirect:/admin-board";
     }
 

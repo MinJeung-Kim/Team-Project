@@ -11,6 +11,10 @@ public interface ADBoardRepository {
     Optional<ADBoard> findById(int boardNum);
 
     int insertNotice(String subject, String content, String passWd);
+
+    int deleteBoard(int boardNum);
+
+    int deleteGrade(int boardNum);
 }
 
 

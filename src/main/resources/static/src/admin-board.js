@@ -6,7 +6,7 @@
       ' style="margin-left:-50px;margin-top:-5px;position:absolute;"'+
        'name="chk" id="inputA">'),
       formatter: (cell,row) => gridjs.html(
-          `<input type="checkbox" style="margin-left:-50px;position:absolute;" name="chk">`
+          `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk" id="${row.cell(2).data}"value="${row.cell(1).data}">`
       ),
       plugin: {
         // install the RowSelection plugin
@@ -51,7 +51,7 @@
     formatter: (data) => gridjs.html (
       `<a style="display:inline-block;text-align:center;
       overflow:hidden;text-overflow:ellipsis;
-      margin-left:3px;
+      margin-left:3px;color:purple;
       white-space:nowrap;width:150px;height:40.8;">${data}</a>`
     ),
     attributes: (cell, row) => {
@@ -105,16 +105,27 @@
 }).render(document.getElementById('wrapper'));
 
 
+//체크박스 전체선택
+const checkbox = document.querySelector('#inputA');
 
-// grid.on('ready', () => {
-//   // find the plugin with the give plugin ID
-//   const checkboxPlugin = grid.config.plugin.get('awesomeCheckbox');
-  
-//   // subscribe to the store events
-//   checkboxPlugin.props.store.on('updated', function (state, prevState) {
-//     console.log('checkbox updated', state, prevState);
-//   });
-// })
+    checkbox.addEventListener('click', (e) => {
+        let ckAll = document.querySelectorAll('.ckAll');
+        if(e.target.checked) { 
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = true;
+            })
+        } else {
+            ckAll.forEach((ckbox) => {
+                ckbox.checked = false;
+            })
+        }
+        ckAll.forEach((ckbox) => {
+            ckbox.addEventListener('click', () => {
+                checkbox.checked = false;
+            })
+        })
+        
+    })
 
 
 
