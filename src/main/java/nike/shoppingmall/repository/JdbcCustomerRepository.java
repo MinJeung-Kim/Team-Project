@@ -36,8 +36,8 @@ public class JdbcCustomerRepository implements CustomerRepository {
     return result;
   }
 
-  public int deleteCustomer(String userId) {
-    int result = jdbcTemplate.update("DELETE FROM user where userId=?", userId);
+  public int deleteCustomer(String id) {
+    int result = jdbcTemplate.update("DELETE FROM user where userId=?", id);
     return result;
   }
 

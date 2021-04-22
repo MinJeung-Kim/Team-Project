@@ -131,24 +131,31 @@
     csCloseBtn.addEventListener('click', resetContents);    
 
 //삭제
-
-const getIdFunc = () => {
-    ckAll.forEach(ck => {
-        ck.addEventListener('click',(e) => {
-            let userId = e.target.value;
-            console.log(userId)
-        })
-    })
-}
-    const form = document.registerForm;
-    const csdelete = document.querySelector('.deleteBtn');
-    function deleteCheck(data) {
-        if (confirm("정말 삭제하시겠습니까?") == true){//확인
-            console.log(`data= ${data}`)
-            form.action="/delete?userId="+userId;
-            form.submit();
-        }else{//취소
-            return false;
+const delFunc = () => {
+    let chk = document.getElementsByName('chk');
+    let chk_lenth = document.getElementsByName('chk').length;
+    //console.log(chk_lenth)
+    for(let i = 0; i < chk_lenth; i++) {
+        if(chk[i].checked == true) {
+            // console.log(chk[i].value)
+            let id = chk[i].value;
+            console.log(id)
+            //fetch
+            fetch('/delete/'+id, {
+                method: 'GET',
+            }).then(res => {
+                if(res.ok) {
+                    alert('삭제되었습니다.');
+                    location.href="/customer"
+                } else {
+                    alert('실패..')
+                }
+            })
         }
     }
-    csdelete.addEventListener('click', deleteCheck);
+    
+}
+
+    //고정
+    const delBtn = document.querySelector('.deleteBtn');
+    delBtn.addEventListener('click',delFunc);
