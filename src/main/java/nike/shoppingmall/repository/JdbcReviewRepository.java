@@ -1,6 +1,7 @@
 package nike.shoppingmall.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.sql.DataSource;
 
@@ -28,6 +29,13 @@ public class JdbcReviewRepository implements ReviewRepository{
     public List<ADBoard> findNotice() {
         List<ADBoard> result = jdbcTemplate.query("SELECT BOARD_NUM,SUBJECT FROM BOARD WHERE board_status=20 ORDER BY board_num desc", noticeRowMapper());
         return result;
+    }
+
+    @Override
+    public Optional<ADBoard> noticeOne(int boardNum) {
+        List<ADBoard> rs = jdbcTemplate.query("SELECT board_num,subject,upt_dt,content FROM board WHERE board_status=20 and board_num=?",noticeOneRowMapper(),boardNum);
+        
+        return rs.stream().findAny();
     }
 
     private RowMapper<ADBoard> reviewRowMapper() {
@@ -59,6 +67,18 @@ public class JdbcReviewRepository implements ReviewRepository{
             ADBoard adBoard = new ADBoard();
           adBoard.setBoardNum(rs.getInt("BOARD_NUM"));
           adBoard.setSubject(rs.getString("SUBJECT"));
+
+          return adBoard;
+        };
+    }
+
+    private RowMapper<ADBoard> noticeOneRowMapper() {
+        return (rs, rowNum) -> {
+            ADBoard adBoard = new ADBoard();
+          adBoard.setBoardNum(rs.getInt("BOARD_NUM"));
+          adBoard.setSubject(rs.getString("SUBJECT"));
+          adBoard.setUptDt(rs.getDate("UPT_DT"));
+          adBoard.setContent(rs.getString("CONTENT"));
 
           return adBoard;
         };

@@ -239,6 +239,7 @@ async function onClick() {
             notice_list_item.classList.add('notice_list-item');
             notice_list.appendChild(notice_list_item);
             const link = document.createElement('a');
+            link.setAttribute('onClick',`openNotice(${nt.boardNum})`)
             link.classList.add('list-item-link');
             link.innerText = nt.subject;
             notice_list_item.appendChild(link);
