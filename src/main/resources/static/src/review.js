@@ -250,6 +250,13 @@ async function onClick() {
 }
 function offClick() {
     window.scrollTo(0,0);
+    //데이터 초기화
+    const notice_list = document.querySelector('.notice_list');
+    notice_list.innerHTML="";
+    const review_list = document.querySelector('#review_list');
+    const li = review_list.querySelector('li');
+    li.innerHTML="";
+    
     document.querySelector('.reviewAllBack').classList.remove('on');
     document.querySelector('.review-all').classList.remove('on');
 }
