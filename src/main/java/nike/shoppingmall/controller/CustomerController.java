@@ -48,4 +48,12 @@ public class CustomerController {
     model.addAttribute("customer", cus);
     return "redirect:/customer";
   }
+
+  @PostMapping("/join")
+  public String join(Customer customer) {
+    customerService.join(customer);
+    return "index";
+  }
+
+
 }

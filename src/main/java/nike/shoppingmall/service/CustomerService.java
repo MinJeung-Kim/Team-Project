@@ -30,4 +30,8 @@ public class CustomerService {
   public int insertCustomer(Customer customer) {
     return customerRepository.insertCustomer(customer);
   }
+
+  public int join(Customer customer) {
+    return customerRepository.join(customer);
+  }
 }

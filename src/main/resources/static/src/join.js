@@ -86,7 +86,6 @@ const pinfoCheck = document.getElementById('pinfoCheck');
     join_phone.addEventListener('keyup', (e) => {
         
         let user_phone=e.target.value;
-        console.log(user_phone);
         if (user_phone==""){
             join_phone.style.border = "1px solid red";
             checkPhone.innerText = "필수 입력 항목입니다.";
@@ -100,7 +99,7 @@ const pinfoCheck = document.getElementById('pinfoCheck');
     })
 
     //필수입력
-    join_button.addEventListener('click', () => {
+    join_button.addEventListener('click', (e) => {
         let user_id = join_id.value;
         let user_password = join_pw.value;
         let user_repass = join_repw.value;
@@ -108,57 +107,68 @@ const pinfoCheck = document.getElementById('pinfoCheck');
         let user_phone = join_phone.value;
     
         if(user_id==""){
+            e.preventDefault();
             join_id.style.border = "1px solid red";
             checkId.innerText = "필수 입력 항목입니다.";
             join_id.focus();
             exit;
             
             }else if (email.test(user_id) == false) {
+                e.preventDefault();
                 join_id.style.border = "1px solid red";
                 checkId.innerText = "이메일 형태로 입력해주세요. 해당 계정으로 주문내역이 발송됩니다.";
                 join_id.focus();
                 exit;
             }else if(user_password==""){
+                e.preventDefault();
                 join_pw.style.border = "1px solid red";
                 checkPw.innerText = "필수 입력 항목입니다.";
                 join_pw.focus();
                 exit;
             }else if (pass.test(user_password) == false) {
+                e.preventDefault();
                 join_pw.style.border = "1px solid red";
                 checkPw.innerText = "영문 대 소문+숫자+특수문자 8~16자리(특수문자 괄호(),<>는 사용 불가)";
                 join_pw.focus();
                 exit;
             }else if(user_repass==""){
+                e.preventDefault();
                 join_repw.style.border = "1px solid red";
                 checkRepw.innerText = "필수 입력 항목입니다.";
                 join_repw.focus();
                 exit;
             }else if(user_password != user_repass){
+                e.preventDefault();
                 join_repw.style.border = "1px solid red";
                 checkRepw.innerText = "입력값이 일치하지 않습니다.";
                 join_repw.focus();
                 exit;
             }else if(user_name==""){
+                e.preventDefault();
                 join_name.style.border = "1px solid red";
                 checkName.innerText = "필수 입력 항목입니다.";
                 join_name.focus();
                 exit;
             }else if(name.test(user_name) == false){
+                e.preventDefault();
                 join_name.style.border = "1px solid red";
                 checkName.innerText = "한글과 영문만 입력 가능합니다.";
                 join_name.focus();
                 exit;
             }else if(user_phone==""){
+                e.preventDefault();
                 join_phone.style.border = "1px solid red";
                 checkPhone.innerText = "필수 입력 항목입니다.";
                 join_phone.focus();
                 exit;
             }else if(phone.test(user_phone) == false){
+                e.preventDefault();
                 join_phone.style.border = "1px solid red";
                 checkPhone.innerText = "숫자만 입력 가능합니다.";
                 join_phone.focus();
                 exit;
             }else if(!(agreeCheck.checked) || !(pinfoCheck.checked)){
+                e.preventDefault();
                 alert('이용 약관에 동의 해주세요.');
                 exit;
             }
