@@ -127,3 +127,27 @@ document.querySelector('.R-write_close-button').addEventListener('click',rClose)
 document.querySelector('.write_close-button').addEventListener('click',nClose);
 
 
+
+//삭제
+const deleteBt = document.querySelector('#delete-review');
+const chk = document.getElementsByName('chk');
+
+deleteBt.addEventListener('click',async () => {
+    let rs = confirm("정말 삭제하시겠습니까?");
+    if(rs){
+        for(let i=1;i<=chk.length;i++){
+            if(chk[i].checked){
+                if(chk[i].id == 10){
+                    console.log("리뷰")
+                    await fetch(`/deleteBoard/${chk[i].value}`,{method:'POST'})
+                    await fetch(`/deleteGrade/${chk[i].value}`,{method:'POST'})
+                }else if(chk[i].id == 20){
+                    console.log("공지")
+                    //데이터 전달
+                    await fetch(`/deleteBoard/${chk[i].value}`,{method:'POST'})
+                }
+            }
+        }
+    }
+});
+

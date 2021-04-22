@@ -30,4 +30,12 @@ public class ADBoardService {
     public int insertNotice(String subject, String content, String passWd){
         return adBoardRepository.insertNotice(subject, content, passWd);
     }
+
+    public int deleteBoard(int boardNum) {
+        return adBoardRepository.deleteBoard(boardNum);
+    }
+
+    public int deleteGrade(int boardNum) {
+        return adBoardRepository.deleteGrade(boardNum);
+    }
 }
