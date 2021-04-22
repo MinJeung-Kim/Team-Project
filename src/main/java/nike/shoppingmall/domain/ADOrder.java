@@ -3,8 +3,8 @@ package nike.shoppingmall.domain;
 import java.sql.Date;
 
 public class ADOrder {
-  private Long orderCd;
-  private String userID;
+  private String orderCd;
+  private String userMail;
   private String prdCd;
   private int statusCd;
   private Date orderDt;
@@ -13,20 +13,20 @@ public class ADOrder {
   private Date insDt;
   private Date uptDt;
 
-  public Long getOrderCd() {
+  public String getOrderCd() {
     return this.orderCd;
   }
 
-  public void setOrderCd(Long orderCd) {
+  public void setOrderCd(String orderCd) {
     this.orderCd = orderCd;
   }
 
-  public String getUserID() {
-    return this.userID;
+  public String getUserMail() {
+    return this.userMail;
   }
 
-  public void setUserID(String userID) {
-    this.userID = userID;
+  public void setUserMail(String userMail) {
+    this.userMail = userMail;
   }
 
   public String getPrdCd() {

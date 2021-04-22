@@ -26,8 +26,8 @@ public class JdbcADOrderRepository implements ADOrderRepository {
   private RowMapper<ADOrder> ADOrderRowMapper() {
     return (rs, rowNum) -> {
       ADOrder adDOrder = new ADOrder();
-      adDOrder.setOrderCd(rs.getLong("ORDER_CD"));
-      adDOrder.setUserID(rs.getString("USER_ID"));
+      adDOrder.setOrderCd(rs.getString("ORDER_CD"));
+      adDOrder.setUserMail(rs.getString("USER_EMAIL"));
       adDOrder.setPrdCd(rs.getString("PRD_CD"));
       adDOrder.setStatusCd(rs.getInt("STATUS_CD"));
       adDOrder.setOrderDt(rs.getDate("ORDER_DT"));
