@@ -5,10 +5,16 @@
     <title>신상품 전체보기 - Nike</title>
 
     <!-- CSS 초기화 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
 
     <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
@@ -18,17 +24,23 @@
     <script defer src="src/category.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
+    />
     <link rel="stylesheet" href="css/category.css" />
 
-    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
         // $('#header').load('comm-header.html')
-        $('#footer').load('comm-footer.html')
-      })
+        $('#footer').load('comm-footer.html');
+      });
     </script>
   </head>
   <div id="header"></div>
@@ -46,168 +58,231 @@
         <span class="filterBtn-wrap" id="header-filter2">
           <span class="filterBtn">신상품순</span>
           <i class="fas fa-chevron-down neworder"></i>
-          
-        </span>  
-        <div id="filterOpt"> 
+        </span>
+        <div id="filterOpt">
           <div class="currentOpt">신상품순</div>
           <div class="currentOpt">높은 가격순</div>
           <div class="currentOpt">낮은 가격순</div>
-        </div>      
+        </div>
       </div>
     </div>
-     <!-- 신상품 필터 클릭 시 -->
+    <!-- 신상품 필터 클릭 시 -->
 
     <!-- left navi -->
     <div class="category-wrap">
       <div class="left_navi_title">
-          <div class="left_navi_emp"></div>
-          <div class="left_navi">
-            <div class="navi_borderline_top"></div>
-            <div class="navi_inner">
-              <div class="menuBar">
-                <div class="border-top-title gender">성별</div>
-                <i class="fas fa-chevron-up"></i>
-              </div>
-              <div class="navi_ck">
-                <ul class="navi_inner_list navList">
-                  <li class="ckbox_wrap">
-                    <span class="input-checkbox" id="woman">여성</span>
-                  </li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">남성</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">여아</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">남아</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox adult">성인공용</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">아동공용</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox seeMore">+ 더보기</span></li>
-                </ul>
-              </div>
+        <div class="left_navi_emp"></div>
+        <div class="left_navi">
+          <div class="navi_borderline_top"></div>
+          <div class="navi_inner">
+            <div class="menuBar">
+              <div class="border-top-title gender">성별</div>
+              <i class="fas fa-chevron-up"></i>
             </div>
-            <div class="navi_inner2">
-              <div class="menuBar">
-                <div class="border-top-title">색상</div>
-                <i class="fas fa-chevron-up toparrow"></i>
-              </div>
-              <div class="navi_ck">
-                <ul class="navi_color navList">
-                  <li class="color-wrap">
-                    <div class="color-border beige"></div>
-                    <span class="color-checkbox">베이지</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border black"></div>
-                    <span class="color-checkbox">검정색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border blue"></div>
-                    <span class="color-checkbox">파랑색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border brown"></div>
-                    <span class="color-checkbox">갈색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border gold"></div>
-                    <span class="color-checkbox">금색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border gray"></div>
-                    <span class="color-checkbox">회색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border green"></div>
-                    <span class="color-checkbox">녹색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border ssuk"></div>
-                    <span class="color-checkbox">쑥색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border navy"></div>
-                    <span class="color-checkbox">남색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border orange"></div>
-                    <span class="color-checkbox">주황색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border pink"></div>
-                    <span class="color-checkbox">분홍색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border purple"></div>
-                    <span class="color-checkbox">보라색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border red"></div>
-                    <span class="color-checkbox">빨강색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border white"></div>
-                    <span class="color-checkbox">흰색</span>
-                  </li>
-                  <li class="color-wrap">
-                    <div class="color-border yellow"></div>
-                    <span class="color-checkbox">노란색</span>
-                  </li>
-                </ul>
-              </div>
+            <div class="navi_ck">
+              <ul class="navi_inner_list navList">
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox" id="woman">여성</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">남성</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">여아</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">남아</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox adult">성인공용</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">아동공용</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox seeMore">+ 더보기</span>
+                </li>
+              </ul>
             </div>
-            <div class="navi_inner">
-              <div class="menuBar">
-                <div class="border-top-title">스포츠</div>
-                <i class="fas fa-chevron-up toparrow"></i>
-              </div>
-              <div class="navi_ck">
-                <ul class="navi_inner_list navList">
-                  <li class="ckbox_wrap"><span class="input-checkbox">라이프스타일</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">러닝</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">농구</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">축구</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">트레이닝&짐</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">골프</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">스케이트보딩</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">테니스</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox seeMore">+ 더보기</span></li>
-                </ul>
-              </div>
+          </div>
+          <div class="navi_inner2">
+            <div class="menuBar">
+              <div class="border-top-title">색상</div>
+              <i class="fas fa-chevron-up toparrow"></i>
             </div>
-            <div class="navi_inner">
-              <div class="menuBar">
-                <div class="border-top-title">브랜드</div>
-                <i class="fas fa-chevron-up toparrow"></i>
-              </div>
-              <div class="navi_ck">
-                <ul class="navi_inner_list navList">
-                  <li class="ckbox_wrap"><span class="input-checkbox">ACG</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">NikeLab</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">나이키 스포츠웨어</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox jordan">조던</span></li>
-                </ul>
-              </div>
+            <div class="navi_ck">
+              <ul class="navi_color navList">
+                <li class="color-wrap">
+                  <div class="color-border beige"></div>
+                  <span class="color-checkbox">베이지</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border black"></div>
+                  <span class="color-checkbox">검정색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border blue"></div>
+                  <span class="color-checkbox">파랑색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border brown"></div>
+                  <span class="color-checkbox">갈색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border gold"></div>
+                  <span class="color-checkbox">금색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border gray"></div>
+                  <span class="color-checkbox">회색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border green"></div>
+                  <span class="color-checkbox">녹색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border ssuk"></div>
+                  <span class="color-checkbox">쑥색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border navy"></div>
+                  <span class="color-checkbox">남색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border orange"></div>
+                  <span class="color-checkbox">주황색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border pink"></div>
+                  <span class="color-checkbox">분홍색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border purple"></div>
+                  <span class="color-checkbox">보라색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border red"></div>
+                  <span class="color-checkbox">빨강색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border white"></div>
+                  <span class="color-checkbox">흰색</span>
+                </li>
+                <li class="color-wrap">
+                  <div class="color-border yellow"></div>
+                  <span class="color-checkbox">노란색</span>
+                </li>
+              </ul>
             </div>
-            <div class="navi_inner">
-              <div class="menuBar">
-                <div class="border-top-title">아이콘</div>
-                <i class="fas fa-chevron-up toparrow"></i>
-              </div>
-              <div class="navi_ck">
-                <ul class="navi_inner_list navList">
-                  <li class="ckbox_wrap"><span class="input-checkbox">에어포스1</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">에어맥스90</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">블레이저</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">코르테즈</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">나이키 덩크</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox">나이키 줌</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">나이키 로쉬</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">나이키 스우시</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">나이키 알파</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">나이키 인디</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">나이키 프리</span></li>
-                  <li class="ckbox_wrap moreOpt"><span class="input-checkbox">레거시</span></li>
-                  <li class="ckbox_wrap"><span class="input-checkbox seeMore">+ 더보기</span></li>
-                </ul>
-              </div>
+          </div>
+          <div class="navi_inner">
+            <div class="menuBar">
+              <div class="border-top-title">스포츠</div>
+              <i class="fas fa-chevron-up toparrow"></i>
             </div>
+            <div class="navi_ck">
+              <ul class="navi_inner_list navList">
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">라이프스타일</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">러닝</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">농구</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">축구</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">트레이닝&짐</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">골프</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">스케이트보딩</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">테니스</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox seeMore">+ 더보기</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="navi_inner">
+            <div class="menuBar">
+              <div class="border-top-title">브랜드</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <div class="navi_ck">
+              <ul class="navi_inner_list navList">
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">ACG</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">NikeLab</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">나이키 스포츠웨어</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox jordan">조던</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="navi_inner">
+            <div class="menuBar">
+              <div class="border-top-title">아이콘</div>
+              <i class="fas fa-chevron-up toparrow"></i>
+            </div>
+            <div class="navi_ck">
+              <ul class="navi_inner_list navList">
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">에어포스1</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">에어맥스90</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">블레이저</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">코르테즈</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">나이키 덩크</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox">나이키 줌</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">나이키 로쉬</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">나이키 스우시</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">나이키 알파</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">나이키 인디</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">나이키 프리</span>
+                </li>
+                <li class="ckbox_wrap moreOpt">
+                  <span class="input-checkbox">레거시</span>
+                </li>
+                <li class="ckbox_wrap">
+                  <span class="input-checkbox seeMore">+ 더보기</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <!-- right contents -->
@@ -215,11 +290,38 @@
         <ul class="category-content">
           <li class="list-wrap">
             <a href="detail.html">
-              <img src="img/img.category/000.jpg" class="category-content-img" />
+              <img
+                src="img/img.category/0000.jpg"
+                class="category-content-img"
+              />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="to_be_released">출시 예정</div>
-                  <div class="category-content-info">나이키 SB 줌 나이키 블레이저 미드 엣지</div>
+                  <div class="category-content-info">
+                    나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF
+                  </div>
+                  <div class="ct-content-price">119,000원</div>
+                </div>
+                <div class="content-sort">성인공용 인조 잔디 축구화</div>
+                <div class="content-color">3 컬러</div>
+              </figcaption>
+              <div class="smallImg">
+                <img src="img/img.category/0000.jpg" />
+                <img src="img/img.category/s0.jpg" />
+                <img src="img/img.category/s01.jpg" />
+              </div>
+            </a>
+          </li>
+          <li class="list-wrap">
+            <a href="detail.html">
+              <img
+                src="img/img.category/000.jpg"
+                class="category-content-img"
+              />
+              <figcaption class="category-content-detail">
+                <div class="category-content-price">
+                  <div class="category-content-info">
+                    나이키 SB 줌 나이키 블레이저 미드 엣지
+                  </div>
                   <div class="ct-content-price">119,000원</div>
                 </div>
                 <div class="content-sort">성인공용 신발 액션스포츠</div>
@@ -245,7 +347,9 @@
               <img src="img/img.category/01.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어 포스 1 '07 스티치</div>
+                  <div class="category-content-info">
+                    나이키 에어 포스 1 '07 스티치
+                  </div>
                   <div class="ct-content-price">129,000원</div>
                 </div>
                 <div class="content-sort">남성 신발 라이프스타일</div>
@@ -260,10 +364,15 @@
           </li>
           <li class="list-wrap">
             <a href="detail.html">
-              <img src="img/img.category/02rr.jpg" class="category-content-img" />
+              <img
+                src="img/img.category/02rr.jpg"
+                class="category-content-img"
+              />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어 베이퍼맥스 EVO</div>
+                  <div class="category-content-info">
+                    나이키 에어 베이퍼맥스 EVO
+                  </div>
                   <div class="ct-content-price">249,000원</div>
                 </div>
                 <div class="content-sort">남성 신발 라이프스타일</div>
@@ -312,7 +421,9 @@
               <img src="img/img.category/06.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 헤리티지</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 헤리티지
+                  </div>
                   <div class="ct-content-price">129,000원</div>
                 </div>
                 <div class="content-sort">남성 하프집 후드 재킷 AS</div>
@@ -330,7 +441,9 @@
               <img src="img/img.category/08.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 월드투어</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 월드투어
+                  </div>
                   <div class="ct-content-price">99,000원</div>
                 </div>
                 <div class="content-sort">남성 프렌치 테리 크루 AS</div>
@@ -348,7 +461,9 @@
               <img src="img/img.category/07.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 월드투어</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 월드투어
+                  </div>
                   <div class="ct-content-price">119,000원</div>
                 </div>
                 <div class="content-sort">남성 프렌치 테리 풀오버 AS</div>
@@ -361,7 +476,9 @@
               <img src="img/img.category/09.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어 베이퍼맥스 EVO</div>
+                  <div class="category-content-info">
+                    나이키 에어 베이퍼맥스 EVO
+                  </div>
                   <div class="ct-content-price">249,000원</div>
                 </div>
                 <div class="content-sort">남성 신발 라이프스타일</div>
@@ -387,7 +504,9 @@
               <img src="img/img.category/12.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어맥스 97 EOI</div>
+                  <div class="category-content-info">
+                    나이키 에어맥스 97 EOI
+                  </div>
                   <div class="ct-content-price">199,000원</div>
                 </div>
                 <div class="content-sort">주니어 신발</div>
@@ -400,7 +519,9 @@
               <img src="img/img.category/13.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어맥스 97 EOI</div>
+                  <div class="category-content-info">
+                    나이키 에어맥스 97 EOI
+                  </div>
                   <div class="ct-content-price">209,000원</div>
                 </div>
                 <div class="content-sort">여성 신발 라이프스타일</div>
@@ -413,7 +534,9 @@
               <img src="img/img.category/13.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어맥스 97 EOI</div>
+                  <div class="category-content-info">
+                    나이키 에어맥스 97 EOI
+                  </div>
                   <div class="ct-content-price">209,000원</div>
                 </div>
                 <div class="content-sort">남성 신발 라이프스타일</div>
@@ -426,7 +549,9 @@
               <img src="img/img.category/14.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어맥스 95 EOI</div>
+                  <div class="category-content-info">
+                    나이키 에어맥스 95 EOI
+                  </div>
                   <div class="ct-content-price">209,000원</div>
                 </div>
                 <div class="content-sort">남성 신발 라이프스타일</div>
@@ -439,7 +564,9 @@
               <img src="img/img.category/14.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 에어맥스 95 EOI</div>
+                  <div class="category-content-info">
+                    나이키 에어맥스 95 EOI
+                  </div>
                   <div class="ct-content-price">209,000원</div>
                 </div>
                 <div class="content-sort">여성 신발 라이프스타일</div>
@@ -452,7 +579,9 @@
               <img src="img/img.category/15.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 AMD 우븐</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 AMD 우븐
+                  </div>
                   <div class="ct-content-price">139,000원</div>
                 </div>
                 <div class="content-sort">여성 우븐 재킷 AS</div>
@@ -465,7 +594,9 @@
               <img src="img/img.category/16.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 트렌드</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 트렌드
+                  </div>
                   <div class="ct-content-price">79,000원</div>
                 </div>
                 <div class="content-sort">여성 플리스 후디 AS</div>
@@ -478,7 +609,9 @@
               <img src="img/img.category/17.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 월드 투어</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 월드 투어
+                  </div>
                   <div class="ct-content-price">119,000원</div>
                 </div>
                 <div class="content-sort">남성 우븐 재킷 AS</div>
@@ -491,7 +624,9 @@
               <img src="img/img.category/18.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 스트라이프</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 스트라이프
+                  </div>
                   <div class="ct-content-price">119,000원</div>
                 </div>
                 <div class="content-sort">남성 프렌치 테리 후디 긴팔 탑 AS</div>
@@ -504,7 +639,9 @@
               <img src="img/img.category/19.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 클럽</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 클럽
+                  </div>
                   <div class="ct-content-price">99,000원</div>
                 </div>
                 <div class="content-sort">남성 프렌치 테리 후디 긴팔 탑 AS</div>
@@ -518,7 +655,9 @@
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
                   <div class="soldout">품절</div>
-                  <div class="category-content-info">나이키 스포츠웨어 클럽</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 클럽
+                  </div>
                   <div class="ct-content-price">79,000원</div>
                 </div>
                 <div class="content-sort">남성 프렌치 테리 조거 AS</div>
@@ -544,7 +683,9 @@
               <img src="img/img.category/22.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 맥스 90 A.I.R</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 맥스 90 A.I.R
+                  </div>
                   <div class="ct-content-price">49,000원</div>
                 </div>
                 <div class="content-sort">남성 반팔 티셔츠 AS</div>
@@ -557,7 +698,9 @@
               <img src="img/img.category/23.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 A.I.R 모크</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 A.I.R 모크
+                  </div>
                   <div class="ct-content-price">55,000원</div>
                 </div>
                 <div class="content-sort">남성 롱슬리브 티셔츠 AS</div>
@@ -570,7 +713,9 @@
               <img src="img/img.category/25.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 팜므</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 팜므
+                  </div>
                   <div class="ct-content-price">99,000원</div>
                 </div>
                 <div class="content-sort">여성 프렌치 테리 가디건 AS</div>
@@ -583,7 +728,9 @@
               <img src="img/img.category/26.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 플리스</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 플리스
+                  </div>
                   <div class="ct-content-price">75,000원</div>
                 </div>
                 <div class="content-sort">여성 팬츠 AS</div>
@@ -596,7 +743,9 @@
               <img src="img/img.category/27.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 팜므</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 팜므
+                  </div>
                   <div class="ct-content-price">79,000원</div>
                 </div>
                 <div class="content-sort">여성 프렌치 테리 가디건 AS</div>
@@ -609,7 +758,9 @@
               <img src="img/img.category/28.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 스포츠웨어 팜므</div>
+                  <div class="category-content-info">
+                    나이키 스포츠웨어 팜므
+                  </div>
                   <div class="ct-content-price">109,000원</div>
                 </div>
                 <div class="content-sort">여성 우븐 재킷 AS</div>
@@ -622,7 +773,9 @@
               <img src="img/img.category/29.jpg" class="category-content-img" />
               <figcaption class="category-content-detail">
                 <div class="category-content-price">
-                  <div class="category-content-info">나이키 SB 줌 블레이저 미드</div>
+                  <div class="category-content-info">
+                    나이키 SB 줌 블레이저 미드
+                  </div>
                   <div class="ct-content-price">109,000원</div>
                 </div>
                 <div class="content-sort">스케이트보드화</div>

@@ -1,5 +1,22 @@
 'use strict'
 
+//리뷰 모달 띄우기
+
+function onClick() {
+    window.scrollTo(0,0);
+    document.querySelector('.reviewAllBack').classList.add('on');
+    document.querySelector('.review-all').classList.add('on');
+    
+}
+function offClick() {
+    window.scrollTo(0,0);
+    document.querySelector('.reviewAllBack').classList.remove('on');
+    document.querySelector('.review-all').classList.remove('on');
+}
+document.querySelector('.reviewRead').addEventListener('click',onClick);
+document.querySelector('.review_close-button').addEventListener('click',offClick);
+
+
 // 최신,도움순 클릭 이벤트
 
 const filter1 = document.getElementById('filter1');
