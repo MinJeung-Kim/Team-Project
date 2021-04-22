@@ -1,25 +1,23 @@
 'use strict';
 
-const gnvSearch = document.querySelector('.gnv-search');
-const gnvSearchInput = document.querySelector('.search-input');
+//검색상단 모달
+const searchWrap = document.querySelector('.search-wrap');
+const searchBack = document.querySelector('.search-back');
+const searchModal = document.querySelector('.search-modal');
+const searchInput = document.querySelector('.search-input');
 
-const searchModal = document.querySelector('big-search');
-//input창 너비 넓히기
+console.log(searchWrap);
+console.log(searchModal);
 
-
-function onClick() {
-    
-    console.log(gnvSearchInput);
-    console.log(searchModal);
-
-
+//모달
+function onClick(event) {
+    searchBack.classList.add('open');
+    searchModal.classList.add('open');
 }
 function offClick() {
-
-    searchModal.style.display = 'none';
-    
+    searchBack.classList.remove('open');
+    searchModal.classList.remove('open');
 }
-gnvSearchInput.addEventListener('click',onClick);
+searchInput.addEventListener('click',onClick);
 document.querySelector('.search-close').addEventListener('click',offClick);
 
-  

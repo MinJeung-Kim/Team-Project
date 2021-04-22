@@ -27,7 +27,7 @@
     padding: 15px 0;
 }
 .right-content-wrap {
-    width: 990px;
+    width: 1200px;
     padding: 0 20px;    
 }
 .dash-icon .fas,
@@ -63,9 +63,6 @@
   margin-bottom: 15px;
 }
 
-/* .prd-search{
-  display: inline-block;
-} */
 .prd-search-bold {
   font-weight: bold;
 }
@@ -76,6 +73,14 @@
   justify-content: space-between;
 
   margin-bottom: 15px;
+}
+
+.prd-tit-hr {
+  width:100%;
+  height: 4px;
+  background-color: black;
+
+  margin-top: 15px;
 }
 
 .selectPrd
@@ -132,7 +137,7 @@ th {
   font-weight: bold;
 }
 table, th, td {
-  border: 2px solid rgb(93, 176, 209);
+  border: 1px solid rgb(243, 243, 243);
   text-align:center;
 }
 .th-checkbox input {
@@ -149,19 +154,100 @@ table, th, td {
 }
 .prd-register, .prd-delete
 {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 15px;
-
-  float: right;
-
-  margin-right: 10px;
-
-  width: 50px;
-  height: 22px;
-
-  text-align: center;
-
-  border: 2px solid rgb(93, 176, 209);
-  border-radius: 50px;
+  border: 1px solid black;
+  background: black;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top:15px;
 }
+
+.adminproduct_filter {
+  display: grid;
+  height: 200px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 2fr 8fr;
+}
+
+.prd_filter {
+  margin:0 15px;
+}
+
+.item {
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.itemL {
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.search-word {
+  border: 1px solid gray;
+  border-radius: 6px;
+  width: 200px;
+  height: 22px;
+  margin-left: 10px;
+}
+
+.date_input {
+  width: 130px;
+  height: 25px;
+  border: 1px solid gray;
+  margin: 0 15px;
+  border-radius: 6px;
+}
+
+.top-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+.search-button {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.reset-button {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.day {
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  margin: 0 5px;
+  height: 28px;
+  width: 50px;
+  cursor: pointer;
+}
+.day:hover {
+  background: gray;
+  color: white;
+}
+
+#wrapper {
+  margin-top: 20px;
+}
+

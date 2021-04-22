@@ -16,10 +16,40 @@
     <link rel="stylesheet" href="css/review.css" />
 
     <script defer src="src/review.js"></script>
+    <script defer src="src/review-notice.js"></script>
 
     <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="rv-modal-back"></div>
+    <div class="rv-modal">
+      <div class="rv_modal-content">
+          <a class="rv_close-button">&times;</a>
+          <div class="rv_modal_title">
+            <span class="rv_modal_title_txt">배송 지연 안내</span>
+            <span class="nt-date">
+              <span class="date-tit">업데이트일 : </span>
+              <span class="date-txt">2021년 1월 11일</span>
+            </span>
+          </div>
+          <div class="rv_body">
+            <p>안녕하세요. </p>
+            <p>나이키닷컴 고객센터입니다.</p>
+            <p>&nbsp;</p>
+            <p class="strong">폭설 및 코로나 19 확산 등으로 인한  CJ 대한통운 택배 물량 증가로 배송이 지연되고 있습니다.</p>
+            <p>&nbsp;</p>
+            <p>※ 관공서, 학교, 사무실의 경우 토요일 배송이 진행되지 않고 차주 월요일(영업일 기준)부터 순차적으로 진행되어 추가지연이 발생할 수 있습니다.</p>
+            <p>&nbsp;</p>
+            <p>나이키닷컴 이용에 불편을 드린 점 양해 부탁드리며, 이른 시일 내에 고객님에 소중한 상품이 안전하게 배송될 수 있도록 최선을 다하겠습니다.</p>
+            <p>&nbsp;</p>
+            <p>다시 한번 많은 양해 부탁드립니다.</p>
+            <p>감사합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    </div>
     <div class="review-all">
       <div class="review_product-wrap">
         <a class="review_close-button">&times;</a>
@@ -89,11 +119,44 @@
             </div>
           </div>
         </div>
+        
+        <div class="notice">
+          <span class="notice_tit">
+            공지사항
+          </span>
+          <div class="notice">
+            <ul class="notice_list">
+              <li class="notice_list-item">
+                <a class="list-item-link">2021년 4월 무이자 할부 혜택 안내</a>
+              </li>
+              <li class="notice_list-item">
+                <a class="list-item-link">개인정보 처리방침 변경 안내</a>
+              </li>
+              <li class="notice_list-item">
+                <a class="list-item-link">배송 지연 안내</a>
+              </li>
+              <li class="notice_list-item">
+                <a class="list-item-link">[공지] 서비스 이용에 불편을 드려 죄송합니다.</a>
+              </li>
+              <li class="notice_list-item">
+                <a class="list-item-link">이용약관 및 개인정보 처리방침 변경 안내</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page">
+            <span class="pre">
+              <a class="page-txt">이전</a>
+            </span>
+            <ul class="page-num">
+              <li class="page-list"><a class="list-num">1</a></li>
+              <li class="page-list"><a class="list-num" id="list2">2</a></li>
+            </ul>
+            <span class="next">
+              <a class="page-txt">다음</a>
+            </span>
+          </div>
+        </div>
         <div class="review_sort">
-          <!-- <label for="chk_1" class="chk_label">최신순</label>
-                <input type="checkbox" id="chk_1" class="chk_input">
-                <label for="chk_2" class="chk_label">도움순</label>
-                <input type="checkbox" id="chk_2" class="chk_input"> -->
           <a class="review_filter clicked" id="filter1">최신순</a>
           <a class="review_filter" id="filter2">도움순</a>
         </div>

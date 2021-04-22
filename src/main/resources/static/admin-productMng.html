@@ -16,18 +16,33 @@
       rel="stylesheet"
     />
 
+    <!-- Nouislider -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"
+      integrity="sha512-0Z2o7qmtl7ixxWcEQxxTCT8mX4PsdffSGoVJ7A80zqt6DvdEHF800xrsSmKPkSoUaHtlIhkLAhCPb/tkf78SCA=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.css"
+      integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
+      crossorigin="anonymous"
+    />
+
     <link
     href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
     rel="stylesheet"
   />
-
+  
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/admin-productMng.css" />  
+    <link rel="stylesheet" href="css/admin-productMng-modal.css" />
 
     <script defer src="src/admin-productMng.js"></script>
+    <script defer src="src/admin-product-day.js"></script>
+    <script defer src="src/admin-product-modal.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap">
@@ -36,10 +51,11 @@
       crossorigin="anonymous"
     ></script> 
     
-     <!-- Grid.js -->
-     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
-     <script src="https://unpkg.com/gridjs-selection/dist/gridjs-selection.production.min.js"></script>
-  
+    <!-- Grid.js -->
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <script src="https://unpkg.com/gridjs-selection/dist/gridjs-selection.production.min.js"></script>
+
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
       $(function () {
@@ -48,9 +64,12 @@
     </script>
   </head>
   <body>
+    <!-- 모달back -->
+    <div class="prd-register-back"></div>
     <div class="body__container">  
       <div id="header"></div>
        <!-- ========== CONTENTS ========== -->
+       
        <section class="section dashboard">
         <div class="section-category">
           <div class="section-title">
@@ -87,17 +106,41 @@
             <div class="right-content-wrap">
               <div class="prdList-title">
                   <div class="prd-txt">상품 목록</div>
+                  <div class="prd-tit-hr"></div>
               </div>
-              <!-- <div class="prd-search-wrap">
-                <div class="prd-search">
-                  <select name="selectPrd" class="selectPrd">
-                    <option value="memberY">상품코드</option>
-                    <option value="memberN">상품명</option>
+              <form action="#" class="adminproduct_filter">
+                <div class="item itemL">상품 정보</div>
+                <div class="item">
+                  <select name="filter" class="prd_filter">
+                    <option value="product_name" selected>상품명</option>
+                    <option value="product_cd">상품코드</option>
                   </select>
-                  <input type="text" class="searchBox" name="searchBox" placeholder="상품명,상품코드">
-                  <a href="javascript:;" class="srhBtnWrap"><i class="fas fa-search searchBtn"></i></a>
+                  <input type="text" class="search-word">
                 </div>
-              </div> -->
+                <div class="item itemL">가격 정보</div>
+                <div class="item">
+                  <!-- 슬라이더 -->
+                  <div class="order-items">
+                    <div id="slider-non-linear-step"></div>
+                    <div id="slider-non-linear-step-value'"></div>
+                  </div>
+                </div>
+                <div class="item itemL">상품 등록기간</div>
+                <div class="item">
+                  <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
+                  <span class="wave">~</span>
+                  <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
+                  <button type="button" class="day" id="bt1">오늘</button>
+                  <button type="button" class="day" id="bt2">1주일</button>
+                  <button type="button" class="day" id="bt3">1개월</button>
+                  <button type="button" class="day" id="bt4">3개월</button>
+                  <button type="button" class="day" id="bt5">6개월</button>
+                </div>
+              </form>
+              <div class="top-search">
+                <button type="reset" class="reset-button" >초기화</button>
+                <button type="submit" class="search-button" >검색</button>
+              </div>
               <div class="prd-count-wrap">
                 <div class="prdTotal">[ 검색결과 상품 0개 / 총 100개 ]</div>
                 <select name="searchLimit" class="searchLimit">
@@ -110,12 +153,111 @@
 
               <!-- ===========상품 리스트========== -->
               <div id="wrapper"></div>
+
               <div class="prd-rgs-button">
-                <input type="button" class="prd-register" value="등록">
-                <input type="button" class="prd-delete" value="삭제">
+                <button class="prd-register">등록</button>
+                <button class="prd-delete">삭제</button>  
               </div>
               
             </div>
+            <!-- 상품등록 모달 -->
+            <div class="prd-register-modal">
+              <div class="prdRegHeader">
+                <span class="prRegister">상품 등록</span>
+              </div>
+              <button type="reset" class="prd_close-button">x</button>
+
+              <form action="#" method="post" name="prdRegisterForm" class="prd-container" id="prd_form">
+                <div class="prd-item">
+                  <span class="title">상품 코드</span>
+                  <input type="text" name="name" class="prdcd">
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 이름</span>
+                  <input type="text" name="name" class="prdnm">
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 서브타이틀</span>
+                  <select nmae="grade" class="wr prdsubtitle">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">공용</option>
+                    <option value="family">남성</option>
+                    <option value="silver">여성</option>
+                    <option value="silver">주니어</option>
+                    <input type="text" name="name" class="prdsub">
+                  </select>
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 종류</span>
+                  <select nmae="grade" class="wr prdtype">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">TOP</option>
+                    <option value="silver">신발</option>
+                    <option value="gold">BOTTOM</option>
+                    <option value="gold">CAP</option>
+                  </select>
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 사이즈</span>
+                  <select nmae="size" class="wr prdcsize">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">S</option>
+                    <option value="silver">M</option>
+                    <option value="gold">L</option>
+                    <option value="gold">XL</option>
+                  </select>
+                  <select nmae="size" class="wr prdsesize">
+                    <option value="family" selected>선택</option>
+                    <option value="silver">230</option>
+                    <option value="silver">235</option>
+                    <option value="gold">240</option>
+                    <option value="gold">245</option>
+                    <option value="gold">250</option>
+                    <option value="gold">255</option>
+                    <option value="gold">260</option>
+                    <option value="gold">265</option>
+                    <option value="gold">270</option>
+                    <option value="gold">275</option>
+                    <option value="gold">280</option>
+                    <option value="gold">285</option>
+                    <option value="gold">290</option>
+                    <option value="gold">295</option>
+                    <option value="gold">300</option>
+                  </select>
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품 요약설명</span>
+                  <input type="textarea" name="name" class="prdsummary">
+                </div>
+                <div class="prd-item">
+                  <span class="title">등록 일자</span>
+                  <span class="rgDate"></span>
+                </div>
+                <div class="prd-item">
+                  <span class="title">판매 가격</span>
+                  <input type="text" name="name" class="wr prdprice" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /> 원
+                </div>
+                <div class="prd-item">
+                  <span class="title">판매 상태</span>
+                  <input type="radio" name="status" value="정상"> 정상판매 
+                  <span>( 재고</span>
+                  <input type="text" name="name" class="normal" placeholder="" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                  <span> )</span>
+                  <input type="radio" name="status" value="품절"> 품절
+                </div>
+                <div class="prd-item">
+                  <span class="title">상품이미지</span>
+                  <label for="addfile" class="fileLabel"></label>
+                  <input type="file" id="add-file" class="prd-img" multiple accept="image/*">
+                </div>
+                
+              </form>
+              <div class="rgBtn">
+                <button class="prdModal-register">등록</button>
+              </div>
+              
+            </div>
+            
           </div> <!-- dashboard-main-->
       </section>
     </div>

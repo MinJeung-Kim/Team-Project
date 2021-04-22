@@ -21,10 +21,16 @@
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/cart.css" /> 
+    <link rel="stylesheet" href="css/review-form.css" />
+    <link rel="stylesheet" href="css/review.css" />
 
     <script defer src="src/detail.js" type="text/javascript"></script>
     <script defer src="src/cart.js"></script>
     <script defer src="src/cart-in.js"></script>
+    <script defer src="src/admin-board-addfile.js"></script>
+    <script defer src="src/reviewform.js"></script>
+    <script defer src="src/review.js"></script>
+    <script defer src="src/review-notice.js"></script>
 
     <script
       src="https://kit.fontawesome.com/9eb162ac0d.js"
@@ -76,6 +82,1762 @@
     </div>
     <!-- CART POPUP END-->
       <div id="header"></div>
+      <!-- REVIEW WRITE START -->
+      <div class="write_modal_back"></div>
+      <div class="write_modal">
+        <div class="write_modal-content">
+            <a class="write_close-button">&times;</a>
+            <div class="write_modal_title">
+              <img class="write_modal_logo" src="img/nike-logo-on.png" alt="" class="nike-logo"/>
+              <span class="write_modal_title_txt">REVIEW</span>
+            </div>
+            <div class="write_body">
+              <form action="#" method="POST" class="writeform">
+                  <div class="cont-l">
+                      <div class="reviewform_subject">
+                          <span class="cont-1_tit">제목</span>
+                          <input type="text" class="review_input1">
+                      </div>
+                      <div class="reviewform_content">
+                          <span class="cont-1_tit">내용</span>
+                          <textarea name="reviewform-cont" class="review_input2"></textarea>
+                      </div>
+                      <div class="reviewform_file">
+                          <span class="cont-1_tit">첨부파일</span>
+                          <div class="filewrap">
+                              <input class="upload-name" disabled="disabled">
+                              <label for="addfile" class="fileLabel">파일선택</label>
+                              <input type="file" id="addfile"class="review_input3" multiple accept="image/*">
+                          </div>
+                      </div>
+                      <div class="reviewform_passwd">
+                          <span class="cont-1_tit">비밀번호</span>
+                          <input type="password" class="review_input4">
+                      </div>
+                  </div>
+                  
+                  <!-- 상품평 -->
+                  <div class="cont-r">
+                      <div class="reviewform_star">
+                          <span class="cont-1_tit">
+                              상품만족도
+                          </span>
+                          <div class="product-star">
+                              <i class="fas fa-star" id="star1"></i>
+                              <i class="fas fa-star" id="star2"></i>
+                              <i class="fas fa-star" id="star3"></i>
+                              <i class="fas fa-star" id="star4"></i>
+                              <i class="fas fa-star" id="star5"></i>
+                          </div>
+                      </div>
+                      <div class="product-gage">
+                          <span class="cont-1_tit">
+                              상품평가
+                          </span>
+                          <div class="reviewform_gage-wrap">
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">편안함</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">편하지 않은</span>
+                                      <span class="reviewform_value-txtRight">편안한</span>
+                                  </div>
+                              </div>
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">사이즈</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">작은</span>
+                                      <span class="reviewform_value-txtRight">큰</span>
+                                  </div>
+                              </div>
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">내구성</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">내구성이 없는</span>
+                                      <span class="reviewform_value-txtRight">내구성이 있는</span>
+                                  </div>
+                              </div>
+                              <div class="reviewform_gage">
+                                  <span class="reviewform_gage-title">폭</span>
+                                  <div class="reviewform_value-box">
+                                      <input type="range" value="1" min="0" max="10" class="rangebar">
+                                      <span class="reviewform_value-txtLeft">좁은</span>
+                                      <span class="reviewform_value-txtRight">넓은</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="reviewform_button">
+                      <button class="review-save">저장하기</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+      <!-- REVIEW WRITE END -->
+      <!-- REVIEW START -->
+      <div class="rv-modal-back"></div>
+      <div class="rv-modal">
+        <div class="rv_modal-content">
+            <a class="rv_close-button">&times;</a>
+            <div class="rv_modal_title">
+              <span class="rv_modal_title_txt">배송 지연 안내</span>
+              <span class="nt-date">
+                <span class="date-tit">업데이트일 : </span>
+                <span class="date-txt">2021년 1월 11일</span>
+              </span>
+            </div>
+            <div class="rv_body">
+              <p>안녕하세요. </p>
+              <p>나이키닷컴 고객센터입니다.</p>
+              <p>&nbsp;</p>
+              <p class="strong">폭설 및 코로나 19 확산 등으로 인한  CJ 대한통운 택배 물량 증가로 배송이 지연되고 있습니다.</p>
+              <p>&nbsp;</p>
+              <p>※ 관공서, 학교, 사무실의 경우 토요일 배송이 진행되지 않고 차주 월요일(영업일 기준)부터 순차적으로 진행되어 추가지연이 발생할 수 있습니다.</p>
+              <p>&nbsp;</p>
+              <p>나이키닷컴 이용에 불편을 드린 점 양해 부탁드리며, 이른 시일 내에 고객님에 소중한 상품이 안전하게 배송될 수 있도록 최선을 다하겠습니다.</p>
+              <p>&nbsp;</p>
+              <p>다시 한번 많은 양해 부탁드립니다.</p>
+              <p>감사합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      </div>
+      <div class="reviewAllBack"></div>
+      <div class="review-all">
+        <div class="review_product-wrap">
+          <a class="review_close-button">&times;</a>
+          <div class="review_img-div">
+            <img class="review_product-img" src=https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CK6469-290/c34d2857-d29f-4b3d-a4a0-bb5edd743ada_primary.jpg?thumbnail>
+          </div>
+          <div class="mini-product-info">
+            <span class="info_tit">조던 플라이트 플리스 풀오버 후디</span>
+            <div class="info_price">109,000 원</div>
+          </div>
+        </div>
+        <div class="review_list-wrap">
+          <div class="review_top">
+            <div class="review_total-info">
+              <p class="star-average">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </p>
+              <div class="star-txt">
+                <span class="star-review-num">45개의 REVIEWS / </span>
+                <span class="star-point">4.7 STARS</span>
+              </div>
+            </div>
+          </div>
+          <div class="review_gage-wrap">
+            <div class="grid-gage">
+              <span class="gage-title">편안함</span>
+              <div class="value-box">
+                <div class="value-gage">
+                  <span class="value-dot"></span>
+                </div>
+                <span class="value-txtLeft">편하지 않은</span>
+                <span class="value-txtRight">편안한</span>
+              </div>
+            </div>
+            <div class="grid-gage">
+              <span class="gage-title">사이즈</span>
+              <div class="value-box">
+                <div class="value-gage">
+                  <span class="value-dot"></span>
+                </div>
+                <span class="value-txtLeft">작은</span>
+                <span class="value-txtRight">큰</span>
+              </div>
+            </div>
+            <div class="grid-gage">
+              <span class="gage-title">내구성</span>
+              <div class="value-box">
+                <div class="value-gage">
+                  <span class="value-dot"></span>
+                </div>
+                <span class="value-txtLeft">내구성이 없는</span>
+                <span class="value-txtRight">내구성이 있는</span>
+              </div>
+            </div>
+            <div class="grid-gage">
+              <span class="gage-title">폭</span>
+              <div class="value-box">
+                <div class="value-gage">
+                  <span class="value-dot"></span>
+                </div>
+                <span class="value-txtLeft">좁은</span>
+                <span class="value-txtRight">넓은</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="notice">
+            <span class="notice_tit">
+              공지사항
+            </span>
+            <div class="notice">
+              <ul class="notice_list">
+                <li class="notice_list-item">
+                  <a class="list-item-link">2021년 4월 무이자 할부 혜택 안내</a>
+                </li>
+                <li class="notice_list-item">
+                  <a class="list-item-link">개인정보 처리방침 변경 안내</a>
+                </li>
+                <li class="notice_list-item">
+                  <a class="list-item-link">배송 지연 안내</a>
+                </li>
+                <li class="notice_list-item">
+                  <a class="list-item-link">[공지] 서비스 이용에 불편을 드려 죄송합니다.</a>
+                </li>
+                <li class="notice_list-item">
+                  <a class="list-item-link">이용약관 및 개인정보 처리방침 변경 안내</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page">
+              <span class="pre">
+                <a class="page-txt">이전</a>
+              </span>
+              <ul class="page-num">
+                <li class="page-list"><a class="list-num">1</a></li>
+                <li class="page-list"><a class="list-num" id="list2">2</a></li>
+              </ul>
+              <span class="next">
+                <a class="page-txt">다음</a>
+              </span>
+            </div>
+          </div>
+          <div class="review_sort">
+            <a class="review_filter clicked" id="filter1">최신순</a>
+            <a class="review_filter" id="filter2">도움순</a>
+          </div>
+          <div class="review_read">
+            <ul id="review_list">
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">색감 좋아요</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">19</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>정*훈 - </span>
+                      <span class="write-date">2021.03.08</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">색상이 너무 좋아서 마음에 들어요</p>
+                    <p class="review-img"></p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">플라이트 조던 후드</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">1</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>김*수 - </span>
+                      <span class="write-date">2021.03.02</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">175/75 3XL 오버핏 좋아해서 딱 좋네요 ㅎㅎㅎㅎ</p>
+                    <p class="review-img">
+                      <span class="appending-img">
+                        <a href="null/cmsstatic/reviewAssetFile/20210302/B38DC6E1-4544-4228-8F7A-2505B75CC68F.jpeg">
+                          <img
+                            src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/reviewAssetFile/20210302/B38DC6E1-4544-4228-8F7A-2505B75CC68F.jpeg?reviewthumbnail"
+                            alt="B38DC6E1-4544-4228-8F7A-2505B75CC68F.jpeg"
+                          />
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">세일할때</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">15</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>김*연 - </span>
+                      <span class="write-date">2021.02.25</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">잘산것같아요...이디자인 세번째 구매했어요..</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">기모가있네</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">19</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>오*환 - </span>
+                      <span class="write-date">2021.02.25</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">겨울엔 따뜻하지만 언젠가 더워질수도</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">리뷰</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">26</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>임*규 - </span>
+                      <span class="write-date">2021.02.23</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">색감 이쁘고 좋음요</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">95샀는지 알았는데</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">3</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>이*영 - </span>
+                      <span class="write-date">2021.02.22</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">
+                      L사쥬 샀네용 박시하게 웃엉덩이 덮히긴하는데.... 박시하게 입어도 예쁘지만딱 맞게 입으면 더 예벘을거같아요ㅠㅠㅠㅠ생삭 예쁘고 이비고있으니 화사해서 얼굴이 확 살아보여서 좋아용ㅋ
+                      할인할때 착하게 잘 샀습니다!:-)리뷰어스펙:woman/165/66/28-29size
+                    </p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">조던 후드</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">0</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>김*리 - </span>
+                      <span class="write-date">2021.02.22</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">색상이 칙칙하지않고 고급스럽고 너무 예뻐요.</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">누가 크다고 그랬음??</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">26</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>김*현 - </span>
+                      <span class="write-date">2021.02.21</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">167/74 근육돼지 남자가 M사이즈 샀는데 저스트 핏입니다. 오버핏 좋아하시는 분들은 L로 가세요, 색깔은 기가막히게 이쁩니다. 왼쪽 어깨 마이클조던 사인 들어간것도 굳</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">편하게 입기 좋은 후드에요</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">0</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>변*윤 - </span>
+                      <span class="write-date">2021.02.15</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">사이즈가 넉넉하니 좋네요.다만 색상이 조금 더 밝은 색인거 같아요.</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">핑쿠 핑쿠~~</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">1</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>이*호 - </span>
+                      <span class="write-date">2021.02.10</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">핑쿠 핑쿠~~</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">조던플라이트 플리즈 팬츠와 함께 구매했습니다</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">7</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>김*우 - </span>
+                      <span class="write-date">2021.01.22</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">색상이 바지와 많이 다릅니다세트로 구매하실 의향이 있으신 분은 비추입니다그리고 마무리가 별로라 실밥이 많이 나옵니다</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">좋아요~</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">9</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>소*호 - </span>
+                      <span class="write-date">2021.01.22</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">사이즈도 딱맞고 180-84 XL(105)사이즈 잘맞습니다~ 가격때문에 고민을했는데 빠른배송에 받아보니 옷감핏도 좋고 부들부들해서 잘입을것같아요~ 디자인 이뻐요</p>
+                    <p class="review-img">
+                      <span class="appending-img">
+                        <a href="null/cmsstatic/reviewAssetFile/20210122/4C25967D-6347-48E4-9086-37BEBA819104.jpeg">
+                          <img
+                            src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/reviewAssetFile/20210122/4C25967D-6347-48E4-9086-37BEBA819104.jpeg?reviewthumbnail"
+                            alt="4C25967D-6347-48E4-9086-37BEBA819104.jpeg"
+                          />
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">굿</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">2</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>홍*현 - </span>
+                      <span class="write-date">2021.01.08</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">정사이즈여서 넉넉하게 입으실분들은 한치수 업하시는게 좋을듯합니다</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">역쉬 조던 후디입니다.</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">19</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>배*석 - </span>
+                      <span class="write-date">2021.01.06</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">정말 너무 이뻐요</p>
+                    <p class="review-img">
+                      <span class="appending-img">
+                        <a href="null/cmsstatic/reviewAssetFile/20210106/20210106_144047.jpg">
+                          <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/reviewAssetFile/20210106/20210106_144047.jpg?reviewthumbnail" alt="20210106_144047.jpg" />
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">이뻐요~</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">8</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>이*영 - </span>
+                      <span class="write-date">2020.12.25</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">색상디자인 모두 이뻐요~</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">너무 좋아요</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">14</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>박*도 - </span>
+                      <span class="write-date">2020.12.25</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">
+                      넉넉하게 xl로 구입했는데 착용감이 넘 편하고 좋네여다만 동일 시리즈 하의와 색깔이 차이가 있는 것 같아요상의가 좀더 진한 겨자색인 것 같네요하의는 그에 비해서 좀더 밝구요그부분이 좀
+                      아쉬워요~
+                    </p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">이뻐요</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">19</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>한*성 - </span>
+                      <span class="write-date">2020.12.24</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">노란옷은 첫 도전인데이쁩니다</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">된장맛</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">0</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>박*수 - </span>
+                      <span class="write-date">2020.12.23</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">오늘 저녁은 된장이네요.</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">175/65 만족합니다</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">9</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>문*수 - </span>
+                      <span class="write-date">2020.12.22</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">175/65(M)부드럽고 맘에 쏙 들어요기장 적당하구요 팔품이 좀크지만 박시하고 이쁘네요만족합니다</p>
+                    <p class="review-img">
+                      <span class="appending-img"> </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="review_grid">
+                  <div class="review_grid_left">
+                    <div class="review_grid_top">
+                      <p class="review_subject">아주 마음에 드네요.</p>
+                      <i class="far fa-thumbs-up"></i>
+                      <span class="thums-num">0</span>
+                    </div>
+                    <p class="review_content-star">
+                      <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </span>
+                    </p>
+                    <div class="RVuser-name">
+                      <span>김*현 - </span>
+                      <span class="write-date">2020.12.20</span>
+                      <span class="product-code">CK6469-630</span>
+                    </div>
+                    <p></p>
+                    <p class="comment">
+                      상품 이름은 풀오버 후디 인데막상 받아보니 스텐다드핏 이였어요..1사이즈 마이너스 해서 샀는데요.충분히 입을수 있어 좋았습니다.디자인 이뻐서 셋업으로 구매 했습니다.
+                    </p>
+                    <p class="review-img">
+                      <span class="appending-img">
+                        <a href="null/cmsstatic/reviewAssetFile/20201220/20201117_000703.jpg">
+                          <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/reviewAssetFile/20201220/20201117_000703.jpg?reviewthumbnail" alt="20201117_000703.jpg" />
+                        </a>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="review_grid_right">
+                    <div class="customer_gage-wrap">
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">편안함</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">편하지 않은</span>
+                          <span class="customer_value-txtRight">편안한</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">사이즈</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">작은</span>
+                          <span class="customer_value-txtRight">큰</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">내구성</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">내구성이 없는</span>
+                          <span class="customer_value-txtRight">내구성이 있는</span>
+                        </div>
+                      </div>
+                      <div class="customer_gage">
+                        <span class="customer_gage-title">폭</span>
+                        <div class="customer_value-box">
+                          <div class="customer_value-gage">
+                            <span class="customer_value-dot"></span>
+                          </div>
+                          <span class="customer_value-txtLeft">좁은</span>
+                          <span class="customer_value-txtRight">넓은</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="review_more">
+            <button id="load-more">더 보기</button>
+          </div>
+        </div>
+      </div>
+      <!-- REVIEW END -->
       <!-- ========== CONTENTS ========== -->
       <section class="section contents">
         <div class="inner clearfix">
@@ -162,12 +1924,34 @@
               <h1 class="title-wrap">
                 나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF
               </h1>
+              <div class="prd-color-option">
+                <div class="color-list">
+                  <a href="#"
+                    ><img
+                      src="img/details/6c2cde19-703c-4bca-b775-ebe2955e7c7d_primary.jpg"
+                      alt="green"
+                  /></a>
+                </div>
+                <div class="color-list">
+                  <a href="#"
+                    ><img
+                      src="img/details/7ba466c7-365b-404a-9f17-141b92b96069_primary.jpg"
+                      alt="black"
+                  /></a>
+                </div>
+                <div class="color-list">
+                  <a href="#"
+                    ><img
+                      src="img/details/2e0ecc3b-681a-45bc-9e03-29da51d3ee0c_primary.jpg"
+                      alt="pink"
+                  /></a>
+                </div>
               <div class="detail-size">
                 <span class="detail-subtitle-left">사이즈 선택</span>
                 <span class="detail-subtitle-right size-guide">사이즈 가이드</span>
               </div>
               <div class="detail-product-option">
-                <div class="opt-list radio-text">
+                <div id="sizeOpt" class="opt-list radio-text">
                   <span class="input-radio">230</span>
                   <span class="input-radio">235</span>
                   <span class="input-radio">240</span>
@@ -199,6 +1983,7 @@
                     <button class="increaseQuantity"><i class="fas fa-plus"></i></button>
                   </span>
                 </div>
+                <span class="msg"></span>
                 <hr>
                 <div class="order-wrap">
                   <div class="buy">
@@ -247,25 +2032,112 @@
                 </div>
                 <hr>
                 <div class="detail-review detail-description detail-primary-text">
-                  <span><a href="review.html">리뷰</span>
-                  <div class="detail-right">
-                    <span>
-                      <i class="far fa-star"></i>
-                    </span>
-                    <span>
-                      <i class="far fa-star"></i>
-                    </span>
-                    <span>
-                      <i class="far fa-star"></i>
-                    </span>
-                    <span>
-                      <i class="far fa-star"></i>
-                    </span>
-                    <span>
-                      <i class="far fa-star"></i>
-                    </span>
-                    <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
-                    </a>
+                  <div id="dt-review">
+                    <span><a id="reviewIcon">리뷰 (1)</span>
+                    <div class="detail-right">
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span class="detail-arrow"><i class="fas fa-chevron-down"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- 리뷰 없을 시 -->
+                  <!-- <div class="review-box">
+                    <div>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span></a>
+                    </div>
+                    <div class="review-noti">
+                      이 상품의 첫 번째 리뷰를 작성해 주세요.
+                    </div>
+                    <div class="review-write">
+                      <a class="writeBt">리뷰 작성하기</a>
+                    </div>
+                  </div> -->
+                  <div class="review-box">
+                    <div>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-star"></i>
+                      </span>
+                      <span class="star-point">5.0 점</span>
+                    </div>
+                    <div class="review-write">
+                      <a class="writeBt">리뷰 작성하기</a>
+                    </div>
+                    <div class="review-readWrap">
+                      <p class="read-subject">260을 시켰는데 좀 크네요</p>
+                      <div class="read-userInfo">
+                        <div>
+                          <span>
+                            <i class="fas fa-star"></i>
+                          </span>
+                          <span>
+                            <i class="fas fa-star"></i>
+                          </span>
+                          <span>
+                            <i class="fas fa-star"></i>
+                          </span>
+                          <span>
+                            <i class="fas fa-star"></i>
+                          </span>
+                          <span>
+                            <i class="fas fa-star"></i>
+                          </span>
+                        </div>
+                        <div class="user-name gray">박*님</div>
+                        <span>-</span>
+                        <div class="review-date gray">2021.04.17</div>
+                        <div class="review-prdCd gray">SE20210416-1</div>
+                      </div>
+                      <div class="read-content"> 
+                        아들이 좋아합니다. 간지난다고
+                      </div>
+                      <div class="review-img-info">
+                        <img src="img/details/bdb0e8cf-b9d4-44da-8160-c63d53108142_primary.jpg" alt=""/>
+                      </div>
+                      
+                    </div>
+                    <div class="review-more">
+                      <a class="reviewRead">더 많은 리뷰 보기</a>
+                    </div>
                   </div>
                 </div>
                 <hr>

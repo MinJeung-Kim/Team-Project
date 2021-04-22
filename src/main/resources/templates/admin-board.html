@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>나이키. Just Do It. Nike.com</title>
+
+    <!-- CSS 초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+
+    <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/comm-header.css" />
+    <link rel="stylesheet" href="css/comm-footer.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/admin-board.css" />
+    <link rel="stylesheet" href="css/admin-board-write.css" />
+    <link rel="stylesheet" href="css/admin-board-review.css" />
+
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const adBoard = '[[${adBoard}]]'
+      /*]]>*/
+    </script>
+    <script defer src="src/admin-board.js"></script>
+    <script defer src="src/admin-board-day.js"></script>
+    <script defer src="src/admin-board-modal.js"></script>
+    <script defer src="src/admin-board-addfile.js"></script>
+    
+
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+      
+    <!-- Grid.js -->
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <script src="https://unpkg.com/gridjs-selection/dist/gridjs-selection.production.min.js"></script>
+
+    <link
+    href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+    rel="stylesheet"
+    />
+ 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+      $(function () {
+        $('#admin-menu').load('comm-admin-menu.html')
+      })
+    </script>
+  </head>
+  <body>
+    <div class="body__container">
+      <!-- 게시물 등록 모달 -->
+      <div class="write_modal_back"></div>
+    <div class="body__container">  
+      <!-- ========== 리뷰모달 ========== -->
+      <div class="R-write_modal">
+        <div class="R-write_modal-content">
+            <a class="R-write_close-button">&times;</a>
+            <div class="R-write_modal_title">
+              <img class="R-write_modal_logo" src="img/nike-logo-on.png" alt=""/>
+              <span class="R-write_modal_title_txt">REVIEW</span>
+            </div>
+            <div class="R-review-body">
+              <div class="R-cont-l">
+                <div class="review_grid_top">
+                    <p class="review_subject">플라이트 조던 후드</p>
+                    <i class="far fa-thumbs-up"></i>
+                    <span class="thums-num">19</span>
+                </div>
+                <p class="review_content-star">
+                    <span class="customer-star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                </p>
+                <div>
+                    <span class="user-name">김*수 - </span>
+                    <span class="write-date">2021.03.02</span>
+                    <span class="product-code">CK6469-630</span>
+                </div>
+                <p></p>
+                <p class="comment">175/75 3XL 오버핏 좋아해서 딱 좋네요 ㅎㅎㅎㅎ</p>
+                <p class="review-img">
+                    <span class="appending-img">
+                        <a href="null/cmsstatic/reviewAssetFile/20210302/B38DC6E1-4544-4228-8F7A-2505B75CC68F.jpeg">
+                            <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/reviewAssetFile/20210302/B38DC6E1-4544-4228-8F7A-2505B75CC68F.jpeg?reviewthumbnail"
+                                alt="B38DC6E1-4544-4228-8F7A-2505B75CC68F.jpeg">
+                        </a>
+                    </span>
+                </p>
+              </div>
+              <div class="R-cont-r">
+              <div class="product-gage">
+                  <span class="cont-1_tit">
+                      상품평가
+                  </span>
+                  <div class="reviewform_gage-wrap">
+                      <div class="reviewform_gage">
+                          <span class="reviewform_gage-title">편안함</span>
+                          <div class="reviewform_value-box">
+                              <input type="range" value="1" min="0" max="10" class="rangebar" id="comfortPt" disabled>
+                              <span class="reviewform_value-txtLeft">편하지 않은</span>
+                              <span class="reviewform_value-txtRight">편안한</span>
+                          </div>
+                      </div>
+                      <div class="reviewform_gage">
+                          <span class="reviewform_gage-title">사이즈</span>
+                          <div class="reviewform_value-box">
+                              <input type="range" value="5" min="0" max="10" class="rangebar" id="sizePt" disabled>
+                              <span class="reviewform_value-txtLeft">작은</span>
+                              <span class="reviewform_value-txtRight">큰</span>
+                          </div>
+                      </div>
+                      <div class="reviewform_gage">
+                          <span class="reviewform_gage-title">내구성</span>
+                          <div class="reviewform_value-box">
+                              <input type="range" value="7" min="0" max="10" class="rangebar" id="durablePt" disabled>
+                              <span class="reviewform_value-txtLeft">내구성이 없는</span>
+                              <span class="reviewform_value-txtRight">내구성이 있는</span>
+                          </div>
+                      </div>
+                      <div class="reviewform_gage">
+                          <span class="reviewform_gage-title">폭</span>
+                          <div class="reviewform_value-box">
+                              <input type="range" value="10" min="0" max="10" class="rangebar" id="widthPt" disabled>
+                              <span class="reviewform_value-txtLeft">좁은</span>
+                              <span class="reviewform_value-txtRight">넓은</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <!-- ========== 등록모달 ========== -->
+          <div class="write_modal">
+              <div class="write_modal-content">
+                <form action="#">
+                <button type="reset" class="write_close-button">&times;
+                </button>
+                  <div class="write_modal_title">
+                    <img class="write_modal_logo" src="/img/nike-logo-on.png" alt=""/>
+                    <span class="write_modal_title_txt">공지사항</span>
+                  </div>
+                  <div class="write_body">
+                    
+                        <div class="writeform">
+                          <div class="cont">
+                              <div class="reviewform_subject">
+                                  <span class="cont-1_tit">제목</span>
+                                  <input type="text" class="review_input1">
+                              </div>
+                              <div class="reviewform_content">
+                                  <span class="cont-1_tit">내용</span>
+                                  <textarea name="reviewform-cont" class="review_input2"></textarea>
+                              </div>
+                              <div class="reviewform_file">
+                                  <span class="cont-1_tit">첨부파일</span>
+                                  <div class="filewrap">
+                                      <input class="upload-name" disabled="disabled">
+                                      <label for="addfile" class="fileLabel">파일선택</label>
+                                      <input type="file" id="addfile"class="review_input3" multiple accept="image/*">
+                                  </div>
+                              </div>
+                              <div class="reviewform_passwd">
+                                  <span class="cont-1_tit">비밀번호</span>
+                                  <input type="password" class="review_input4">
+                              </div>
+                          </div>
+                          <div class="reviewform_button">
+                              <button class="review-save">저장하기</button>
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </div>
+      <div id="header"></div>
+      <!-- ========== CONTENTS ========== -->
+      <section class="section dashboard">
+        <div class="section-category">
+          <div class="section-title">
+            <a href="#" class="tit_h1"> <h1>게시판관리</h1></a>
+          </div>
+        </div>
+        <div class="dashboard-main">
+          <div class="dashboard-menu">
+            <ul class="dashboard-menu-list">
+              <li>
+                <span class="dash-icon"><i class="fas fa-chart-line"></i></span
+                ><a href="#">대시보드</a>
+              </li>
+              <li>
+                <span class="dash-icon"><i class="fas fa-dollar-sign"></i></span
+                ><a href="#">상품관리</a>
+              </li>
+              <li>
+                <span class="dash-icon"
+                  ><i class="fas fa-shopping-basket"></i></span
+                ><a href="#">주문관리</a>
+              </li>
+              <li>
+                <span class="dash-icon"><i class="fab fa-intercom"></i></span
+                ><a href="#">고객관리</a>
+              </li>
+              <li>
+                <span class="dash-icon"><i class="fas fa-headset"></i></span
+                ><a href="#">게시판관리</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dashboard-main-right">
+              <div class="adreview">
+                  <div class="adreview_top">
+                      <span class="adminboard_tit">상품 리뷰 관리</span>
+                  </div>
+                    <form action="#">
+                      <div class="adminboard_filter">
+                        <div class="item itemL">상품만족도</div>
+                        <div class="item">
+                          <select name="star" class="adreview_star">
+                            <option value="5" selected>★★★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="3">★★★</option>
+                            <option value="2">★★</option>
+                            <option value="1">★</option>
+                          </select>
+                        </div>
+                        <div class="item itemL">세부 정보</div>
+                        <div class="item">
+                          <select name="filter" class="review_filter">
+                            <option value="product_name" selected>상품 코드</option>
+                            <option value="email">고객 ID</option>
+                            <option value="name">고객명</option>
+                            <option value="name">구분</option>
+                        </select>
+                        <input type="text" class="search-word">
+                        </div>
+                        <div class="item itemL">기간</div>
+                        <div class="item">
+                          <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
+                          <span class="wave">~</span>
+                          <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
+                          <button type="button" class="day" id="bt1">오늘</button>
+                          <button type="button" class="day" id="bt2">1주일</button>
+                          <button type="button" class="day" id="bt3">1개월</button>
+                          <button type="button" class="day" id="bt4">3개월</button>
+                          <button type="button" class="day" id="bt5">6개월</button>
+                        </div>
+                      </div>
+                      <div class="bt-wrap">
+                        <button type="reset" class="reset-button" >초기화</button>
+                        <button type="submit" class="search-button" >검색</button>
+                      </div>
+                    </form>
+                    <div class="searchLimitWrap">
+                      <select name="searchLimit" class="searchLimit">
+                        <option value="5">5건씩보기</option>
+                        <option value="10">10건씩보기</option> 
+                        <option value="15">15건씩보기</option> 
+                        <option value="20">20건씩보기</option>  
+                      </select>
+                    </div>
+                  <div id="wrapper"></div>
+                  <div class="admin_write">
+                    <button class="write_button" id="write-review">등록</button>
+                    <button class="write_button" id="delete-review">삭제</button>  
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

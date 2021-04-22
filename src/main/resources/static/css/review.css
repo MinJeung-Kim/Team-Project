@@ -1,5 +1,80 @@
+.rv-modal-back {
+    position: fixed;
+    background: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    display: none;
+}
+.rv-modal {
+    position: fixed;
+    top: 60px; 
+    box-sizing: border-box;
+    width: 550px;
+    overflow-y: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    display: none;
+    z-index: 9999;
+    left: 50%;
+    margin-left: -240px;
+}
+.rv_modal-content {
+    height: 576.8px;
+}
+.rv_close-button {
+    font-size: 30px;
+    position: relative;
+    left: 490px;  
+}
+.rv_close-button:hover {
+    color: gray;
+}
+.rv_modal_title {
+    width: 490px;
+    height: 90px;
+    margin-top: -25px;
+}
+.rv_modal_title_txt {
+    font-size: 23px;
+    font-weight: 700;
+    display: block;
+    width: 490px;
+    margin-top: 20px;
+    padding: 20px 0px;
+    border-bottom: 2px solid black;
+}
+.nt-date {
+    text-align: right;
+    display: block;
+    margin: 10px 0px;
+}
+.rv_body{
+    width: 490px;
+    margin-top: 40px;
+    line-height: 25px;
+}
+.strong {
+    font-weight: 550;
+}
+.reviewAllBack {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 9996;
+    display: none;
+}
 .review-all {
     overflow-y: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 9997;
+    display: none;
 }
 .review_product-wrap {
     position: fixed;
@@ -113,6 +188,42 @@
     float: right;
     margin-top: 10px;
 }
+.notice {
+    display: grid;
+}
+.notice_tit {
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.notice_list-item {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0px 15px 0px;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    align-items: center;
+}
+.page-txt {
+    background: #e5e5e5;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px 5px 0px 5px;
+}
+.page-txt:hover {
+    background: gray;
+    color: white;
+}
+.page-num {
+    display: flex;
+}
+.page-list {
+    margin: 0px 5px 0px 5px;
+}
 .review_sort {
     display: flex;
     justify-content: flex-end;
@@ -158,7 +269,7 @@
     font-size: 10px;
     margin-bottom: 20px;
 }
-.user-name, .write-date, .product-code {
+.RVuser-name, .write-date, .product-code {
     color: gray;
     font-size: 11px;
     font-weight: 700;
@@ -246,4 +357,7 @@
 .clicked {
     border: 2px solid black;
     box-sizing: border-box;
+}
+.open {
+    display: block !important;
 }

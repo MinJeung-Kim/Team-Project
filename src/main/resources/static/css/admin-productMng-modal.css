@@ -1,0 +1,167 @@
+.prd-register-back {
+    background: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9998;
+    display: none;
+}
+
+.prd-register-modal {
+    position: absolute;
+    top: 50px; 
+    box-sizing: border-box;
+    width: 700px;
+    height: 650px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    display: none;
+    z-index: 9999;
+    left: 42%;
+    margin-left: -240px;
+}
+
+.prdRegHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+.prRegister {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+}
+
+.prd_close-button {
+    font-size: 30px;
+    position: absolute;
+    right:10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    top: 5px;
+}
+
+.open {
+    display: block;
+}
+
+/*상품등록 모달창*/
+.prd-container {
+    display: grid;
+    width: 650px;
+    height: 450px;
+    grid-template-columns: repeat(1, 650px);
+    border-top: 2px solid lightgray;
+    margin-top: 30px;
+}
+
+.prd-item {
+    border-bottom: 1px solid lightgray;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.prd-item .title {
+    display: inline-block;
+    width: 110px;
+    height: 100%;
+    border-right: 1px solid lightgray;
+    background-color: whitesmoke;
+    line-height: 44px;
+    padding-left: 8px;
+}
+
+.wr {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 150px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 15px;
+    outline: none;
+}
+
+.wr:focus { outline:none; }
+
+.prdcd {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 250px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 15px;
+    outline: none;
+}
+
+.prdnm {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 250px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 15px;
+    outline: none;
+}
+
+.rgDate {
+    outline:none;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+#add-file {
+    width:500px;
+    height: 25px;
+    margin-left: 15px;
+    outline: none;
+}
+
+.prdModal-register {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 15px;
+    margin-top: 25px;
+    float: right;
+}
+
+.prdsummary{
+    width:450px; height:30px; 
+
+     border: 1px solid gray;
+     border-radius: 4px;
+     position: relative;
+     top: -2px;
+     margin-left: 15px;
+     outline: none;
+    }
+
+.prdsub {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 280px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 15px;
+    outline: none;
+}
+
+.prd-price:invalid {
+    border: 2px solid red;
+}
