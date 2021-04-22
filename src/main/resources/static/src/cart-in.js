@@ -130,3 +130,17 @@ const totPrice = document.querySelector('.tot-price');
 
 totPrice.innerText = `${sendPrice.textContent} + ${pdPrice.textContent}`;
 console.log(sendPrice.textContent);
+
+// 주문하기 버튼
+const orderBtn = document.querySelector('.order-btn');
+
+const prdPrice = document.querySelector('.mini-price');
+const prdSend = document.querySelector('.send-price');
+const prdTot = document.querySelector('.tot-price');
+
+orderBtn.addEventListener('click', (e) => {
+  // e.preventDefault();
+  localStorage.setItem('prdPrice', prdPrice.textContent);
+  localStorage.setItem('prdSend', prdSend.textContent);
+  localStorage.setItem('prdTot', prdTot.textContent);
+});
