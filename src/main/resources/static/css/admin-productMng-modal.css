@@ -12,17 +12,33 @@
     position: absolute;
     top: 50px; 
     box-sizing: border-box;
-    width: 700px;
-    height: 650px;
+    width: 850px;
+    height: 70%;
     padding: 20px;
     background: white;
     border-radius: 4px;
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     display: none;
     z-index: 9999;
-    left: 42%;
+    left: 39%;
     margin-left: -240px;
+    overflow:auto;
+
 }
+.prd-register-modal::-webkit-scrollbar {
+    width: 10px;
+  }
+.prd-register-modal::-webkit-scrollbar-thumb {
+    background-color: #acabab;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+.prd-register-modal::-webkit-scrollbar-track {
+    background-color: rgb(192, 190, 190);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+  }
 
 .prdRegHeader {
     display: flex;
@@ -55,11 +71,12 @@
 /*상품등록 모달창*/
 .prd-container {
     display: grid;
-    width: 650px;
-    height: 450px;
-    grid-template-columns: repeat(1, 650px);
+    width: 800px;
+    height: 90%;
+    grid-template-columns: repeat(1, 800px);
     border-top: 2px solid lightgray;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .prd-item {
@@ -67,23 +84,25 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     line-height: 30px;
+
 }
 
 .prd-item .title {
     display: inline-block;
-    width: 110px;
-    height: 100%;
+    width: 125px;
+    height: 55px;
     border-right: 1px solid lightgray;
     background-color: whitesmoke;
     line-height: 44px;
-    padding-left: 8px;
+    padding-left: 15px;
+
 }
 
 .wr {
     border: 1px solid gray;
     border-radius: 4px;
     width: 150px;
-    height: 20px;
+    height: 24px;
     position: relative;
     top: -2px;
     margin-left: 15px;
@@ -95,7 +114,7 @@
 .prdcd {
     border: 1px solid gray;
     border-radius: 4px;
-    width: 250px;
+    width: 150px;
     height: 20px;
     position: relative;
     top: -2px;
@@ -106,7 +125,7 @@
 .prdnm {
     border: 1px solid gray;
     border-radius: 4px;
-    width: 250px;
+    width: 350px;
     height: 20px;
     position: relative;
     top: -2px;
@@ -114,9 +133,31 @@
     outline: none;
 }
 
+.prdcl {
+    border: 1px solid rgb(66, 64, 64);
+    border-radius: 4px;
+    width: 80px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+}
+
+.prdqty {
+    border: 1px solid rgb(66, 64, 64);
+    border-radius: 4px;
+    width: 45px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .rgDate {
     outline:none;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
     margin-left: 15px;
 }
 
@@ -136,17 +177,23 @@
     border-radius: 6px;
     cursor: pointer;
     margin: 15px;
-    margin-top: 25px;
     float: right;
+
 }
 
+.rgBtn {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
 .prdsummary{
-    width:450px; height:30px; 
+    width:600px; height:40px; 
 
      border: 1px solid gray;
      border-radius: 4px;
      position: relative;
-     top: -2px;
+     top: -1px;
      margin-left: 15px;
      outline: none;
     }
@@ -154,7 +201,7 @@
 .prdsub {
     border: 1px solid gray;
     border-radius: 4px;
-    width: 280px;
+    width: 200px;
     height: 20px;
     position: relative;
     top: -2px;
@@ -164,4 +211,17 @@
 
 .prd-price:invalid {
     border: 2px solid red;
+}
+
+.plus button{
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.minus{
+    width: 22px;
+    height: 22px;
+    margin-left: 8px;
 }
