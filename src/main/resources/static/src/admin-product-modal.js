@@ -26,6 +26,6 @@ const year = today.getFullYear(); // 년도
 const month = today.getMonth() + 1;  // 월
 const date = today.getDate();  // 날짜
 
-rgDate.innerHTML=(year + '-' + month + '-' + date);
+rgDate.value=(year + '-' + month + '-' + date);
 
 
