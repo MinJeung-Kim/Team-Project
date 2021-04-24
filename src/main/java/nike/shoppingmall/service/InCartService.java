@@ -19,6 +19,7 @@ public class InCartService {
     }
 
     public List<InCart> findInCartAll() {
+        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&");
         return inCartRepository.findAll();
     }
 }
