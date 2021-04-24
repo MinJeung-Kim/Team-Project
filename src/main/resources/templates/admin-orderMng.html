@@ -26,7 +26,13 @@
     <link rel="stylesheet" href="css/admin-board.css" />
     <link rel="stylesheet" href="css/admin-orderMng-popup.css" />
 
-    <script type="module" src="src/admin-orderMng.js"></script>
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const adInCart = '[[${inCart}]]';
+      /*]]>*/
+    </script>
+
+    <script defer src="src/admin-orderMng.js"></script>
     <script defer src="src/admin-orderMng-grid.js"></script>
     <script defer src="src/admin-orderMng-popup.js"></script>
 
@@ -77,9 +83,9 @@
             <span>주문상세정보</span
             ><span class="or-close"><i class="fas fa-times"></i></span>
           </div>
-          <div class="or-detail-info">
-            <span class="or-num">주문번호 : 20210411HDNDW</span
-            ><span class="or-date">주문일시 : 2021-04-11 22:30:22</span>
+          <div class="or-detail-info" th:each="adDOrder : ${adDOrder}">
+            <span class="or-num" th:text="${adDOrder.orderCd}"></span
+            ><span class="or-date" th:text="${adDOrder.orderDt}"></span>
           </div>
           <div class="or-wrap">
             <div class="or-title or-product">주문상품</div>
@@ -95,7 +101,7 @@
               />
               <ul class="or-content-option">
                 <li>
-                  <span class="or-content-title">나이키 에어맥스 GENOME</span>
+                  <span class="or-content-title"></span>
                 </li>
                 <li>
                   <span class="or-content-style">스타일 : CW1648-004</span>
@@ -217,35 +223,6 @@
         <!-- ========== CONTENTS ========== -->
         <div class="admin-right">
           <span class="admin-content-title adminboard_tit">주문관리</span>
-          <!-- <div class="order-search">
-            <div class="order-items f-title">주문번호</div>
-            <div class="order-items f-title">기간</div>
-            <div class="order-items f-title">상품코드/명</div>
-            <div class="order-items f-title">금액조건</div>
-            <div class="order-items order-num">
-              <input type="text" />
-            </div>
-            <div class="order-items">
-              <select name="" id="">
-                <option value="">결제일</option>
-                <option value="">발송일</option>
-                <option value="">주문완료일</option>
-              </select>
-              <input class="order-calender date-start" type="date" required />
-              ~
-              <input class="order-calender date-end" type="date" required />
-              <a class="day-btn day-today">오늘</a
-              ><a class="day-btn day-three">7일</a
-              ><a class="day-btn day-month">1개월</a>
-            </div>
-            <div class="order-items order-num">
-              <input type="text" />
-            </div>
-            <div class="order-items">
-              <div id="slider"></div>
-              <div id="slider-value"></div>
-            </div>
-          </div> -->
           <div class="order-search">
             <div class="or-search or-pay-title">주문번호</div>
             <div class="or-pay or-content order-num"><input type="text" /></div>

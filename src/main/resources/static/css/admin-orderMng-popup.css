@@ -42,6 +42,14 @@
   padding-right: 20px;
 }
 
+.or-num::before {
+  content: '주문번호 : ';
+}
+
+.or-date::before {
+  content: '주문일시 : ';
+}
+
 .or-wrap {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
