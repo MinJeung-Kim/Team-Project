@@ -39,6 +39,11 @@ public class JdbcCustomerRepository implements CustomerRepository {
   public int deleteCustomer(String id) {
     int result = jdbcTemplate.update("DELETE FROM user where userId=?", id);
     return result;
+
+  @Override
+  public int join(Customer customer) {
+      int result = jdbcTemplate.update("INSERT INTO user (userNm,userId,password,tel) VALUES (?,?,?,?)", customer.getUserNm(),customer.getUserId(),customer.getPassword(),customer.getTel());
+      return result;
   }
 
   private RowMapper<Customer> CustomerRowMapper() {

@@ -26,4 +26,8 @@ public class ADBoardService {
     public Optional<ADBoard> findById(int boardNum) {
         return adBoardRepository.findById(boardNum);
     }
+
+    public int insertNotice(String subject, String content, String passWd){
+        return adBoardRepository.insertNotice(subject, content, passWd);
+    }
 }

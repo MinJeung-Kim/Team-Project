@@ -26,7 +26,7 @@ span {
   position: relative;
 }
 
-.section .inner {
+.inner {
   position: relative;
   max-width: 1808px;
   margin: 0 auto;
@@ -50,7 +50,7 @@ span {
 }
 
 .on {
-  display: block;
+  display: block !important;
 }
 
 .off {

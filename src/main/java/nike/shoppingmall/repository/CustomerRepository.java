@@ -10,5 +10,5 @@ public interface CustomerRepository {
   Optional<Customer> findById(String userId);
   int insertCustomer(Customer customer);
   int deleteCustomer(String id);
-  
+  int join(Customer customer);
 }

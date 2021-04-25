@@ -28,6 +28,7 @@
       integrity="sha512-GfBcf4DnNHwnnhpzrx2q6r+5WT8ZaAHjv6VjAdUnyo/3+pNljzp78wKwgzOE5+T+wkXcD/AtneDBbIUCuZazyg=="
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/wnumb@1.2.0/wNumb.js" crossorigin="anonymous"></script>
 
     <link
     href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
@@ -119,11 +120,10 @@
                 </div>
                 <div class="item itemL">가격 정보</div>
                 <div class="item">
-                  <!-- 슬라이더 -->
-                  <div class="order-items">
-                    <div id="slider-non-linear-step"></div>
-                    <div id="slider-non-linear-step-value'"></div>
-                  </div>
+    
+                  <div id="slider"></div>
+                  <div id="slider-value"></div>
+                  
                 </div>
                 <div class="item itemL">상품 등록기간</div>
                 <div class="item">
@@ -136,11 +136,13 @@
                   <button type="button" class="day" id="bt4">3개월</button>
                   <button type="button" class="day" id="bt5">6개월</button>
                 </div>
+                <div></div>
+                <div class="top-search">
+                  <input type="reset" class="reset-button" ></button>
+                  <input type="submit" class="search-button" ></button>
+                </div>
               </form>
-              <div class="top-search">
-                <button type="reset" class="reset-button" >초기화</button>
-                <button type="submit" class="search-button" >검색</button>
-              </div>
+              
               <div class="prd-count-wrap">
                 <div class="prdTotal">[ 검색결과 상품 0개 / 총 100개 ]</div>
                 <select name="searchLimit" class="searchLimit">

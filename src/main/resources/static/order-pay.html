@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주문결제</title>
+
+    <!-- CSS 초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+
+    <!-- 경량화된 웹 폰트 사용(구글 폰트 => https://fonts.google.com/) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/order-pay.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+      $(function () {
+        $('#header').load('comm-header.html');
+        $('#footer').load('comm-footer.html');
+      });
+    </script>
+  </head>
+  <body>
+    <div class="body__container">
+      <div id="header"></div>
+      <!-- ========== CONTENTS ========== -->
+      <div class="inner clearfix">
+        <span class="pay-title">주문결제</span>
+        <section class="section contents">
+          <div class="order-pay">
+            <div class="or-cm">
+              <span class="or-cm-title">주문고객</span>
+              <span class="cm-nm">김민정</span
+              ><span class="cm-tel">010-1234-5678</span
+              ><span class="cm-email">focso@abc.com</span>
+            </div>
+            <div class="or-cm">
+              <span class="or-cm-title">배송지 정보</span>
+              <div class="or-addr">
+                <span class="or-befor">이전 주소</span
+                ><span class="or-after">새로 입력</span>
+              </div>
+              <div class="send-info">
+                <div class="send-cm-info">
+                  <span class="cm-nm">min jeung kim</span
+                  ><span class="cm-tel"
+                    >경기도 안양시 동안구 동편로20번길 9 제시카타워</span
+                  ><span class="cm-tel">010-2543-6124</span>
+                </div>
+                <div class="send-list"><span>배송지 목록</span></div>
+              </div>
+              <select name="" id="send-memo-form">
+                <option value="1" selected>배송 메모를 선택해주세요.</option>
+                <option value="2">배송 시 연락 부탁드립니다.</option>
+                <option value="3">빠른 배송 부탁드립니다.</option>
+                <option value="4">직접입력</option>
+              </select>
+              <input
+                type="text"
+                class="send-memo"
+                placeholder="배송메모를 입력하여 주십시오."
+              />
+            </div>
+            <div class="or-cm">
+              <span class="or-cm-title">배송방식 선택</span>
+              <span class="basic-send"
+                ><i class="fas fa-check-circle"></i>일반배송 : 배송비 무료</span
+              >
+              <ul class="send-method">
+                <li>· 배송지역 : 전국 (일부 도서산간 지역 제외)</li>
+                <li>· 배송기간 : 결제 후 3일 이내 (토요일, 공휴일 제외)</li>
+                <li>
+                  · 배송안내 : 상품의 출고지 또는 물류센터 보관장소에 따라 분리
+                  배송
+                </li>
+              </ul>
+              <button class="go-pay">결제하기</button>
+            </div>
+          </div>
+          <div class="info-pay">
+            <div class="order-price">
+              <div class="order-price-title">
+                <p>주문예정금액</p>
+              </div>
+              <ul class="order-price-info">
+                <li>
+                  <span>상품 금액</span
+                  ><span class="pd-price mini-price won"></span>
+                </li>
+                <li>
+                  <span>예상 배송비</span
+                  ><span class="send-price won">2,500</span>
+                </li>
+                <li>
+                  <span>상품 할인 금액</span><span class="orange">0 원</span>
+                </li>
+                <li>
+                  <span>주문 할인 금액</span><span class="orange">0 원</span>
+                </li>
+                <li class="order-total-price">
+                  <span>총 결제 예정 금액</span
+                  ><span class="tot-price orange won"></span>
+                </li>
+                <a href="order-pay.html" class="order-btn">주문하기</a>
+              </ul>
+              <form class="promo-box" action="">
+                <input
+                  class="promo"
+                  type="text"
+                  placeholder="프로모 코드 입력"
+                />
+                <button class="promo-btn">적용</button>
+              </form>
+              <span class="promo-title">
+                장기간 장바구니에 보관하신 상품은 시간이 지남에 따라 가격과
+                혜택이 변동 될 수 있으며, 최대 30일동안 보관됩니다.
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

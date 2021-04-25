@@ -66,9 +66,9 @@
             <span class="join_h-txt">OR</span>
           </div>
           <div class="uk-grid">
-            <form action="#" method="POST">
+            <form action="/join" method="POST">
               <div class="email">
-                <input type="email" name="id" class="join_input" id="join_id" placeholder="사용하실 ID를 입력해주세요.(수신 가능 E-mail)" required />
+                <input type="email" name="userId" class="join_input" id="join_id" placeholder="사용하실 ID를 입력해주세요.(수신 가능 E-mail)" required />
                 <span class="check" id="checkId"></span>
               </div>
               <div class="password">
@@ -76,18 +76,18 @@
                 <div class="check" id="checkPasswd"></div>
               </div>
               <div class="repass">
-                <input type="password" name="repass" class="join_input" id="join_repass" placeholder="패스워드를 다시 입력해 주세요." required />
+                <input type="password" class="join_input" id="join_repass" placeholder="패스워드를 다시 입력해 주세요." required />
                 <div class="check" id="checkRepass"></div>
               </div>
               <div class="name">
-                <input type="text" name="name" class="join_input" id="join_name" placeholder="이름을 입력해 주세요." required />
+                <input type="text" name="userNm" class="join_input" id="join_name" placeholder="이름을 입력해 주세요." required />
                 <div class="check" id="checkName"></div>
               </div>
               <div class="phone">
-                <input type="text" name="phone" class="join_input" id="join_phone" placeholder="휴대폰 번호'-'표 없이 입력해 주세요." required />
+                <input type="text" name="tel" class="join_input" id="join_phone" placeholder="휴대폰 번호'-'표 없이 입력해 주세요." required />
                 <div class="check" id="checkPhone"></div>
               </div>
-            </form>
+            
             <!-- 이용약관 -->
             <div class="join_agree">
               <div class="join_agree-top">
@@ -345,6 +345,7 @@
           <div class="join-foot">
             <button class="join_button" type="submit">회원가입하기 (만 14세 이상)</button>
           </div>
+        </form>
         </div>
       </div>
 

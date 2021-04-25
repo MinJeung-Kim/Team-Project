@@ -49,6 +49,7 @@ public class CustomerController {
     return "redirect:/customer";
   }
 
+
   @GetMapping("/delete/{id}")
   @ResponseBody
   public String deleteCustomer(@PathVariable String id) {
@@ -56,4 +57,11 @@ public class CustomerController {
     System.out.println("id="+id);
     return "redirect:/customer";
   }
+
+  @PostMapping("/join")
+  public String join(Customer customer) {
+    customerService.join(customer);
+    return "index";
+  }
+
 }

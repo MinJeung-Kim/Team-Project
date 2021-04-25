@@ -64,16 +64,17 @@ const sizeDiv = document.querySelector('.option-size-warp');
 
 //미니 장바구니에서 선택된 사이즈 옵션 -> 옵션 변경 팝업에 적용
 optionSize.forEach((op) => {
-  console.log(op.textContent);
+  // console.log(op.textContent);
   if (op.textContent === cartSize.textContent) {
     console.log(cartSize.textContent);
     op.classList.add('change-color');
   }
 });
 
-//선택에 따른 사이즈 색상 변경
+//선택에 따른 사이즈 background 색상 변경
 sizeDiv.addEventListener('click', (e) => {
   if (e.target.nodeName === 'SPAN') {
+    console.log(e.target.textContent);
     optionSize.forEach((option) => {
       e.target === option
         ? option.classList.add('change-color')
@@ -106,4 +107,40 @@ puls.addEventListener('click', () => {
   } else if (optionCount.value == 10) {
     msg.innerText = `10개 까지 구매가능 합니다.`;
   }
+});
+
+// 옵션 변경하기 버튼 클릭
+const optBtn = document.querySelector('.option-update');
+
+optBtn.addEventListener('click', () => {
+  popupBack.classList.remove('on');
+  optionPopup.classList.remove('on');
+
+  sizeDiv.addEventListener('click', (e) => {
+    //클릭된 사이즈 값 장바구니에 적용하기 !!!
+    cartSize.innerText = e.target.textContent;
+  });
+  console.log(optionCount.value);
+  cartCount.innerText = optionCount.value;
+});
+
+const sendPrice = document.querySelector('.send-price');
+const pdPrice = document.querySelector('.pd-price');
+const totPrice = document.querySelector('.tot-price');
+
+totPrice.innerText = `${sendPrice.textContent} + ${pdPrice.textContent}`;
+console.log(sendPrice.textContent);
+
+// 주문하기 버튼
+const orderBtn = document.querySelector('.order-btn');
+
+const prdPrice = document.querySelector('.mini-price');
+const prdSend = document.querySelector('.send-price');
+const prdTot = document.querySelector('.tot-price');
+
+orderBtn.addEventListener('click', (e) => {
+  // e.preventDefault();
+  localStorage.setItem('prdPrice', prdPrice.textContent);
+  localStorage.setItem('prdSend', prdSend.textContent);
+  localStorage.setItem('prdTot', prdTot.textContent);
 });

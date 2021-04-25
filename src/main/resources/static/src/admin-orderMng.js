@@ -11,7 +11,7 @@ const month = document.querySelector('.day-month');
 
 let date = new Date();
 let beforeMonth = getDate(-30);
-let beforeThreeDay = getDate(-3);
+let beforeThreeDay = getDate(-7);
 
 dateStart.value = beforeMonth.toISOString().substring(0, 10);
 dateEnd.value = date.toISOString().substring(0, 10); // today

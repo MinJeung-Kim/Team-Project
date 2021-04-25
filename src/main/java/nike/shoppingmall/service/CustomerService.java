@@ -36,4 +36,9 @@ public class CustomerService {
   public void deleteCustomer(String id) {
     customerRepository.deleteCustomer(id);
     }
+
+  public int join(Customer customer) {
+    return customerRepository.join(customer);
+  }
+
 }
