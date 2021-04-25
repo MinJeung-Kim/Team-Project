@@ -43,8 +43,15 @@ public class JdbcCustomerRepository implements CustomerRepository {
 
   @Override
   public int join(Customer customer) {
-      int result = jdbcTemplate.update("INSERT INTO user (userNm,userId,password,tel) VALUES (?,?,?,?)", customer.getUserNm(),customer.getUserId(),customer.getPassword(),customer.getTel());
+      int result = jdbcTemplate.update("INSERT INTO user userNm,userId,password,tel) VALUES (?,?,?,?)", customer.getUserNm(),customer.getUserId(),customer.getPassword(),customer.getTel());
       return result;
+  }
+
+  public int updateCustomer(Customer customer) {
+    int result = jdbcTemplate.update("UPDATE user SET userNm=?,password=?,tel=?,gender=?,birth=?,address=?,insDt=?,uptDt=?,memo=? WHERE userId=?"
+    ,customer.getUserNm(),customer.getPassword(),customer.getTel(),customer.getGender(),customer.getBirth()
+    ,customer.getAddress(),customer.getInsDt(),customer.getUptDt(),customer.getMemo(),customer.getUserId());
+    return result;
   }
 
   private RowMapper<Customer> CustomerRowMapper() {

@@ -11,4 +11,5 @@ public interface CustomerRepository {
   int insertCustomer(Customer customer);
   int deleteCustomer(String id);
   int join(Customer customer);
+  int updateCustomer(Customer customer);
 }

@@ -41,4 +41,9 @@ public class CustomerService {
     return customerRepository.join(customer);
   }
 
+  public int updateCustomer(Customer customer) {
+    return customerRepository.updateCustomer(customer);
+  }
+
+
 }
