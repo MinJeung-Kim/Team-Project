@@ -1,4 +1,5 @@
  'use strict';
+let test = customer.replace(/\r\n/g, '\\r\\n');
  new gridjs.Grid({
   columns: [
     {
@@ -7,13 +8,6 @@
       ' style="margin-left:-50px;margin-top:-5px;position:absolute; name="chk" id="inputA">'),
       formatter: (cell,row) => gridjs.html(
         `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk" value=${row.cells[4].data}>`),
-      // attributes: (cell, row) => {
-      //     if (cell, row) { 
-      //       return {
-      //         'onClick': () => deleteCheck(row.cells[4].data),
-      //       }
-      //     }
-      // },
       width: '10px',
       sort: false,
       plugin: {
@@ -84,5 +78,5 @@
       'text-align': 'center'
     }
   },
-  data: JSON.parse(customer).map(({listNum, userNm, gradeCd, userId, tel, gender, statusCd}) => [listNum, userNm, gradeCd, userId, tel, gender, statusCd]),
+  data: JSON.parse(test).map(({listNum, userNm, gradeCd, userId, tel, gender, statusCd}) => [listNum, userNm, gradeCd, userId, tel, gender, statusCd]),
 }).render(document.getElementById("wrapper"));

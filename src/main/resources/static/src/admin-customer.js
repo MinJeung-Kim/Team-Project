@@ -47,6 +47,7 @@
                 status.classList.remove('on');
             })
             csRegister.textContent = "고객 등록";
+            frm.userId.readOnly = false;
             resetContents();
         } else if(test == "update") {
             const res = await fetch(`/customer/${userId}`)
@@ -62,11 +63,6 @@
             }
             frm.birth.value = customer.birth;
             frm.address.value = customer.address;
-            // frm.grade.options.forEach((grade,i) => {
-            //     if(grade == customer.grade) grade.selected = true;
-            // })
-            //frm.grade.setAttribute('value',customer.gradeCd);
-            // frm.status.value = customer.statusCd;
             console.log(customer.insDt)
             frm.insDt.value = customer.insDt;
             frm.uptDt.value = customer.uptDt;
@@ -76,6 +72,7 @@
             status.forEach(status => {
                 status.classList.add('on');
             })
+            frm.userId.readOnly = true;
         }
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');
@@ -155,7 +152,22 @@ const delFunc = () => {
     }
     
 }
-
     //고정
     const delBtn = document.querySelector('.deleteBtn');
     delBtn.addEventListener('click',delFunc);
+
+//수정
+
+const uptFunc = () => {
+    
+    if(confirm('수정하시겠습니까?')) {
+        frm.action = "/customer/"+frm.userId.value;
+        //console.log(frm.userId.value)
+        frm.submit();
+    } else {
+        return false;
+    }
+}
+
+const updateBtn = document.querySelector('.update');
+updateBtn.addEventListener('click', uptFunc);
