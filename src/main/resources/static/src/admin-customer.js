@@ -141,8 +141,8 @@ const delFunc = () => {
             let id = chk[i].value;
             console.log(id)
             //fetch
-            fetch('/delete/'+id, {
-                method: 'GET',
+            fetch('/customer/'+id, {
+                method: 'DELETE',
             }).then(res => {
                 if(res.ok) {
                     alert('삭제되었습니다.');
