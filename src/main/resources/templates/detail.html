@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
@@ -1914,15 +1914,15 @@
               <div class="detail-info-top">
                 <div class="">
                   <div class="detail-subtitle-left detail-subtitle-text">
-                    <span>성인공용 인조 잔디 축구화</span>
+                    <span th:text="${detail[0].subtitle}">디폴트 값</span>
                   </div>
                   <div class="detail-subtitle-right detail-price-text">
-                    <span class="won">119,000</span>
+                    <span class="won" th:text="${detail[0].price}">디폴트 값</span>
                   </div>
                 </div>
               </div>
-              <h1 class="title-wrap">
-                나이키 머큐리얼 드림 스피드 슈퍼플라이 8 아카데미 TF
+              <h1 class="title-wrap" th:text="${detail[0].name}">
+                디폴트 값
               </h1>
               <div class="prd-color-option">
                 <div class="color-list">
