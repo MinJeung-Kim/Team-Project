@@ -27,7 +27,7 @@ new gridjs.Grid({
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
-            'onClick': () => handleModal('update'),
+            'onClick': () => openClick('update'),
             'style': 'cursor: pointer',
           }
         }
