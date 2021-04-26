@@ -1,5 +1,5 @@
  'use strict';
-let test = customer.replace(/\r\n/g, '\\r\\n');
+let custom = customer.replace(/\r\n/g, '\\r\\n');
  new gridjs.Grid({
   columns: [
     {
@@ -23,7 +23,7 @@ let test = customer.replace(/\r\n/g, '\\r\\n');
     },
     { 
       name: '이름',
-      width: "60px",
+      width: "80px",
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
@@ -78,5 +78,5 @@ let test = customer.replace(/\r\n/g, '\\r\\n');
       'text-align': 'center'
     }
   },
-  data: JSON.parse(test).map(({listNum, userNm, gradeCd, userId, tel, gender, statusCd}) => [listNum, userNm, gradeCd, userId, tel, gender, statusCd]),
+  data: JSON.parse(custom).map(({listNum, userNm, gradeCd, userId, tel, gender, statusCd}) => [listNum, userNm, gradeCd, userId, tel, gender, statusCd]),
 }).render(document.getElementById("wrapper"));

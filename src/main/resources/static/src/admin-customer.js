@@ -5,7 +5,7 @@
     const ckAll = document.querySelectorAll('.ckAll');
 
     checkbox.addEventListener('click', (e) => {
-        
+        //console.log(e.target)
         if(e.target.checked) { 
             ckAll.forEach((ckbox) => {
                 ckbox.checked = true;
@@ -20,7 +20,6 @@
                 checkbox.checked = false;
             })
         })
-        
     })
      
 
@@ -128,46 +127,45 @@
     csCloseBtn.addEventListener('click', resetContents);    
 
 //삭제
-const delFunc = () => {
-    let chk = document.getElementsByName('chk');
-    let chk_lenth = document.getElementsByName('chk').length;
-    //console.log(chk_lenth)
-    for(let i = 0; i < chk_lenth; i++) {
-        if(chk[i].checked == true) {
-            // console.log(chk[i].value)
-            let id = chk[i].value;
-            console.log(id)
-            //fetch
-            fetch('/customer/'+id, {
-                method: 'DELETE',
-            }).then(res => {
-                if(res.ok) {
-                    alert('삭제되었습니다.');
-                    location.href="/customer"
-                } else {
-                    alert('실패..')
-                }
-            })
+
+    const delFunc = () => {
+        let chk = document.getElementsByName('chk');
+        let chk_lenth = document.getElementsByName('chk').length;
+        //console.log(chk_lenth)
+        for(let i = 0; i < chk_lenth; i++) {
+            if(chk[i].checked == true) {
+                // console.log(chk[i].value)
+                let id = chk[i].value;
+                console.log(id)
+                //fetch
+                fetch('/customer/'+id, {
+                    method: 'DELETE',
+                }).then(res => {
+                    if(res.ok) {
+                        alert('삭제되었습니다.');
+                        location.href="/customer"
+                    } else {
+                        alert('실패..')
+                    }
+                })
+            }
         }
     }
-    
-}
     //고정
     const delBtn = document.querySelector('.deleteBtn');
     delBtn.addEventListener('click',delFunc);
 
 //수정
 
-const uptFunc = () => {
-    
-    if(confirm('수정하시겠습니까?')) {
-        frm.action = "/customer/"+frm.userId.value;
-        //console.log(frm.userId.value)
-        frm.submit();
-    } else {
-        return false;
+    const uptFunc = () => {
+        if(confirm('수정하시겠습니까?')) {
+            frm.action = "/customer/"+frm.userId.value;
+            //console.log(frm.userId.value)
+            frm.submit();
+        } else {
+            return false;
+        }
     }
-}
 
-const updateBtn = document.querySelector('.update');
-updateBtn.addEventListener('click', uptFunc);
+    const updateBtn = document.querySelector('.update');
+    updateBtn.addEventListener('click', uptFunc);
