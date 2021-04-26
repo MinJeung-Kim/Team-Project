@@ -43,7 +43,7 @@ public class JdbcCustomerRepository implements CustomerRepository {
 
   @Override
   public int join(Customer customer) {
-      int result = jdbcTemplate.update("INSERT INTO user userNm,userId,password,tel) VALUES (?,?,?,?)", customer.getUserNm(),customer.getUserId(),customer.getPassword(),customer.getTel());
+      int result = jdbcTemplate.update("INSERT INTO user (userNm,userId,password,tel) VALUES (?,?,?,?)", customer.getUserNm(),customer.getUserId(),customer.getPassword(),customer.getTel());
       return result;
   }
 
