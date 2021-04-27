@@ -4,18 +4,23 @@ const prdRegister=document.querySelector('.prd-register');
 const prdModalback=document.querySelector('.prd-register-back');
 const prdModal=document.querySelector('.prd-register-modal');
 const rgText=document.querySelector('.prRegister');
-console.log(prdRegister);
+const modalRgBt=document.querySelector('.rgBtn');
+const modalUpBt=document.querySelector('.upBtn');
 
 function openClick(test) {
     
     if(test=='register') {
         prdModalback.classList.add('open');
         prdModal.classList.add('open');
+        modalRgBt.classList.add('stage');
+        modalUpBt.classList.remove('stage1');
     }
     else if (test=='update') {
         prdModalback.classList.add('open');
         prdModal.classList.add('open');
-        rgText.textContent="상품 정보 수정";
+        rgText.textContent="상품 정보 수정"; 
+        modalRgBt.classList.remove('stage');
+        modalUpBt.classList.add('stage1');      
     }
 
 }

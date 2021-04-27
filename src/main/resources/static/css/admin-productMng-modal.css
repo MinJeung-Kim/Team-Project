@@ -181,11 +181,33 @@
 
 }
 
-.rgBtn {
-    position: relative;
-    margin-bottom: 15px;
+.prdModal-update {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 15px;
+    float: right;
+} 
+
+.rgBtn, .upBtn {
+    display: none;
 }
 
+.rgBtn.stage {
+    display: inline;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.upBtn.stage1 {
+    display: inline;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
 .prdsummary{
     width:600px; height:40px; 
