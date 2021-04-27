@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import nike.shoppingmall.domain.ADOrder;
-import nike.shoppingmall.domain.InCart;
+import nike.shoppingmall.domain.ADOrderInfo;
 
 @Repository
 public class JdbcADOrderRepository implements ADOrderRepository {
@@ -26,8 +26,10 @@ public class JdbcADOrderRepository implements ADOrderRepository {
   }
 
   @Override
-  public Optional<InCart> findInCartAll(String userMail) {
-    List<InCart> result = jdbcTemplate.query("SELECT * FROM cart where USER_EMAIL = ?", CartRowMapper(), userMail);
+  public Optional<ADOrderInfo> findInCartAll(String userMail) {
+    List<ADOrderInfo> result = jdbcTemplate.query(
+        "SELECT A.*, (SELECT COMM_NM FROM `COMMSTATUS` WHERE COMM_VAL = A.STATUS_CD AND COMM_CD = 'USER_STATUS') AS STATUS_NM, B.PRD_NM, B.PRD_IMG, B.PRD_SIZE, B.PRD_STYLE, B.PRD_CNT, B.PRD_PRICE, B.SEND_PRICE, B.SEND_PRICE,(SELECT SEND_NUM FROM delivery WHERE ORDER_CD = A.ORDER_CD) AS SEND_NUM  FROM ordermng A INNER JOIN cart B ON A.USER_EMAIL = B.USER_EMAIL WHERE A.USER_EMAIL = ?",
+        OrderInfoRowMapper(), userMail);
 
     return result.stream().findAny();
   }
@@ -48,18 +50,26 @@ public class JdbcADOrderRepository implements ADOrderRepository {
     };
   }
 
-  private RowMapper<InCart> CartRowMapper() {
+  private RowMapper<ADOrderInfo> OrderInfoRowMapper() {
     return (rs, rowNum) -> {
-      InCart inCart = new InCart();
-      inCart.setUserEmail(rs.getString("USER_EMAIL"));
-      inCart.setPrdNm(rs.getString("PRD_NM"));
-      inCart.setPrdImg(rs.getString("PRD_IMG"));
-      inCart.setPrdSize(rs.getInt("PRD_SIZE"));
-      inCart.setPrdStyle(rs.getString("PRD_STYLE"));
-      inCart.setPrdCnt(rs.getInt("PRD_CNT"));
-      inCart.setPrdPrice(rs.getLong("PRD_PRICE"));
-      inCart.setSendPrice(rs.getInt("SEND_PRICE"));
-      return inCart;
+      ADOrderInfo aDOrderInfo = new ADOrderInfo();
+      aDOrderInfo.setOrderCd(rs.getString("ORDER_CD"));
+      aDOrderInfo.setUserEmail(rs.getString("USER_EMAIL"));
+      aDOrderInfo.setPrdCd(rs.getString("PRD_CD"));
+      aDOrderInfo.setStatusCd(rs.getInt("STATUS_CD"));
+      aDOrderInfo.setStatusNm(rs.getString("STATUS_NM"));
+      aDOrderInfo.setOrderDt(rs.getDate("ORDER_DT"));
+      aDOrderInfo.setPayDt(rs.getDate("PAY_DT"));
+      aDOrderInfo.setTotalPrice(rs.getLong("TOTAL_PRICE"));
+      aDOrderInfo.setSendPrice(rs.getInt("SEND_PRICE"));
+      aDOrderInfo.setPrdNm(rs.getString("PRD_NM"));
+      aDOrderInfo.setPrdImg(rs.getString("PRD_IMG"));
+      aDOrderInfo.setPrdSize(rs.getInt("PRD_SIZE"));
+      aDOrderInfo.setPrdStyle(rs.getString("PRD_STYLE"));
+      aDOrderInfo.setPrdCnt(rs.getInt("PRD_CNT"));
+      aDOrderInfo.setPrdPrice(rs.getLong("PRD_PRICE"));
+      aDOrderInfo.setSandNum(rs.getString("SEND_NUM"));
+      return aDOrderInfo;
     };
   }
 

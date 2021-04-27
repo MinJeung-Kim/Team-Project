@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import nike.shoppingmall.domain.ADOrder;
-import nike.shoppingmall.domain.InCart;
+import nike.shoppingmall.domain.ADOrderInfo;
 import nike.shoppingmall.repository.ADOrderRepository;
 
 @Service
@@ -23,7 +23,7 @@ public class ADOrderService {
     return adDOrderRepository.findAll();
   }
 
-  public Optional<InCart> findInCartAll(String userMail) {
+  public Optional<ADOrderInfo> findInCartAll(String userMail) {
     return adDOrderRepository.findInCartAll(userMail);
   }
 }

@@ -79,6 +79,23 @@
   font-weight: bold;
 }
 
+.or-content-style::before {
+  content: '스타일 : ';
+}
+
+.or-content-size::before {
+  content: '사이즈 : ';
+}
+
+.or-content-count::before {
+  content: '수량 : ';
+}
+
+.content-price::after,
+.content-send::after {
+  content: ' 원';
+}
+
 .or-section-title {
   font-size: 20px;
   font-weight: bold;
