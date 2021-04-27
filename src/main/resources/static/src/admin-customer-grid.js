@@ -6,7 +6,14 @@
       name: gridjs.html('<input type="checkbox"'+
       ' style="margin-left:-50px;margin-top:-5px;position:absolute; name="chk" id="inputA">'),
       formatter: (cell,row) => gridjs.html(
-        `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk">`),
+        `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk" value=${row.cells[4].data}>`),
+      // attributes: (cell, row) => {
+      //     if (cell, row) { 
+      //       return {
+      //         'onClick': () => deleteCheck(row.cells[4].data),
+      //       }
+      //     }
+      // },
       width: '10px',
       sort: false,
       plugin: {
@@ -27,7 +34,6 @@
         if (cell, row) { 
           return {
             'onClick': () => handleModal('update',row.cells[4].data),
-            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
           }
         }

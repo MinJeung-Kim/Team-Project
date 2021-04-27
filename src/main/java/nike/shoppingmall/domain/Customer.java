@@ -126,12 +126,15 @@ public class Customer {
         this.uptDt = uptDt;
     }
    
+    // @Override
+    // public String toString() {
+    //     return getUserNm()+"/"+getAddress()+"/"+getGender()+"/"+getMemo()+"/"+getPassword()+"/"+getTel()+"/"+getUserId()+"/"+getBirth()+"/"+getInsDt()+"/"+getUptDt();
+    // }
+
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return getUserNm()+"/"+getAddress()+"/"+getGender()+"/"+getMemo()+"/"+getPassword()+"/"+getTel()+"/"+getUserId()+"/"+getBirth()+"/"+getInsDt()+"/"+getUptDt();
+        return getUserId();
     }
-
 
 
 

@@ -2,11 +2,11 @@
 // 회원 목록 테이블 checkbox 전체 선택
 
     const checkbox = document.querySelector('#inputA');
+    const ckAll = document.querySelectorAll('.ckAll');
 
     checkbox.addEventListener('click', (e) => {
-        let ckAll = document.querySelectorAll('.ckAll');
+        
         if(e.target.checked) { 
-            console.log('되나?');
             ckAll.forEach((ckbox) => {
                 ckbox.checked = true;
             })
@@ -68,9 +68,8 @@
             //frm.grade.setAttribute('value',customer.gradeCd);
             // frm.status.value = customer.statusCd;
             console.log(customer.insDt)
-            joinDate.textContent = customer.insDt;
-            //frm.uptDt.value = customer.uptDt;
-            updateDate.textContent = customer.uptDt;
+            frm.insDt.value = customer.insDt;
+            frm.uptDt.value = customer.uptDt;
             frm.memo.value = customer.memo;
             reAndSub.classList.remove('stage');
             updateWrap.classList.add('stage1');
@@ -131,31 +130,32 @@
     }
     csCloseBtn.addEventListener('click', resetContents);    
 
-//등록
-
-    // function regCheck() {
-    //     if(confirm("등록하시겠습니까?") == false) return false;
-    // }
-
-//수정
-    // const update = document.querySelector('.update');
-    // function updateCheck() {
-    //     if (confirm("정말 수정하시겠습니까?") == true){//확인
-    //         document.registerForm.submit();
-    //     }else{//취소
-    //         return false;
-    //     }
-    // }
-    // update.addEventListener('click', updateCheck);
-
 //삭제
-
-    const csdelete = document.querySelector('.deleteBtn');
-    function deleteCheck() {
-        if (confirm("정말 삭제하시겠습니까?") == true){//확인
-            document.registerForm.submit();
-        }else{//취소
-            return false;
+const delFunc = () => {
+    let chk = document.getElementsByName('chk');
+    let chk_lenth = document.getElementsByName('chk').length;
+    //console.log(chk_lenth)
+    for(let i = 0; i < chk_lenth; i++) {
+        if(chk[i].checked == true) {
+            // console.log(chk[i].value)
+            let id = chk[i].value;
+            console.log(id)
+            //fetch
+            fetch('/delete/'+id, {
+                method: 'GET',
+            }).then(res => {
+                if(res.ok) {
+                    alert('삭제되었습니다.');
+                    location.href="/customer"
+                } else {
+                    alert('실패..')
+                }
+            })
         }
     }
-    csdelete.addEventListener('click', deleteCheck);
+    
+}
+
+    //고정
+    const delBtn = document.querySelector('.deleteBtn');
+    delBtn.addEventListener('click',delFunc);

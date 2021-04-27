@@ -43,9 +43,25 @@ public class CustomerController {
 
   @PostMapping("/register")
   public String insertCustomer(Model model,Customer customer) {
-    System.out.println(customer.toString());
+    //System.out.println(customer.toString());
     int cus = customerService.insertCustomer(customer);
     model.addAttribute("customer", cus);
     return "redirect:/customer";
   }
+
+
+  @GetMapping("/delete/{id}")
+  @ResponseBody
+  public String deleteCustomer(@PathVariable String id) {
+    customerService.deleteCustomer(id);
+    System.out.println("id="+id);
+    return "redirect:/customer";
+  }
+
+  @PostMapping("/join")
+  public String join(Customer customer) {
+    customerService.join(customer);
+    return "index";
+  }
+
 }
