@@ -39,6 +39,7 @@ public class JdbcCustomerRepository implements CustomerRepository {
   public int deleteCustomer(String id) {
     int result = jdbcTemplate.update("DELETE FROM user where userId=?", id);
     return result;
+  }
 
   @Override
   public int join(Customer customer) {
