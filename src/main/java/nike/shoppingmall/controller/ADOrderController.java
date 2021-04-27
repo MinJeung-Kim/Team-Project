@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import nike.shoppingmall.domain.ADOrder;
-import nike.shoppingmall.domain.InCart;
+import nike.shoppingmall.domain.ADOrderInfo;
 import nike.shoppingmall.service.ADOrderService;
 
 @Controller
@@ -35,11 +35,11 @@ public class ADOrderController {
     return "admin-orderMng";
   }
 
-  @GetMapping("/inCart/{email}")
+  @GetMapping("/aDOrderInfo/{email}")
   @ResponseBody
-  public Optional<InCart> cartInfo(@PathVariable("email") String userMail) {
-    Optional<InCart> inCart = adDOrderService.findInCartAll(userMail);
-    System.out.println(inCart);
-    return inCart;
+  public Optional<ADOrderInfo> cartInfo(@PathVariable("email") String userMail) {
+    Optional<ADOrderInfo> aDOrderInfo = adDOrderService.findInCartAll(userMail);
+    System.out.println(aDOrderInfo);
+    return aDOrderInfo;
   }
 }
