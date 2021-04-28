@@ -138,8 +138,8 @@
                 </div>
                 <div></div>
                 <div class="top-search">
-                  <input type="reset" class="reset-button" ></button>
-                  <input type="submit" class="search-button" ></button>
+                  <input type="reset" class="reset-button" >
+                  <input type="submit" class="search-button" value="검색">
                 </div>
               </form>
               
@@ -180,71 +180,74 @@
                 </div>
                 <div class="prd-item">
                   <span class="title">상품 서브타이틀</span>
-                  <select nmae="grade" class="wr prdsubtitle">
-                    <option value="family" selected>선택</option>
-                    <option value="silver">공용</option>
-                    <option value="family">남성</option>
-                    <option value="silver">여성</option>
-                    <option value="silver">주니어</option>
+                  <select name="prdtype" class="wr prdtype">
+                    <option value="option" selected>선택</option>
+                    <option value="both">신상품</option>
+                    <option value="man">남성</option>
+                    <option value="woman">여성</option>
+                    <option value="junior">주니어</option>
                     <input type="text" name="name" class="prdsub">
                   </select>
                 </div>
                 <div class="prd-item">
                   <span class="title">상품 종류</span>
-                  <select nmae="grade" class="wr prdtype">
-                    <option value="family" selected>선택</option>
-                    <option value="silver">TOP</option>
-                    <option value="silver">신발</option>
-                    <option value="gold">BOTTOM</option>
-                    <option value="gold">CAP</option>
+                  <select name="prdtype" class="wr prdtype">
+                    <option value="option" selected>선택</option>
+                    <option value="top">TOP</option>
+                    <option value="bottom">BOTTOM</option>
+                    <option value="shoes">신발</option>
+                    <option value="cap">CAP</option>
                   </select>
                 </div>
-                <div class="prd-item">
-                  <span class="title">상품 사이즈</span>
-                  <select nmae="size" class="wr prdcsize">
-                    <option value="family" selected>선택</option>
-                    <option value="silver">S</option>
-                    <option value="silver">M</option>
-                    <option value="gold">L</option>
-                    <option value="gold">XL</option>
+
+                <div class="prd-item" id = "pro_size">
+                  <span class="title">상품 사이즈/색상 </span>
+                  <select name="size_sml" class="wr prdcsize">
+                    <option value="option" selected>선택</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
                   </select>
-                  <select nmae="size" class="wr prdsesize">
-                    <option value="family" selected>선택</option>
-                    <option value="silver">230</option>
-                    <option value="silver">235</option>
-                    <option value="gold">240</option>
-                    <option value="gold">245</option>
-                    <option value="gold">250</option>
-                    <option value="gold">255</option>
-                    <option value="gold">260</option>
-                    <option value="gold">265</option>
-                    <option value="gold">270</option>
-                    <option value="gold">275</option>
-                    <option value="gold">280</option>
-                    <option value="gold">285</option>
-                    <option value="gold">290</option>
-                    <option value="gold">295</option>
-                    <option value="gold">300</option>
+                  <select name="size_num" class="wr prdsesize">
+                    <option value="option" selected>선택</option>
+                    <option value="230">230</option>
+                    <option value="235">235</option>
+                    <option value="240">240</option>
+                    <option value="245">245</option>
+                    <option value="250">250</option>
+                    <option value="255">255</option>
+                    <option value="260">260</option>
+                    <option value="265">265</option>
+                    <option value="270">270</option>
+                    <option value="275">275</option>
+                    <option value="280">280</option>
+                    <option value="285">285</option>
+                    <option value="290">290</option>
+                    <option value="295">295</option>
+                    <option value="300">300</option>
                   </select>
+                  <input type="text" name="name" class="wr prdcl" placeholder="색상"  oninput="handleOnInput(this)" >
+                  <input type="text" name="name" class="wr prdqty" placeholder="수량" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'>
+                  <button onclick="add_size()" type="button" class="plus">+</button>
                 </div>
+
+
                 <div class="prd-item">
                   <span class="title">상품 요약설명</span>
                   <input type="textarea" name="name" class="prdsummary">
                 </div>
                 <div class="prd-item">
                   <span class="title">등록 일자</span>
-                  <span class="rgDate"></span>
+                  <input type="text" name="name" class="rgDate">
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 가격</span>
-                  <input type="text" name="name" class="wr prdprice" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /> 원
+                  <input type="text" name="name" class="wr prdprice" onKeyup="inputNumberFormat(this)" /> 원
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 상태</span>
                   <input type="radio" name="status" value="정상"> 정상판매 
-                  <span>( 재고</span>
-                  <input type="text" name="name" class="normal" placeholder="" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
-                  <span> )</span>
                   <input type="radio" name="status" value="품절"> 품절
                 </div>
                 <div class="prd-item">
@@ -252,11 +255,13 @@
                   <label for="addfile" class="fileLabel"></label>
                   <input type="file" id="add-file" class="prd-img" multiple accept="image/*">
                 </div>
-                
+                <div class="rgBtn">
+                  <input type="submit" class="prdModal-register" value="등록"></input>
+                </div>
+                <div class="upBtn">
+                  <button type="button" class="prdModal-update">수정</button>
+                </div>
               </form>
-              <div class="rgBtn">
-                <button class="prdModal-register">등록</button>
-              </div>
               
             </div>
             
