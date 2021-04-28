@@ -11,7 +11,7 @@ public class ADProduct {
     private String prdSub; //서브타이틀
     private String prdTp;  //종류
     private String prdSm;  //요약
-    private String prdStk;  //현재고량
+    private int prdStk;  //현재고량
     private int prdPr;
     private Date insDt;
     private Date uptDt;
@@ -80,11 +80,11 @@ public class ADProduct {
         this.prdSm = prdSm;
     }
 
-    public String getPrdStk() {
+    public int getPrdStk() {
         return this.prdStk;
     }
 
-    public void setPrdStk(String prdStk) {
+    public void setPrdStk(int prdStk) {
         this.prdStk = prdStk;
     }
 
