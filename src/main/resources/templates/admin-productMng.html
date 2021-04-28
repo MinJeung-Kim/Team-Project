@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <title>나이키. Just Do It. Nike.com</title>
@@ -34,6 +34,12 @@
     href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
     rel="stylesheet"
   />
+
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const adProduct = '[[${adProduct}]]'
+      /*]]>*/
+    </script>
   
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/comm-header.css" />
@@ -172,11 +178,11 @@
               <form action="/register" method="post" name="prdRegisterForm" class="prd-container" id="prd_form">
                 <div class="prd-item">
                   <span class="title">상품 코드</span>
-                  <input type="text" name="name" class="prdcd">
+                  <input type="text" name="prdCd" class="prdcd">
                 </div>
                 <div class="prd-item">
                   <span class="title">상품 이름</span>
-                  <input type="text" name="name" class="prdnm">
+                  <input type="text" name="prdNm" class="prdnm">
                 </div>
                 <div class="prd-item">
                   <span class="title">상품 서브타이틀</span>
@@ -239,11 +245,11 @@
                 </div>
                 <div class="prd-item">
                   <span class="title">등록 일자</span>
-                  <input type="text" name="name" class="rgDate">
+                  <input type="text" name="insDt" class="rgDate">
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 가격</span>
-                  <input type="text" name="name" class="wr prdprice" onKeyup="inputNumberFormat(this)" /> 원
+                  <input type="text" name="prdPr" class="wr prdprice" onKeyup="inputNumberFormat(this)" /> 원
                 </div>
                 <div class="prd-item">
                   <span class="title">판매 상태</span>
