@@ -11,8 +11,9 @@ public class ADProduct {
     private String prdSub; //서브타이틀
     private String prdTp;  //종류
     private String prdSm;  //요약
+    private String prdImg;
     private int prdStk;  //현재고량
-    private int prdPr;
+    private int prdPr;  //가격
     private Date insDt;
     private Date uptDt;
 
@@ -78,6 +79,14 @@ public class ADProduct {
 
     public void setPrdSm(String prdSm) {
         this.prdSm = prdSm;
+    }
+
+    public String getPrdImg() {
+        return this.prdImg;
+    }
+
+    public void setPrdImg(String prdImg) {
+        this.prdImg = prdImg;
     }
 
     public int getPrdStk() {

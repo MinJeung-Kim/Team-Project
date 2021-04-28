@@ -1,7 +1,6 @@
 'use strict';
 
 new gridjs.Grid({
-  //width조정 했지만 체크박스는 그대로인 이유?
   columns: [
     
 {
@@ -27,17 +26,12 @@ new gridjs.Grid({
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
-            'onClick': () => openClick('update'),
+            'onClick': () => openClick('update',row.cells[3].data),
+            //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
           }
         }
       },
-    },
-    {
-      name: '상품이미지',
-      sort: {
-        enabled:false
-      }
     },
     {
       name: '상품명',
@@ -51,13 +45,7 @@ new gridjs.Grid({
     },
     {
       name: '현재고량',
-      width:'100px'
-    },
-    {
-      name: '상품리뷰',
-      sort: {
-        enabled:false
-      }
+      width:'130px'
     },
     {
       name: '등록날짜',
@@ -82,37 +70,8 @@ new gridjs.Grid({
       }
     },
     fixedHeader: true,
-    //이미지 넣는 방법
-    data: [
-      [
-        'A-123',
-        '이미지',
-        '나이키 와플 트레이너',
-        '100,000',
-        '100',
-        '21',
-        '2021-03-16',
-      ],
-      [
-        'B-456',
-        '이미지',
-        '나이키 에어 포스',
-        '65,000',
-        '200',
-        '5',
-        '2021-02-16',
-      ],
-      [
-        'C-456',
-        '이미지',
-        '나이키 코트 레거시',
-        '30,000',
-        '50',
-        '0',
-        '2021-03-01',
-      ],
-    ],
-  }).render(document.getElementById('wrapper'));
+    data: JSON.parse(adProduct).map(({prdCd,prdNm,prdPr,prdStk, insDt}) => [prdCd,prdNm,prdPr,prdStk,insDt]),
+  }).render(document.getElementById("wrapper"));
   
 //금액 설정 슬라이더
 var pipsSlider = document.getElementById('slider');
@@ -140,68 +99,69 @@ pipsSlider.noUiSlider.on('update', function (values) {
   nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
 });
 
-  //체크박스 전체 선택
-  const checkbox = document.querySelector('#inputA');
 
-  checkbox.addEventListener('click', (e) => {
-      let ckAll = document.querySelectorAll('.ckAll');
-      if(e.target.checked) { 
-          console.log('되나?');
-          ckAll.forEach((ckbox) => {
-              ckbox.checked = true;
-          })
-      } else {
-          ckAll.forEach((ckbox) => {
-              ckbox.checked = false;
-          })
-      }
-      ckAll.forEach((ckbox) => {
-          ckbox.addEventListener('click', () => {
-              checkbox.checked = false;
-          })
-      })
+//체크박스 전체 선택
+const checkbox = document.querySelector('#inputA');
 
-  })
+checkbox.addEventListener('click', (e) => {
+    let ckAll = document.querySelectorAll('.ckAll');
+    if(e.target.checked) { 
+        console.log('되나?');
+        ckAll.forEach((ckbox) => {
+            ckbox.checked = true;
+        })
+    } else {
+        ckAll.forEach((ckbox) => {
+            ckbox.checked = false;
+        })
+    }
+    ckAll.forEach((ckbox) => {
+        ckbox.addEventListener('click', () => {
+            checkbox.checked = false;
+        })
+    })
 
-   //사이즈 추가
-   var size_index = 1
-   function add_size(){
-   $('#pro_size').after(
-       '<div class="prd-item" id="pro_size">'
-             +'<span class="title">상품 사이즈/색상  </span>'
-             +'<select name="size_sml'+size_index+'" class="wr prdcsize">'
-               +'<option value="option" selected>선택</option>'
-               +'<option value="s">S</option>'
-               +'<option value="m">M</option>'
-               +'<option value="l">L</option>'
-               +'<option value="xl">XL</option>'
-               +'</select>'
-               +'<select name="size_num"'+size_index+' class="wr prdsesize">'
-                   +'<option value="option" selected>선택</option>'
-                   +'<option value="230">230</option>'
-                   +'<option value="235">235</option>'
-                   +'<option value="240">240</option>'
-                   +'<option value="245">245</option>'
-                   +'<option value="250">250</option>'
-                   +'<option value="255">255</option>'
-                   +'<option value="260">260</option>'
-                   +'<option value="265">265</option>'
-                   +'<option value="270">270</option>'
-                   +'<option value="275">275</option>'
-                   +'<option value="280">280</option>'
-                   +'<option value="285">285</option>'
-                   +'<option value="290">290</option>'
-                   +'<option value="295">295</option>'
-                   +'<option value="300">300</option>'
-                   +'</select>'
-                   +'<input type="text" name="name" '+size_index+' class="wr prdcl" placeholder="색상"  oninput="handleOnInput(this)" >'
-               +'<input type="text" name="name" '+size_index+' class="wr prdqty" placeholder="수량" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">'
-               +'<button onclick="add_size()" type="button" class="plus">+</button>'
-               +'<button onclick="delete_size(this)" type="button" class="minus">-</button>'
-       +'</div>'
-   );
-   size_index++;
- }
+})
+
+//사이즈 추가
+var size_index = 1
+function add_size(){
+$('#pro_size').after(
+    '<div class="prd-item" id="pro_size">'
+          +'<span class="title">상품 사이즈/색상  </span>'
+          +'<select name="size_sml'+size_index+'" class="wr prdcsize">'
+            +'<option value="option" selected>선택</option>'
+            +'<option value="s">S</option>'
+            +'<option value="m">M</option>'
+            +'<option value="l">L</option>'
+            +'<option value="xl">XL</option>'
+            +'</select>'
+            +'<select name="size_num"'+size_index+' class="wr prdsesize">'
+                +'<option value="option" selected>선택</option>'
+                +'<option value="230">230</option>'
+                +'<option value="235">235</option>'
+                +'<option value="240">240</option>'
+                +'<option value="245">245</option>'
+                +'<option value="250">250</option>'
+                +'<option value="255">255</option>'
+                +'<option value="260">260</option>'
+                +'<option value="265">265</option>'
+                +'<option value="270">270</option>'
+                +'<option value="275">275</option>'
+                +'<option value="280">280</option>'
+                +'<option value="285">285</option>'
+                +'<option value="290">290</option>'
+                +'<option value="295">295</option>'
+                +'<option value="300">300</option>'
+                +'</select>'
+                +'<input type="text" name="name" '+size_index+' class="wr prdcl" placeholder="색상"  oninput="handleOnInput(this)" >'
+            +'<input type="text" name="name" '+size_index+' class="wr prdqty" placeholder="수량" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">'
+            +'<button onclick="add_size()" type="button" class="plus">+</button>'
+            +'<button onclick="delete_size(this)" type="button" class="minus">-</button>'
+    +'</div>'
+  );
+size_index++;
+}
  function delete_size(obj){
      $(obj).parent().remove();
  }

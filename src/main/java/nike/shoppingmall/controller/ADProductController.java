@@ -23,7 +23,7 @@ public class ADProductController {
     @GetMapping("/adProduct")
     public String list(Model model) {
     List<ADProduct> adProduct = adProductService.findProductAll();
-    model.addAttribute("ADProduct", adProduct);
+    model.addAttribute("adProduct", adProduct);
     return "adProduct";
     }
 
