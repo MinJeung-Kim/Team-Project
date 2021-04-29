@@ -26,9 +26,11 @@ async function openClick(test,prdCd) {
         modalUpBt.classList.remove('stage1');
     }
     else if (test=='update') {
-        const res = await fetch('/adProduct/${prdCd}');
+        const res = await fetch('/admin-productMng/${prdCd}');
         const adProduct = await res.json();
-        form.prdCd,value=adProduct.prdCd;
+        
+        form.prdCd.value=adProduct.prdCd;
+        //console.log(adProduct.prdCd);
         form.prdNm.value=adProduct.prdNm;
         form.prdPr.value=adProduct.prdPr;
         form.insDt.value=adProduct.insDt;
