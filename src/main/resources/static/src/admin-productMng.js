@@ -26,7 +26,7 @@ new gridjs.Grid({
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
-            'onClick': () => openClick('update',row.cells[3].data),
+            'onClick': () => openClick('update',row.cells[0].data),
             //alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}" "${row.cells[2].data}" "${row.cells[3].data}" "${row.cells[4].data}"`),
             'style': 'cursor: pointer',
           }

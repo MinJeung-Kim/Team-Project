@@ -7,9 +7,11 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import nike.shoppingmall.domain.ADProduct;
 
+@Repository
 public class JdbcADProductRepository implements ADProductRepository{
     
     private final JdbcTemplate jdbcTemplate;
