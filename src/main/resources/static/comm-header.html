@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <link rel="stylesheet" href="css/comm-header.css" />
     <link rel="stylesheet" href="css/comm-footer.css" />
     <link rel="stylesheet" href="css/index-search.css" />
     <link rel="stylesheet" href="css/login.css" />
 
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      const validate = '[[${validate}]]'
+      /*]]>*/
+    </script>
+    <script defer src="src/login.js"></script>
     <script defer src="src/comm-header-menu.js"></script>
     <script src="./src/login-modal.js" type="text/javascript"></script>
     <script defer src="src/index-search.js"></script> 
@@ -325,10 +331,10 @@
                       <span class="modal_title_txt">나이키 로그인</span>
                     </div>
                     <div class="login-body">
-                      <form action="#" method="POST"></form>
+                      
                         <div class="modal_idinput">
                           <div class="check" id="chk_all"></div>
-                          <input type="text" name="id" placeholder="아이디" class="modal_input" id="input1">
+                          <input type="text" name="userId" placeholder="아이디" class="modal_input" id="input1">
                           <div class="check" id="chk_email"></div>
                         </div>
                         <div class="modal_psinput">
@@ -341,7 +347,7 @@
                         </div>
                         <a class="modal_find">아이디/비밀번호 찾기</a>
                         <button class="log-button">로그인</button>
-                      </form>
+                      
                     </div>
                     <!-- social -->
                     <div class="modal_social">
@@ -369,7 +375,7 @@
                     <div class="modal_bottom">
                       <div class="modal_join-line">
                         <span class="modal_join-txt">회원이 아니신가요?</span>
-                        <a href="#">회원가입</a>
+                        <a href="join.html">회원가입</a>
                       </div>
                       <a href="#" class="modal_nomem">비회원 주문 조회</a>
                     </div>
