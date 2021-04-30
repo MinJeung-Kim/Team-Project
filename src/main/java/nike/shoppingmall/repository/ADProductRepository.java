@@ -8,4 +8,5 @@ import nike.shoppingmall.domain.ADProduct;
 public interface ADProductRepository {
     List<ADProduct> findAll();
     Optional<ADProduct> findByCd(String prdCd);
+    int insertProduct(ADProduct adProduct);
 }

@@ -25,4 +25,9 @@ public class ADProductService {
   public Optional<ADProduct> findByCd(String prdCd) {
     return adProductRepository.findByCd(prdCd);
   }
+
+  public int insertProduct(ADProduct adProduct) {
+    return adProductRepository.insertProduct(adProduct);
+  }
+  
 }

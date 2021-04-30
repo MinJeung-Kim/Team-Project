@@ -121,4 +121,5 @@ public class ADProduct {
         this.uptDt = uptDt;
     }
    
+    
 }
