@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import nike.shoppingmall.domain.ADProduct;
@@ -35,5 +36,13 @@ public class ADProductController {
     Optional<ADProduct> adProduct = adProductService.findByCd(prdCd);
     return adProduct;
     }
+
+    @PostMapping("/register")
+    public String insertProduct(Model model,ADProduct adProduct) {
+    //System.out.println(adProduct.toString());
+    int pro = adProductService.insertProduct(adProduct);
+    model.addAttribute("adProduct", pro);
+    return "redirect:/admin-productMng";
+  }
   
 }

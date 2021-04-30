@@ -32,9 +32,17 @@ async function openClick(test,prdCd) {
         form.prdCd.value=adProduct.prdCd;
         //console.log(adProduct.prdCd);
         form.prdNm.value=adProduct.prdNm;
+        for(let i = 0; i < frm.prdCt.options.length; i++){
+            if(frm.prdCt.options[i].value == adProduct.prdCt){
+                frm.prdCt.options[i].selected = true;
+            }
+        }
+        form.prdSub.value=adProduct.prdSub;
+        form.prdTp.value=adProduct.prdTp;
+        form.prdSum.value=adProduct.prdSm;
         form.prdPr.value=adProduct.prdPr;
         form.insDt.value=adProduct.insDt;
-
+        rgDate.textContent=adProduct.insDt;
         prdModalback.classList.add('open');
         prdModal.classList.add('open');
         rgText.textContent="상품 정보 수정"; 
