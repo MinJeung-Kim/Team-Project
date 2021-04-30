@@ -5,6 +5,17 @@ public class Detail {
     private int price;
     private String name;
     private String color;
+    private String cd;
+
+
+    public String getCd() {
+        return this.cd;
+    }
+
+    public void setCd(String cd) {
+        this.cd = cd;
+    }
+
 
     public String getSubtitle() {
         return this.subtitle;

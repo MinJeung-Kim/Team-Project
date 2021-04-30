@@ -21,7 +21,7 @@ public class JdbcDetailRepository implements DetailRepository{
 
     @Override
     public List<Detail> findAll() {
-        return jdbcTemplate.query("SELECT PRD_SUBTITLE as subtitle, PRD_PRICE as price, PRD_NM as name FROM msproduct", DetailRowMapper());
+        return jdbcTemplate.query("SELECT m.PRD_CD as cd, m.PRD_SUBTITLE as subtitle, m.PRD_PRICE as price, m.PRD_NM as name, d.PRD_CL as color FROM msproduct AS m LEFT JOIN dtproduct AS d ON m.PRD_CD = d.PRD_CD", DetailRowMapper());
     }
 
     private RowMapper<Detail> DetailRowMapper() {
@@ -30,6 +30,8 @@ public class JdbcDetailRepository implements DetailRepository{
             detail.setSubtitle(rs.getString("PRD_SUBTITLE"));
             detail.setPrice(rs.getInt("PRD_PRICE"));
             detail.setName(rs.getString("PRD_NM"));
+            detail.setColor(rs.getString("PRD_Cl"));
+            detail.setCd(rs.getString("PRD_CD"));
             return detail;
         };
     }
