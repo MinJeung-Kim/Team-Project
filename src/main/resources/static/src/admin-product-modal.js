@@ -30,7 +30,7 @@ async function openClick(test,prdCd) {
         const adProduct = await res.json();
         
         form.prdCd.value=adProduct.prdCd;
-        //console.log(adProduct.prdCd);
+        console.log(adProduct.prdCd);
         form.prdNm.value=adProduct.prdNm;
         for(let i = 0; i < frm.prdCt.options.length; i++){
             if(frm.prdCt.options[i].value == adProduct.prdCt){
@@ -66,13 +66,6 @@ document.querySelector('.prd_close-button').addEventListener('click',offClick);
 //가입날짜
 const rgDate = document.querySelector('.rgDate');
 console.log(rgDate);
-
-// const today = new Date();   
-// const year = today.getFullYear(); // 년도
-// const month = today.getMonth() + 1;  // 월
-// const date = today.getDate();  // 날짜
-
-// rgDate.value=(year + '-' + month + '-' + date);
 
 const getDate = () => {
         const date = new Date();
