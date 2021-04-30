@@ -33,7 +33,7 @@ public class JdbcADProductRepository implements ADProductRepository{
 
     @Override
     public int insertProduct(ADProduct adProduct) {
-        int result = jdbcTemplate.update("INSERT INTO msproduct (PRD_CD,PRD_NM,PRD_CATEGORY,PRD_SUBTITLE,PRD_TYPE,PRD_SUMMARY,PRD_PRICE,INS_DT,UPT_DT) VALUES (?,?,?,?,?,?,?,?,?)"
+        int result = jdbcTemplate.update("INSERT INTO msproduct (PRD_CD,PRD_NM,PRD_CATEGORY,PRD_SUBTITLE,PRD_TYPE,PRD_SUMMARY,PRD_PRICE,INS_DT,UPD_DT) VALUES (?,?,?,?,?,?,?,?,?)"
         ,adProduct.getPrdCd(),adProduct.getPrdNm(),adProduct.getPrdCt(),adProduct.getPrdSub(),adProduct.getPrdTp()
     ,adProduct.getPrdSm(),adProduct.getPrdPr(),adProduct.getInsDt(),adProduct.getUptDt());
         return result;
