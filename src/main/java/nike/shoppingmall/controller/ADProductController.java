@@ -37,7 +37,7 @@ public class ADProductController {
     return adProduct;
     }
 
-    @PostMapping("/register")
+    @PostMapping("/rg")
     public String insertProduct(Model model,ADProduct adProduct) {
     //System.out.println(adProduct.toString());
     int pro = adProductService.insertProduct(adProduct);

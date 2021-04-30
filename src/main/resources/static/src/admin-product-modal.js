@@ -38,7 +38,11 @@ async function openClick(test,prdCd) {
             }
         }
         form.prdSub.value=adProduct.prdSub;
-        form.prdTp.value=adProduct.prdTp;
+        for(let i = 0; i < frm.prdTp.options.length; i++){
+            if(frm.prdTp.options[i].value == adProduct.prdTp){
+                frm.prdTp.options[i].selected = true;
+            }
+        }
         form.prdSum.value=adProduct.prdSm;
         form.prdPr.value=adProduct.prdPr;
         form.insDt.value=adProduct.insDt;

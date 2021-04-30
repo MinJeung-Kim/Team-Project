@@ -190,18 +190,18 @@ size_index++;
          event.target.value = event.target.value.replace(/[^0-9]/g, "");
  }
 
- //금액 자동 , 입력
- function inputNumberFormat(obj) {
-  obj.value = comma(uncomma(obj.value));
-}
+//  //금액 자동 , 입력
+//  function inputNumberFormat(obj) {
+//   obj.value = comma(uncomma(obj.value));
+// }
 
-function comma(str) {
-  str = String(str);
-  return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
-}
+// function comma(str) {
+//   str = String(str);
+//   return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+// }
 
-function uncomma(str) {
-  str = String(str);
-  return str.replace(/[^\d]+/g, '');
-}
+// function uncomma(str) {
+//   str = String(str);
+//   return str.replace(/[^\d]+/g, '');
+// }
 
