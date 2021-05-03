@@ -26,27 +26,30 @@ async function openClick(test,prdCd) {
         modalUpBt.classList.remove('stage1');
     }
     else if (test=='update') {
-        const res = await fetch('/admin-productMng/${prdCd}');
+        const res = await fetch(`/admin-productMng/${prdCd}`);
         const adProduct = await res.json();
         
         form.prdCd.value=adProduct.prdCd;
         console.log(adProduct.prdCd);
         form.prdNm.value=adProduct.prdNm;
-        for(let i = 0; i < frm.prdCt.options.length; i++){
-            if(frm.prdCt.options[i].value == adProduct.prdCt){
-                frm.prdCt.options[i].selected = true;
+        console.log(adProduct.prdCt);
+        for(let i = 0; i < form.prdCt.options.length; i++){
+            if(form.prdCt.options[i].value == adProduct.prdCt){
+                form.prdCt.options[i].selected = true;
+                
             }
         }
         form.prdSub.value=adProduct.prdSub;
-        for(let i = 0; i < frm.prdTp.options.length; i++){
-            if(frm.prdTp.options[i].value == adProduct.prdTp){
-                frm.prdTp.options[i].selected = true;
+        for(let i = 0; i < form.prdTp.options.length; i++){
+            if(form.prdTp.options[i].value == adProduct.prdTp){
+                form.prdTp.options[i].selected = true;
             }
         }
         form.prdSum.value=adProduct.prdSm;
         form.prdPr.value=adProduct.prdPr;
         form.insDt.value=adProduct.insDt;
         rgDate.textContent=adProduct.insDt;
+
         prdModalback.classList.add('open');
         prdModal.classList.add('open');
         rgText.textContent="상품 정보 수정"; 
