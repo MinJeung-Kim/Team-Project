@@ -39,6 +39,12 @@ public class JdbcADProductRepository implements ADProductRepository{
         return result;
     }
 
+    @Override
+    public int deleteProduct(String prdCd) {
+        int result = jdbcTemplate.update("DELETE FROM msproduct where prdCd=?", prdCd);
+        return result;
+    }
+
     private RowMapper<ADProduct> ProductRowMapper() {
         return (rs,rowNum) -> {
 

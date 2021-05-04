@@ -8,7 +8,7 @@ new gridjs.Grid({
   name: gridjs.html('<input type="checkbox"'+
   ' style="margin-left:-50px;margin-top:-5px;position:absolute; name="chk" id="inputA">'),
   formatter: (cell,row) => gridjs.html(
-    `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk">`),
+    `<input type="checkbox" class="ckAll" style="margin-left:-50px;position:absolute;" name="chk" value=${row.cells[1].data}>`),
   width: '10px',
   sort: false,
   plugin: {
@@ -103,11 +103,11 @@ pipsSlider.noUiSlider.on('update', function (values) {
 
 //체크박스 전체 선택
 const checkbox = document.querySelector('#inputA');
+const ckAll = document.querySelectorAll('.ckAll');
 
 checkbox.addEventListener('click', (e) => {
-    let ckAll = document.querySelectorAll('.ckAll');
+
     if(e.target.checked) { 
-        console.log('되나?');
         ckAll.forEach((ckbox) => {
             ckbox.checked = true;
         })
@@ -123,6 +123,36 @@ checkbox.addEventListener('click', (e) => {
     })
 
 })
+
+//삭제
+const delFunc = () => {
+  let chk = document.getElementsByName('chk');
+  let chk_lenth = document.getElementsByName('chk').length;
+  //console.log(chk_lenth)
+  for(let i = 0; i < chk_lenth; i++) {
+      if(chk[i].checked == true) {
+          // console.log(chk[i].value)
+          let prdCd = chk[i].value;
+          console.log(prdCd)
+          //fetch
+          fetch('/delete/'+prdCd, {
+              method: 'GET',
+          }).then(res => {
+              if(res.ok) {
+                  alert('삭제되었습니다.');
+                  //location.href="/admin-productMng"
+              } else {
+                  alert('실패')
+              }
+          })
+      }
+  }
+  
+}
+
+//삭제버튼
+const delBtn = document.querySelector('.prd-delete');
+delBtn.addEventListener('click',delFunc);
 
 //사이즈 추가
 var size_index = 1
