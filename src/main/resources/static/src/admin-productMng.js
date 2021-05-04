@@ -135,12 +135,12 @@ const delFunc = () => {
           let prdCd = chk[i].value;
           console.log(prdCd)
           //fetch
-          fetch('/delete/'+prdCd, {
+          fetch('/admin-productMng/'+prdCd, {
               method: 'GET',
           }).then(res => {
               if(res.ok) {
                   alert('삭제되었습니다.');
-                  //location.href="/admin-productMng"
+                  location.href="/admin-productMng"
               } else {
                   alert('실패')
               }
@@ -153,6 +153,7 @@ const delFunc = () => {
 //삭제버튼
 const delBtn = document.querySelector('.prd-delete');
 delBtn.addEventListener('click',delFunc);
+
 
 //사이즈 추가
 var size_index = 1

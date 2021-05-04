@@ -35,5 +35,9 @@ public class ADProductService {
   public void deleteProduct(String prdCd) {
     adProductRepository.deleteProduct(prdCd);
   }
+
+  public int updateProduct(ADProduct adProduct) {
+    return adProductRepository.updateProduct(adProduct);
+  }
   
 }

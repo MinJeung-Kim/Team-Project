@@ -10,4 +10,5 @@ public interface ADProductRepository {
     Optional<ADProduct> findByCd(String prdCd);
     int insertProduct(ADProduct adProduct);
     int deleteProduct(String prdCd);
+    int updateProduct(ADProduct adProduct);
 }
