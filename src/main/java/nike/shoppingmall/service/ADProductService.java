@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import nike.shoppingmall.domain.ADProduct;
 import nike.shoppingmall.repository.ADProductRepository;
@@ -28,6 +29,11 @@ public class ADProductService {
 
   public int insertProduct(ADProduct adProduct) {
     return adProductRepository.insertProduct(adProduct);
+  }
+
+  @Transactional
+  public void deleteProduct(String prdCd) {
+    adProductRepository.deleteProduct(prdCd);
   }
   
 }

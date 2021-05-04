@@ -44,5 +44,12 @@ public class ADProductController {
     model.addAttribute("adProduct", pro);
     return "redirect:/admin-productMng";
   }
+    @GetMapping("/delete/{prdCd}")
+    @ResponseBody
+    public String deleteProduct(@PathVariable String prdCd) {
+      adProductService.deleteProduct(prdCd);
+      System.out.println("prdCd="+prdCd);
+      return "redirect:/admin-productMng";
+    }
   
 }

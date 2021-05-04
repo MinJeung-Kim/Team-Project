@@ -3,7 +3,7 @@
 const prdRegister=document.querySelector('.prd-register');
 const prdModalback=document.querySelector('.prd-register-back');
 const prdModal=document.querySelector('.prd-register-modal');
-const rgBt=document.querySelector('.prd-rgs-button');
+const rgBt=document.querySelector('.prd-register');
 const rgText=document.querySelector('.prRegister');
 const modalRgBt=document.querySelector('.rgBtn');
 const modalUpBt=document.querySelector('.upBtn'); //div
