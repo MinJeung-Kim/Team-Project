@@ -94,7 +94,7 @@ noUiSlider.create(pipsSlider, {
 });
 
 //금액 설정 슬라이더
-var nonLinearStepSliderValueElement = document.getElementById('slider-value');
+var nonLinearStepSliderValueElement = document.getElementById('slider-value2');
 
 pipsSlider.noUiSlider.on('update', function (values) {
   nonLinearStepSliderValueElement.innerHTML = values.join(' - ');

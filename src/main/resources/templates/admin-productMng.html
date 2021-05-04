@@ -97,7 +97,7 @@
           </li>
           <li>
             <span class="side-img"><i class="fas fa-gift"></i></span
-            ><a href="admin-productMng.html">상품관리</a>
+            ><a href="">상품관리</a>
           </li>
           <li>
             <span class="side-img"><i class="fas fa-shopping-cart"></i></span
@@ -112,179 +112,166 @@
             ><a href="">게시판관리</a>
           </li>
         </ul>
-       <!-- ========== CONTENTS ========== -->
-       
-        <!-- <section class="section dashboard">
-          <div class="section-category">
-            <div class="section-title">
-              <a href="#"><span class="prd-title-txt">상품관리<span></a>
-            </div>
+        <!-- ======= RIGHT CONTENT ======= -->
+        <div class="right-content-wrap">
+          <div class="prdList-title">
+              <div class="prd-txt">상품 관리</div>
+              <div class="prd-tit-hr"></div>
           </div>
-          <div class="dashboard-main"> -->
-            <!-- <div id="admin-menu"></div> -->
-              <!-- ======= RIGHT CONTENT ======= -->
-              <div class="right-content-wrap">
-                <div class="prdList-title">
-                    <div class="prd-txt">상품 목록</div>
-                    <div class="prd-tit-hr"></div>
-                </div>
-                <form action="#" class="adminproduct_filter">
-                  <div class="item itemL">상품 정보</div>
-                  <div class="item">
-                    <select name="filter" class="prd_filter">
-                      <option value="product_name" selected>상품명</option>
-                      <option value="product_cd">상품코드</option>
-                    </select>
-                    <input type="text" class="search-word">
-                  </div>
-                  <div class="item itemL">가격 정보</div>
-                  <div class="item">
-      
-                    <div id="slider"></div>
-                    <div id="slider-value"></div>
-                    
-                  </div>
-                  <div class="item itemL">상품 등록기간</div>
-                  <div class="item">
-                    <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
-                    <span class="wave">~</span>
-                    <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
-                    <button type="button" class="day" id="bt1">오늘</button>
-                    <button type="button" class="day" id="bt2">1주일</button>
-                    <button type="button" class="day" id="bt3">1개월</button>
-                    <button type="button" class="day" id="bt4">3개월</button>
-                    <button type="button" class="day" id="bt5">6개월</button>
-                  </div>
-                  <div></div>
-                  <div class="top-search">
-                    <input type="reset" class="reset-button" >
-                    <input type="submit" class="search-button" value="검색">
-                  </div>
-                </form>
-                
-                <div class="prd-count-wrap">
-                  <div class="prdTotal">[ 검색결과 상품 0개 / 총 100개 ]</div>
-                  <select name="searchLimit" class="searchLimit">
-                    <option value="5">5건씩보기</option>
-                    <option value="10">10건씩보기</option> 
-                    <option value="15">15건씩보기</option> 
-                    <option value="20">20건씩보기</option>  
-                  </select>
-                </div>
+          <form action="#" class="adminproduct_filter">
+            <div class="item itemL">상품 정보</div>
+            <div class="item">
+              <select name="filter" class="prd_filter">
+                <option value="product_name" selected>상품명</option>
+                <option value="product_cd">상품코드</option>
+              </select>
+              <input type="text" class="search-word">
+            </div>
+            <div class="item itemL">가격 정보</div>
+            <div class="item">
 
-                <!-- ===========상품 리스트========== -->
-                <div id="wrapper"></div>
+              <div id="slider"></div>
+              <div id="slider-value2"></div>
+              
+            </div>
+            <div class="item itemL">상품 등록기간</div>
+            <div class="item">
+              <input type="date" name="date" value="reg_date-s" class="date_input" id="date_inputS"/>
+              <span class="wave">~</span>
+              <input type="date" name="date" value="reg_date-e" class="date_input" id="date_inputE"/>
+              <button type="button" class="day" id="bt1">오늘</button>
+              <button type="button" class="day" id="bt2">1주일</button>
+              <button type="button" class="day" id="bt3">1개월</button>
+              <button type="button" class="day" id="bt4">3개월</button>
+              <button type="button" class="day" id="bt5">6개월</button>
+            </div>
+            <div></div>
+            <div class="top-search">
+              <input type="reset" class="reset-button" >
+              <input type="submit" class="search-button" value="검색">
+            </div>
+          </form>
+          
+          <div class="prd-count-wrap">
+            <div class="prdTotal">[ 검색결과 상품 0개 / 총 100개 ]</div>
+            <select name="searchLimit" class="searchLimit">
+              <option value="5">5건씩보기</option>
+              <option value="10">10건씩보기</option> 
+              <option value="15">15건씩보기</option> 
+              <option value="20">20건씩보기</option>  
+            </select>
+          </div>
 
-                <div class="prd-rgs-button">
-                  <button class="prd-register">등록</button>
-                  <button class="prd-delete">삭제</button>  
-                </div>
-                
-              </div>
-              <!-- 상품등록 모달 -->
-              <div class="prd-register-modal">
-                <div class="prdRegHeader">
-                  <span class="prRegister">상품 등록</span>
-                </div>
-                <button type="reset" class="prd_close-button">x</button>
+          <!-- ===========상품 리스트========== -->
+          <div id="wrapper"></div>
 
-                <form action="/rg" method="post" name="prdRegisterForm" class="prd-container" id="prd_form">
-                  <div class="prd-item">
-                    <span class="title">상품 코드</span>
-                    <input type="text" name="prdCd" class="prdcd">
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">상품 이름</span>
-                    <input type="text" name="prdNm" class="prdnm">
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">상품 서브타이틀</span>
-                    <select name="prdCt" class="wr prdtype">
-                      <option value="option">선택</option>
-                      <option value="new">신상품</option>
-                      <option value="man">남성</option>
-                      <option value="woman">여성</option>
-                      <option value="junior">주니어</option>
-                      <input type="text" name="prdSub" class="prdsub">
-                    </select>
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">상품 종류</span>
-                    <select name="prdTp" class="wr prdtype">
-                      <option value="option">선택</option>
-                      <option value="top">TOP</option>
-                      <option value="bottom">BOTTOM</option>
-                      <option value="shoes">신발</option>
-                      <option value="cap">CAP</option>
-                    </select>
-                  </div>
+          <div class="prd-rgs-button">
+            <button class="prd-register">등록</button>
+            <button class="prd-delete">삭제</button>  
+          </div>
+          
+        </div>
+        <!-- 상품등록 모달 -->
+        <div class="prd-register-modal">
+          <div class="prdRegHeader">
+            <span class="prRegister">상품 등록</span>
+          </div>
+          <button type="reset" class="prd_close-button">x</button>
 
-                  <div class="prd-item" id = "pro_size">
-                    <span class="title">상품 사이즈/색상 </span>
-                    <select name="size_sml" class="wr prdcsize">
-                      <option value="option" >선택</option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                    </select>
-                    <select name="size_num" class="wr prdsesize">
-                      <option value="option" >선택</option>
-                      <option value="230">230</option>
-                      <option value="235">235</option>
-                      <option value="240">240</option>
-                      <option value="245">245</option>
-                      <option value="250">250</option>
-                      <option value="255">255</option>
-                      <option value="260">260</option>
-                      <option value="265">265</option>
-                      <option value="270">270</option>
-                      <option value="275">275</option>
-                      <option value="280">280</option>
-                      <option value="285">285</option>
-                      <option value="290">290</option>
-                      <option value="295">295</option>
-                      <option value="300">300</option>
-                    </select>
-                    <input type="text" name="name" class="wr prdcl" placeholder="색상"  oninput="handleOnInput(this)" >
-                    <input type="text" name="name" class="wr prdqty" placeholder="수량" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'>
-                    <button onclick="add_size()" type="button" class="plus">+</button>
-                  </div>
+          <form action="/rg" method="post" name="prdRegisterForm" class="prd-container" id="prd_form">
+            <div class="prd-item">
+              <span class="title">상품 코드</span>
+              <input type="text" name="prdCd" class="prdcd">
+            </div>
+            <div class="prd-item">
+              <span class="title">상품 이름</span>
+              <input type="text" name="prdNm" class="prdnm">
+            </div>
+            <div class="prd-item">
+              <span class="title">상품 서브타이틀</span>
+              <select name="prdCt" class="wr prdtype">
+                <option value="option">선택</option>
+                <option value="new">신상품</option>
+                <option value="man">남성</option>
+                <option value="woman">여성</option>
+                <option value="junior">주니어</option>
+                <input type="text" name="prdSub" class="prdsub">
+              </select>
+            </div>
+            <div class="prd-item">
+              <span class="title">상품 종류</span>
+              <select name="prdTp" class="wr prdtype">
+                <option value="option">선택</option>
+                <option value="top">TOP</option>
+                <option value="bottom">BOTTOM</option>
+                <option value="shoes">신발</option>
+                <option value="cap">CAP</option>
+              </select>
+            </div>
+
+            <div class="prd-item" id = "pro_size">
+              <span class="title">상품 사이즈/색상 </span>
+              <select name="size_sml" class="wr prdcsize">
+                <option value="option" >선택</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+              </select>
+              <select name="size_num" class="wr prdsesize">
+                <option value="option" >선택</option>
+                <option value="230">230</option>
+                <option value="235">235</option>
+                <option value="240">240</option>
+                <option value="245">245</option>
+                <option value="250">250</option>
+                <option value="255">255</option>
+                <option value="260">260</option>
+                <option value="265">265</option>
+                <option value="270">270</option>
+                <option value="275">275</option>
+                <option value="280">280</option>
+                <option value="285">285</option>
+                <option value="290">290</option>
+                <option value="295">295</option>
+                <option value="300">300</option>
+              </select>
+              <input type="text" name="name" class="wr prdcl" placeholder="색상"  oninput="handleOnInput(this)" >
+              <input type="text" name="name" class="wr prdqty" placeholder="수량" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)'>
+              <button onclick="add_size()" type="button" class="plus">+</button>
+            </div>
 
 
-                  <div class="prd-item">
-                    <span class="title">상품 요약설명</span>
-                    <input type="textarea" name="prdSum" class="prdsummary">
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">등록 일자</span>
-                    <input type="text" name="insDt" class="rgDate">
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">판매 가격</span>
-                    <input type="text" name="prdPr" class="wr prdprice" onKeyup="inputNumberFormat(this)" /> 원
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">판매 상태</span>
-                    <input type="radio" name="status" value="정상"> 정상판매 
-                    <input type="radio" name="status" value="품절"> 품절
-                  </div>
-                  <div class="prd-item">
-                    <span class="title">상품이미지</span>
-                    <label for="addfile" class="fileLabel"></label>
-                    <input type="file" id="add-file" class="prd-img" multiple accept="image/*">
-                  </div>
-                  <div class="rgBtn">
-                    <input type="submit" class="prdModal-register" value="등록"></input>
-                  </div>
-                  <div class="upBtn">
-                    <button type="button" class="prdModal-update">수정</button>
-                  </div>
-                </form>
-        
-              </div>
-            </div> <!-- dashboard-main-->
-        </section>
+            <div class="prd-item">
+              <span class="title">상품 요약설명</span>
+              <input type="textarea" name="prdSum" class="prdsummary">
+            </div>
+            <div class="prd-item">
+              <span class="title">등록 일자</span>
+              <input type="text" name="insDt" class="rgDate">
+            </div>
+            <div class="prd-item">
+              <span class="title">판매 가격</span>
+              <input type="text" name="prdPr" class="wr prdprice" onKeyup="inputNumberFormat(this)" /> 원
+            </div>
+            <div class="prd-item">
+              <span class="title">판매 상태</span>
+              <input type="radio" name="status" value="정상"> 정상판매 
+              <input type="radio" name="status" value="품절"> 품절
+            </div>
+            <div class="prd-item">
+              <span class="title">상품이미지</span>
+              <label for="addfile" class="fileLabel"></label>
+              <input type="file" id="add-file" class="prd-img" multiple accept="image/*">
+            </div>
+            <div class="rgBtn">
+              <input type="submit" class="prdModal-register" value="등록"></input>
+            </div>
+            <div class="upBtn">
+              <button type="button" class="prdModal-update">수정</button>
+            </div>
+          </form>
+        </div>
       </section>
     </div>
 </body>

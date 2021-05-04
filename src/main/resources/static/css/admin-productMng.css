@@ -3,8 +3,7 @@
   font-weight: bold;
 }
 .body__container {
-  max-width: 1808px;
-  margin: 0 auto;
+  margin: 0;
 }
 .prd-title-txt {
     display: inline-block;
@@ -19,7 +18,7 @@
 }
 .dashboard-menu {
     width: 250px;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 .dashboard-menu-list {
     padding-top: 30px;
@@ -28,8 +27,8 @@
     padding: 15px 0;
 }
 .right-content-wrap {
-    width: 1200px;
-    padding: 0 20px;    
+    width: 1750px;
+    padding: 0 30px;    
 }
 .dash-icon .fas,
 .dash-icon .fab
@@ -46,7 +45,7 @@
 .prd-txt
 {
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 500;
 
   letter-spacing: 2px;
@@ -153,6 +152,7 @@ table, th, td {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 20px;
 }
 .prd-register, .prd-delete
 {
@@ -170,7 +170,7 @@ table, th, td {
 
 .adminproduct_filter {
   display: grid;
-  height: 200px;
+  height: 300px;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 2fr 8fr;
 }
@@ -261,13 +261,14 @@ table, th, td {
 
 .noUi-target {
   position: relative;
-  width:70%;
+  width:40%;
   margin-left: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-#slider-value {
+#slider-value2 {
   position: relative;
-  left:10px;
-  bottom: 10px;
+  width:120px;
+  top:2px;
+  margin-left: 10px;
 }
