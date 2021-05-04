@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,12 +45,21 @@ public class ADProductController {
     model.addAttribute("adProduct", pro);
     return "redirect:/admin-productMng";
   }
-    @GetMapping("/delete/{prdCd}")
-    @ResponseBody
-    public String deleteProduct(@PathVariable String prdCd) {
-      adProductService.deleteProduct(prdCd);
-      System.out.println("prdCd="+prdCd);
+  
+    @DeleteMapping("/admin-productMng/{prdCd}")
+      @ResponseBody
+      public String deleteProduct(@PathVariable String prdCd) {
+        adProductService.deleteProduct(prdCd);
+        System.out.println("prdCd="+prdCd);
+        return "redirect:/admin-productMng";
+      }
+    
+    @PostMapping("/admin-productMng/{prdCd}")
+    public String updateProduct(ADProduct adProduct) {
+      adProductService.updateProduct(adProduct);
       return "redirect:/admin-productMng";
     }
+
+  
   
 }

@@ -15,7 +15,19 @@ const rgF = function(e) {
     form.submit();
 }
 form.addEventListener('submit',rgF);
-uptBt.addEventListener('submit',rgF);
+
+//수정
+const uptFunc = () => {
+    if(confirm('수정하시겠습니까?')) {
+        form.action = "/admin-productMng/"+form.prdCd.value;
+        form.submit();
+    } else {
+        return false;
+    }
+
+uptBt.addEventListener('submit',uptFunc);
+
+
 
 async function openClick(test,prdCd) {
     
@@ -24,6 +36,7 @@ async function openClick(test,prdCd) {
         prdModal.classList.add('open');
         modalRgBt.classList.add('stage');
         modalUpBt.classList.remove('stage1');
+
     }
     else if (test=='update') {
         const res = await fetch(`/admin-productMng/${prdCd}`);
@@ -45,16 +58,15 @@ async function openClick(test,prdCd) {
                 form.prdTp.options[i].selected = true;
             }
         }
-        form.prdSum.value=adProduct.prdSm;
+        form.prdSm.value=adProduct.prdSm;
         form.prdPr.value=adProduct.prdPr;
         form.insDt.value=adProduct.insDt;
-        rgDate.textContent=adProduct.insDt;
 
         prdModalback.classList.add('open');
         prdModal.classList.add('open');
         rgText.textContent="상품 정보 수정"; 
         modalRgBt.classList.remove('stage');
-        modalUpBt.classList.add('stage1');      
+        modalUpBt.classList.add('stage1');    
     }
 
 }

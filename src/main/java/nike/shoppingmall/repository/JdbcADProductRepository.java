@@ -34,14 +34,19 @@ public class JdbcADProductRepository implements ADProductRepository{
     @Override
     public int insertProduct(ADProduct adProduct) {
         int result = jdbcTemplate.update("INSERT INTO msproduct (PRD_CD,PRD_NM,PRD_CATEGORY,PRD_SUBTITLE,PRD_TYPE,PRD_SUMMARY,PRD_PRICE,INS_DT,UPD_DT) VALUES (?,?,?,?,?,?,?,?,?)"
-        ,adProduct.getPrdCd(),adProduct.getPrdNm(),adProduct.getPrdCt(),adProduct.getPrdSub(),adProduct.getPrdTp()
-    ,adProduct.getPrdSm(),adProduct.getPrdPr(),adProduct.getInsDt(),adProduct.getUptDt());
+        ,adProduct.getPrdCd(),adProduct.getPrdNm(),adProduct.getPrdCt(),adProduct.getPrdSub(),adProduct.getPrdTp(),adProduct.getPrdSm(),adProduct.getPrdPr(),adProduct.getInsDt(),adProduct.getUptDt());
         return result;
     }
 
     @Override
     public int deleteProduct(String prdCd) {
         int result = jdbcTemplate.update("DELETE FROM msproduct where prdCd=?", prdCd);
+        return result;
+    }
+
+    public int updateProduct(ADProduct adProduct) {
+        int result=jdbcTemplate.update("UPDATE msproduct set PRD_CD=?,PRD_NM=?,PRD_CATEGORY=?,PRD_SUBTITLE=?,PRD_TYPE=?,PRD_SUMMARY=?,PRD_PRICE=?,INS_DT=?,UPT_DT=? WHERE PRD_CD=?",
+        adProduct.getPrdCd(),adProduct.getPrdNm(),adProduct.getPrdCt(),adProduct.getPrdSub(),adProduct.getPrdTp(),adProduct.getPrdSm(),adProduct.getPrdPr(),adProduct.getInsDt(),adProduct.getUptDt());
         return result;
     }
 
