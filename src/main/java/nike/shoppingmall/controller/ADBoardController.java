@@ -49,7 +49,7 @@ public class ADBoardController {
                       @RequestParam("Ncontent") String content,
                       @RequestParam("NpassWd") String passWd){
 
-        int adNotice = adBoardService.insertNotice(subject,content,passWd);
+        adBoardService.insertNotice(subject,content,passWd);
         return "redirect:/admin-board";
     }
 
