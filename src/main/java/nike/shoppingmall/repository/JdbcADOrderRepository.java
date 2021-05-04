@@ -28,7 +28,7 @@ public class JdbcADOrderRepository implements ADOrderRepository {
   @Override
   public Optional<ADOrderInfo> findInCartAll(String userMail) {
     List<ADOrderInfo> result = jdbcTemplate.query(
-        "SELECT A.*, (SELECT COMM_NM FROM `COMMSTATUS` WHERE COMM_VAL = A.STATUS_CD AND COMM_CD = 'USER_STATUS') AS STATUS_NM, B.PRD_NM, B.PRD_IMG, B.PRD_SIZE, B.PRD_STYLE, B.PRD_CNT, B.PRD_PRICE, B.SEND_PRICE, B.SEND_PRICE,(SELECT SEND_NUM FROM delivery WHERE ORDER_CD = A.ORDER_CD) AS SEND_NUM  FROM ordermng A INNER JOIN cart B ON A.USER_EMAIL = B.USER_EMAIL WHERE A.USER_EMAIL = ?",
+        "SELECT A.*, (SELECT SEND_NUM FROM `delivery` WHERE ORDER_CD = A.ORDER_CD) AS SEND_NUM, (SELECT COMM_NM FROM `COMMSTATUS` WHERE COMM_VAL = A.STATUS_CD AND COMM_CD = 'USER_STATUS') AS STATUS_NM, B.PRD_NM, B.PRD_IMG, B.PRD_SIZE, B.PRD_STYLE, B.PRD_CNT, B.PRD_PRICE, B.SEND_PRICE, C.* FROM ordermng A INNER JOIN cart B ON A.USER_EMAIL = B.USER_EMAIL INNER JOIN payinfo C ON A.ORDER_CD = C.ORDER_CD WHERE A.USER_EMAIL = ?",
         OrderInfoRowMapper(), userMail);
 
     return result.stream().findAny();
@@ -57,7 +57,6 @@ public class JdbcADOrderRepository implements ADOrderRepository {
       aDOrderInfo.setUserEmail(rs.getString("USER_EMAIL"));
       aDOrderInfo.setPrdCd(rs.getString("PRD_CD"));
       aDOrderInfo.setStatusCd(rs.getInt("STATUS_CD"));
-      aDOrderInfo.setStatusNm(rs.getString("STATUS_NM"));
       aDOrderInfo.setOrderDt(rs.getDate("ORDER_DT"));
       aDOrderInfo.setPayDt(rs.getDate("PAY_DT"));
       aDOrderInfo.setTotalPrice(rs.getLong("TOTAL_PRICE"));
@@ -68,7 +67,10 @@ public class JdbcADOrderRepository implements ADOrderRepository {
       aDOrderInfo.setPrdStyle(rs.getString("PRD_STYLE"));
       aDOrderInfo.setPrdCnt(rs.getInt("PRD_CNT"));
       aDOrderInfo.setPrdPrice(rs.getLong("PRD_PRICE"));
-      aDOrderInfo.setSandNum(rs.getString("SEND_NUM"));
+      aDOrderInfo.setSendNum(rs.getString("SEND_NUM"));
+      aDOrderInfo.setDepositNum(rs.getString("DEPOSIT_NUM"));
+      aDOrderInfo.setPayMethod(rs.getString("PAY_METHOD"));
+      aDOrderInfo.setPriceReceipt(rs.getString("PRICE_RECEIPT"));
       return aDOrderInfo;
     };
   }
