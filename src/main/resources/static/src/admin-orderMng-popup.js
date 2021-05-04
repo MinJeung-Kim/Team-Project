@@ -34,6 +34,14 @@ async function open(email) {
     }
   });
 
+  // 결제정보
+  const payMethod = document.querySelector('.or-pay-method');
+  const payPrice = document.querySelector('.or-pay-price');
+  const depositNm = document.querySelector('.or-deposit-nm');
+  const depositNum = document.querySelector('.or-deposit-num');
+  const priceReceipt = document.querySelector('.or-price-receipt');
+  const phone = document.querySelector('.or-phone');
+
   orderNum.textContent = json.orderCd;
   orderDate.textContent = json.orderDt;
   title.textContent = json.prdNm;
@@ -42,7 +50,15 @@ async function open(email) {
   count.textContent = json.prdCnt;
   price.textContent = json.prdPrice;
   sendPrice.textContent = json.sendPrice;
-  songjang.value = json.sandNum;
+  songjang.value = json.sendNum;
+
+  //결제정보
+  payMethod.textContent = json.payMethod;
+  // payPrice.textContent = json.;
+  // depositNm.textContent = json.;
+  depositNum.textContent = json.depositNum;
+  priceReceipt.textContent = json.priceReceipt;
+  // phone.textContent = json.;
 }
 
 orClose.addEventListener('click', () => {

@@ -7,7 +7,7 @@ public class ADOrderInfo {
     private String userEmail;
     private String prdCd;
     private int statusCd;
-    private String statusNm;
+    // private String statusNm;
     private Date orderDt;
     private Date payDt;
     private Long totalPrice;
@@ -22,9 +22,12 @@ public class ADOrderInfo {
     private Long prdPrice;
     private int sendPrice;
 
-    private String sandNum;
+    private String sendNum;
 
     // 결제 정보
+    private String depositNum;
+    private String payMethod;
+    private String priceReceipt;
 
     public String getOrderCd() {
         return this.orderCd;
@@ -56,14 +59,6 @@ public class ADOrderInfo {
 
     public void setStatusCd(int statusCd) {
         this.statusCd = statusCd;
-    }
-
-    public String getStatusNm() {
-        return this.statusNm;
-    }
-
-    public void setStatusNm(String statusNm) {
-        this.statusNm = statusNm;
     }
 
     public Date getOrderDt() {
@@ -162,12 +157,36 @@ public class ADOrderInfo {
         this.sendPrice = sendPrice;
     }
 
-    public String getSandNum() {
-        return this.sandNum;
+    public String getSendNum() {
+        return this.sendNum;
     }
 
-    public void setSandNum(String sandNum) {
-        this.sandNum = sandNum;
+    public void setSendNum(String sendNum) {
+        this.sendNum = sendNum;
+    }
+
+    public String getDepositNum() {
+        return this.depositNum;
+    }
+
+    public void setDepositNum(String depositNum) {
+        this.depositNum = depositNum;
+    }
+
+    public String getPayMethod() {
+        return this.payMethod;
+    }
+
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
+    }
+
+    public String getPriceReceipt() {
+        return this.priceReceipt;
+    }
+
+    public void setPriceReceipt(String priceReceipt) {
+        this.priceReceipt = priceReceipt;
     }
 
 }
