@@ -3,11 +3,11 @@
 const prdRegister=document.querySelector('.prd-register');
 const prdModalback=document.querySelector('.prd-register-back');
 const prdModal=document.querySelector('.prd-register-modal');
-const rgBt=document.querySelector('.prd-register');
-const rgText=document.querySelector('.prRegister');
-const modalRgBt=document.querySelector('.rgBtn');
-const modalUpBt=document.querySelector('.upBtn'); //div
-const uptBt=document.querySelector('.prdModal-update'); //bt
+const rgBt=document.querySelector('.prd-register'); //grid.js 테이블 밑 등록 버튼
+const rgText=document.querySelector('.prRegister'); //모달창 상단 텍스트 변경 위한
+const modalRgBt=document.querySelector('.rgBtn'); //모달창 안에 있는 등록버튼 
+const modalUpBt=document.querySelector('.upBtn'); //div 영역
+const uptBt=document.querySelector('.prdModal-update'); //bt 
 
 const form=document.getElementById('prd_form');
 
