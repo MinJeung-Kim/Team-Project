@@ -17,15 +17,15 @@ const rgF = function(e) {
 form.addEventListener('submit',rgF);
 
 //수정
-const uptFunc = () => {
-    if(confirm('수정하시겠습니까?')) {
-        form.action = "/admin-productMng/"+form.prdCd.value;
-        form.submit();
-    } else {
-        return false;
-    }
+// const uptFunc = () => {
+//     if(confirm('수정하시겠습니까?')) {
+//         form.action = "/admin-productMng/"+form.prdCd.value;
+//         form.submit();
+//     } else {
+//         return false;
+//     }
 
-uptBt.addEventListener('submit',uptFunc);
+// uptBt.addEventListener('submit',uptFunc);
 
 
 
