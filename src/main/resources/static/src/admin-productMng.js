@@ -125,34 +125,34 @@ checkbox.addEventListener('click', (e) => {
 })
 
 //삭제
-const delFunc = () => {
-  let chk = document.getElementsByName('chk');
-  let chk_lenth = document.getElementsByName('chk').length;
-  //console.log(chk_lenth)
-  for(let i = 0; i < chk_lenth; i++) {
-      if(chk[i].checked == true) {
-          // console.log(chk[i].value)
-          let prdCd = chk[i].value;
-          console.log(prdCd)
-          //fetch
-          fetch('/admin-productMng/'+prdCd, {
-              method: 'GET',
-          }).then(res => {
-              if(res.ok) {
-                  alert('삭제되었습니다.');
-                  location.href="/admin-productMng"
-              } else {
-                  alert('실패')
-              }
-          })
-      }
-  }
+// const delFunc = () => {
+//   let chk = document.getElementsByName('chk');
+//   let chk_lenth = document.getElementsByName('chk').length;
+//   //console.log(chk_lenth)
+//   for(let i = 0; i < chk_lenth; i++) {
+//       if(chk[i].checked == true) {
+//           // console.log(chk[i].value)
+//           let prdCd = chk[i].value;
+//           console.log(prdCd)
+//           //fetch
+//           fetch('/admin-productMng/'+prdCd, {
+//               method: 'GET',
+//           }).then(res => {
+//               if(res.ok) {
+//                   alert('삭제되었습니다.');
+//                   location.href="/admin-productMng"
+//               } else {
+//                   alert('실패')
+//               }
+//           })
+//       }
+//   }
   
-}
+// }
 
-//삭제버튼
-const delBtn = document.querySelector('.prd-delete');
-delBtn.addEventListener('click',delFunc);
+// //삭제버튼
+// const delBtn = document.querySelector('.prd-delete');
+// delBtn.addEventListener('click',delFunc);
 
 
 //사이즈 추가
