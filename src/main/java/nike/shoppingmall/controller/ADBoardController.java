@@ -15,11 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import nike.shoppingmall.domain.ADBoard;
 import nike.shoppingmall.service.ADBoardService;
 
-
-
 @Controller
 public class ADBoardController {
-    
+
     private ADBoardService adBoardService;
 
     @Autowired
@@ -32,7 +30,6 @@ public class ADBoardController {
         List<ADBoard> adBoard = adBoardService.findADBoardAll();
         model.addAttribute("adBoard", adBoard);
 
-        
         return "admin-board";
     }
 
@@ -49,7 +46,7 @@ public class ADBoardController {
                       @RequestParam("Ncontent") String content,
                       @RequestParam("NpassWd") String passWd){
 
-        int adNotice = adBoardService.insertNotice(subject,content,passWd);
+        adBoardService.insertNotice(subject,content,passWd);
         return "redirect:/admin-board";
     }
 

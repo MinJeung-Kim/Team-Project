@@ -1,11 +1,13 @@
 package nike.shoppingmall.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import nike.shoppingmall.domain.ADOrder;
+import nike.shoppingmall.domain.ADOrderInfo;
 import nike.shoppingmall.repository.ADOrderRepository;
 
 @Service
@@ -19,5 +21,9 @@ public class ADOrderService {
 
   public List<ADOrder> findADOrderyAll() {
     return adDOrderRepository.findAll();
+  }
+
+  public Optional<ADOrderInfo> findInCartAll(String userMail) {
+    return adDOrderRepository.findInCartAll(userMail);
   }
 }

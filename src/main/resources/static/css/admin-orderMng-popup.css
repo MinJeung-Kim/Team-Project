@@ -42,6 +42,14 @@
   padding-right: 20px;
 }
 
+.or-num::before {
+  content: '주문번호 : ';
+}
+
+.or-date::before {
+  content: '주문일시 : ';
+}
+
 .or-wrap {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -69,6 +77,23 @@
 .or-content-title {
   font-size: 16px;
   font-weight: bold;
+}
+
+.or-content-style::before {
+  content: '스타일 : ';
+}
+
+.or-content-size::before {
+  content: '사이즈 : ';
+}
+
+.or-content-count::before {
+  content: '수량 : ';
+}
+
+.content-price::after,
+.content-send::after {
+  content: ' 원';
 }
 
 .or-section-title {
