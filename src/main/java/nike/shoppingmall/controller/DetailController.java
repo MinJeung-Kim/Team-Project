@@ -20,7 +20,7 @@ public class DetailController {
     this.detailService = detailService;
   }
 
-  @GetMapping("/detail")
+  @GetMapping("/detailpd")
   public String list(Model model) {
     List<Detail> detail = detailService.findProducts();
     model.addAttribute("detail", detail);
