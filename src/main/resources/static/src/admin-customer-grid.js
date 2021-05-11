@@ -19,11 +19,11 @@ let custom = customer.replace(/\r\n/g, '\\r\\n');
     },
     {
       name: 'No',
-      width: '30px',
+      width: '60px',
     },
     { 
       name: '이름',
-      width: "80px",
+      width: "140px",
       attributes: (cell, row) => {
         if (cell, row) { 
           return {
