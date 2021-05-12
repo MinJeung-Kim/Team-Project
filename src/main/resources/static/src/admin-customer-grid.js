@@ -36,7 +36,6 @@ let custom = customer.replace(/\r\n/g, '\\r\\n');
     },
     {
       name: '등급',
-      width: "45px",
       sort: false,
     },
     {
@@ -75,7 +74,8 @@ let custom = customer.replace(/\r\n/g, '\\r\\n');
   },
   style: {
     table: {
-      'text-align': 'center'
+      'text-align': 'center',
+      'width': '100%'
     }
   },
   data: JSON.parse(custom).map(({listNum, userNm, gradeCd, userId, tel, gender, statusCd}) => [listNum, userNm, gradeCd, userId, tel, gender, statusCd]),

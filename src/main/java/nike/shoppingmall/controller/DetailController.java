@@ -20,11 +20,11 @@ public class DetailController {
     this.detailService = detailService;
   }
 
-  @GetMapping("/detail")
-  public String list(Model model) {
-    List<Detail> detail = detailService.findProducts();
-    model.addAttribute("detail", detail);
+  // @GetMapping("/detail")
+  // public String list(Model model) {
+  //   List<Detail> detail = detailService.findProducts();
+  //   model.addAttribute("detail", detail);
 
-    return "detail";
-  }
+  //   return "detail";
+  // }
 }

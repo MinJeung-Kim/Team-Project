@@ -1,166 +1,199 @@
 .body__container {
-    max-width: 1808px;
-    margin: 0 auto;
-    overflow-x: hidden;
-  }
-  .cstxt {
-      display: inline-block;
-      padding: 30px;
-      font-family: 'Noto Sans KR', sans-serif;
-      letter-spacing: 2px;
-      font-size: 25px;
-  }
-  .dashboard-main {
-      display: flex;
-  }
-  .dashboard-menu {
-      width: 250px;
-      padding: 0 20px;
-      min-width: 110px;
-  }
-  .dashboard-menu-list {
-      padding-top: 30px;
-  }
-  .dashboard-menu-list li {
-      padding: 15px 0;
-  }
-  .adminCustomer {
-      font-weight: bold;
-  }
-  .right-content-wrap {
-      width: 990px;
-      padding: 0 30px;    
-  }
-  .dash-icon .fas,
-  .dash-icon .fab {
-      font-size: 18px;
-      padding: 5px;
-  }
-  .customer-list {
-     display: flex;
-     justify-content: space-between;
-     padding: 15px;
-  }
-  .list-txt {
-     font-family: 'Noto Sans KR', sans-serif;
-     font-size: 25px;
-     font-weight: 500;
-     letter-spacing: 2px;
-  }
-  #divisionLine {
-    width: 100%;
-    background: black;
-    border:1px solid;
-    margin-bottom: 25px;
-  }
+  max-width: 1808px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  display: flex;
+}
+/* ADMIN MENU COMMON */
+.text-shadow {
+color: #032a32 !important;
+text-shadow: 0 1px 0 #126d7e, 0 -1px 0 #020e1f;
+}
 
-  /* 고객 검색 */
-  .search-customer {
-    display: grid;
-    width: 100%;
-    height: 180px;
-    align-items: center;
-    grid-template-columns: 2fr 8fr;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .search-customer select {
-    height: 25px;
-  }
-  .search-option {
-    height: 100%;
-    line-height: 50px;
-    padding-left: 8px;
-    border: 1px solid #e5e5e5;
-  }
-  .search-option:nth-child(1),
-  .search-option:nth-child(3),
-  .search-option:nth-child(5) { 
-    text-align: center;
-    font-weight: bold;
-  }
-  .search-option:nth-child(2),
-  .search-option:nth-child(4),
-  .search-option:nth-child(6) { 
-    grid-column: 2/6; 
-  }
- 
-  .search-option:nth-child(2),
-  .search-option:nth-child(6) {
-    padding-left: 8px;
-  }
-  .searchText {
-    width: 150px;
-    height: 21px;
-    border: 1px solid gray;
-  }
-  .regAndDel {
-    float: right;
-  }
+/* TOP MENU */
+.admin-top-menu {
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: #111;
+color: #fff;
+}
 
-  .regdel,
-  .search-customerBtn {
-    width: 60px;
-    height: 28px;
-    margin: 5px;
-    background: black;
-    border-radius: 5px;
-    color: white;
-    height: 23px;
-    line-height: 21px;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-  }
+/* SIDE MENU */
+.dash {
+display: grid;
+grid-template-columns: 1fr 18fr;
+}
 
-  .search-customerBtn.resetBtn {
-    background: white;
-    border: 1px solid black;
-    color: black;
-  }
-  .search-customerBtn.resetBtn:hover {
-    background-color: whitesmoke;
-  }
+.admin-side-menu {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: #105275;
+color: #fff;
+width: 100px;
+}
 
-  .searchCs-btn {
-    grid-column: 2;
-    position: relative;
-    left: 250px;
-  }
-  
-  .regdel:hover,
-  .search-customerBtn:hover {
-    background: #5C5B5B;
-  }
+.admin-side-menu li {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+padding: 15px 10px;
+}
 
-  .select-gender { width: 20px; }
+.admin-side-menu li::after {
+content: '';
+border-bottom: 1px solid rgba(187, 185, 189, 0.877);
+width: 100%;
+height: 4px;
+}
 
-  .memWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 15px;
-    display: none;
-  }
-  .memTotal {
-    padding-top: 30px;
-    color: #5C5B5B;
-    font-size: 14px;
-  }
-  .searchLimit {
-    margin-top: 10px;
-    height:100%;
-    float: right;
-    z-index: 99;
-  }
-  .gradeWrap {
-    margin-top: 30px;
-    color: #5C5B5B;
-    line-height: 25px;
-    font-size: 14px;
-  }
-  .gradeTitle {
-    font-weight: bold;
-    font-size: 15px;
-  }
-  .gradeSubTitle { font-weight: bold; }
+.side-img,
+.admin-side-menu a {
+padding-bottom: 15px;
+color: #fff;
+cursor: pointer;
+font-weight: bold;
+}
+
+/* CONTENT */
+.right-content-wrap {
+  width: 1100px;
+  padding: 0 40px;    
+}
+.dash-icon .fas,
+.dash-icon .fab {
+  font-size: 18px;
+  padding: 5px;
+}
+.customer-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.list-txt {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+#divisionLine {
+width: 100%;
+background: black;
+border:1px solid;
+margin-bottom: 25px;
+}
+
+/* 고객 검색 */
+.search-customer {
+display: grid;
+width: 100%;
+height: 180px;
+align-items: center;
+grid-template-columns: 2fr 8fr;
+grid-template-rows: repeat(4, 1fr);
+}
+.search-customer select {
+height: 25px;
+}
+.search-option {
+height: 100%;
+line-height: 50px;
+padding-left: 8px;
+border: 1px solid #e5e5e5;
+}
+.search-option:nth-child(1),
+.search-option:nth-child(3),
+.search-option:nth-child(5) { 
+text-align: center;
+font-weight: bold;
+}
+.search-option:nth-child(2),
+.search-option:nth-child(4),
+.search-option:nth-child(6) { 
+grid-column: 2/6; 
+}
+
+.search-option:nth-child(2),
+.search-option:nth-child(6) {
+padding-left: 8px;
+}
+.searchText {
+width: 150px;
+height: 21px;
+border: 1px solid gray;
+}
+.regAndDel {
+float: right;
+}
+
+.regdel,
+.search-customerBtn {
+width: 60px;
+height: 28px;
+margin: 5px;
+background: black;
+border-radius: 5px;
+color: white;
+height: 23px;
+line-height: 21px;
+font-size: 14px;
+cursor: pointer;
+outline: none;
+border: none;
+}
+
+.search-customerBtn.resetBtn {
+background: white;
+border: 1px solid black;
+color: black;
+}
+.search-customerBtn.resetBtn:hover {
+background-color: whitesmoke;
+}
+
+.searchCs-btn {
+grid-column: 2;
+position: relative;
+left: 250px;
+}
+
+.regdel:hover,
+.search-customerBtn:hover {
+background: #5C5B5B;
+}
+
+.select-gender { width: 20px; }
+
+.memWrap {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+margin-bottom: 15px;
+display: none;
+}
+.memTotal {
+padding-top: 30px;
+color: #5C5B5B;
+font-size: 14px;
+}
+.searchLimit {
+margin-top: 10px;
+height:100%;
+float: right;
+z-index: 99;
+}
+.gradeWrap {
+margin-top: 30px;
+color: #5C5B5B;
+line-height: 25px;
+font-size: 14px;
+}
+.gradeTitle {
+font-weight: bold;
+font-size: 15px;
+}
+.gradeSubTitle { font-weight: bold; }
