@@ -72,6 +72,7 @@
                 status.classList.add('on');
             })
             frm.userId.readOnly = true;
+            csRegister.textContent = "고객 수정";
         }
         csModal.classList.toggle('unstaged');
         document.body.classList.toggle('back');

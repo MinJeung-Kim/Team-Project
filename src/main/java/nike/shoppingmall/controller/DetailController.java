@@ -24,4 +24,7 @@ public class DetailController {
   public String list(Model model) {
     List<Detail> detail = detailService.findProducts();
     model.addAttribute("detail", detail);
+
+    return "detail";
+  }
 }
